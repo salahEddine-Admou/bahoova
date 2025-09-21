@@ -9,6 +9,8 @@ const About = () => {
   const [hoveredStat, setHoveredStat] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [transitionType, setTransitionType] = useState('creative');
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const aboutImages = [
     {
@@ -45,24 +47,42 @@ const About = () => {
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
+        setIsTransitioning(true);
         setCurrentImageIndex((prevIndex) => 
           (prevIndex + 1) % aboutImages.length
         );
+        // Change transition type randomly
+        const transitionTypes = ['creative', 'morphing', 'glitch', 'wave'];
+        setTransitionType(transitionTypes[Math.floor(Math.random() * transitionTypes.length)]);
+        setTimeout(() => setIsTransitioning(false), 1000);
       }, 4000);
       return () => clearInterval(interval);
     }
   }, [isPlaying, aboutImages.length]);
 
   const nextImage = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
     setCurrentImageIndex((prevIndex) => 
       (prevIndex + 1) % aboutImages.length
     );
+    setTimeout(() => setIsTransitioning(false), 1000);
   };
 
   const prevImage = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
     setCurrentImageIndex((prevIndex) => 
       (prevIndex - 1 + aboutImages.length) % aboutImages.length
     );
+    setTimeout(() => setIsTransitioning(false), 1000);
+  };
+
+  const goToImage = (index) => {
+    if (isTransitioning || index === currentImageIndex) return;
+    setIsTransitioning(true);
+    setCurrentImageIndex(index);
+    setTimeout(() => setIsTransitioning(false), 1000);
   };
 
   const togglePlayPause = () => {
@@ -167,37 +187,214 @@ const About = () => {
                     overflow: "hidden",
                     borderRadius: "16px"
                   }}>
-                    {/* Slider Images */}
-                    {aboutImages.map((image, index) => (
-                      <div
-                        key={index}
-                        style={{
-                          position: "absolute",
-                          top: 0,
-                          left: 0,
-                          width: "100%",
-                          height: "100%",
-                          opacity: index === currentImageIndex ? 1 : 0,
-                          transform: `translateX(${(index - currentImageIndex) * 100}%)`,
-                          transition: "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)"
-                        }}
-                      >
-                        <img 
-                          src={image.src}
-                          alt={image.title}
+                    {/* Creative Slider Images */}
+                    {aboutImages.map((image, index) => {
+                      const isActive = index === currentImageIndex;
+                      const isNext = index === (currentImageIndex + 1) % aboutImages.length;
+                      const isPrev = index === (currentImageIndex - 1 + aboutImages.length) % aboutImages.length;
+                      
+                      return (
+                        <div
+                          key={index}
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            opacity: isActive ? 1 : 0,
+                            transform: isActive 
+                              ? (transitionType === 'wave' ? "scale(1.05) rotate(0deg)" : 
+                                 transitionType === 'glitch' ? "scale(1) rotate(0deg)" :
+                                 "scale(1) rotate(0deg)")
+                              : isNext 
+                                ? (transitionType === 'morphing' ? "scale(1.3) rotate(10deg) translateX(100%)" :
+                                   transitionType === 'glitch' ? "scale(1.1) rotate(0deg) translateX(100%)" :
+                                   transitionType === 'wave' ? "scale(1.2) rotate(5deg) translateX(100%)" :
+                                   "scale(1.2) rotate(5deg) translateX(100%)")
+                                : isPrev 
+                                  ? (transitionType === 'morphing' ? "scale(0.7) rotate(-10deg) translateX(-100%)" :
+                                     transitionType === 'glitch' ? "scale(0.9) rotate(0deg) translateX(-100%)" :
+                                     transitionType === 'wave' ? "scale(0.8) rotate(-5deg) translateX(-100%)" :
+                                     "scale(0.8) rotate(-5deg) translateX(-100%)")
+                                  : "scale(0.5) rotate(0deg) translateX(0%)",
+                            transition: transitionType === 'glitch' 
+                              ? "all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)"
+                              : transitionType === 'wave'
+                              ? "all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+                              : "all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                            zIndex: isActive ? 3 : isNext || isPrev ? 2 : 1,
+                            filter: isActive 
+                              ? "blur(0px) brightness(1) contrast(1)" 
+                              : "blur(2px) brightness(0.7) contrast(0.8)",
+                            clipPath: isActive 
+                              ? (transitionType === 'morphing' ? "polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%)" :
+                                 transitionType === 'wave' ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" :
+                                 "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)")
+                              : isNext
+                                ? (transitionType === 'morphing' ? "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)" :
+                                   transitionType === 'wave' ? "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)" :
+                                   "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)")
+                                : isPrev
+                                  ? (transitionType === 'morphing' ? "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" :
+                                     transitionType === 'wave' ? "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" :
+                                     "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)")
+                                  : "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)",
+                            animation: isActive && transitionType === 'glitch' 
+                              ? "glitchEffect 0.3s ease-in-out"
+                              : isActive && transitionType === 'wave'
+                              ? "waveEffect 2s ease-in-out infinite"
+                              : isActive && transitionType === 'morphing'
+                              ? "morphingShape 3s ease-in-out infinite"
+                              : "none"
+                          }}
+                        >
+                          {/* Creative Overlay Effects */}
+                          <div style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            background: isActive 
+                              ? "linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1))"
+                              : "linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5))",
+                            zIndex: 1,
+                            transition: "all 1s ease"
+                          }} />
+                          
+                          {/* Animated Border */}
+                          <div style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            border: isActive ? "3px solid transparent" : "0px solid transparent",
+                            background: isActive 
+                              ? "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c) border-box"
+                              : "transparent",
+                            borderRadius: "16px",
+                            zIndex: 2,
+                            transition: "all 1s ease",
+                            animation: isActive ? "borderGlow 2s ease-in-out infinite" : "none"
+                          }} />
+                          
+                          <img 
+                            src={image.src}
+                            alt={image.title}
                 style={{ 
                   width: "100%", 
-                            height: "100%", 
+                              height: "100%", 
                   objectFit: "cover",
-                            transition: "transform 0.3s ease"
-                          }}
-                          onError={(e) => {
-                            e.target.src = `https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
-                          }}
-                          loading="lazy"
-                        />
-                      </div>
-                    ))}
+                              transition: transitionType === 'glitch' 
+                                ? "all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)"
+                                : "all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                              transform: isActive 
+                                ? (transitionType === 'wave' ? "scale(1.08) rotate(0deg)" : 
+                                   transitionType === 'glitch' ? "scale(1.02) rotate(0deg)" :
+                                   "scale(1.05) rotate(0deg)")
+                                : "scale(1) rotate(0deg)",
+                              filter: isActive 
+                                ? (transitionType === 'glitch' ? "saturate(1.5) contrast(1.3) hue-rotate(10deg)" :
+                                   transitionType === 'wave' ? "saturate(1.3) contrast(1.2) brightness(1.1)" :
+                                   transitionType === 'morphing' ? "saturate(1.4) contrast(1.1) brightness(1.05)" :
+                                   "saturate(1.2) contrast(1.1)")
+                                : "saturate(0.5) contrast(0.8) brightness(0.7)",
+                              animation: isActive && transitionType === 'glitch' 
+                                ? "colorShift 0.5s ease-in-out"
+                                : "none"
+                            }}
+                            onError={(e) => {
+                              e.target.src = `https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
+                            }}
+                            loading="lazy"
+                          />
+                          
+                          {/* Creative Particles */}
+                          {isActive && (
+                            <>
+                              <div style={{
+                                position: "absolute",
+                                top: "20%",
+                                left: "10%",
+                                width: transitionType === 'glitch' ? "6px" : "4px",
+                                height: transitionType === 'glitch' ? "6px" : "4px",
+                                background: transitionType === 'glitch' ? "#ff6b6b" : 
+                                          transitionType === 'wave' ? "#4ecdc4" : 
+                                          transitionType === 'morphing' ? "#feca57" : "white",
+                                borderRadius: transitionType === 'morphing' ? "0%" : "50%",
+                                animation: transitionType === 'glitch' 
+                                  ? "glitchEffect 0.5s ease-in-out infinite"
+                                  : "particleFloat 3s ease-in-out infinite",
+                                zIndex: 4,
+                                boxShadow: transitionType === 'glitch' 
+                                  ? "0 0 10px rgba(255, 107, 107, 0.8)" : "none"
+                              }} />
+                              <div style={{
+                                position: "absolute",
+                                top: "60%",
+                                right: "15%",
+                                width: transitionType === 'wave' ? "8px" : "6px",
+                                height: transitionType === 'wave' ? "8px" : "6px",
+                                background: transitionType === 'wave' ? "#45b7d1" : 
+                                          transitionType === 'morphing' ? "#96ceb4" : "#667eea",
+                                borderRadius: transitionType === 'morphing' ? "0%" : "50%",
+                                animation: transitionType === 'wave' 
+                                  ? "waveEffect 2s ease-in-out infinite"
+                                  : "particleFloat 3s ease-in-out infinite 1s",
+                                zIndex: 4,
+                                boxShadow: transitionType === 'wave' 
+                                  ? "0 0 15px rgba(69, 183, 209, 0.6)" : "none"
+                              }} />
+                              <div style={{
+                                position: "absolute",
+                                bottom: "30%",
+                                left: "20%",
+                                width: transitionType === 'morphing' ? "5px" : "3px",
+                                height: transitionType === 'morphing' ? "5px" : "3px",
+                                background: transitionType === 'morphing' ? "#f093fb" : 
+                                          transitionType === 'glitch' ? "#764ba2" : "#f093fb",
+                                borderRadius: transitionType === 'morphing' ? "0%" : "50%",
+                                animation: transitionType === 'morphing' 
+                                  ? "morphingShape 2s ease-in-out infinite"
+                                  : "particleFloat 3s ease-in-out infinite 2s",
+                                zIndex: 4,
+                                boxShadow: transitionType === 'morphing' 
+                                  ? "0 0 12px rgba(240, 147, 251, 0.7)" : "none"
+                              }} />
+                              {/* Additional particles for glitch effect */}
+                              {transitionType === 'glitch' && (
+                                <>
+                                  <div style={{
+                                    position: "absolute",
+                                    top: "40%",
+                                    left: "50%",
+                                    width: "2px",
+                                    height: "2px",
+                                    background: "#f5576c",
+                                    borderRadius: "50%",
+                                    animation: "glitchEffect 0.3s ease-in-out infinite 0.1s",
+                                    zIndex: 4
+                                  }} />
+                                  <div style={{
+                                    position: "absolute",
+                                    top: "70%",
+                                    right: "30%",
+                                    width: "3px",
+                                    height: "3px",
+                                    background: "#4ecdc4",
+                                    borderRadius: "50%",
+                                    animation: "glitchEffect 0.3s ease-in-out infinite 0.2s",
+                                    zIndex: 4
+                                  }} />
+                                </>
+                              )}
+                            </>
+                          )}
+                        </div>
+                      );
+                    })}
                     
                     {/* Image Overlay */}
                     <div style={{
@@ -336,6 +533,32 @@ const About = () => {
                       {isPlaying ? <Pause size={20} color="white" /> : <Play size={20} color="white" />}
                     </button>
                     
+                    {/* Transition Type Indicator */}
+                    <div style={{
+                      position: "absolute",
+                      top: "20px",
+                      left: "20px",
+                      background: "rgba(0, 0, 0, 0.7)",
+                      padding: "8px 12px",
+                      borderRadius: "20px",
+                      backdropFilter: "blur(10px)",
+                      zIndex: 4,
+                      transition: "all 0.3s ease"
+                    }}>
+                      <span style={{
+                        color: "white",
+                        fontSize: "0.8rem",
+                        fontWeight: "600",
+                        textTransform: "uppercase",
+                        letterSpacing: "1px"
+                      }}>
+                        {transitionType === 'creative' ? '✨ Creative' :
+                         transitionType === 'morphing' ? '🔄 Morphing' :
+                         transitionType === 'glitch' ? '⚡ Glitch' :
+                         transitionType === 'wave' ? '🌊 Wave' : '✨ Creative'}
+                      </span>
+                    </div>
+                    
                     {/* Dots Indicator */}
                     <div style={{
                       position: "absolute",
@@ -349,23 +572,39 @@ const About = () => {
                       {aboutImages.map((_, index) => (
                         <button
                           key={index}
-                          onClick={() => setCurrentImageIndex(index)}
+                          onClick={() => goToImage(index)}
                           style={{
-                            width: "10px",
-                            height: "10px",
+                            width: "12px",
+                            height: "12px",
                             borderRadius: "50%",
                             border: "none",
-                            background: index === currentImageIndex ? "white" : "rgba(255, 255, 255, 0.5)",
-                            cursor: "pointer",
-                            transition: "all 0.3s ease"
+                            background: index === currentImageIndex 
+                              ? "linear-gradient(45deg, #667eea, #764ba2)" 
+                              : "rgba(255, 255, 255, 0.3)",
+                            cursor: isTransitioning ? "not-allowed" : "pointer",
+                            transition: "all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                            transform: index === currentImageIndex ? "scale(1.3)" : "scale(1)",
+                            boxShadow: index === currentImageIndex 
+                              ? "0 0 20px rgba(102, 126, 234, 0.6)" 
+                              : "none"
                           }}
                           onMouseEnter={(e) => {
-                            e.target.style.background = "white";
-                            e.target.style.transform = "scale(1.2)";
+                            if (!isTransitioning) {
+                              e.target.style.background = "linear-gradient(45deg, #667eea, #764ba2)";
+                              e.target.style.transform = "scale(1.4)";
+                              e.target.style.boxShadow = "0 0 25px rgba(102, 126, 234, 0.8)";
+                            }
                           }}
                           onMouseLeave={(e) => {
-                            e.target.style.background = index === currentImageIndex ? "white" : "rgba(255, 255, 255, 0.5)";
-                            e.target.style.transform = "scale(1)";
+                            if (!isTransitioning) {
+                              e.target.style.background = index === currentImageIndex 
+                                ? "linear-gradient(45deg, #667eea, #764ba2)" 
+                                : "rgba(255, 255, 255, 0.3)";
+                              e.target.style.transform = index === currentImageIndex ? "scale(1.3)" : "scale(1)";
+                              e.target.style.boxShadow = index === currentImageIndex 
+                                ? "0 0 20px rgba(102, 126, 234, 0.6)" 
+                                : "none";
+                            }
                           }}
                         />
                       ))}
