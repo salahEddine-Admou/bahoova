@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { mockData } from "../mock";
 
 const Footer = () => {
@@ -11,13 +11,50 @@ const Footer = () => {
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
     setIsSubscribing(true);
+    setSubscribeMessage('');
     
-    // Simulate newsletter signup
-    setTimeout(() => {
-      setSubscribeMessage('Merci pour votre inscription à notre newsletter !');
+    // Basic validation
+    if (!email) {
+      setSubscribeMessage('Veuillez entrer votre adresse email.');
       setIsSubscribing(false);
+      return;
+    }
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setSubscribeMessage('Veuillez entrer une adresse email valide.');
+      setIsSubscribing(false);
+      return;
+    }
+    
+    try {
+      // Create mailto link for newsletter subscription
+      const subject = encodeURIComponent('Inscription à la newsletter BAHOOVA Events');
+      const body = encodeURIComponent(`
+Bonjour,
+
+Je souhaite m'inscrire à votre newsletter pour recevoir des informations sur vos événements et services.
+
+Email: ${email}
+
+Cordialement
+      `);
+      
+      const mailtoLink = `mailto:${mockData.company.contact.email}?subject=${subject}&body=${body}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+      
+      // Show success message
+      setSubscribeMessage('Votre demande d\'inscription a été préparée dans votre client email. Merci de l\'envoyer pour finaliser votre inscription.');
       setEmail('');
-    }, 1000);
+      
+    } catch (error) {
+      setSubscribeMessage('Une erreur est survenue. Veuillez nous contacter directement par email.');
+    }
+    
+    setIsSubscribing(false);
   };
 
   return (
@@ -75,12 +112,25 @@ const Footer = () => {
             {subscribeMessage && (
               <div style={{ 
                 padding: "12px", 
-                background: "var(--bg-primary)", 
-                border: "1px solid var(--border-light)",
+                background: subscribeMessage.includes('erreur') ? "#fef2f2" : "#f0f9ff", 
+                border: `1px solid ${subscribeMessage.includes('erreur') ? "#fecaca" : "#bae6fd"}`,
                 marginBottom: "16px",
-                borderRadius: "0px"
+                borderRadius: "6px",
+                display: "flex",
+                alignItems: "center",
+                gap: "8px"
               }}>
-                <p style={{ color: "var(--status-success)", margin: 0, fontSize: "12px" }}>
+                {subscribeMessage.includes('erreur') ? (
+                  <AlertCircle size={16} color="#dc2626" />
+                ) : (
+                  <CheckCircle size={16} color="#059669" />
+                )}
+                <p style={{ 
+                  color: subscribeMessage.includes('erreur') ? "#dc2626" : "#059669", 
+                  margin: 0, 
+                  fontSize: "12px",
+                  fontWeight: "500"
+                }}>
                   {subscribeMessage}
                 </p>
               </div>

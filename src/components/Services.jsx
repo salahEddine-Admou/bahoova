@@ -4,6 +4,7 @@ import { mockData } from "../mock";
 import AnimatedSlider from "./AnimatedSlider";
 import ColorSwitcher from "./ColorSwitcher";
 import AnimatedText from "./AnimatedText";
+import FloatingElements from "./FloatingElements";
 
 const Services = () => {
   const serviceFeatures = [
@@ -31,6 +32,7 @@ const Services = () => {
 
   return (
     <main>
+      <FloatingElements />
       {/* Hero Section */}
       <section className="section-padding">
         <ColorSwitcher>

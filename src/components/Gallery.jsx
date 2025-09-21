@@ -3,6 +3,7 @@ import { X, ArrowLeft, ArrowRight, Sparkles, Zap, Heart, Star } from "lucide-rea
 import { mockData } from "../mock";
 import ColorSwitcher from "./ColorSwitcher";
 import AnimatedText from "./AnimatedText";
+import FloatingElements from "./FloatingElements";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -44,6 +45,7 @@ const Gallery = () => {
 
   return (
     <main>
+      <FloatingElements />
       {/* Hero Section */}
       <section className="section-padding" style={{ position: "relative", overflow: "hidden" }}>
         <ColorSwitcher>

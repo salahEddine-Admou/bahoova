@@ -2,8 +2,8 @@
 export const mockData = {
   company: {
     name: "BAHOOVA Events",
-    tagline: "Gestion d'Événements Scientifiques & Congrès",
-    intro: "Votre partenaire expert en organisation de congrès, forums scientifiques et événements de recherche au Maroc. Nous créons des expériences professionnelles exceptionnelles.",
+    tagline: "Gestion de Tous Événements & Congrès",
+    intro: "Votre partenaire expert en organisation de tous types d'événements, congrès, forums et événements de recherche au Maroc. Nous créons des expériences professionnelles exceptionnelles.",
     vision: "Visiblement, nous avons atteint un sommet où chaque idée s'élève au-delà du simple rêve, où les projets prennent vie sous une lumière nouvelle. À l'image de l'horizon qui s'étire à l'infini, nous façonnons vos événements pour qu'ils deviennent des souvenirs éternels, suspendus dans le temps et marqués par l'émotion.",
     stats: {
       experience: "15 ans d'expérience",
@@ -21,20 +21,20 @@ export const mockData = {
   
   coreValues: [
     {
-      title: "Expertise Scientifique",
-      description: "Spécialisés dans l'organisation de congrès et forums scientifiques"
+      title: "Expertise Polyvalente",
+      description: "Spécialisés dans l'organisation de tous types d'événements et congrès"
     },
     {
       title: "Gestion Complète",
-      description: "De la planification à l'exécution de vos événements de recherche"
+      description: "De la planification à l'exécution de vos événements professionnels"
     },
     {
       title: "Technologies Avancées", 
-      description: "Équipements de pointe pour conférences et présentations scientifiques"
+      description: "Équipements de pointe pour conférences et présentations de qualité"
     },
     {
       title: "Réseau International",
-      description: "Partenaires experts dans le domaine scientifique et académique"
+      description: "Partenaires experts dans tous les domaines d'événements"
     }
   ],
 
@@ -259,6 +259,24 @@ export const mockData = {
       role: "Président de Congrès",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
       text: "Notre congrès médical international a été un succès total grâce à l'expertise de BAHOOVA Events. Nous les recommandons vivement pour tous événements scientifiques."
+    },
+    {
+      name: "Dr. Fatima Al-Zahra",
+      role: "Directrice Médicale",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      text: "L'équipe de BAHOOVA Events a transformé notre symposium médical en un événement mémorable. Leur attention aux détails est impressionnante."
+    },
+    {
+      name: "Prof. James Wilson",
+      role: "Chercheur Principal",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      text: "Grâce à BAHOOVA Events, notre conférence de physique quantique a attiré des experts du monde entier. Une organisation professionnelle exemplaire."
+    },
+    {
+      name: "Dr. Aisha Patel",
+      role: "Coordinatrice de Recherche",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+      text: "BAHOOVA Events a su créer une atmosphère parfaite pour notre colloque de chimie organique. Leur créativité et leur professionnalisme sont remarquables."
     }
   ]
 };

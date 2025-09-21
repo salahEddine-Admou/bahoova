@@ -1227,6 +1227,39 @@ body {
   transform: rotate(45deg);
 }
 
+/* Enhanced floating element animations for new shapes */
+.floating-element.heart {
+  animation: float 6s ease-in-out infinite, pulse 2s ease-in-out infinite;
+}
+
+.floating-element.star {
+  animation: float 6s ease-in-out infinite, twinkle 3s ease-in-out infinite;
+}
+
+.floating-element.triangle {
+  animation: float 6s ease-in-out infinite, rotate 4s linear infinite;
+}
+
+.floating-element.diamond {
+  animation: float 6s ease-in-out infinite, shimmer 2.5s ease-in-out infinite;
+}
+
+.floating-element.zap {
+  animation: float 6s ease-in-out infinite, electric 1.5s ease-in-out infinite;
+}
+
+.floating-element.sparkles {
+  animation: float 6s ease-in-out infinite, sparkle 2s ease-in-out infinite;
+}
+
+.floating-element.target {
+  animation: float 6s ease-in-out infinite, targetPulse 3s ease-in-out infinite;
+}
+
+.floating-element.award {
+  animation: float 6s ease-in-out infinite, awardGlow 2.5s ease-in-out infinite;
+}
+
 /* Animated Text Styles */
 .animated-text {
   display: inline-block;
@@ -1404,6 +1437,231 @@ body {
   100% {
     transform: translate(0);
     filter: hue-rotate(0deg);
+  }
+}
+
+/* New shape animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.3) rotate(90deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1) rotate(180deg);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.4) rotate(270deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 0.6;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+  100% {
+    opacity: 0.6;
+    filter: brightness(1);
+  }
+}
+
+@keyframes electric {
+  0%, 100% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 5px currentColor);
+  }
+  25% {
+    opacity: 1;
+    filter: drop-shadow(0 0 15px currentColor) drop-shadow(0 0 25px currentColor);
+  }
+  50% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px currentColor);
+  }
+  75% {
+    opacity: 1;
+    filter: drop-shadow(0 0 20px currentColor) drop-shadow(0 0 30px currentColor);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  40% {
+    opacity: 0.8;
+    transform: scale(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  80% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes targetPulse {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes awardGlow {
+  0%, 100% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px currentColor);
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 15px currentColor) drop-shadow(0 0 25px currentColor);
+  }
+}
+
+/* TopBar Styles */
+.topbar-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 8px 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.topbar-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-contact {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.topbar-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.topbar-social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.topbar-contact-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.topbar-contact-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design for TopBar */
+@media (max-width: 768px) {
+  .topbar-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .topbar-social {
+    justify-content: center;
+  }
+  
+  .topbar-contact {
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .topbar-contact-link {
+    font-size: 0.8rem;
+  }
+  
+  .topbar-contact-link span {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar-social {
+    gap: 8px;
+  }
+  
+  .topbar-social-link {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .topbar-contact {
+    gap: 12px;
+  }
+  
+  .topbar-contact-link {
+    padding: 2px 6px;
   }
 }
 

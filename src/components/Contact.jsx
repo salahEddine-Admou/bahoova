@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle, AlertCircle } from "lucide-react";
 import { mockData } from "../mock";
 
 const Contact = () => {
@@ -25,11 +25,44 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage('');
     
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitMessage('Votre message a été envoyé avec succès ! Nous vous contacterons bientôt.');
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      setSubmitMessage('Veuillez remplir tous les champs obligatoires.');
       setIsSubmitting(false);
+      return;
+    }
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setSubmitMessage('Veuillez entrer une adresse email valide.');
+      setIsSubmitting(false);
+      return;
+    }
+    
+    try {
+      // Create mailto link for email client
+      const subject = encodeURIComponent(formData.subject || 'Nouveau message depuis le site web');
+      const body = encodeURIComponent(`
+Nom: ${formData.name}
+Email: ${formData.email}
+Type d'événement: ${formData.eventType || 'Non spécifié'}
+
+Message:
+${formData.message}
+      `);
+      
+      const mailtoLink = `mailto:${mockData.company.contact.email}?subject=${subject}&body=${body}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+      
+      // Show success message
+      setSubmitMessage('Votre message a été préparé dans votre client email. Merci de l\'envoyer pour nous contacter.');
+      
+      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -37,7 +70,12 @@ const Contact = () => {
         eventType: '',
         message: ''
       });
-    }, 1000);
+      
+    } catch (error) {
+      setSubmitMessage('Une erreur est survenue. Veuillez nous contacter directement par email.');
+    }
+    
+    setIsSubmitting(false);
   };
 
   return (
@@ -198,12 +236,24 @@ const Contact = () => {
               {submitMessage && (
                 <div style={{ 
                   padding: "16px", 
-                  background: "var(--bg-secondary)", 
-                  border: "1px solid var(--border-light)",
+                  background: submitMessage.includes('erreur') ? "#fef2f2" : "#f0f9ff", 
+                  border: `1px solid ${submitMessage.includes('erreur') ? "#fecaca" : "#bae6fd"}`,
                   marginBottom: "24px",
-                  borderRadius: "0px"
+                  borderRadius: "8px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px"
                 }}>
-                  <p className="body-regular" style={{ color: "var(--status-success)", margin: 0 }}>
+                  {submitMessage.includes('erreur') ? (
+                    <AlertCircle size={20} color="#dc2626" />
+                  ) : (
+                    <CheckCircle size={20} color="#059669" />
+                  )}
+                  <p className="body-regular" style={{ 
+                    color: submitMessage.includes('erreur') ? "#dc2626" : "#059669", 
+                    margin: 0,
+                    fontWeight: "500"
+                  }}>
                     {submitMessage}
                   </p>
                 </div>
@@ -314,6 +364,110 @@ const Contact = () => {
                   )}
                 </button>
               </form>
+              
+              {/* Alternative Contact Methods */}
+              <div style={{ 
+                marginTop: "32px", 
+                padding: "24px", 
+                background: "var(--bg-secondary)", 
+                borderRadius: "12px",
+                border: "1px solid var(--border-light)"
+              }}>
+                <h3 className="heading-3" style={{ marginBottom: "16px", textAlign: "center" }}>
+                  Ou contactez-nous directement
+                </h3>
+                <div style={{ 
+                  display: "grid", 
+                  gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", 
+                  gap: "16px" 
+                }}>
+                  <a 
+                    href={`mailto:${mockData.company.contact.email}`}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: "8px",
+                      padding: "12px 16px",
+                      background: "var(--interactive-base)",
+                      color: "white",
+                      textDecoration: "none",
+                      borderRadius: "8px",
+                      transition: "all 0.3s ease",
+                      fontWeight: "500"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.background = "var(--interactive-hover)";
+                      e.target.style.transform = "translateY(-2px)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.background = "var(--interactive-base)";
+                      e.target.style.transform = "translateY(0)";
+                    }}
+                  >
+                    <Mail size={16} />
+                    Email
+                  </a>
+                  
+                  <a 
+                    href={mockData.company.contact.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: "8px",
+                      padding: "12px 16px",
+                      background: "#25D366",
+                      color: "white",
+                      textDecoration: "none",
+                      borderRadius: "8px",
+                      transition: "all 0.3s ease",
+                      fontWeight: "500"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.background = "#128C7E";
+                      e.target.style.transform = "translateY(-2px)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.background = "#25D366";
+                      e.target.style.transform = "translateY(0)";
+                    }}
+                  >
+                    <MessageCircle size={16} />
+                    WhatsApp
+                  </a>
+                  
+                  <a 
+                    href={`tel:${mockData.company.contact.phone}`}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: "8px",
+                      padding: "12px 16px",
+                      background: "var(--text-primary)",
+                      color: "white",
+                      textDecoration: "none",
+                      borderRadius: "8px",
+                      transition: "all 0.3s ease",
+                      fontWeight: "500"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.background = "var(--text-secondary)";
+                      e.target.style.transform = "translateY(-2px)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.background = "var(--text-primary)";
+                      e.target.style.transform = "translateY(0)";
+                    }}
+                  >
+                    <Phone size={16} />
+                    Téléphone
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

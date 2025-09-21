@@ -211,48 +211,143 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="section-padding-small">
+      <section className="section-padding-small" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "60px" }}>
-            <h2 className="heading-1">Témoignages clients</h2>
-            <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
+            <h2 className="heading-1" style={{ 
+              background: "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)",
+              backgroundSize: "300% 300%",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              animation: "gradientShift 3s ease-in-out infinite"
+            }}>
+              Témoignages clients
+            </h2>
+            <p className="body-large" style={{ 
+              marginTop: "16px", 
+              color: "var(--text-secondary)",
+              fontSize: "1.2rem",
+              fontWeight: "500"
+            }}>
               Ce que disent nos clients de leur expérience BAHOOVA
             </p>
           </div>
           
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }}>
+          <div style={{ 
+            display: "grid", 
+            gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", 
+            gap: "32px",
+            maxWidth: "1200px",
+            margin: "0 auto"
+          }}>
             {mockData.testimonials.map((testimonial, index) => (
-              <div key={index} style={{ 
-                padding: "32px 24px", 
-                background: "var(--bg-secondary)", 
-                border: "1px solid var(--border-light)",
-                textAlign: "center"
-              }}>
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name}
-                  style={{ 
-                    width: "80px", 
-                    height: "80px", 
-                    borderRadius: "50%", 
-                    objectFit: "cover",
-                    marginBottom: "20px",
-                    border: "3px solid var(--bg-primary)"
-                  }}
-                />
+              <div 
+                key={index} 
+                className="fade-in"
+                style={{ 
+                  padding: "40px 32px", 
+                  background: "white", 
+                  border: "1px solid var(--border-light)",
+                  borderRadius: "16px",
+                  textAlign: "center",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+                  transition: "all 0.3s ease",
+                  position: "relative",
+                  overflow: "hidden",
+                  animation: `fadeInUp 0.8s ease-out ${index * 0.2}s both`
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.transform = "translateY(-10px)";
+                  e.target.style.boxShadow = "0 20px 40px rgba(0,0,0,0.15)";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.transform = "translateY(0)";
+                  e.target.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
+                }}
+              >
+                {/* Quote Icon */}
+                <div style={{
+                  position: "absolute",
+                  top: "20px",
+                  right: "20px",
+                  fontSize: "2rem",
+                  color: "var(--interactive-base)",
+                  opacity: 0.3
+                }}>
+                  "
+                </div>
+                
+                {/* Profile Image */}
+                <div style={{ position: "relative", marginBottom: "24px" }}>
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name}
+                    style={{ 
+                      width: "100px", 
+                      height: "100px", 
+                      borderRadius: "50%", 
+                      objectFit: "cover",
+                      border: "4px solid var(--interactive-base)",
+                      boxShadow: "0 8px 25px rgba(102, 126, 234, 0.3)"
+                    }}
+                    onError={(e) => {
+                      e.target.src = `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&t=${Date.now()}`;
+                    }}
+                    loading="lazy"
+                  />
+                  {/* Decorative Ring */}
+                  <div style={{
+                    position: "absolute",
+                    top: "-8px",
+                    left: "-8px",
+                    right: "-8px",
+                    bottom: "-8px",
+                    border: "2px solid var(--interactive-base)",
+                    borderRadius: "50%",
+                    opacity: 0.3,
+                    animation: "rotate 10s linear infinite"
+                  }} />
+                </div>
+                
+                {/* Testimonial Text */}
                 <p className="body-regular" style={{ 
                   color: "var(--text-primary)", 
-                  marginBottom: "20px",
-                  fontStyle: "italic"
+                  marginBottom: "24px",
+                  fontStyle: "italic",
+                  fontSize: "1.1rem",
+                  lineHeight: "1.6"
                 }}>
                   "{testimonial.text}"
                 </p>
-                <h4 className="heading-3" style={{ marginBottom: "4px" }}>
-                  {testimonial.name}
-                </h4>
-                <p className="body-small" style={{ color: "var(--text-secondary)" }}>
-                  {testimonial.role}
-                </p>
+                
+                {/* Author Info */}
+                <div>
+                  <h4 className="heading-3" style={{ 
+                    marginBottom: "4px",
+                    color: "var(--text-primary)",
+                    fontWeight: "700"
+                  }}>
+                    {testimonial.name}
+                  </h4>
+                  <p className="body-small" style={{ 
+                    color: "var(--interactive-base)",
+                    fontWeight: "500"
+                  }}>
+                    {testimonial.role}
+                  </p>
+                </div>
+                
+                {/* Decorative Bottom Border */}
+                <div style={{
+                  position: "absolute",
+                  bottom: "0",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  width: "60px",
+                  height: "4px",
+                  background: "linear-gradient(45deg, #667eea, #764ba2)",
+                  borderRadius: "2px"
+                }} />
               </div>
             ))}
           </div>

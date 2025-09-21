@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Award, Users, Clock, Heart, Sparkles, Zap, Star, Target, Rocket, Shield, ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
+import { Award, Users, Clock, Heart, Sparkles, Zap, Star, Target, Rocket, Shield, ChevronLeft, ChevronRight, Play, Pause, Calendar, Settings, Palette, Handshake } from "lucide-react";
 import { mockData } from "../mock";
 import ColorSwitcher from "./ColorSwitcher";
 import AnimatedText from "./AnimatedText";
+import FloatingElements from "./FloatingElements";
 
 const About = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -91,6 +92,7 @@ const About = () => {
 
   return (
     <main>
+      <FloatingElements />
       {/* Hero Section */}
       <section className="section-padding" style={{ position: "relative", overflow: "hidden" }}>
         <ColorSwitcher>
@@ -798,31 +800,37 @@ const About = () => {
       <section className="section-padding-small" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "60px" }}>
-            <h2 className="heading-1">Notre équipe passionnée</h2>
+            <h2 className="heading-1">Notre équipe événementielle</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Des professionnels dévoués à l'excellence de vos événements
+              Des experts en gestion d'événements dédiés à votre succès
             </p>
           </div>
           
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }}>
             {[
               {
-                image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
-                title: "Équipe Scientifique",
-                description: "Experts en congrès et forums de recherche",
+                image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center",
+                title: "Équipe de Planification",
+                description: "Coordination et organisation complète de vos événements",
                 color: "#667eea"
               },
               {
-                image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
-                title: "Équipe Médicale",
-                description: "Spécialistes en événements médicaux",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center",
+                title: "Équipe Logistique",
+                description: "Gestion technique, sonorisation et éclairage professionnel",
                 color: "#764ba2"
               },
               {
-                image: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center",
-                title: "Équipe Technique",
-                description: "Techniciens et spécialistes logistiques",
+                image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
+                title: "Équipe Créative",
+                description: "Design, décoration et mise en scène de vos événements",
                 color: "#f093fb"
+              },
+              {
+                image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
+                title: "Équipe Commerciale",
+                description: "Relation client et développement de nouveaux projets",
+                color: "#10ac84"
               }
             ].map((team, index) => (
               <div 
@@ -887,7 +895,10 @@ const About = () => {
                     animation: "bounce 2s ease-in-out infinite",
                     zIndex: 2
                   }}>
-                    <Shield size={24} color="white" />
+                    {index === 0 ? <Calendar size={24} color="white" /> : 
+                     index === 1 ? <Settings size={24} color="white" /> : 
+                     index === 2 ? <Palette size={24} color="white" /> :
+                     <Handshake size={24} color="white" />}
                   </div>
                   <div style={{ 
                     position: "absolute", 
@@ -896,7 +907,10 @@ const About = () => {
                     animation: "bounce 2s ease-in-out infinite 1s",
                     zIndex: 2
                   }}>
-                    <Target size={20} color="white" />
+                    {index === 0 ? <Users size={20} color="white" /> : 
+                     index === 1 ? <Zap size={20} color="white" /> : 
+                     index === 2 ? <Heart size={20} color="white" /> :
+                     <Award size={20} color="white" />}
                   </div>
             </div>
             
