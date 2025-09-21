@@ -49,7 +49,7 @@ export const mockData = {
     {
       title: "Forums de Recherche",
       description: "Forums académiques, colloques scientifiques et événements de networking professionnel",
-      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
       category: "Scientifique",
       priority: 2
     },
@@ -63,7 +63,7 @@ export const mockData = {
     {
       title: "Conférences Médicales",
       description: "Événements médicaux, symposiums pharmaceutiques et conférences de santé",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center",
       category: "Médical",
       priority: 4
     },
@@ -85,66 +85,150 @@ export const mockData = {
 
   venues: [
     {
-      name: "The Pergola",
-      address: "Santa Lucia cor. Morallas Sts., Intramuros, Manila",
-      image: "https://bahoova.com/wp-content/uploads/2022/08/venues-1.jpeg",
-      description: "Un lieu historique élégant pour vos événements prestigieux"
+      name: "Centre de Congrès International",
+      address: "Avenue Mohammed V, Rabat, Maroc",
+      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
+      description: "Un lieu prestigieux pour vos congrès et conférences scientifiques"
     },
     {
-      name: "Jade Pavilion", 
-      address: "100 Park Avenue, McKinley Hill Village",
-      image: "https://bahoova.com/wp-content/uploads/2022/08/venues-2.jpeg",
-      description: "Pavillon moderne avec vue panoramique"
+      name: "Palais des Congrès", 
+      address: "Boulevard Zerktouni, Casablanca, Maroc",
+      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
+      description: "Pavillon moderne avec technologies de pointe"
     },
     {
-      name: "North Forbes Pavilion",
-      address: "Forbes Park, Makati City", 
-      image: "https://bahoova.com/wp-content/uploads/2022/08/venues-3.jpeg",
-      description: "Espace exclusif au cœur de Makati"
+      name: "Complexe Universitaire",
+      address: "Campus Universitaire, Fès, Maroc", 
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
+      description: "Espace académique pour forums et colloques scientifiques"
     },
     {
-      name: "Decagon Silver City",
-      address: "Frontera Verde Drive cor. Julia Vargas",
-      image: "https://bahoova.com/wp-content/uploads/2022/08/venues-4.jpeg",
-      description: "Architecture contemporaine pour événements modernes"
+      name: "Centre de Recherche",
+      address: "Technopolis, Marrakech, Maroc",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center",
+      description: "Centre de conférences ultramoderne pour la recherche"
     }
   ],
 
   gallery: [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
-      title: "Sonorisation Professionnelle",
-      category: "Technique"
+      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
+      title: "Congrès International de Neurosciences",
+      category: "Scientifique"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
-      title: "Conférence avec Éclairage LED",
+      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
+      title: "Forum de Recherche en Biotechnologie",
       category: "Scientifique"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
+      title: "Colloque de Physique Quantique",
+      category: "Scientifique"
+    },
+    {
+      id: 4,
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center",
+      title: "Conférence Médicale Internationale",
+      category: "Médical"
+    },
+    {
+      id: 5,
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
+      title: "Symposium de Chimie Organique",
+      category: "Scientifique"
+    },
+    {
+      id: 6,
+      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center",
+      title: "Congrès d'Intelligence Artificielle",
+      category: "Technique"
+    },
+    {
+      id: 7,
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center",
       title: "Événement Sportif avec Live Stream",
       category: "Sportif"
     },
     {
-      id: 4,
+      id: 8,
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&crop=center",
+      title: "Tournoi de Football Professionnel",
+      category: "Sportif"
+    },
+    {
+      id: 9,
+      image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=600&fit=crop&crop=center",
+      title: "Compétition de Natation",
+      category: "Sportif"
+    },
+    {
+      id: 10,
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&crop=center",
+      title: "Marathon International",
+      category: "Sportif"
+    },
+    {
+      id: 11,
+      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center",
+      title: "Gala d'Entreprise Annuel",
+      category: "Corporate"
+    },
+    {
+      id: 12,
+      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
+      title: "Séminaire de Formation",
+      category: "Corporate"
+    },
+    {
+      id: 13,
+      image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop&crop=center",
+      title: "Lancement de Produit",
+      category: "Corporate"
+    },
+    {
+      id: 14,
+      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
+      title: "Conférence de Presse",
+      category: "Corporate"
+    },
+    {
+      id: 15,
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
+      title: "Équipement Sonorisation Pro",
+      category: "Technique"
+    },
+    {
+      id: 16,
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center",
+      title: "Éclairage LED Professionnel",
+      category: "Technique"
+    },
+    {
+      id: 17,
       image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
       title: "Écran LED Géant",
       category: "Technique"
     },
     {
-      id: 5,
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center",
-      title: "Team Building d'Entreprise",
-      category: "Corporate"
+      id: 18,
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center",
+      title: "Système de Traduction Simultanée",
+      category: "Technique"
     },
     {
-      id: 6,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center",
-      title: "Light Show Professionnel",
+      id: 19,
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
+      title: "Webinaire International",
+      category: "Technique"
+    },
+    {
+      id: 20,
+      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
+      title: "Live Stream Professionnel",
       category: "Technique"
     }
   ],

@@ -30,6 +30,10 @@ const Venues = () => {
                   src={venue.image} 
                   alt={venue.name}
                   className="venue-card-image"
+                  onError={(e) => {
+                    e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
+                  }}
+                  loading="lazy"
                 />
                 <div style={{ padding: "24px" }}>
                   <h3 className="venue-card-title" style={{ padding: 0, marginBottom: "8px" }}>

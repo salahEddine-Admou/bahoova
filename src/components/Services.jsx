@@ -35,20 +35,34 @@ const Services = () => {
       <section className="section-padding">
         <ColorSwitcher>
           <div className="container">
-            <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto" }}>
+            <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto", padding: "40px 20px" }}>
               <AnimatedText 
                 text="Planification d'événements"
                 type="gradient"
                 className="hero-large"
-                style={{ marginBottom: "24px" }}
+                style={{ 
+                  marginBottom: "32px",
+                  display: "block",
+                  fontSize: "3rem",
+                  fontWeight: "700"
+                }}
               />
-              <AnimatedText 
-                text="De la conception créative à l'exécution parfaite, nous transformons vos idées en événements mémorables. Notre expertise couvre tous les types d'événements, du mariage intime au gala corporatif."
-                type="fadeIn"
-                speed={30}
-                className="body-large"
-                style={{ color: "var(--text-secondary)", marginBottom: "32px" }}
-              />
+              <div 
+                className="fade-in"
+                style={{ 
+                  color: "#4a90e2", 
+                  fontSize: "1.25rem",
+                  lineHeight: "1.6",
+                  marginBottom: "32px",
+                  padding: "20px",
+                  backgroundColor: "rgba(74, 144, 226, 0.1)",
+                  borderRadius: "12px",
+                  border: "2px solid rgba(74, 144, 226, 0.2)",
+                  animation: "fadeIn 1s ease-in-out 0.5s both"
+                }}
+              >
+                De la conception créative à l'exécution parfaite, nous transformons vos idées en événements mémorables. Notre expertise couvre tous les types d'événements, du mariage intime au gala corporatif.
+              </div>
             </div>
           </div>
         </ColorSwitcher>
@@ -98,6 +112,10 @@ const Services = () => {
                   src={service.image} 
                   alt={service.title}
                   className="service-card-image"
+                  onError={(e) => {
+                    e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
+                  }}
+                  loading="lazy"
                 />
                 <div style={{ padding: "24px" }}>
                   <h3 className="service-card-title" style={{ padding: 0, marginBottom: "12px" }}>

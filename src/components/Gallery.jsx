@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import { X, ArrowLeft, ArrowRight } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { X, ArrowLeft, ArrowRight, Sparkles, Zap, Heart, Star } from "lucide-react";
 import { mockData } from "../mock";
+import ColorSwitcher from "./ColorSwitcher";
+import AnimatedText from "./AnimatedText";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [hoveredImage, setHoveredImage] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const openLightbox = (image, index) => {
     setSelectedImage(image);
@@ -27,51 +31,143 @@ const Gallery = () => {
     setCurrentIndex(prevIndex);
   };
 
-  const categories = ["Tous", "Mariage", "Corporate", "Décoration", "Luxe", "Gastronomie"];
+  const categories = ["Tous", "Scientifique", "Médical", "Sportif", "Corporate", "Technique"];
   const [activeCategory, setActiveCategory] = useState("Tous");
 
   const filteredGallery = activeCategory === "Tous" 
     ? mockData.gallery 
     : mockData.gallery.filter(item => item.category === activeCategory);
 
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <main>
       {/* Hero Section */}
-      <section className="section-padding">
-        <div className="container">
-          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto" }}>
-            <h1 className="hero-large" style={{ marginBottom: "24px" }}>
-              Galerie
-            </h1>
-            <p className="body-large" style={{ color: "var(--text-secondary)", marginBottom: "32px" }}>
-              Découvrez nos plus belles réalisations à travers une sélection d'événements exceptionnels 
-              que nous avons eu le privilège d'organiser pour nos clients.
-            </p>
+      <section className="section-padding" style={{ position: "relative", overflow: "hidden" }}>
+        <ColorSwitcher>
+          <div className="container">
+            <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto", position: "relative", zIndex: 2 }}>
+              <AnimatedText 
+                text="Galerie"
+                type="gradient"
+                className="hero-large"
+                style={{ 
+                  marginBottom: "32px",
+                  fontSize: "4rem",
+                  fontWeight: "700",
+                  background: "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)",
+                  backgroundSize: "300% 300%",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  animation: "gradientShift 3s ease-in-out infinite"
+                }}
+              />
+              <AnimatedText 
+                text="Découvrez nos plus belles réalisations à travers une sélection d'événements exceptionnels que nous avons eu le privilège d'organiser pour nos clients."
+                type="fadeIn"
+                speed={20}
+                className="body-large"
+                style={{ 
+                  color: "var(--text-secondary)", 
+                  marginBottom: "48px",
+                  fontSize: "1.25rem",
+                  lineHeight: "1.6"
+                }}
+              />
+              
+              {/* Floating Icons */}
+              <div style={{ 
+                position: "absolute", 
+                top: "20%", 
+                left: "10%", 
+                animation: "float 3s ease-in-out infinite",
+                zIndex: 1
+              }}>
+                <Sparkles size={24} color="#667eea" />
+              </div>
+              <div style={{ 
+                position: "absolute", 
+                top: "30%", 
+                right: "15%", 
+                animation: "float 3s ease-in-out infinite 1s",
+                zIndex: 1
+              }}>
+                <Zap size={20} color="#764ba2" />
+              </div>
+              <div style={{ 
+                position: "absolute", 
+                bottom: "20%", 
+                left: "20%", 
+                animation: "float 3s ease-in-out infinite 2s",
+                zIndex: 1
+              }}>
+                <Heart size={18} color="#f093fb" />
+              </div>
+              <div style={{ 
+                position: "absolute", 
+                bottom: "30%", 
+                right: "10%", 
+                animation: "float 3s ease-in-out infinite 0.5s",
+                zIndex: 1
+              }}>
+                <Star size={22} color="#f5576c" />
+              </div>
+            </div>
           </div>
-        </div>
+        </ColorSwitcher>
       </section>
 
       {/* Category Filter */}
-      <section style={{ background: "var(--bg-secondary)", padding: "40px 0" }}>
+      <section style={{ background: "var(--bg-secondary)", padding: "40px 0", position: "relative" }}>
         <div className="container">
-          <div style={{ 
-            display: "flex", 
-            justifyContent: "center", 
-            gap: "16px", 
-            flexWrap: "wrap",
-            marginBottom: "20px"
-          }}>
-            {categories.map((category) => (
+          <div 
+            className="fade-in"
+            style={{ 
+              display: "flex", 
+              justifyContent: "center", 
+              gap: "16px", 
+              flexWrap: "wrap",
+              marginBottom: "20px",
+              animation: "slideUp 0.8s ease-out 0.3s both"
+            }}
+          >
+            {categories.map((category, index) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={activeCategory === category ? "btn-primary" : "btn-secondary"}
+                className={`creative-btn ${activeCategory === category ? 'btn-primary' : 'btn-secondary'}`}
                 style={{ 
                   minWidth: "auto",
                   padding: "12px 20px",
-                  height: "auto"
+                  height: "auto",
+                  animation: `slideUp 0.6s ease-out ${0.5 + index * 0.1}s both`,
+                  position: "relative",
+                  overflow: "hidden",
+                  transition: "all 0.3s ease",
+                  color: activeCategory === category ? "white" : "var(--text-primary)"
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.transform = "translateY(-2px) scale(1.05)";
+                  e.target.style.boxShadow = "0 8px 25px rgba(0,0,0,0.15)";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.transform = "translateY(0) scale(1)";
+                  e.target.style.boxShadow = "none";
                 }}
               >
+                {activeCategory === category && (
+                  <Sparkles 
+                    size={16} 
+                    style={{ 
+                      position: "absolute", 
+                      top: "-5px", 
+                      right: "-5px",
+                      animation: "bounce 1s ease-in-out infinite"
+                    }} 
+                  />
+                )}
                 {category}
               </button>
             ))}
@@ -87,22 +183,71 @@ const Gallery = () => {
               {filteredGallery.map((item, index) => (
                 <div 
                   key={item.id} 
-                  className="gallery-item"
+                  className="gallery-item creative-gallery-item"
                   onClick={() => openLightbox(item, index)}
+                  style={{
+                    animation: `slideInUp 0.8s ease-out ${index * 0.1}s both`,
+                    transform: hoveredImage === item.id ? "translateY(-8px) scale(1.02)" : "translateY(0) scale(1)",
+                    transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)"
+                  }}
+                  onMouseEnter={() => setHoveredImage(item.id)}
+                  onMouseLeave={() => setHoveredImage(null)}
                 >
                   <img 
                     src={item.image} 
                     alt={item.title}
                     className="gallery-image"
+                    onError={(e) => {
+                      e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
+                    }}
+                    loading="lazy"
+                    style={{
+                      transform: hoveredImage === item.id ? "scale(1.1)" : "scale(1)",
+                      transition: "transform 0.4s ease"
+                    }}
                   />
-                  <div className="gallery-overlay">
-                    <h3 className="heading-3" style={{ color: "white", marginBottom: "8px" }}>
-                      {item.title}
-                    </h3>
-                    <p className="body-small" style={{ color: "rgba(255,255,255,0.8)" }}>
-                      {item.category}
-                    </p>
+                  <div 
+                    className="gallery-overlay"
+                    style={{
+                      opacity: hoveredImage === item.id ? 1 : 0,
+                      transform: hoveredImage === item.id ? "translateY(0)" : "translateY(20px)",
+                      transition: "all 0.3s ease"
+                    }}
+                  >
+                    <div style={{ textAlign: "center" }}>
+                      <h3 className="heading-3" style={{ color: "white", marginBottom: "8px" }}>
+                        {item.title}
+                      </h3>
+                      <p className="body-small" style={{ color: "rgba(255,255,255,0.8)", marginBottom: "12px" }}>
+                        {item.category}
+                      </p>
+                      <div style={{ 
+                        display: "flex", 
+                        justifyContent: "center", 
+                        gap: "8px",
+                        animation: hoveredImage === item.id ? "bounce 0.6s ease-in-out" : "none"
+                      }}>
+                        <Sparkles size={16} color="white" />
+                        <Zap size={16} color="white" />
+                        <Heart size={16} color="white" />
+                      </div>
+                    </div>
                   </div>
+                  
+                  {/* Hover Effect Border */}
+                  <div 
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      border: hoveredImage === item.id ? "3px solid #667eea" : "3px solid transparent",
+                      borderRadius: "12px",
+                      transition: "all 0.3s ease",
+                      pointerEvents: "none"
+                    }}
+                  />
                 </div>
               ))}
             </div>
@@ -129,8 +274,8 @@ const Gallery = () => {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }}>
             <div style={{ textAlign: "center" }}>
               <img 
-                src="https://bahoova.com/wp-content/uploads/2022/08/h2_img2.jpg"
-                alt="Mariage de luxe"
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center"
+                alt="Événement scientifique"
                 style={{ 
                   width: "100%", 
                   height: "250px", 
@@ -138,19 +283,23 @@ const Gallery = () => {
                   marginBottom: "16px",
                   border: "1px solid var(--border-light)"
                 }}
+                onError={(e) => {
+                  e.target.src = `https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
+                }}
+                loading="lazy"
               />
               <h3 className="heading-3" style={{ marginBottom: "8px" }}>
-                Mariage élégant
+                Congrès Scientifique
               </h3>
               <p className="body-small" style={{ color: "var(--text-secondary)" }}>
-                Un mariage de rêve dans un cadre d'exception
+                Organisation complète de congrès internationaux
               </p>
             </div>
             
             <div style={{ textAlign: "center" }}>
               <img 
-                src="https://bahoova.com/wp-content/uploads/2022/08/h2_img4.jpg"
-                alt="Gala corporatif"
+                src="https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center"
+                alt="Congrès scientifique"
                 style={{ 
                   width: "100%", 
                   height: "250px", 
@@ -158,19 +307,23 @@ const Gallery = () => {
                   marginBottom: "16px",
                   border: "1px solid var(--border-light)"
                 }}
+                onError={(e) => {
+                  e.target.src = `https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
+                }}
+                loading="lazy"
               />
               <h3 className="heading-3" style={{ marginBottom: "8px" }}>
-                Gala annuel entreprise
+                Forum de Recherche
               </h3>
               <p className="body-small" style={{ color: "var(--text-secondary)" }}>
-                Soirée de prestige pour 400 invités
+                Colloques et symposiums scientifiques
               </p>
             </div>
             
             <div style={{ textAlign: "center" }}>
               <img 
-                src="https://bahoova.com/wp-content/uploads/2022/08/h2_img5.jpg"
-                alt="Événement culturel"
+                src="https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center"
+                alt="Forum de recherche"
                 style={{ 
                   width: "100%", 
                   height: "250px", 
@@ -178,12 +331,16 @@ const Gallery = () => {
                   marginBottom: "16px",
                   border: "1px solid var(--border-light)"
                 }}
+                onError={(e) => {
+                  e.target.src = `https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
+                }}
+                loading="lazy"
               />
               <h3 className="heading-3" style={{ marginBottom: "8px" }}>
-                Exposition d'art privée
+                Conférence Médicale
               </h3>
               <p className="body-small" style={{ color: "var(--text-secondary)" }}>
-                Vernissage exclusif dans une galerie parisienne
+                Événements médicaux et pharmaceutiques
               </p>
             </div>
           </div>

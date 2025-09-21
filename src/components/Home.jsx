@@ -191,6 +191,10 @@ const Home = () => {
                   src={service.image} 
                   alt={service.title}
                   className="service-card-image"
+                  onError={(e) => {
+                    e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
+                  }}
+                  loading="lazy"
                 />
                 <h3 className="service-card-title">{service.title}</h3>
                 <p className="service-card-description">{service.description}</p>

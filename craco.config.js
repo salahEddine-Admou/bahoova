@@ -7,6 +7,15 @@ const config = {
 };
 
 module.exports = {
+  devServer: {
+    port: 3000,
+    host: 'localhost',
+    hot: true,
+    liveReload: true,
+    client: {
+      webSocketURL: 'ws://localhost:3000/ws',
+    },
+  },
   webpack: {
     alias: {
       '@': path.resolve(__dirname, 'src'),

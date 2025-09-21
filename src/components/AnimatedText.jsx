@@ -5,6 +5,7 @@ const AnimatedText = ({
   type = 'typewriter', 
   speed = 100, 
   className = '',
+  style = {},
   colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57']
 }) => {
   const [displayText, setDisplayText] = useState('');
@@ -46,7 +47,7 @@ const AnimatedText = ({
   };
 
   return (
-    <div className={`animated-text ${getAnimationClass()} ${className}`}>
+    <div className={`animated-text ${getAnimationClass()} ${className}`} style={style}>
       {type === 'gradient' ? (
         <span 
           className="gradient-text"
