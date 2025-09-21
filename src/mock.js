@@ -1,0 +1,180 @@
+// Mock data for BAHOOVA Events website - Updated with original BAHOOVA images
+export const mockData = {
+  company: {
+    name: "BAHOOVA Events",
+    tagline: "Gestion d'Événements Scientifiques & Congrès",
+    intro: "Votre partenaire expert en organisation de congrès, forums scientifiques et événements de recherche au Maroc. Nous créons des expériences professionnelles exceptionnelles.",
+    vision: "Visiblement, nous avons atteint un sommet où chaque idée s'élève au-delà du simple rêve, où les projets prennent vie sous une lumière nouvelle. À l'image de l'horizon qui s'étire à l'infini, nous façonnons vos événements pour qu'ils deviennent des souvenirs éternels, suspendus dans le temps et marqués par l'émotion.",
+    stats: {
+      experience: "15 ans d'expérience",
+      employees: "350 employés à temps plein", 
+      events: "25 événements par an",
+      servings: "720 services/jour"
+    },
+    contact: {
+      phone: "+212 662 017 389",
+      email: "bahoovaevents@gmail.com",
+      address: "123 Avenue Mohammed V, Casablanca, Maroc",
+      whatsapp: "https://wa.me/212662017389?text=Bonjour,%20je%20souhaite%20organiser%20un%20événement%20avec%20BAHOOVA%20Events."
+    }
+  },
+  
+  coreValues: [
+    {
+      title: "Expertise Scientifique",
+      description: "Spécialisés dans l'organisation de congrès et forums scientifiques"
+    },
+    {
+      title: "Gestion Complète",
+      description: "De la planification à l'exécution de vos événements de recherche"
+    },
+    {
+      title: "Technologies Avancées", 
+      description: "Équipements de pointe pour conférences et présentations scientifiques"
+    },
+    {
+      title: "Réseau International",
+      description: "Partenaires experts dans le domaine scientifique et académique"
+    }
+  ],
+
+  services: [
+    {
+      title: "Congrès Scientifiques",
+      description: "Organisation complète de congrès internationaux, symposiums et conférences de recherche",
+      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
+      category: "Scientifique",
+      priority: 1
+    },
+    {
+      title: "Forums de Recherche",
+      description: "Forums académiques, colloques scientifiques et événements de networking professionnel",
+      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
+      category: "Scientifique",
+      priority: 2
+    },
+    {
+      title: "Gestion d'Événements",
+      description: "Organisation complète et créative de tous vos événements avec une approche unique et innovante",
+      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center",
+      category: "Management",
+      priority: 3
+    },
+    {
+      title: "Conférences Médicales",
+      description: "Événements médicaux, symposiums pharmaceutiques et conférences de santé",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop&crop=center",
+      category: "Médical",
+      priority: 4
+    },
+    {
+      title: "Technologies Avancées",
+      description: "Équipements de pointe, sonorisation et éclairage pour présentations scientifiques",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
+      category: "Technique",
+      priority: 5
+    },
+    {
+      title: "Live Stream & Webinaire",
+      description: "Diffusion en direct, webinaires et événements hybrides pour la communauté scientifique",
+      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
+      category: "Technique",
+      priority: 6
+    }
+  ],
+
+  venues: [
+    {
+      name: "The Pergola",
+      address: "Santa Lucia cor. Morallas Sts., Intramuros, Manila",
+      image: "https://bahoova.com/wp-content/uploads/2022/08/venues-1.jpeg",
+      description: "Un lieu historique élégant pour vos événements prestigieux"
+    },
+    {
+      name: "Jade Pavilion", 
+      address: "100 Park Avenue, McKinley Hill Village",
+      image: "https://bahoova.com/wp-content/uploads/2022/08/venues-2.jpeg",
+      description: "Pavillon moderne avec vue panoramique"
+    },
+    {
+      name: "North Forbes Pavilion",
+      address: "Forbes Park, Makati City", 
+      image: "https://bahoova.com/wp-content/uploads/2022/08/venues-3.jpeg",
+      description: "Espace exclusif au cœur de Makati"
+    },
+    {
+      name: "Decagon Silver City",
+      address: "Frontera Verde Drive cor. Julia Vargas",
+      image: "https://bahoova.com/wp-content/uploads/2022/08/venues-4.jpeg",
+      description: "Architecture contemporaine pour événements modernes"
+    }
+  ],
+
+  gallery: [
+    {
+      id: 1,
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
+      title: "Sonorisation Professionnelle",
+      category: "Technique"
+    },
+    {
+      id: 2,
+      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
+      title: "Conférence avec Éclairage LED",
+      category: "Scientifique"
+    },
+    {
+      id: 3,
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&crop=center",
+      title: "Événement Sportif avec Live Stream",
+      category: "Sportif"
+    },
+    {
+      id: 4,
+      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
+      title: "Écran LED Géant",
+      category: "Technique"
+    },
+    {
+      id: 5,
+      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center",
+      title: "Team Building d'Entreprise",
+      category: "Corporate"
+    },
+    {
+      id: 6,
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center",
+      title: "Light Show Professionnel",
+      category: "Technique"
+    }
+  ],
+
+  // Hero images featuring scientific congresses and conferences
+  heroImages: {
+    main: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=800&fit=crop&crop=center",
+    about: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=1200&h=800&fit=crop&crop=center",
+    services: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&h=800&fit=crop&crop=center"
+  },
+
+  // Testimonials from scientific congress clients
+  testimonials: [
+    {
+      name: "Dr. Sarah Chen",
+      role: "Directrice de Recherche",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      text: "BAHOOVA Events a organisé notre congrès international de neurosciences avec une précision remarquable. Une expertise exceptionnelle dans l'organisation scientifique."
+    },
+    {
+      name: "Prof. Marc Dubois",
+      role: "Président de Forum",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      text: "L'organisation de notre forum de recherche en biotechnologie a été parfaite. BAHOOVA Events excelle dans les événements scientifiques."
+    },
+    {
+      name: "Prof. Ahmed Al-Rashid",
+      role: "Président de Congrès",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      text: "Notre congrès médical international a été un succès total grâce à l'expertise de BAHOOVA Events. Nous les recommandons vivement pour tous événements scientifiques."
+    }
+  ]
+};
