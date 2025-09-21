@@ -51,7 +51,13 @@ Cordialement
       const result = await sendNewsletterEmail(emailData);
       
       if (result.success) {
-        setSubscribeMessage(`✅ ${result.message}`);
+        setSubscribeMessage(`✅ ${result.message}
+        
+📧 Votre inscription à la newsletter a été enregistrée !
+• Email : ${email}
+• Heure : ${new Date().toLocaleString('fr-FR')}
+
+${process.env.NODE_ENV === 'development' ? '📝 Mode développement : Inscription simulée.' : '📧 Vous recevrez nos actualités par email !'}`);
         setEmail('');
       } else {
         setSubscribeMessage(`❌ ${result.message}`);

@@ -17,15 +17,17 @@ export const simulateEmail = (emailData) => {
   console.log('Timestamp:', new Date().toLocaleString('fr-FR'));
   console.log('========================');
   
-  // Store in localStorage for testing
-  localStorage.setItem('lastEmailSent', JSON.stringify({
-    ...emailData,
-    timestamp: new Date().toLocaleString('fr-FR')
-  }));
+  // Only store in localStorage for development testing
+  if (process.env.NODE_ENV === 'development') {
+    localStorage.setItem('lastEmailSent', JSON.stringify({
+      ...emailData,
+      timestamp: new Date().toLocaleString('fr-FR')
+    }));
+  }
   
   return Promise.resolve({
     success: true,
-    message: 'Email simulé envoyé avec succès !'
+    message: 'Email simulé envoyé avec succès ! (Mode développement)'
   });
 };
 
@@ -103,15 +105,33 @@ export const sendEmailWithAPI = async (emailData) => {
 
 // Main email sending function
 export const sendEmail = async (emailData, templateType = 'contact') => {
-  // For development, use simulation
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Development mode: Using email simulation');
-    return await simulateEmail(emailData);
+  // Always try to send real email first, fallback to simulation only in development
+  try {
+    console.log('Attempting to send email via EmailJS...');
+    const result = await sendEmailWithEmailJS(emailData, templateType);
+    
+    if (result.success) {
+      console.log('Email sent successfully via EmailJS');
+      return result;
+    } else {
+      throw new Error(result.message);
+    }
+  } catch (error) {
+    console.error('EmailJS failed, falling back to simulation:', error);
+    
+    // Only use simulation in development mode
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Development mode: Using email simulation as fallback');
+      return await simulateEmail(emailData);
+    } else {
+      // In production, return the error
+      return {
+        success: false,
+        message: `Erreur lors de l'envoi de l'email: ${error.message}`,
+        error: error
+      };
+    }
   }
-  
-  // For production, use EmailJS
-  console.log('Production mode: Using EmailJS');
-  return await sendEmailWithEmailJS(emailData, templateType);
 };
 
 // Export configuration for debugging

@@ -391,13 +391,13 @@ ${formData.name}`
         // Show success message
         setSubmitMessage(`✅ ${result.message}
         
-📧 Détails de l'email :
+📧 Votre message a été envoyé avec succès !
 • À : ${mockData.company.contact.email}
 • De : ${formData.email}
 • Sujet : ${template.subject}
 • Heure : ${new Date().toLocaleString('fr-FR')}
 
-${process.env.NODE_ENV === 'development' ? '📝 Mode développement : Email simulé. En production, l\'email sera envoyé via EmailJS.' : '📧 Email envoyé via EmailJS !'}`);
+${process.env.NODE_ENV === 'development' ? '📝 Mode développement : Email simulé pour test.' : '📧 Email envoyé directement à notre équipe ! Nous vous répondrons dans les plus brefs délais.'}`);
         
         // Reset form
         setFormData({
@@ -422,7 +422,7 @@ ${process.env.NODE_ENV === 'development' ? '📝 Mode développement : Email sim
   return (
     <main>
       <FloatingElements />
-      <EmailDebugger />
+      {process.env.NODE_ENV === 'development' && <EmailDebugger />}
       {/* Hero Section */}
       <section className="section-padding" style={{ position: "relative", overflow: "hidden" }}>
         <div className="container">

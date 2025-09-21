@@ -5,6 +5,11 @@ const EmailDebugger = () => {
   const [emails, setEmails] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
 
+  // Only show in development mode
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
+
   useEffect(() => {
     // Load emails from localStorage
     const loadEmails = () => {
