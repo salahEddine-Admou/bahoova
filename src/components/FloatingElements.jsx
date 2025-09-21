@@ -5,6 +5,9 @@ const FloatingElements = () => {
   const [elements, setElements] = useState([]);
 
   useEffect(() => {
+    // Check if we're in browser environment
+    if (typeof window === 'undefined') return;
+
     const shapes = ['circle', 'square', 'heart', 'star', 'triangle', 'diamond', 'zap', 'sparkles', 'target', 'award'];
     const colors = [
       '#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', 
@@ -14,8 +17,8 @@ const FloatingElements = () => {
 
     const createElement = () => ({
       id: Math.random(),
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
+      x: Math.random() * (window.innerWidth || 1200),
+      y: Math.random() * (window.innerHeight || 800),
       size: Math.random() * 25 + 15,
       speed: Math.random() * 3 + 0.5,
       direction: Math.random() * 360,
@@ -38,8 +41,8 @@ const FloatingElements = () => {
           rotation: el.rotation + el.rotationSpeed
         })).map(el => ({
           ...el,
-          x: el.x > window.innerWidth ? 0 : el.x < 0 ? window.innerWidth : el.x,
-          y: el.y > window.innerHeight ? 0 : el.y < 0 ? window.innerHeight : el.y
+          x: el.x > (window.innerWidth || 1200) ? 0 : el.x < 0 ? (window.innerWidth || 1200) : el.x,
+          y: el.y > (window.innerHeight || 800) ? 0 : el.y < 0 ? (window.innerHeight || 800) : el.y
         }))
       );
     }, 50);
@@ -120,7 +123,7 @@ const FloatingElements = () => {
 
   return (
     <div className="floating-elements">
-      {elements.map(element => (
+      {elements && elements.length > 0 && elements.map(element => (
         <div key={element.id}>
           {renderShape(element)}
         </div>

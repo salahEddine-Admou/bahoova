@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const AnimatedText = ({ 
+  children,
   text, 
   type = 'typewriter', 
   speed = 100, 
@@ -12,11 +13,14 @@ const AnimatedText = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
 
+  // Use children as text if text is not provided
+  const textContent = text || children || '';
+
   useEffect(() => {
     if (type === 'typewriter') {
-      if (currentIndex < text.length) {
+      if (currentIndex < textContent.length) {
         const timeout = setTimeout(() => {
-          setDisplayText(prev => prev + text[currentIndex]);
+          setDisplayText(prev => prev + textContent[currentIndex]);
           setCurrentIndex(prev => prev + 1);
         }, speed);
         return () => clearTimeout(timeout);
@@ -24,10 +28,10 @@ const AnimatedText = ({
         setIsComplete(true);
       }
     } else if (type === 'fadeIn') {
-      setDisplayText(text);
+      setDisplayText(textContent);
       setIsComplete(true);
     }
-  }, [currentIndex, text, speed, type]);
+  }, [currentIndex, textContent, speed, type]);
 
   const getAnimationClass = () => {
     switch (type) {
@@ -59,7 +63,7 @@ const AnimatedText = ({
             animation: 'gradientShift 3s ease-in-out infinite'
           }}
         >
-          {text}
+          {textContent}
         </span>
       ) : (
         <span className="text-content">

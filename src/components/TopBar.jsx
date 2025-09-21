@@ -66,11 +66,11 @@ const TopBar = () => {
 
           {/* Email */}
           <a 
-            href="mailto:contact@bahoovaevents.ma" 
+            href="mailto:bahoovaevents@gmail.com" 
             className="topbar-contact-link"
           >
             <Mail size={16} color="#ff6b6b" />
-            <span>contact@bahoovaevents.ma</span>
+            <span>bahoovaevents@gmail.com</span>
           </a>
 
           {/* WhatsApp */}

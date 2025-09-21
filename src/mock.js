@@ -84,29 +84,192 @@ export const mockData = {
   ],
 
   venues: [
+    // Hôtels de Luxe
     {
-      name: "Centre de Congrès International",
-      address: "Avenue Mohammed V, Rabat, Maroc",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
-      description: "Un lieu prestigieux pour vos congrès et conférences scientifiques"
+      name: "Palais Namaskar Marrakech",
+      address: "Route de Bab Atlas, Marrakech, Maroc",
+      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center",
+      description: "Palais de luxe avec jardins exotiques et salles de réception somptueuses",
+      category: "Hôtel de Luxe",
+      capacity: "500 personnes",
+      price: "Prix sur demande"
     },
     {
-      name: "Palais des Congrès", 
-      address: "Boulevard Zerktouni, Casablanca, Maroc",
+      name: "Royal Mansour Marrakech",
+      address: "Rue Abou Abbas El Sebti, Marrakech, Maroc",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
+      description: "Palais royal transformé en hôtel de luxe avec architecture traditionnelle marocaine",
+      category: "Palais de Luxe",
+      capacity: "300 personnes",
+      price: "Prix sur demande"
+    },
+    {
+      name: "Four Seasons Resort Casablanca",
+      address: "Boulevard de la Corniche, Casablanca, Maroc",
+      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop&crop=center",
+      description: "Hôtel 5 étoiles face à l'océan avec salles de conférence modernes",
+      category: "Hôtel 5 Étoiles",
+      capacity: "800 personnes",
+      price: "À partir de 2000€"
+    },
+    {
+      name: "La Mamounia Marrakech",
+      address: "Avenue Bab Jdid, Marrakech, Maroc",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      description: "Hôtel légendaire avec jardins historiques et architecture art déco",
+      category: "Hôtel Historique",
+      capacity: "600 personnes",
+      price: "À partir de 1500€"
+    },
+    {
+      name: "Sofitel Rabat Jardin des Roses",
+      address: "Avenue de France, Rabat, Maroc",
+      image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop&crop=center",
+      description: "Hôtel moderne avec jardins de roses et salles polyvalentes",
+      category: "Hôtel 5 Étoiles",
+      capacity: "400 personnes",
+      price: "À partir de 1200€"
+    },
+    {
+      name: "Mandarin Oriental Marrakech",
+      address: "Route de Fès, Marrakech, Maroc",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      description: "Résort de luxe avec villas privées et espaces événementiels exclusifs",
+      category: "Résort de Luxe",
+      capacity: "300 personnes",
+      price: "Prix sur demande"
+    },
+    
+    // Palais et Monuments Historiques
+    {
+      name: "Palais Bahia",
+      address: "Rue Riad Zitoun el Jdid, Marrakech, Maroc",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      description: "Palais du 19ème siècle avec cours intérieures et jardins andalous",
+      category: "Monument Historique",
+      capacity: "200 personnes",
+      price: "À partir de 800€"
+    },
+    {
+      name: "Palais El Badi",
+      address: "Ksibat Nhass, Marrakech, Maroc",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      description: "Ruines du palais saadien avec cours majestueuses pour événements historiques",
+      category: "Monument Historique",
+      capacity: "500 personnes",
+      price: "À partir de 1000€"
+    },
+    {
+      name: "Villa des Arts Casablanca",
+      address: "30 Boulevard Brahim Roudani, Casablanca, Maroc",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      description: "Villa art déco des années 30 avec jardins et salles d'exposition",
+      category: "Monument Historique",
+      capacity: "150 personnes",
+      price: "À partir de 600€"
+    },
+    {
+      name: "Dar Si Said",
+      address: "Rue Riad Zitoun el Jdid, Marrakech, Maroc",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      description: "Palais du 19ème siècle transformé en musée avec cours intérieures",
+      category: "Monument Historique",
+      capacity: "100 personnes",
+      price: "À partir de 500€"
+    },
+    
+    // Hôtels Modernes
+    {
+      name: "Hyatt Regency Casablanca",
+      address: "Place des Nations Unies, Casablanca, Maroc",
+      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop&crop=center",
+      description: "Hôtel moderne avec centre de conférences et vue sur la ville",
+      category: "Hôtel 5 Étoiles",
+      capacity: "1000 personnes",
+      price: "À partir de 1800€"
+    },
+    {
+      name: "Sofitel Casablanca Tour Blanche",
+      address: "Avenue des FAR, Casablanca, Maroc",
+      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop&crop=center",
+      description: "Hôtel moderne avec salles de conférence et vue panoramique",
+      category: "Hôtel 5 Étoiles",
+      capacity: "600 personnes",
+      price: "À partir de 1400€"
+    },
+    {
+      name: "Riad Fès",
+      address: "Derb Ben Slimane Zerbtana, Fès, Maroc",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      description: "Riad traditionnel restauré avec patio et salles intimes",
+      category: "Riad Traditionnel",
+      capacity: "80 personnes",
+      price: "À partir de 400€"
+    },
+    {
+      name: "Palais Amani Fès",
+      address: "12 Derb el Miter, Fès, Maroc",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      description: "Palais du 17ème siècle avec jardins andalous et salles historiques",
+      category: "Palais Historique",
+      capacity: "120 personnes",
+      price: "À partir de 700€"
+    },
+    
+    // Lieux Uniques
+    {
+      name: "Kasbah des Oudayas",
+      address: "Rabat, Maroc",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      description: "Forteresse historique avec vue sur l'océan et jardins andalous",
+      category: "Monument Historique",
+      capacity: "300 personnes",
+      price: "À partir de 900€"
+    },
+    {
+      name: "Villa Harris Tanger",
+      address: "Avenue Mohammed VI, Tanger, Maroc",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      description: "Villa coloniale avec jardins et vue sur le détroit de Gibraltar",
+      category: "Villa Historique",
+      capacity: "150 personnes",
+      price: "À partir de 600€"
+    },
+    {
+      name: "Palais des Congrès Agadir",
+      address: "Avenue du 20 Août, Agadir, Maroc",
       image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
-      description: "Pavillon moderne avec technologies de pointe"
+      description: "Centre de congrès moderne avec vue sur l'océan Atlantique",
+      category: "Centre de Congrès",
+      capacity: "2000 personnes",
+      price: "À partir de 2500€"
     },
     {
-      name: "Complexe Universitaire",
-      address: "Campus Universitaire, Fès, Maroc", 
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
-      description: "Espace académique pour forums et colloques scientifiques"
+      name: "Riad Al Moussika Marrakech",
+      address: "Derb Assabane, Marrakech, Maroc",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      description: "Riad de luxe avec piscine et jardins exotiques",
+      category: "Riad de Luxe",
+      capacity: "60 personnes",
+      price: "À partir de 800€"
     },
     {
-      name: "Centre de Recherche",
-      address: "Technopolis, Marrakech, Maroc",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center",
-      description: "Centre de conférences ultramoderne pour la recherche"
+      name: "Hôtel Hassan II Rabat",
+      address: "Avenue Mohammed V, Rabat, Maroc",
+      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop&crop=center",
+      description: "Hôtel moderne avec salles de conférence et vue sur la ville",
+      category: "Hôtel 4 Étoiles",
+      capacity: "400 personnes",
+      price: "À partir de 1000€"
+    },
+    {
+      name: "Palais des Roses Marrakech",
+      address: "Route de l'Ourika, Marrakech, Maroc",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      description: "Palais moderne avec jardins de roses et salles de réception",
+      category: "Palais Moderne",
+      capacity: "800 personnes",
+      price: "À partir de 2000€"
     }
   ],
 

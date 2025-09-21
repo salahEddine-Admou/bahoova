@@ -1,6 +1,11 @@
 import React, { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle, AlertCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle, AlertCircle, Sparkles, Zap, Heart, Star, Target, Rocket } from "lucide-react";
 import { mockData } from "../mock";
+import EmailDebugger from "./EmailDebugger";
+import ColorSwitcher from "./ColorSwitcher";
+import AnimatedText from "./AnimatedText";
+import FloatingElements from "./FloatingElements";
+import { sendContactEmail, getEmailJSConfig } from "../emailService";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,6 +25,330 @@ const Contact = () => {
       ...prev,
       [name]: value
     }));
+  };
+
+  // Email templates for different event types
+  const getEmailTemplate = (eventType, formData) => {
+    const templates = {
+      'congres-scientifique': {
+        subject: 'Demande de Devis - Congrès Scientifique',
+        body: `Bonjour l'équipe BAHOOVA Events,
+
+Je souhaite organiser un congrès scientifique et j'aimerais recevoir un devis personnalisé.
+
+INFORMATIONS PERSONNELLES:
+• Nom: ${formData.name}
+• Email: ${formData.email}
+
+DÉTAILS DE L'ÉVÉNEMENT:
+• Type: Congrès Scientifique
+• Sujet: ${formData.subject || 'À préciser'}
+
+MESSAGE:
+${formData.message}
+
+SERVICES SOUHAITÉS:
+• Salle de conférence avec équipements audiovisuels
+• Traduction simultanée (si nécessaire)
+• Restauration et pauses café
+• Accueil et enregistrement des participants
+• Support technique et logistique
+
+Pouvez-vous me contacter pour discuter des détails et me faire parvenir une proposition personnalisée ?
+
+Cordialement,
+${formData.name}`
+      },
+      'forum-recherche': {
+        subject: 'Organisation Forum de Recherche - Devis',
+        body: `Bonjour,
+
+Je vous contacte pour l'organisation d'un forum de recherche.
+
+COORDONNÉES:
+• Nom: ${formData.name}
+• Email: ${formData.email}
+
+ÉVÉNEMENT:
+• Type: Forum de Recherche
+• Sujet: ${formData.subject || 'À définir'}
+
+BESOINS:
+${formData.message}
+
+SERVICES REQUIS:
+• Espace d'exposition pour posters scientifiques
+• Salles de conférence modulaires
+• Équipements de présentation haute définition
+• Networking et sessions parallèles
+• Restauration scientifique
+
+Merci de me faire parvenir votre proposition.
+
+Bien à vous,
+${formData.name}`
+      },
+      'conference-medicale': {
+        subject: 'Conférence Médicale - Demande de Services',
+        body: `Bonjour l'équipe BAHOOVA,
+
+Je souhaite organiser une conférence médicale et j'aurais besoin de vos services.
+
+INFORMATIONS:
+• Nom: ${formData.name}
+• Email: ${formData.email}
+• Sujet: ${formData.subject || 'Conférence Médicale'}
+
+DÉTAILS:
+${formData.message}
+
+SERVICES MÉDICAUX NÉCESSAIRES:
+• Salle de conférence avec écrans multiples
+• Système de traduction médicale
+• Espace d'exposition pharmaceutique
+• Restauration adaptée aux professionnels de santé
+• Accréditation CME (si applicable)
+
+Pouvez-vous me contacter pour un devis détaillé ?
+
+Dr. ${formData.name}`
+      },
+      'seminaire-entreprise': {
+        subject: 'Séminaire d\'Entreprise - Organisation',
+        body: `Bonjour,
+
+Je souhaite organiser un séminaire d'entreprise et j'aimerais vos services.
+
+COORDONNÉES:
+• Nom: ${formData.name}
+• Email: ${formData.email}
+• Sujet: ${formData.subject || 'Séminaire d\'Entreprise'}
+
+DÉTAILS DE L'ÉVÉNEMENT:
+${formData.message}
+
+SERVICES CORPORATIFS:
+• Salle de conférence professionnelle
+• Équipements audiovisuels de pointe
+• Restauration d'entreprise
+• Team building et activités
+• Matériel de présentation
+
+Merci de me faire parvenir votre proposition.
+
+Cordialement,
+${formData.name}`
+      },
+      'lancement-produit': {
+        subject: 'Lancement de Produit - Événement Créatif',
+        body: `Bonjour l'équipe créative de BAHOOVA,
+
+Je souhaite organiser un lancement de produit et j'ai besoin de votre expertise créative.
+
+INFORMATIONS:
+• Nom: ${formData.name}
+• Email: ${formData.email}
+• Sujet: ${formData.subject || 'Lancement de Produit'}
+
+CONCEPT:
+${formData.message}
+
+SERVICES CRÉATIFS:
+• Décoration thématique personnalisée
+• Éclairage scénique et effets visuels
+• Sonorisation professionnelle
+• Animation et mise en scène
+• Photographie et vidéo
+• Restauration créative
+
+Pouvez-vous me proposer un concept unique pour cet événement ?
+
+Merci,
+${formData.name}`
+      },
+      'mariage-luxe': {
+        subject: 'Mariage de Luxe - Organisation Complète',
+        body: `Bonjour,
+
+Je souhaite organiser un mariage de luxe et j'aimerais vos services premium.
+
+COORDONNÉES:
+• Nom: ${formData.name}
+• Email: ${formData.email}
+• Sujet: ${formData.subject || 'Mariage de Luxe'}
+
+VISION DU MARIAGE:
+${formData.message}
+
+SERVICES LUXE:
+• Décoration florale exceptionnelle
+• Éclairage romantique et scénique
+• Sonorisation et DJ professionnel
+• Restauration gastronomique
+• Photographie et vidéo artistique
+• Coordination complète de la journée
+
+Pouvez-vous me proposer un devis pour un mariage inoubliable ?
+
+Avec mes remerciements,
+${formData.name}`
+      },
+      'formation-professionnelle': {
+        subject: 'Formation Professionnelle - Organisation',
+        body: `Bonjour l'équipe BAHOOVA,
+
+Je souhaite organiser une formation professionnelle et j'aurais besoin de vos services.
+
+INFORMATIONS:
+• Nom: ${formData.name}
+• Email: ${formData.email}
+• Sujet: ${formData.subject || 'Formation Professionnelle'}
+
+DÉTAILS DE LA FORMATION:
+${formData.message}
+
+SERVICES FORMATION:
+• Salle de formation équipée
+• Matériel pédagogique et supports
+• Restauration et pauses
+• Certificats de participation
+• Support logistique complet
+
+Merci de me faire parvenir votre proposition.
+
+Cordialement,
+${formData.name}`
+      },
+      'gala-charity': {
+        subject: 'Gala & Événement Caritatif - Organisation',
+        body: `Bonjour,
+
+Je souhaite organiser un gala caritatif et j'aimerais vos services.
+
+COORDONNÉES:
+• Nom: ${formData.name}
+• Email: ${formData.email}
+• Sujet: ${formData.subject || 'Gala Caritatif'}
+
+CONCEPT DE L'ÉVÉNEMENT:
+${formData.message}
+
+SERVICES GALA:
+• Décoration élégante et sophistiquée
+• Éclairage scénique professionnel
+• Sonorisation et animation
+• Restauration gastronomique
+• Photographie et vidéo
+• Coordination complète
+
+Pouvez-vous me proposer un concept unique pour cet événement caritatif ?
+
+Avec mes remerciements,
+${formData.name}`
+      },
+      'evenement-sportif': {
+        subject: 'Événement Sportif - Organisation',
+        body: `Bonjour l'équipe BAHOOVA,
+
+Je souhaite organiser un événement sportif et j'aurais besoin de vos services.
+
+INFORMATIONS:
+• Nom: ${formData.name}
+• Email: ${formData.email}
+• Sujet: ${formData.subject || 'Événement Sportif'}
+
+DÉTAILS DE L'ÉVÉNEMENT:
+${formData.message}
+
+SERVICES SPORTIFS:
+• Équipements sportifs et logistique
+• Sonorisation et annonces
+• Restauration et rafraîchissements
+• Sécurité et organisation
+• Photographie et vidéo sportive
+• Cérémonies et remises de prix
+
+Merci de me faire parvenir votre proposition.
+
+Cordialement,
+${formData.name}`
+      },
+      'festival-culturel': {
+        subject: 'Festival Culturel - Organisation Créative',
+        body: `Bonjour l'équipe créative de BAHOOVA,
+
+Je souhaite organiser un festival culturel et j'ai besoin de votre expertise.
+
+INFORMATIONS:
+• Nom: ${formData.name}
+• Email: ${formData.email}
+• Sujet: ${formData.subject || 'Festival Culturel'}
+
+CONCEPT DU FESTIVAL:
+${formData.message}
+
+SERVICES FESTIVAL:
+• Décoration thématique et artistique
+• Éclairage scénique et effets visuels
+• Sonorisation professionnelle
+• Restauration et stands
+• Animation et spectacles
+• Coordination complète
+
+Pouvez-vous me proposer un concept unique pour ce festival ?
+
+Merci,
+${formData.name}`
+      },
+      'webinaire-live': {
+        subject: 'Webinaire & Live Stream - Services Techniques',
+        body: `Bonjour l'équipe technique de BAHOOVA,
+
+Je souhaite organiser un webinaire en direct et j'aurais besoin de vos services techniques.
+
+INFORMATIONS:
+• Nom: ${formData.name}
+• Email: ${formData.email}
+• Sujet: ${formData.subject || 'Webinaire & Live Stream'}
+
+DÉTAILS TECHNIQUES:
+${formData.message}
+
+SERVICES TECHNIQUES:
+• Équipements de streaming professionnel
+• Sonorisation et micros
+• Éclairage pour vidéo
+• Plateforme de diffusion
+• Support technique en direct
+• Enregistrement et montage
+
+Merci de me faire parvenir votre proposition technique.
+
+Cordialement,
+${formData.name}`
+      },
+      'autre': {
+        subject: 'Demande de Devis - Événement Personnalisé',
+        body: `Bonjour l'équipe BAHOOVA Events,
+
+Je souhaite organiser un événement et j'aimerais recevoir un devis personnalisé.
+
+INFORMATIONS:
+• Nom: ${formData.name}
+• Email: ${formData.email}
+• Sujet: ${formData.subject || 'Événement Personnalisé'}
+
+DÉTAILS DE L'ÉVÉNEMENT:
+${formData.message}
+
+Pouvez-vous me contacter pour discuter de mes besoins spécifiques et me faire parvenir une proposition adaptée ?
+
+Cordialement,
+${formData.name}`
+      }
+    };
+    
+    return templates[eventType] || templates['autre'];
   };
 
   const handleSubmit = async (e) => {
@@ -43,36 +372,48 @@ const Contact = () => {
     }
     
     try {
-      // Create mailto link for email client
-      const subject = encodeURIComponent(formData.subject || 'Nouveau message depuis le site web');
-      const body = encodeURIComponent(`
-Nom: ${formData.name}
-Email: ${formData.email}
-Type d'événement: ${formData.eventType || 'Non spécifié'}
+      // Get personalized email template based on event type
+      const template = getEmailTemplate(formData.eventType, formData);
+      
+      // Prepare email data for the service
+      const emailData = {
+        to: mockData.company.contact.email,
+        from: formData.email,
+        fromName: formData.name,
+        subject: template.subject,
+        body: template.body
+      };
+      
+      // Send email using the contact email service
+      const result = await sendContactEmail(emailData);
+      
+      if (result.success) {
+        // Show success message
+        setSubmitMessage(`✅ ${result.message}
+        
+📧 Détails de l'email :
+• À : ${mockData.company.contact.email}
+• De : ${formData.email}
+• Sujet : ${template.subject}
+• Heure : ${new Date().toLocaleString('fr-FR')}
 
-Message:
-${formData.message}
-      `);
-      
-      const mailtoLink = `mailto:${mockData.company.contact.email}?subject=${subject}&body=${body}`;
-      
-      // Open email client
-      window.location.href = mailtoLink;
-      
-      // Show success message
-      setSubmitMessage('Votre message a été préparé dans votre client email. Merci de l\'envoyer pour nous contacter.');
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        eventType: '',
-        message: ''
-      });
+${process.env.NODE_ENV === 'development' ? '📝 Mode développement : Email simulé. En production, l\'email sera envoyé via EmailJS.' : '📧 Email envoyé via EmailJS !'}`);
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          eventType: '',
+          message: ''
+        });
+      } else {
+        setSubmitMessage(`❌ ${result.message}`);
+      }
       
     } catch (error) {
       setSubmitMessage('Une erreur est survenue. Veuillez nous contacter directement par email.');
+      console.error('Email sending error:', error);
     }
     
     setIsSubmitting(false);
@@ -80,17 +421,103 @@ ${formData.message}
 
   return (
     <main>
+      <FloatingElements />
+      <EmailDebugger />
       {/* Hero Section */}
-      <section className="section-padding">
+      <section className="section-padding" style={{ position: "relative", overflow: "hidden" }}>
         <div className="container">
-          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto" }}>
-            <h1 className="hero-large" style={{ marginBottom: "24px" }}>
-              Contactez-nous
-            </h1>
-            <p className="body-large" style={{ color: "var(--text-secondary)", marginBottom: "32px" }}>
-              Prêt à donner vie à votre événement de rêve ? Notre équipe d'experts est là pour vous accompagner 
-              à chaque étape, de la conception initiale à la réalisation parfaite.
-            </p>
+          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto", position: "relative" }}>
+            {/* Floating Icons */}
+            <div style={{ 
+              position: "absolute", 
+              top: "-20px", 
+              left: "20px", 
+              animation: "bounce 3s ease-in-out infinite",
+              zIndex: 1
+            }}>
+              <Sparkles size={32} color="#667eea" />
+            </div>
+            <div style={{ 
+              position: "absolute", 
+              top: "40px", 
+              right: "30px", 
+              animation: "bounce 3s ease-in-out infinite 1s",
+              zIndex: 1
+            }}>
+              <Zap size={28} color="#764ba2" />
+            </div>
+            <div style={{ 
+              position: "absolute", 
+              bottom: "20px", 
+              left: "40px", 
+              animation: "bounce 3s ease-in-out infinite 2s",
+              zIndex: 1
+            }}>
+              <Heart size={24} color="#f093fb" />
+            </div>
+            <div style={{ 
+              position: "absolute", 
+              bottom: "60px", 
+              right: "20px", 
+              animation: "bounce 3s ease-in-out infinite 0.5s",
+              zIndex: 1
+            }}>
+              <Star size={26} color="#10ac84" />
+            </div>
+            <div style={{ 
+              position: "absolute", 
+              top: "80px", 
+              left: "50%", 
+              transform: "translateX(-50%)",
+              animation: "bounce 3s ease-in-out infinite 1.5s",
+              zIndex: 1
+            }}>
+              <Target size={22} color="#ff6b6b" />
+            </div>
+            <div style={{ 
+              position: "absolute", 
+              top: "120px", 
+              right: "50px", 
+              animation: "bounce 3s ease-in-out infinite 2.5s",
+              zIndex: 1
+            }}>
+              <Rocket size={20} color="#667eea" />
+            </div>
+
+            <ColorSwitcher>
+              <h1 
+                className="hero-large fade-in" 
+                style={{ 
+                  marginBottom: "24px",
+                  background: "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)",
+                  backgroundSize: "300% 300%",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  animation: "gradientShift 3s ease-in-out infinite, fadeIn 1s ease-in-out",
+                  position: "relative",
+                  zIndex: 2
+                }}
+              >
+                Contactez-nous
+              </h1>
+              <AnimatedText 
+                className="body-large" 
+                style={{ 
+                  color: "var(--text-secondary)",
+                  fontSize: "1.2rem",
+                  lineHeight: "1.6",
+                  marginBottom: "32px",
+                  animation: "fadeIn 1s ease-in-out 0.5s both",
+                  position: "relative",
+                  zIndex: 2
+                }}
+                animation="typewriter"
+                delay={1000}
+              >
+                Prêt à donner vie à votre événement de rêve ? Notre équipe d'experts est là pour vous accompagner 
+                à chaque étape, de la conception initiale à la réalisation parfaite.
+              </AnimatedText>
+            </ColorSwitcher>
           </div>
         </div>
       </section>
@@ -106,19 +533,38 @@ ${formData.message}
               </h2>
               
               <div style={{ display: "flex", flexDirection: "column", gap: "24px", marginBottom: "40px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                <div 
+                  className="fade-in"
+                  style={{ 
+                    display: "flex", 
+                    alignItems: "center", 
+                    gap: "16px",
+                    animation: "slideInUp 0.8s ease-out 0.2s both",
+                    transition: "all 0.3s ease"
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateX(10px)";
+                    e.currentTarget.style.boxShadow = "0 10px 30px rgba(102, 126, 234, 0.2)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateX(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
                   <div style={{ 
                     width: "48px", 
                     height: "48px", 
-                    background: "var(--bg-primary)",
+                    background: "linear-gradient(135deg, #667eea, #764ba2)",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    border: "1px solid var(--border-light)",
-                    flexShrink: 0
+                    border: "2px solid rgba(102, 126, 234, 0.3)",
+                    flexShrink: 0,
+                    animation: "pulse 2s ease-in-out infinite",
+                    boxShadow: "0 4px 15px rgba(102, 126, 234, 0.3)"
                   }}>
-                    <Phone size={20} color="var(--text-primary)" />
+                    <Phone size={20} color="white" />
                   </div>
                   <div>
                     <h3 className="heading-3" style={{ marginBottom: "4px" }}>
@@ -130,19 +576,38 @@ ${formData.message}
                   </div>
                 </div>
                 
-                <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                <div 
+                  className="fade-in"
+                  style={{ 
+                    display: "flex", 
+                    alignItems: "center", 
+                    gap: "16px",
+                    animation: "slideInUp 0.8s ease-out 0.4s both",
+                    transition: "all 0.3s ease"
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateX(10px)";
+                    e.currentTarget.style.boxShadow = "0 10px 30px rgba(118, 75, 162, 0.2)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateX(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
                   <div style={{ 
                     width: "48px", 
                     height: "48px", 
-                    background: "var(--bg-primary)",
+                    background: "linear-gradient(135deg, #764ba2, #f093fb)",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    border: "1px solid var(--border-light)",
-                    flexShrink: 0
+                    border: "2px solid rgba(118, 75, 162, 0.3)",
+                    flexShrink: 0,
+                    animation: "pulse 2s ease-in-out infinite 0.5s",
+                    boxShadow: "0 4px 15px rgba(118, 75, 162, 0.3)"
                   }}>
-                    <Mail size={20} color="var(--text-primary)" />
+                    <Mail size={20} color="white" />
                   </div>
                   <div>
                     <h3 className="heading-3" style={{ marginBottom: "4px" }}>
@@ -154,19 +619,38 @@ ${formData.message}
                   </div>
                 </div>
                 
-                <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                <div 
+                  className="fade-in"
+                  style={{ 
+                    display: "flex", 
+                    alignItems: "center", 
+                    gap: "16px",
+                    animation: "slideInUp 0.8s ease-out 0.6s both",
+                    transition: "all 0.3s ease"
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateX(10px)";
+                    e.currentTarget.style.boxShadow = "0 10px 30px rgba(240, 147, 251, 0.2)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateX(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
                   <div style={{ 
                     width: "48px", 
                     height: "48px", 
-                    background: "var(--bg-primary)",
+                    background: "linear-gradient(135deg, #f093fb, #f5576c)",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    border: "1px solid var(--border-light)",
-                    flexShrink: 0
+                    border: "2px solid rgba(240, 147, 251, 0.3)",
+                    flexShrink: 0,
+                    animation: "pulse 2s ease-in-out infinite 1s",
+                    boxShadow: "0 4px 15px rgba(240, 147, 251, 0.3)"
                   }}>
-                    <MapPin size={20} color="var(--text-primary)" />
+                    <MapPin size={20} color="white" />
                   </div>
                   <div>
                     <h3 className="heading-3" style={{ marginBottom: "4px" }}>
@@ -178,19 +662,38 @@ ${formData.message}
                   </div>
                 </div>
                 
-                <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                <div 
+                  className="fade-in"
+                  style={{ 
+                    display: "flex", 
+                    alignItems: "center", 
+                    gap: "16px",
+                    animation: "slideInUp 0.8s ease-out 0.8s both",
+                    transition: "all 0.3s ease"
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateX(10px)";
+                    e.currentTarget.style.boxShadow = "0 10px 30px rgba(16, 172, 132, 0.2)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateX(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
                   <div style={{ 
                     width: "48px", 
                     height: "48px", 
-                    background: "var(--bg-primary)",
+                    background: "linear-gradient(135deg, #10ac84, #667eea)",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    border: "1px solid var(--border-light)",
-                    flexShrink: 0
+                    border: "2px solid rgba(16, 172, 132, 0.3)",
+                    flexShrink: 0,
+                    animation: "pulse 2s ease-in-out infinite 1.5s",
+                    boxShadow: "0 4px 15px rgba(16, 172, 132, 0.3)"
                   }}>
-                    <Clock size={20} color="var(--text-primary)" />
+                    <Clock size={20} color="white" />
                   </div>
                   <div>
                     <h3 className="heading-3" style={{ marginBottom: "4px" }}>
@@ -228,8 +731,53 @@ ${formData.message}
             </div>
             
             {/* Contact Form */}
-            <div style={{ background: "var(--bg-primary)", padding: "40px", border: "1px solid var(--border-light)" }}>
-              <h2 className="heading-1" style={{ marginBottom: "24px" }}>
+            <div 
+              className="fade-in"
+              style={{ 
+                background: "var(--bg-primary)", 
+                padding: "40px", 
+                border: "1px solid var(--border-light)",
+                borderRadius: "16px",
+                boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+                animation: "slideInUp 0.8s ease-out 1s both",
+                position: "relative",
+                overflow: "hidden"
+              }}
+            >
+              {/* Decorative Background */}
+              <div style={{
+                position: "absolute",
+                top: "-50px",
+                right: "-50px",
+                width: "100px",
+                height: "100px",
+                background: "linear-gradient(135deg, #667eea20, #764ba220)",
+                borderRadius: "50%",
+                animation: "rotate 20s linear infinite"
+              }} />
+              <div style={{
+                position: "absolute",
+                bottom: "-30px",
+                left: "-30px",
+                width: "60px",
+                height: "60px",
+                background: "linear-gradient(135deg, #f093fb20, #f5576c20)",
+                borderRadius: "50%",
+                animation: "rotate 15s linear infinite reverse"
+              }} />
+
+              <h2 
+                className="heading-1 fade-in" 
+                style={{ 
+                  marginBottom: "24px",
+                  background: "linear-gradient(45deg, #667eea, #764ba2)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  animation: "gradientShift 3s ease-in-out infinite, fadeIn 1s ease-in-out 1.2s both",
+                  position: "relative",
+                  zIndex: 2
+                }}
+              >
                 Envoyez-nous un message
               </h2>
               
@@ -259,8 +807,11 @@ ${formData.message}
                 </div>
               )}
               
-              <form onSubmit={handleSubmit} className="contact-form">
-                <div className="form-group">
+              <form onSubmit={handleSubmit} className="contact-form" style={{ position: "relative", zIndex: 2 }}>
+                <div 
+                  className="form-group fade-in"
+                  style={{ animation: "slideInUp 0.8s ease-out 1.4s both" }}
+                >
                   <label htmlFor="name" className="form-label">
                     Nom complet *
                   </label>
@@ -273,10 +824,25 @@ ${formData.message}
                     className="form-input"
                     required
                     placeholder="Votre nom complet"
+                    style={{
+                      transition: "all 0.3s ease",
+                      border: "2px solid #e2e8f0"
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = "#667eea";
+                      e.target.style.boxShadow = "0 0 0 3px rgba(102, 126, 234, 0.1)";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = "#e2e8f0";
+                      e.target.style.boxShadow = "none";
+                    }}
                   />
                 </div>
                 
-                <div className="form-group">
+                <div 
+                  className="form-group fade-in"
+                  style={{ animation: "slideInUp 0.8s ease-out 1.6s both" }}
+                >
                   <label htmlFor="email" className="form-label">
                     Email *
                   </label>
@@ -289,10 +855,25 @@ ${formData.message}
                     className="form-input"
                     required
                     placeholder="votre@email.com"
+                    style={{
+                      transition: "all 0.3s ease",
+                      border: "2px solid #e2e8f0"
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = "#764ba2";
+                      e.target.style.boxShadow = "0 0 0 3px rgba(118, 75, 162, 0.1)";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = "#e2e8f0";
+                      e.target.style.boxShadow = "none";
+                    }}
                   />
                 </div>
                 
-                <div className="form-group">
+                <div 
+                  className="form-group fade-in"
+                  style={{ animation: "slideInUp 0.8s ease-out 1.8s both" }}
+                >
                   <label htmlFor="subject" className="form-label">
                     Sujet
                   </label>
@@ -304,10 +885,25 @@ ${formData.message}
                     onChange={handleInputChange}
                     className="form-input"
                     placeholder="Sujet de votre demande"
+                    style={{
+                      transition: "all 0.3s ease",
+                      border: "2px solid #e2e8f0"
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = "#f093fb";
+                      e.target.style.boxShadow = "0 0 0 3px rgba(240, 147, 251, 0.1)";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = "#e2e8f0";
+                      e.target.style.boxShadow = "none";
+                    }}
                   />
                 </div>
                 
-                <div className="form-group">
+                <div 
+                  className="form-group fade-in"
+                  style={{ animation: "slideInUp 0.8s ease-out 2s both" }}
+                >
                   <label htmlFor="eventType" className="form-label">
                     Type d'événement
                   </label>
@@ -317,17 +913,44 @@ ${formData.message}
                     value={formData.eventType}
                     onChange={handleInputChange}
                     className="form-select"
+                    style={{
+                      transition: "all 0.3s ease",
+                      border: "2px solid #e2e8f0"
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = "#10ac84";
+                      e.target.style.boxShadow = "0 0 0 3px rgba(16, 172, 132, 0.1)";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = "#e2e8f0";
+                      e.target.style.boxShadow = "none";
+                    }}
                   >
                     <option value="">Sélectionnez un type d'événement</option>
-                    <option value="mariage">Mariage</option>
-                    <option value="corporatif">Événement corporatif</option>
-                    <option value="prive">Fête privée</option>
-                    <option value="culturel">Événement culturel</option>
-                    <option value="autre">Autre</option>
+                    <option value="congres-scientifique">🏛️ Congrès Scientifique</option>
+                    <option value="forum-recherche">🔬 Forum de Recherche</option>
+                    <option value="conference-medicale">🏥 Conférence Médicale</option>
+                    <option value="seminaire-entreprise">💼 Séminaire d'Entreprise</option>
+                    <option value="lancement-produit">🚀 Lancement de Produit</option>
+                    <option value="formation-professionnelle">📚 Formation Professionnelle</option>
+                    <option value="gala-charity">🎭 Gala & Événements Caritatifs</option>
+                    <option value="mariage-luxe">💍 Mariage de Luxe</option>
+                    <option value="anniversaire-corporatif">🎂 Anniversaire d'Entreprise</option>
+                    <option value="evenement-sportif">⚽ Événement Sportif</option>
+                    <option value="festival-culturel">🎪 Festival Culturel</option>
+                    <option value="exposition-art">🎨 Exposition d'Art</option>
+                    <option value="conference-presse">📰 Conférence de Presse</option>
+                    <option value="evenement-religieux">🕌 Événement Religieux</option>
+                    <option value="fete-privee">🎉 Fête Privée</option>
+                    <option value="webinaire-live">💻 Webinaire & Live Stream</option>
+                    <option value="autre">✨ Autre (Précisez dans le message)</option>
                   </select>
                 </div>
                 
-                <div className="form-group">
+                <div 
+                  className="form-group fade-in"
+                  style={{ animation: "slideInUp 0.8s ease-out 2.2s both" }}
+                >
                   <label htmlFor="message" className="form-label">
                     Message *
                   </label>
@@ -339,23 +962,67 @@ ${formData.message}
                     className="form-textarea"
                     required
                     placeholder="Décrivez votre projet d'événement, vos besoins, la date prévue, le nombre d'invités..."
+                    style={{
+                      transition: "all 0.3s ease",
+                      border: "2px solid #e2e8f0",
+                      minHeight: "120px"
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = "#ff6b6b";
+                      e.target.style.boxShadow = "0 0 0 3px rgba(255, 107, 107, 0.1)";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = "#e2e8f0";
+                      e.target.style.boxShadow = "none";
+                    }}
                   />
                 </div>
                 
                 <button
                   type="submit"
-                  className="btn-primary"
+                  className="btn-primary fade-in"
                   disabled={isSubmitting}
                   style={{ 
                     width: "100%", 
                     display: "flex", 
                     alignItems: "center", 
                     justifyContent: "center", 
-                    gap: "8px" 
+                    gap: "8px",
+                    animation: "slideInUp 0.8s ease-out 2.4s both",
+                    background: "linear-gradient(135deg, #667eea, #764ba2)",
+                    border: "none",
+                    borderRadius: "12px",
+                    padding: "16px 24px",
+                    fontSize: "16px",
+                    fontWeight: "600",
+                    color: "white",
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                    boxShadow: "0 8px 25px rgba(102, 126, 234, 0.3)",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = "translateY(-2px)";
+                    e.target.style.boxShadow = "0 12px 35px rgba(102, 126, 234, 0.4)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = "translateY(0)";
+                    e.target.style.boxShadow = "0 8px 25px rgba(102, 126, 234, 0.3)";
                   }}
                 >
                   {isSubmitting ? (
-                    "Envoi en cours..."
+                    <>
+                      <div style={{
+                        width: "16px",
+                        height: "16px",
+                        border: "2px solid white",
+                        borderTop: "2px solid transparent",
+                        borderRadius: "50%",
+                        animation: "rotate 1s linear infinite"
+                      }} />
+                      Envoi en cours...
+                    </>
                   ) : (
                     <>
                       Envoyer le message

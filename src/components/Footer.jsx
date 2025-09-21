@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { mockData } from "../mock";
+import { sendNewsletterEmail } from "../emailService";
 
 const Footer = () => {
   const [email, setEmail] = useState('');
   const [isSubscribing, setIsSubscribing] = useState(false);
   const [subscribeMessage, setSubscribeMessage] = useState('');
 
-  const handleNewsletterSubmit = (e) => {
+  const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
     setIsSubscribing(true);
     setSubscribeMessage('');
@@ -29,9 +30,13 @@ const Footer = () => {
     }
     
     try {
-      // Create mailto link for newsletter subscription
-      const subject = encodeURIComponent('Inscription à la newsletter BAHOOVA Events');
-      const body = encodeURIComponent(`
+      // Prepare newsletter subscription email
+      const emailData = {
+        to: mockData.company.contact.email,
+        from: email,
+        fromName: 'Newsletter Subscriber',
+        subject: 'Inscription à la newsletter BAHOOVA Events',
+        body: `
 Bonjour,
 
 Je souhaite m'inscrire à votre newsletter pour recevoir des informations sur vos événements et services.
@@ -39,19 +44,22 @@ Je souhaite m'inscrire à votre newsletter pour recevoir des informations sur vo
 Email: ${email}
 
 Cordialement
-      `);
+        `
+      };
       
-      const mailtoLink = `mailto:${mockData.company.contact.email}?subject=${subject}&body=${body}`;
+      // Send email using the newsletter email service
+      const result = await sendNewsletterEmail(emailData);
       
-      // Open email client
-      window.location.href = mailtoLink;
-      
-      // Show success message
-      setSubscribeMessage('Votre demande d\'inscription a été préparée dans votre client email. Merci de l\'envoyer pour finaliser votre inscription.');
-      setEmail('');
+      if (result.success) {
+        setSubscribeMessage(`✅ ${result.message}`);
+        setEmail('');
+      } else {
+        setSubscribeMessage(`❌ ${result.message}`);
+      }
       
     } catch (error) {
       setSubscribeMessage('Une erreur est survenue. Veuillez nous contacter directement par email.');
+      console.error('Newsletter subscription error:', error);
     }
     
     setIsSubscribing(false);
