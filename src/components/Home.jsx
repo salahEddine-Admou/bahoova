@@ -41,7 +41,7 @@ const Home = () => {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "BAHOOVA Events",
-          "description": "Expert en gestion d'événements, organisation de congrès, forums et événements scientifiques au Maroc",
+          "description": "Expert gestion événements Maroc - BAHOOVA Events, organisation de congrès, forums, séminaires, réunions d'entreprises et dîners de gala au Maroc",
           "url": "https://bahoovaevents.com",
           "telephone": "+212-662-017-389",
           "email": "bahoovaevents@gmail.com",
@@ -93,6 +93,22 @@ const Home = () => {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
+                  "name": "Séminaires d'Entreprise",
+                  "description": "Organisation de séminaires et réunions d'entreprises professionnelles"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Dîners de Gala",
+                  "description": "Organisation de dîners de gala et événements prestigieux"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
                   "name": "Événements Corporate",
                   "description": "Gestion d'événements d'entreprise et lancements de produits"
                 }
@@ -128,10 +144,10 @@ const Home = () => {
             <div className="hero-content">
               <div className="hero-text-container">
                 <h1 className="hero-title">
-                  Gestion d'Événements & Congrès - BAHOOVA Events
+                  Expert Gestion Événements Maroc - BAHOOVA Events
                 </h1>
                 <p className="hero-description">
-                  Expert en organisation d'événements, congrès et forums scientifiques au Maroc. Planification complète, technologies avancées, 15 ans d'expérience dans l'événementiel professionnel.
+                  <strong>Expert gestion événements Maroc</strong> - BAHOOVA Events est votre partenaire de confiance pour l'organisation d'événements, congrès, forums, séminaires, réunions d'entreprises et dîners de gala au Maroc. Planification complète, technologies avancées, 15 ans d'expérience dans l'événementiel professionnel.
                 </p>
                 <div className="hero-actions">
                   <Link to="/contact" className="btn-primary creative-btn">
@@ -154,9 +170,9 @@ const Home = () => {
       <section className="section-padding" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Expertise en Gestion d'Événements</h2>
+            <h2 className="heading-1">Expert Gestion Événements Maroc - Notre Expertise</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Spécialistes de l'organisation d'événements, congrès et forums scientifiques au Maroc
+              Spécialistes de l'organisation d'événements, congrès, forums, séminaires, réunions d'entreprises et dîners de gala au Maroc
             </p>
           </div>
           
@@ -255,9 +271,9 @@ const Home = () => {
       <section className="section-padding" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Services de Gestion d'Événements</h2>
+            <h2 className="heading-1">Expert Gestion Événements Maroc - Nos Services</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Organisation complète de congrès, forums et événements scientifiques avec technologies avancées
+              Organisation complète de congrès, forums, séminaires, réunions d'entreprises, dîners de gala et événements scientifiques avec technologies avancées
             </p>
           </div>
           

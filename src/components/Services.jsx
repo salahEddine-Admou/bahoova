@@ -39,7 +39,7 @@ const Services = () => {
           <div className="container">
             <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto", padding: "40px 20px" }}>
               <AnimatedText 
-                text="Gestion d'Événements & Congrès"
+                text="Expert Gestion Événements Maroc"
                 type="gradient"
                 className="hero-large"
                 style={{ 
@@ -63,7 +63,7 @@ const Services = () => {
                   animation: "fadeIn 1s ease-in-out 0.5s both"
                 }}
               >
-                Expert en gestion d'événements et organisation de congrès au Maroc. Nous transformons vos idées en événements scientifiques mémorables. Notre expertise couvre congrès, forums, conférences médicales et événements corporate.
+                <strong>Expert gestion événements Maroc</strong> - BAHOOVA Events transforme vos idées en événements mémorables. Notre expertise couvre congrès, forums, séminaires, réunions d'entreprises, dîners de gala, conférences médicales et événements corporate au Maroc.
               </div>
             </div>
           </div>
@@ -101,9 +101,9 @@ const Services = () => {
       <section className="section-padding-small" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "60px" }}>
-            <h2 className="heading-1">Services de Gestion d'Événements</h2>
+            <h2 className="heading-1">Expert Gestion Événements Maroc - Nos Services</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Organisation complète de congrès, forums et événements scientifiques au Maroc
+              Organisation complète de congrès, forums, séminaires, réunions d'entreprises, dîners de gala et événements scientifiques au Maroc
             </p>
           </div>
           
