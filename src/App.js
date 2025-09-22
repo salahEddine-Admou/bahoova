@@ -10,6 +10,7 @@ import Services from "./components/Services";
 import Venues from "./components/Venues";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
+import ExpertGestionEvenements from "./components/ExpertGestionEvenements";
 import Footer from "./components/Footer";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 import ScrollToTop from "./components/ScrollToTop";
@@ -28,6 +29,7 @@ function App() {
           <Route path="/venues" element={<Venues />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/expert-gestion-evenements-maroc" element={<ExpertGestionEvenements />} />
         </Routes>
         <Footer />
         <WhatsAppFloat />

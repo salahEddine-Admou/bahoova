@@ -172,7 +172,7 @@ const Home = () => {
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
             <h2 className="heading-1">Expert Gestion Événements Maroc - Notre Expertise</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Spécialistes de l'organisation d'événements, congrès, forums, séminaires, réunions d'entreprises et dîners de gala au Maroc
+              <strong>Expert gestion événements Maroc</strong> - Spécialistes de l'organisation d'événements, congrès, forums, séminaires, réunions d'entreprises et dîners de gala au Maroc. BAHOOVA Events, votre expert de confiance.
             </p>
           </div>
           
