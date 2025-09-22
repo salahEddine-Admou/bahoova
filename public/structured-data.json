@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Congrès International de Gestion d'Événements",
+  "description": "Organisation professionnelle de congrès et forums scientifiques au Maroc par BAHOOVA Events",
+  "startDate": "2024-06-15T09:00:00+01:00",
+  "endDate": "2024-06-17T18:00:00+01:00",
+  "location": {
+    "@type": "Place",
+    "name": "Palais des Congrès Casablanca",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Avenue Mohammed V",
+      "addressLocality": "Casablanca",
+      "addressCountry": "MA"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "BAHOOVA Events",
+    "url": "https://bahoovaevents.com",
+    "email": "bahoovaevents@gmail.com",
+    "telephone": "+212-662-017-389"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock"
+  },
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+}

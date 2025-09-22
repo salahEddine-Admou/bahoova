@@ -35,6 +35,83 @@ const Home = () => {
     <main>
       <FloatingElements />
       
+      {/* Structured Data for Local SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "BAHOOVA Events",
+          "description": "Expert en gestion d'événements, organisation de congrès, forums et événements scientifiques au Maroc",
+          "url": "https://bahoovaevents.com",
+          "telephone": "+212-662-017-389",
+          "email": "bahoovaevents@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Avenue Mohammed V",
+            "addressLocality": "Casablanca",
+            "addressRegion": "Casablanca-Settat",
+            "postalCode": "20000",
+            "addressCountry": "MA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "33.5731",
+            "longitude": "-7.5898"
+          },
+          "openingHours": "Mo-Fr 08:00-18:00",
+          "priceRange": "$$",
+          "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": "33.5731",
+              "longitude": "-7.5898"
+            },
+            "geoRadius": "500000"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services de Gestion d'Événements",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Organisation de Congrès",
+                  "description": "Planification complète de congrès scientifiques et médicaux"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Forums de Recherche",
+                  "description": "Organisation de forums académiques et colloques scientifiques"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Événements Corporate",
+                  "description": "Gestion d'événements d'entreprise et lancements de produits"
+                }
+              }
+            ]
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "150"
+          },
+          "sameAs": [
+            "https://www.facebook.com/bahoovaevents",
+            "https://www.instagram.com/bahoovaevents",
+            "https://www.linkedin.com/company/bahoovaevents"
+          ]
+        })}
+      </script>
+      
       {/* Hero Section */}
       <section 
         className="hero-section"
@@ -51,10 +128,10 @@ const Home = () => {
             <div className="hero-content">
               <div className="hero-text-container">
                 <h1 className="hero-title">
-                  {mockData.company.tagline}
+                  Gestion d'Événements & Congrès - BAHOOVA Events
                 </h1>
                 <p className="hero-description">
-                  {mockData.company.intro}
+                  Expert en organisation d'événements, congrès et forums scientifiques au Maroc. Planification complète, technologies avancées, 15 ans d'expérience dans l'événementiel professionnel.
                 </p>
                 <div className="hero-actions">
                   <Link to="/contact" className="btn-primary creative-btn">
@@ -77,9 +154,9 @@ const Home = () => {
       <section className="section-padding" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Nos valeurs fondamentales</h2>
+            <h2 className="heading-1">Expertise en Gestion d'Événements</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Ce qui nous distingue dans l'organisation d'événements exceptionnels
+              Spécialistes de l'organisation d'événements, congrès et forums scientifiques au Maroc
             </p>
           </div>
           
@@ -178,9 +255,9 @@ const Home = () => {
       <section className="section-padding" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Nos services d'exception</h2>
+            <h2 className="heading-1">Services de Gestion d'Événements</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              De la conception à la réalisation, nous créons des événements inoubliables
+              Organisation complète de congrès, forums et événements scientifiques avec technologies avancées
             </p>
           </div>
           

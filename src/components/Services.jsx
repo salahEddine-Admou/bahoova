@@ -39,7 +39,7 @@ const Services = () => {
           <div className="container">
             <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto", padding: "40px 20px" }}>
               <AnimatedText 
-                text="Planification d'événements"
+                text="Gestion d'Événements & Congrès"
                 type="gradient"
                 className="hero-large"
                 style={{ 
@@ -63,7 +63,7 @@ const Services = () => {
                   animation: "fadeIn 1s ease-in-out 0.5s both"
                 }}
               >
-                De la conception créative à l'exécution parfaite, nous transformons vos idées en événements mémorables. Notre expertise couvre tous les types d'événements, du mariage intime au gala corporatif.
+                Expert en gestion d'événements et organisation de congrès au Maroc. Nous transformons vos idées en événements scientifiques mémorables. Notre expertise couvre congrès, forums, conférences médicales et événements corporate.
               </div>
             </div>
           </div>
@@ -101,9 +101,9 @@ const Services = () => {
       <section className="section-padding-small" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "60px" }}>
-            <h2 className="heading-1">Nos services d'exception</h2>
+            <h2 className="heading-1">Services de Gestion d'Événements</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Une gamme complète de services pour tous vos événements
+              Organisation complète de congrès, forums et événements scientifiques au Maroc
             </p>
           </div>
           
