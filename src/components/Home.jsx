@@ -147,7 +147,7 @@ const Home = () => {
                   Expert Gestion Événements Maroc - BAHOOVA Events
                 </h1>
                 <p className="hero-description">
-                  <strong>Expert gestion événements Maroc</strong> - BAHOOVA Events est votre partenaire de confiance pour l'organisation d'événements, congrès, forums, séminaires, réunions d'entreprises et dîners de gala au Maroc. Planification complète, technologies avancées, 15 ans d'expérience dans l'événementiel professionnel.
+                  <strong>Expert gestion événements Maroc</strong> - BAHOOVA Events est votre partenaire de confiance pour l'organisation d'événements, congrès, forums, séminaires, réunions d'entreprises et dîners de gala au Maroc. Notre expertise en gestion d'événements au Maroc couvre tous les secteurs : congrès scientifiques, forums de recherche, séminaires d'entreprises, dîners de gala et événements corporate. Planification complète, technologies avancées, 15 ans d'expérience dans l'événementiel professionnel au Maroc.
                 </p>
                 <div className="hero-actions">
                   <Link to="/contact" className="btn-primary creative-btn">
@@ -170,9 +170,9 @@ const Home = () => {
       <section className="section-padding" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Expert Gestion Événements Maroc - Notre Expertise</h2>
+            <h2 className="heading-1">Expert Gestion Événements Maroc - Notre Expertise Événementielle</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              <strong>Expert gestion événements Maroc</strong> - Spécialistes de l'organisation d'événements, congrès, forums, séminaires, réunions d'entreprises et dîners de gala au Maroc. BAHOOVA Events, votre expert de confiance.
+              <strong>Expert gestion événements Maroc</strong> - BAHOOVA Events est le spécialiste de l'organisation d'événements au Maroc. Notre expertise événementielle couvre congrès, forums, séminaires, réunions d'entreprises et dîners de gala. Depuis 15 ans, nous sommes votre expert de confiance en gestion d'événements au Maroc, offrant des solutions sur mesure pour tous vos besoins événementiels.
             </p>
           </div>
           
@@ -197,10 +197,10 @@ const Home = () => {
                     {index === 3 && <Coffee size={24} color="var(--text-primary)" />}
                   </div>
                   <h3 className="heading-3" style={{ marginBottom: "16px" }}>
-                    {value.title}
+                    {value.title} - Expert Gestion Événements Maroc
                   </h3>
                   <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                    {value.description}
+                    {value.description}. Notre expertise en gestion d'événements au Maroc garantit la réussite de vos projets événementiels.
                   </p>
                 </div>
               </div>
@@ -215,13 +215,16 @@ const Home = () => {
           <div className="grid-two-column">
             <div>
               <h2 className="hero-medium" style={{ marginBottom: "24px" }}>
-                Une expertise reconnue
+                Expert Gestion Événements Maroc - Une Expertise Reconnue
               </h2>
-              <p className="body-large" style={{ color: "var(--text-secondary)", marginBottom: "32px" }}>
+              <p className="body-large" style={{ color: "var(--text-secondary)", marginBottom: "24px" }}>
                 {mockData.company.vision}
               </p>
+              <p className="body-regular" style={{ color: "var(--text-secondary)", marginBottom: "32px" }}>
+                En tant qu'<strong>expert gestion événements Maroc</strong>, BAHOOVA Events a développé une expertise unique dans l'organisation d'événements au Maroc. Notre connaissance approfondie du marché local, de la culture marocaine et des spécificités régionales nous permet d'offrir des solutions événementielles parfaitement adaptées. Que ce soit pour des congrès scientifiques à Casablanca, des forums de recherche à Rabat, ou des séminaires d'entreprises à Marrakech, notre expertise événementielle au Maroc garantit le succès de vos événements.
+              </p>
               <Link to="/about" className="btn-icon">
-                En savoir plus sur nous
+                En savoir plus sur notre expertise
                 <ArrowRight size={16} />
               </Link>
             </div>
@@ -271,9 +274,9 @@ const Home = () => {
       <section className="section-padding" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Expert Gestion Événements Maroc - Nos Services</h2>
+            <h2 className="heading-1">Expert Gestion Événements Maroc - Nos Services Événementiels</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Organisation complète de congrès, forums, séminaires, réunions d'entreprises, dîners de gala et événements scientifiques avec technologies avancées
+              En tant qu'<strong>expert gestion événements Maroc</strong>, BAHOOVA Events propose une organisation complète de congrès, forums, séminaires, réunions d'entreprises, dîners de gala et événements scientifiques. Notre expertise événementielle au Maroc s'appuie sur des technologies avancées et une équipe de 350 professionnels dédiés à la réussite de vos événements.
             </p>
           </div>
           
@@ -447,15 +450,50 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Pourquoi Choisir BAHOOVA Events - Expert Maroc */}
+      <section className="section-padding">
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "80px" }}>
+            <h2 className="heading-1">Pourquoi Choisir BAHOOVA Events - Expert Gestion Événements Maroc ?</h2>
+            <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
+              Découvrez les avantages de faire appel à notre expertise événementielle au Maroc
+            </p>
+          </div>
+          
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px", marginBottom: "60px" }}>
+            <div style={{ padding: "32px 24px", textAlign: "center", border: "1px solid var(--border-light)", borderRadius: "12px" }}>
+              <h3 className="heading-3" style={{ marginBottom: "16px" }}>Expertise Locale Maroc</h3>
+              <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                Notre <strong>expert gestion événements Maroc</strong> maîtrise parfaitement le marché local, les réglementations marocaines et les spécificités culturelles. Cette expertise locale garantit des événements parfaitement adaptés au contexte marocain.
+              </p>
+            </div>
+            
+            <div style={{ padding: "32px 24px", textAlign: "center", border: "1px solid var(--border-light)", borderRadius: "12px" }}>
+              <h3 className="heading-3" style={{ marginBottom: "16px" }}>Réseau de Partenaires Maroc</h3>
+              <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                En tant qu'<strong>expert gestion événements Maroc</strong>, nous disposons d'un réseau étendu de partenaires locaux : lieux, traiteurs, techniciens, artistes. Cette collaboration nous permet d'offrir des services de qualité supérieure.
+              </p>
+            </div>
+            
+            <div style={{ padding: "32px 24px", textAlign: "center", border: "1px solid var(--border-light)", borderRadius: "12px" }}>
+              <h3 className="heading-3" style={{ marginBottom: "16px" }}>Technologies Avancées</h3>
+              <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                Notre <strong>expertise événementielle au Maroc</strong> s'appuie sur les dernières technologies : sonorisation professionnelle, éclairage LED, écrans géants, live streaming. Nous garantissons des événements modernes et technologiquement avancés.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="section-padding-small">
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto" }}>
             <h2 className="hero-medium" style={{ marginBottom: "24px" }}>
-              Prêt à créer votre événement de rêve ?
+              Prêt à créer votre événement de rêve au Maroc ?
             </h2>
             <p className="body-large" style={{ color: "var(--text-secondary)", marginBottom: "32px" }}>
-              Contactez-nous dès aujourd'hui pour discuter de votre projet et découvrir comment nous pouvons le transformer en réalité.
+              Contactez notre <strong>expert gestion événements Maroc</strong> dès aujourd'hui pour discuter de votre projet et découvrir comment nous pouvons le transformer en réalité. Devis gratuit et conseil personnalisé.
             </p>
             <div style={{ display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap" }}>
               <Link to="/contact" className="btn-primary">
