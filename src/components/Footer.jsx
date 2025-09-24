@@ -82,7 +82,7 @@ ${process.env.NODE_ENV === 'development' ? '📝 Mode développement : Inscripti
             </h3>
             <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
               Votre partenaire expert en organisation de congrès, forums scientifiques et événements de recherche au Maroc. 
-              Nous créons des expériences professionnelles exceptionnelles pour la communauté scientifique.
+              Nous créons des expériences professionnelles et exceptionnelles.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>

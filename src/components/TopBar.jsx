@@ -1,5 +1,5 @@
 import React from "react";
-import { MessageCircle, Mail, Phone, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import { MessageCircle, Mail, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
 
 const TopBar = () => {
   return (
@@ -8,21 +8,12 @@ const TopBar = () => {
         {/* Social Media Links */}
         <div className="topbar-social">
           <a 
-            href="https://facebook.com/bahoovaevents" 
+            href="https://facebook.com/BahoovaEvents" 
             target="_blank" 
             rel="noopener noreferrer"
             className="topbar-social-link"
           >
             <Facebook size={16} />
-          </a>
-          
-          <a 
-            href="https://twitter.com/bahoovaevents" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="topbar-social-link"
-          >
-            <Twitter size={16} />
           </a>
           
           <a 
@@ -41,15 +32,6 @@ const TopBar = () => {
             className="topbar-social-link"
           >
             <Linkedin size={16} />
-          </a>
-          
-          <a 
-            href="https://youtube.com/@bahoovaevents" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="topbar-social-link"
-          >
-            <Youtube size={16} />
           </a>
         </div>
 

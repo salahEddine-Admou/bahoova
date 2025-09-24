@@ -43,7 +43,7 @@ const Home = () => {
           "name": "BAHOOVA Events",
           "description": "Expert gestion événements Maroc - BAHOOVA Events, organisation de congrès, forums, séminaires, réunions d'entreprises et dîners de gala au Maroc",
           "url": "https://bahoovaevents.com",
-          "telephone": "+212-662-017-389",
+          "telephone": "0662017389",
           "email": "bahoovaevents@gmail.com",
           "address": {
             "@type": "PostalAddress",
@@ -93,8 +93,8 @@ const Home = () => {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Séminaires d'Entreprise",
-                  "description": "Organisation de séminaires et réunions d'entreprises professionnelles"
+                  "name": "Expert Dîner et Gala",
+                  "description": "Organisation de dîners de gala et événements prestigieux"
                 }
               },
               {

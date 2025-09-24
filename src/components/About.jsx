@@ -12,30 +12,36 @@ const About = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [transitionType, setTransitionType] = useState('creative');
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState({});
 
   const aboutImages = [
     {
-      src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
+      src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      fallback: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
       title: "Congrès Scientifiques",
       description: "Organisation professionnelle de vos événements de recherche"
     },
     {
-      src: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
+      src: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      fallback: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
       title: "Forums de Recherche",
       description: "Colloques et symposiums scientifiques internationaux"
     },
     {
-      src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
+      src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      fallback: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
       title: "Conférences Médicales",
       description: "Événements médicaux et pharmaceutiques de pointe"
     },
     {
-      src: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center",
+      src: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      fallback: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
       title: "Technologies Avancées",
       description: "Équipements de pointe pour présentations scientifiques"
     },
     {
-      src: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
+      src: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      fallback: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
       title: "Live Stream & Webinaire",
       description: "Diffusion en direct et événements hybrides"
     }
@@ -282,13 +288,31 @@ const About = () => {
                             animation: isActive ? "borderGlow 2s ease-in-out infinite" : "none"
                           }} />
                           
+                          {/* Loading indicator */}
+                          {!imagesLoaded[index] && (
+                            <div style={{
+                              position: "absolute",
+                              top: "50%",
+                              left: "50%",
+                              transform: "translate(-50%, -50%)",
+                              width: "40px",
+                              height: "40px",
+                              border: "3px solid rgba(255,255,255,0.3)",
+                              borderTop: "3px solid var(--interactive-base)",
+                              borderRadius: "50%",
+                              animation: "spin 1s linear infinite",
+                              zIndex: 3
+                            }} />
+                          )}
+                          
                           <img 
                             src={image.src}
                             alt={image.title}
-                style={{ 
-                  width: "100%", 
+                            style={{ 
+                              width: "100%", 
                               height: "100%", 
-                  objectFit: "cover",
+                              objectFit: "cover",
+                              opacity: imagesLoaded[index] ? 1 : 0,
                               transition: transitionType === 'glitch' 
                                 ? "all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)"
                                 : "all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
@@ -308,7 +332,14 @@ const About = () => {
                                 : "none"
                             }}
                             onError={(e) => {
-                              e.target.src = `https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
+                              if (e.target.src !== image.fallback) {
+                                e.target.src = image.fallback;
+                              } else {
+                                e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&auto=format&q=80&t=${Date.now()}`;
+                              }
+                            }}
+                            onLoad={() => {
+                              setImagesLoaded(prev => ({ ...prev, [index]: true }));
                             }}
                             loading="lazy"
                           />
@@ -809,25 +840,25 @@ const About = () => {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }}>
             {[
               {
-                image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
                 title: "Équipe de Planification",
                 description: "Coordination et organisation complète de vos événements",
                 color: "#667eea"
               },
               {
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
                 title: "Équipe Logistique",
                 description: "Gestion technique, sonorisation et éclairage professionnel",
                 color: "#764ba2"
               },
               {
-                image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
                 title: "Équipe Créative",
                 description: "Design, décoration et mise en scène de vos événements",
                 color: "#f093fb"
               },
               {
-                image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
                 title: "Équipe Commerciale",
                 description: "Relation client et développement de nouveaux projets",
                 color: "#10ac84"
@@ -858,14 +889,17 @@ const About = () => {
                   <img 
                     src={team.image}
                     alt={team.title}
-                style={{ 
-                  width: "100%", 
-                  height: "250px", 
-                  objectFit: "cover", 
+                    style={{ 
+                      width: "100%", 
+                      height: "250px", 
+                      objectFit: "cover", 
                       transition: "transform 0.3s ease"
                     }}
                     onError={(e) => {
-                      e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
+                      e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&auto=format&q=80&t=${Date.now()}`;
+                    }}
+                    onLoad={() => {
+                      // Image loaded successfully
                     }}
                     loading="lazy"
                     onMouseEnter={(e) => {

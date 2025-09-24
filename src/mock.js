@@ -12,7 +12,7 @@ export const mockData = {
       servings: "720 services/jour"
     },
     contact: {
-      phone: "+212 662 017 389",
+      phone: "0662017389",
       email: "bahoovaevents@gmail.com",
       address: "123 Avenue Mohammed V, Casablanca, Maroc",
       whatsapp: "https://wa.me/212662017389?text=Bonjour,%20je%20souhaite%20organiser%20un%20événement%20avec%20BAHOOVA%20Events."
@@ -76,7 +76,7 @@ export const mockData = {
     },
     {
       title: "Live Stream & Webinaire",
-      description: "Diffusion en direct, webinaires et événements hybrides pour la communauté scientifique",
+      description: "Diffusion en direct, webinaires et événements hybrides",
       image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
       category: "Technique",
       priority: 6
@@ -408,7 +408,7 @@ export const mockData = {
     {
       name: "Dr. Sarah Chen",
       role: "Directrice de Recherche",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
       text: "BAHOOVA Events a organisé notre congrès international de neurosciences avec une précision remarquable. Une expertise exceptionnelle dans l'organisation scientifique."
     },
     {
