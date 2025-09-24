@@ -17,7 +17,7 @@ const TopBar = () => {
           </a>
           
           <a 
-            href="https://instagram.com/bahoovaevents" 
+            href="https://www.instagram.com/bahoova_events/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="topbar-social-link"
@@ -26,7 +26,7 @@ const TopBar = () => {
           </a>
           
           <a 
-            href="https://linkedin.com/company/bahoovaevents" 
+            href="https://linkedin.com/in/amina-bahou" 
             target="_blank" 
             rel="noopener noreferrer"
             className="topbar-social-link"
