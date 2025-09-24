@@ -207,12 +207,12 @@ const ExpertGestionEvenements = () => {
               {
                 title: "Expert Séminaires Entreprises Maroc",
                 description: "Expert en organisation de séminaires d'entreprises, réunions professionnelles et formations au Maroc. Solutions sur mesure pour chaque secteur.",
-                image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center"
+                image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center"
               },
               {
                 title: "Expert Dîners de Gala Maroc",
                 description: "Expert en organisation de dîners de gala, événements prestigieux et cérémonies au Maroc. Lieux d'exception, service haut de gamme.",
-                image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center"
+                image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center"
               }
             ].map((expertise, index) => (
               <div key={index} className="service-card hover-lift">
