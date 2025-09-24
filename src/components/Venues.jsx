@@ -312,21 +312,6 @@ const Venues = () => {
                     {venue.category}
                   </div>
 
-                  {/* Price Badge */}
-                  <div style={{
-                    position: "absolute",
-                    bottom: "16px",
-                    left: "16px",
-                    background: "rgba(0,0,0,0.8)",
-                    color: "white",
-                    padding: "6px 12px",
-                    borderRadius: "20px",
-                    fontSize: "12px",
-                    fontWeight: "600",
-                    backdropFilter: "blur(10px)"
-                  }}>
-                    {venue.price}
-                  </div>
                 </div>
 
                 {/* Content */}

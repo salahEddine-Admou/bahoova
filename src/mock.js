@@ -92,7 +92,6 @@ export const mockData = {
       description: "Palais de luxe avec jardins exotiques et salles de réception somptueuses",
       category: "Hôtel de Luxe",
       capacity: "500 personnes",
-      price: "Prix sur demande"
     },
     {
       name: "Royal Mansour Marrakech",
@@ -101,7 +100,6 @@ export const mockData = {
       description: "Palais royal transformé en hôtel de luxe avec architecture traditionnelle marocaine",
       category: "Palais de Luxe",
       capacity: "300 personnes",
-      price: "Prix sur demande"
     },
     {
       name: "Four Seasons Resort Casablanca",
@@ -110,7 +108,6 @@ export const mockData = {
       description: "Hôtel 5 étoiles face à l'océan avec salles de conférence modernes",
       category: "Hôtel 5 Étoiles",
       capacity: "800 personnes",
-      price: "À partir de 2000€"
     },
     {
       name: "La Mamounia Marrakech",
@@ -119,7 +116,6 @@ export const mockData = {
       description: "Hôtel légendaire avec jardins historiques et architecture art déco",
       category: "Hôtel Historique",
       capacity: "600 personnes",
-      price: "À partir de 1500€"
     },
     {
       name: "Sofitel Rabat Jardin des Roses",
@@ -128,7 +124,6 @@ export const mockData = {
       description: "Hôtel moderne avec jardins de roses et salles polyvalentes",
       category: "Hôtel 5 Étoiles",
       capacity: "400 personnes",
-      price: "À partir de 1200€"
     },
     {
       name: "Mandarin Oriental Marrakech",
@@ -137,7 +132,6 @@ export const mockData = {
       description: "Résort de luxe avec villas privées et espaces événementiels exclusifs",
       category: "Résort de Luxe",
       capacity: "300 personnes",
-      price: "Prix sur demande"
     },
     
     // Palais et Monuments Historiques
@@ -148,7 +142,6 @@ export const mockData = {
       description: "Palais du 19ème siècle avec cours intérieures et jardins andalous",
       category: "Monument Historique",
       capacity: "200 personnes",
-      price: "À partir de 800€"
     },
     {
       name: "Palais El Badi",
@@ -157,7 +150,6 @@ export const mockData = {
       description: "Ruines du palais saadien avec cours majestueuses pour événements historiques",
       category: "Monument Historique",
       capacity: "500 personnes",
-      price: "À partir de 1000€"
     },
     {
       name: "Villa des Arts Casablanca",
@@ -166,7 +158,6 @@ export const mockData = {
       description: "Villa art déco des années 30 avec jardins et salles d'exposition",
       category: "Monument Historique",
       capacity: "150 personnes",
-      price: "À partir de 600€"
     },
     {
       name: "Dar Si Said",
@@ -175,7 +166,6 @@ export const mockData = {
       description: "Palais du 19ème siècle transformé en musée avec cours intérieures",
       category: "Monument Historique",
       capacity: "100 personnes",
-      price: "À partir de 500€"
     },
     
     // Hôtels Modernes
@@ -186,7 +176,6 @@ export const mockData = {
       description: "Hôtel moderne avec centre de conférences et vue sur la ville",
       category: "Hôtel 5 Étoiles",
       capacity: "1000 personnes",
-      price: "À partir de 1800€"
     },
     {
       name: "Sofitel Casablanca Tour Blanche",
@@ -195,7 +184,6 @@ export const mockData = {
       description: "Hôtel moderne avec salles de conférence et vue panoramique",
       category: "Hôtel 5 Étoiles",
       capacity: "600 personnes",
-      price: "À partir de 1400€"
     },
     {
       name: "Riad Fès",
@@ -204,7 +192,6 @@ export const mockData = {
       description: "Riad traditionnel restauré avec patio et salles intimes",
       category: "Riad Traditionnel",
       capacity: "80 personnes",
-      price: "À partir de 400€"
     },
     {
       name: "Palais Amani Fès",
@@ -213,7 +200,6 @@ export const mockData = {
       description: "Palais du 17ème siècle avec jardins andalous et salles historiques",
       category: "Palais Historique",
       capacity: "120 personnes",
-      price: "À partir de 700€"
     },
     
     // Lieux Uniques
@@ -224,7 +210,6 @@ export const mockData = {
       description: "Forteresse historique avec vue sur l'océan et jardins andalous",
       category: "Monument Historique",
       capacity: "300 personnes",
-      price: "À partir de 900€"
     },
     {
       name: "Villa Harris Tanger",
@@ -233,7 +218,6 @@ export const mockData = {
       description: "Villa coloniale avec jardins et vue sur le détroit de Gibraltar",
       category: "Villa Historique",
       capacity: "150 personnes",
-      price: "À partir de 600€"
     },
     {
       name: "Palais des Congrès Agadir",
@@ -242,7 +226,6 @@ export const mockData = {
       description: "Centre de congrès moderne avec vue sur l'océan Atlantique",
       category: "Centre de Congrès",
       capacity: "2000 personnes",
-      price: "À partir de 2500€"
     },
     {
       name: "Riad Al Moussika Marrakech",
@@ -251,7 +234,6 @@ export const mockData = {
       description: "Riad de luxe avec piscine et jardins exotiques",
       category: "Riad de Luxe",
       capacity: "60 personnes",
-      price: "À partir de 800€"
     },
     {
       name: "Hôtel Hassan II Rabat",
@@ -260,7 +242,6 @@ export const mockData = {
       description: "Hôtel moderne avec salles de conférence et vue sur la ville",
       category: "Hôtel 4 Étoiles",
       capacity: "400 personnes",
-      price: "À partir de 1000€"
     },
     {
       name: "Palais des Roses Marrakech",
@@ -269,7 +250,6 @@ export const mockData = {
       description: "Palais moderne avec jardins de roses et salles de réception",
       category: "Palais Moderne",
       capacity: "800 personnes",
-      price: "À partir de 2000€"
     }
   ],
 

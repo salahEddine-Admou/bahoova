@@ -1,5 +1,5 @@
-import React from "react";
-import { ArrowRight, Heart, Building, Users, Palette, Target, Plane, Star, Wifi, Coffee, Car, Gift, MapPin, Phone, Monitor, Handshake, BookOpen, Rocket, Network, Globe, Settings, Award, BarChart, Leaf, Sparkles, Zap } from "lucide-react";
+import React, { useState } from "react";
+import { ArrowRight, Heart, Building, Users, Palette, Target, Plane, Star, Wifi, Coffee, Car, Gift, MapPin, Phone, Monitor, Handshake, BookOpen, Rocket, Network, Globe, Settings, Award, BarChart, Leaf, Sparkles, Zap, X, CheckCircle } from "lucide-react";
 import { mockData } from "../mock";
 import AnimatedSlider from "./AnimatedSlider";
 import ColorSwitcher from "./ColorSwitcher";
@@ -7,6 +7,16 @@ import AnimatedText from "./AnimatedText";
 import FloatingElements from "./FloatingElements";
 
 const Services = () => {
+  const [selectedService, setSelectedService] = useState(null);
+
+  const handleServiceClick = (service) => {
+    setSelectedService(service);
+  };
+
+  const closeModal = () => {
+    setSelectedService(null);
+  };
+
   const serviceFeatures = [
     {
       icon: <Heart size={24} />,
@@ -126,7 +136,11 @@ const Services = () => {
                   <p className="service-card-description" style={{ padding: 0, marginBottom: "16px" }}>
                     {service.description}
                   </p>
-                  <button className="btn-icon" style={{ padding: 0 }}>
+                  <button 
+                    className="btn-icon" 
+                    style={{ padding: 0 }}
+                    onClick={() => handleServiceClick(service)}
+                  >
                     En savoir plus
                     <ArrowRight size={16} />
                   </button>
@@ -625,13 +639,13 @@ const Services = () => {
                 </div>
                 <div>
                   <h3 className="heading-3" style={{ marginBottom: "4px" }}>
-                    Corporate Forums & Conferences
+                    Forums & Conférences Corporate
                   </h3>
                 </div>
               </div>
               <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                Planning and executing forums, summits, and industry conferences with full logistics, 
-                agenda management, and speaker coordination.
+                Planification et exécution de forums, sommets et conférences sectorielles avec logistique complète, 
+                gestion d'agenda et coordination des intervenants.
               </p>
             </div>
 
@@ -652,13 +666,13 @@ const Services = () => {
                 </div>
                 <div>
                   <h3 className="heading-3" style={{ marginBottom: "4px" }}>
-                    Enterprise Partnership Events
+                    Événements de Partenariat d'Entreprise
                   </h3>
                 </div>
               </div>
               <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                Organizing strategic partner meetings, B2B networking events, and collaborative launches 
-                to strengthen business relationships.
+                Organisation de réunions stratégiques avec partenaires, événements de networking B2B et lancements collaboratifs 
+                pour renforcer les relations commerciales.
               </p>
             </div>
 
@@ -679,13 +693,13 @@ const Services = () => {
                 </div>
                 <div>
                   <h3 className="heading-3" style={{ marginBottom: "4px" }}>
-                    Corporate Seminars & Workshops
+                    Séminaires & Ateliers Corporate
                   </h3>
                 </div>
               </div>
               <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                Professional training sessions, workshops, and internal corporate events 
-                with custom content and materials.
+                Sessions de formation professionnelle, ateliers et événements internes d'entreprise 
+                avec contenu et matériels personnalisés.
               </p>
             </div>
 
@@ -706,13 +720,13 @@ const Services = () => {
                 </div>
                 <div>
                   <h3 className="heading-3" style={{ marginBottom: "4px" }}>
-                    Product Launches & Brand Activations
+                    Lancements de Produits & Activations de Marque
                   </h3>
                 </div>
               </div>
               <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                Event management for unveiling new products or services, including stage design, 
-                audiovisual setup, and media coverage.
+                Gestion d'événements pour le lancement de nouveaux produits ou services, incluant design de scène, 
+                installation audiovisuelle et couverture médiatique.
               </p>
             </div>
 
@@ -733,13 +747,13 @@ const Services = () => {
                 </div>
                 <div>
                   <h3 className="heading-3" style={{ marginBottom: "4px" }}>
-                    Networking & Business Gatherings
+                    Networking & Rassemblements d'Affaires
                   </h3>
                 </div>
               </div>
               <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                Curating exclusive networking events for executives, investors, and stakeholders 
-                to foster connections and collaboration.
+                Organisation d'événements de networking exclusifs pour dirigeants, investisseurs et parties prenantes 
+                pour favoriser les connexions et la collaboration.
               </p>
             </div>
 
@@ -760,13 +774,13 @@ const Services = () => {
                 </div>
                 <div>
                   <h3 className="heading-3" style={{ marginBottom: "4px" }}>
-                    Hybrid & Digital Corporate Events
+                    Événements Corporate Hybrides & Numériques
                   </h3>
                 </div>
               </div>
               <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                Live-streamed conferences, webinars, and hybrid forums combining 
-                in-person and virtual participation.
+                Conférences en direct, webinaires et forums hybrides combinant 
+                participation en présentiel et virtuelle.
               </p>
             </div>
 
@@ -787,13 +801,13 @@ const Services = () => {
                 </div>
                 <div>
                   <h3 className="heading-3" style={{ marginBottom: "4px" }}>
-                    Corporate Event Logistics & Support
+                    Logistique & Support Événements Corporate
                   </h3>
                 </div>
               </div>
               <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                End-to-end event management: venue sourcing, technical setup, catering, 
-                guest management, transportation, and security.
+                Gestion d'événements de bout en bout : sourcing de lieux, installation technique, restauration, 
+                gestion des invités, transport et sécurité.
               </p>
             </div>
           </div>
@@ -828,10 +842,10 @@ const Services = () => {
                   <Star size={24} color="var(--text-primary)" />
                 </div>
                 <h4 className="heading-3" style={{ marginBottom: "8px" }}>
-                  Executive VIP Services
+                  Services VIP Exécutifs
                 </h4>
                 <p className="body-small" style={{ color: "var(--text-secondary)" }}>
-                  Dedicated concierge & luxury transportation
+                  Conciergerie dédiée et transport de luxe
                 </p>
               </div>
               
@@ -850,10 +864,10 @@ const Services = () => {
                   <BarChart size={24} color="var(--text-primary)" />
                 </div>
                 <h4 className="heading-3" style={{ marginBottom: "8px" }}>
-                  Event Analytics & Reporting
+                  Analytics & Rapports d'Événements
                 </h4>
                 <p className="body-small" style={{ color: "var(--text-secondary)" }}>
-                  ROI tracking & performance analytics
+                  Suivi ROI et analytics de performance
                 </p>
               </div>
               
@@ -872,10 +886,10 @@ const Services = () => {
                   <Leaf size={24} color="var(--text-primary)" />
                 </div>
                 <h4 className="heading-3" style={{ marginBottom: "8px" }}>
-                  Green Corporate Events
+                  Événements Corporate Écologiques
                 </h4>
                 <p className="body-small" style={{ color: "var(--text-secondary)" }}>
-                  Eco-friendly events for sustainability branding
+                  Événements éco-responsables pour un branding durable
                 </p>
               </div>
             </div>
@@ -902,6 +916,129 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      {/* Service Details Modal */}
+      {selectedService && (
+        <div style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.8)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          zIndex: 1000,
+          padding: "20px"
+        }}>
+          <div style={{
+            backgroundColor: "var(--bg-primary)",
+            borderRadius: "16px",
+            maxWidth: "800px",
+            width: "100%",
+            maxHeight: "90vh",
+            overflow: "auto",
+            position: "relative",
+            boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3)"
+          }}>
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              style={{
+                position: "absolute",
+                top: "20px",
+                right: "20px",
+                background: "var(--interactive-base)",
+                border: "none",
+                borderRadius: "50%",
+                width: "40px",
+                height: "40px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                zIndex: 1001,
+                color: "white"
+              }}
+            >
+              <X size={20} />
+            </button>
+
+            {/* Modal Content */}
+            <div style={{ padding: "40px" }}>
+              <div style={{ display: "flex", gap: "30px", alignItems: "flex-start" }}>
+                <img 
+                  src={selectedService.image}
+                  alt={selectedService.title}
+                  style={{
+                    width: "200px",
+                    height: "150px",
+                    objectFit: "cover",
+                    borderRadius: "12px",
+                    flexShrink: 0
+                  }}
+                  onError={(e) => {
+                    e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
+                  }}
+                />
+                <div style={{ flex: 1 }}>
+                  <h2 className="heading-1" style={{ marginBottom: "16px", color: "var(--text-primary)" }}>
+                    {selectedService.title}
+                  </h2>
+                  <p className="body-large" style={{ color: "var(--text-secondary)", marginBottom: "24px" }}>
+                    {selectedService.description}
+                  </p>
+                  
+                  {/* Service Details */}
+                  <div style={{ marginBottom: "24px" }}>
+                    <h3 className="heading-3" style={{ marginBottom: "12px", color: "var(--text-primary)" }}>
+                      Ce que nous offrons :
+                    </h3>
+                    <ul style={{ listStyle: "none", padding: 0 }}>
+                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                        <CheckCircle size={16} color="var(--success)" />
+                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                          Planification complète et personnalisée
+                        </span>
+                      </li>
+                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                        <CheckCircle size={16} color="var(--success)" />
+                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                          Gestion logistique et technique
+                        </span>
+                      </li>
+                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                        <CheckCircle size={16} color="var(--success)" />
+                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                          Suivi et coordination en temps réel
+                        </span>
+                      </li>
+                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                        <CheckCircle size={16} color="var(--success)" />
+                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                          Support technique professionnel
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+                    <a href="/contact" className="btn-primary">
+                      Demander un devis
+                    </a>
+                    <a href="/venues" className="btn-secondary">
+                      Voir nos lieux
+                      <ArrowRight size={16} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 };
