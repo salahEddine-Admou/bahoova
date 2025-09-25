@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { ArrowRight, Heart, Building, Users, Palette, Target, Plane, Star, Wifi, Coffee, Car, Gift, MapPin, Phone, Monitor, Handshake, BookOpen, Rocket, Network, Globe, Settings, Award, BarChart, Leaf, Sparkles, Zap, X, CheckCircle } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { ArrowRight, Heart, Building, Users, Palette, Target, Plane, Star, Wifi, Coffee, Car, Gift, MapPin, Phone, Monitor, Handshake, BookOpen, Rocket, Network, Globe, Settings, Award, BarChart, Leaf, Sparkles, Zap, X, CheckCircle, MessageCircle } from "lucide-react";
 import { mockData } from "../mock";
 import AnimatedSlider from "./AnimatedSlider";
 import ColorSwitcher from "./ColorSwitcher";
@@ -10,12 +10,17 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   const handleServiceClick = (service) => {
+    console.log("Service clicked:", service);
     setSelectedService(service);
   };
 
   const closeModal = () => {
     setSelectedService(null);
   };
+
+  useEffect(() => {
+    console.log("Selected service changed:", selectedService);
+  }, [selectedService]);
 
   const serviceFeatures = [
     {
@@ -137,9 +142,34 @@ const Services = () => {
                     {service.description}
                   </p>
                   <button 
-                    className="btn-icon" 
-                    style={{ padding: 0 }}
+                    style={{ 
+                      padding: "12px 24px",
+                      backgroundColor: "#667eea",
+                      color: "white",
+                      border: "none",
+                      borderRadius: "8px",
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      fontSize: "14px",
+                      fontWeight: "600",
+                      transition: "all 0.3s ease",
+                      width: "100%",
+                      justifyContent: "center",
+                      marginTop: "16px",
+                      zIndex: 10,
+                      position: "relative"
+                    }}
                     onClick={() => handleServiceClick(service)}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = "#5a6fd8";
+                      e.target.style.transform = "translateY(-2px)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = "#667eea";
+                      e.target.style.transform = "translateY(0)";
+                    }}
                   >
                     En savoir plus
                     <ArrowRight size={16} />
@@ -1015,11 +1045,11 @@ const Services = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: "rgba(0, 0, 0, 0.8)",
+          backgroundColor: "rgba(0, 0, 0, 0.9)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          zIndex: 1000,
+          zIndex: 9999,
           padding: "20px"
         }}>
           <div style={{
@@ -1086,30 +1116,174 @@ const Services = () => {
                       Ce que nous offrons :
                     </h3>
                     <ul style={{ listStyle: "none", padding: 0 }}>
-                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
-                        <CheckCircle size={16} color="var(--success)" />
-                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                          Planification complète et personnalisée
-                        </span>
-                      </li>
-                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
-                        <CheckCircle size={16} color="var(--success)" />
-                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                          Gestion logistique et technique
-                        </span>
-                      </li>
-                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
-                        <CheckCircle size={16} color="var(--success)" />
-                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                          Suivi et coordination en temps réel
-                        </span>
-                      </li>
-                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
-                        <CheckCircle size={16} color="var(--success)" />
-                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                          Support technique professionnel
-                        </span>
-                      </li>
+                      {selectedService.title === "Congrès Scientifiques" && (
+                        <>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Organisation de congrès internationaux et symposiums
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Gestion des intervenants et du programme scientifique
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Technologies de pointe pour présentations
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Traduction simultanée multilingue
+                            </span>
+                          </li>
+                        </>
+                      )}
+                      {selectedService.title === "Forums de Recherche" && (
+                        <>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Organisation de forums académiques et colloques
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Networking et sessions de collaboration
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Publication des actes et communications
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Accompagnement logistique complet
+                            </span>
+                          </li>
+                        </>
+                      )}
+                      {selectedService.title === "Conférences Médicales" && (
+                        <>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Événements médicaux et pharmaceutiques
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Respect des normes médicales internationales
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Gestion des accréditations CME/CPD
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Support technique médical spécialisé
+                            </span>
+                          </li>
+                        </>
+                      )}
+                      {selectedService.title === "Technologies Avancées" && (
+                        <>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Équipements de pointe et sonorisation professionnelle
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Éclairage LED et effets visuels
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Écrans géants et systèmes de projection
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Support technique 24/7
+                            </span>
+                          </li>
+                        </>
+                      )}
+                      {selectedService.title === "Live Stream & Webinaire" && (
+                        <>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Diffusion en direct et événements hybrides
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Plateformes de webinaire professionnelles
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Interaction en temps réel avec les participants
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Enregistrement et archivage des sessions
+                            </span>
+                          </li>
+                        </>
+                      )}
+                      {selectedService.title === "Mariages & Cérémonies" && (
+                        <>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Organisation complète de mariages de luxe
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Lieux d'exception et palais au Maroc
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Cérémonies traditionnelles et modernes
+                            </span>
+                          </li>
+                          <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                            <CheckCircle size={16} color="var(--success)" />
+                            <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                              Service haut de gamme et traiteur de luxe
+                            </span>
+                          </li>
+                        </>
+                      )}
                     </ul>
                   </div>
 
@@ -1117,6 +1291,23 @@ const Services = () => {
                   <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
                     <a href="/contact" className="btn-primary">
                       Demander un devis
+                    </a>
+                    <a 
+                      href={`https://wa.me/212662017389?text=Bonjour,%20je%20souhaite%20plus%20d'informations%20sur%20le%20service%20${encodeURIComponent(selectedService.title)}%20de%20BAHOOVA%20Events.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary"
+                      style={{ 
+                        backgroundColor: "#25D366", 
+                        color: "white",
+                        border: "none",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "8px"
+                      }}
+                    >
+                      <MessageCircle size={16} />
+                      WhatsApp Direct
                     </a>
                     <a href="/venues" className="btn-secondary">
                       Voir nos lieux

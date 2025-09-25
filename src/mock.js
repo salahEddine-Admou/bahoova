@@ -56,7 +56,7 @@ export const mockData = {
     {
       title: "Gestion d'Événements",
       description: "Organisation complète et créative de tous vos événements avec une approche unique et innovante",
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
       category: "Management",
       priority: 3
     },
@@ -111,7 +111,7 @@ export const mockData = {
     {
       name: "Four Seasons Resort Casablanca",
       address: "Boulevard de la Corniche, Casablanca, Maroc",
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center",
       description: "Hôtel 5 étoiles face à l'océan avec salles de conférence modernes",
       category: "Hôtel 5 Étoiles",
       capacity: "800 personnes",
@@ -119,7 +119,7 @@ export const mockData = {
     {
       name: "La Mamounia Marrakech",
       address: "Avenue Bab Jdid, Marrakech, Maroc",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
       description: "Hôtel légendaire avec jardins historiques et architecture art déco",
       category: "Hôtel Historique",
       capacity: "600 personnes",
@@ -135,7 +135,7 @@ export const mockData = {
     {
       name: "Mandarin Oriental Marrakech",
       address: "Route de Fès, Marrakech, Maroc",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
       description: "Résort de luxe avec villas privées et espaces événementiels exclusifs",
       category: "Résort de Luxe",
       capacity: "300 personnes",
@@ -145,7 +145,7 @@ export const mockData = {
     {
       name: "Palais Bahia",
       address: "Rue Riad Zitoun el Jdid, Marrakech, Maroc",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
       description: "Palais du 19ème siècle avec cours intérieures et jardins andalous",
       category: "Monument Historique",
       capacity: "200 personnes",
@@ -153,7 +153,7 @@ export const mockData = {
     {
       name: "Palais El Badi",
       address: "Ksibat Nhass, Marrakech, Maroc",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
       description: "Ruines du palais saadien avec cours majestueuses pour événements historiques",
       category: "Monument Historique",
       capacity: "500 personnes",
@@ -161,7 +161,7 @@ export const mockData = {
     {
       name: "Villa des Arts Casablanca",
       address: "30 Boulevard Brahim Roudani, Casablanca, Maroc",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
       description: "Villa art déco des années 30 avec jardins et salles d'exposition",
       category: "Monument Historique",
       capacity: "150 personnes",
@@ -169,7 +169,7 @@ export const mockData = {
     {
       name: "Dar Si Said",
       address: "Rue Riad Zitoun el Jdid, Marrakech, Maroc",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
       description: "Palais du 19ème siècle transformé en musée avec cours intérieures",
       category: "Monument Historique",
       capacity: "100 personnes",
@@ -179,7 +179,7 @@ export const mockData = {
     {
       name: "Hyatt Regency Casablanca",
       address: "Place des Nations Unies, Casablanca, Maroc",
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center",
       description: "Hôtel moderne avec centre de conférences et vue sur la ville",
       category: "Hôtel 5 Étoiles",
       capacity: "1000 personnes",
@@ -187,7 +187,7 @@ export const mockData = {
     {
       name: "Sofitel Casablanca Tour Blanche",
       address: "Avenue des FAR, Casablanca, Maroc",
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center",
       description: "Hôtel moderne avec salles de conférence et vue panoramique",
       category: "Hôtel 5 Étoiles",
       capacity: "600 personnes",
@@ -195,7 +195,7 @@ export const mockData = {
     {
       name: "Riad Fès",
       address: "Derb Ben Slimane Zerbtana, Fès, Maroc",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
       description: "Riad traditionnel restauré avec patio et salles intimes",
       category: "Riad Traditionnel",
       capacity: "80 personnes",
@@ -203,7 +203,7 @@ export const mockData = {
     {
       name: "Palais Amani Fès",
       address: "12 Derb el Miter, Fès, Maroc",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
       description: "Palais du 17ème siècle avec jardins andalous et salles historiques",
       category: "Palais Historique",
       capacity: "120 personnes",
@@ -213,7 +213,7 @@ export const mockData = {
     {
       name: "Kasbah des Oudayas",
       address: "Rabat, Maroc",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
       description: "Forteresse historique avec vue sur l'océan et jardins andalous",
       category: "Monument Historique",
       capacity: "300 personnes",
@@ -221,7 +221,7 @@ export const mockData = {
     {
       name: "Villa Harris Tanger",
       address: "Avenue Mohammed VI, Tanger, Maroc",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
       description: "Villa coloniale avec jardins et vue sur le détroit de Gibraltar",
       category: "Villa Historique",
       capacity: "150 personnes",
@@ -237,7 +237,7 @@ export const mockData = {
     {
       name: "Riad Al Moussika Marrakech",
       address: "Derb Assabane, Marrakech, Maroc",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
       description: "Riad de luxe avec piscine et jardins exotiques",
       category: "Riad de Luxe",
       capacity: "60 personnes",
@@ -245,7 +245,7 @@ export const mockData = {
     {
       name: "Hôtel Hassan II Rabat",
       address: "Avenue Mohammed V, Rabat, Maroc",
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center",
       description: "Hôtel moderne avec salles de conférence et vue sur la ville",
       category: "Hôtel 4 Étoiles",
       capacity: "400 personnes",
@@ -253,7 +253,7 @@ export const mockData = {
     {
       name: "Palais des Roses Marrakech",
       address: "Route de l'Ourika, Marrakech, Maroc",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
       description: "Palais moderne avec jardins de roses et salles de réception",
       category: "Palais Moderne",
       capacity: "800 personnes",
@@ -293,7 +293,7 @@ export const mockData = {
     },
     {
       id: 6,
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
       title: "Congrès d'Intelligence Artificielle",
       category: "Technique"
     },
@@ -347,7 +347,7 @@ export const mockData = {
     },
     {
       id: 15,
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
       title: "Équipement Sonorisation Pro",
       category: "Technique"
     },
@@ -431,7 +431,7 @@ export const mockData = {
     {
       name: "Dr. Fatima Al-Zahra",
       role: "Directrice Médicale",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
       text: "L'équipe de BAHOOVA Events a transformé notre symposium médical en un événement mémorable. Leur attention aux détails est impressionnante."
     },
     {
