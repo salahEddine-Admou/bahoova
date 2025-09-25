@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapPin, ArrowRight, Star, Users, Calendar, Filter, Search, Sparkles, Zap, Heart, Target, Rocket } from "lucide-react";
+import { MapPin, ArrowRight, Star, Users, Calendar, Filter, Search, Sparkles, Zap, Heart, Target, Rocket, X, CheckCircle } from "lucide-react";
 import { mockData } from "../mock";
 import ColorSwitcher from "./ColorSwitcher";
 import AnimatedText from "./AnimatedText";
@@ -8,6 +8,7 @@ import FloatingElements from "./FloatingElements";
 const Venues = () => {
   const [selectedCategory, setSelectedCategory] = useState("Tous");
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedVenue, setSelectedVenue] = useState(null);
 
   // Get unique categories with safety check
   const venues = mockData.venues || [];
@@ -21,6 +22,14 @@ const Venues = () => {
                          venue.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  const handleVenueClick = (venue) => {
+    setSelectedVenue(venue);
+  };
+
+  const closeModal = () => {
+    setSelectedVenue(null);
+  };
 
   return (
     <main>
@@ -403,6 +412,7 @@ const Venues = () => {
                       transition: "all 0.3s ease",
                       boxShadow: "0 4px 15px rgba(102, 126, 234, 0.3)"
                     }}
+                    onClick={() => handleVenueClick(venue)}
                     onMouseEnter={(e) => {
                       e.target.style.transform = "translateY(-2px)";
                       e.target.style.boxShadow = "0 8px 25px rgba(102, 126, 234, 0.4)";
@@ -420,11 +430,6 @@ const Venues = () => {
             ))}
           </div>
           
-          <div style={{ textAlign: "center", marginTop: "48px" }}>
-            <button className="btn-primary">
-              Voir plus de lieux
-            </button>
-          </div>
         </div>
       </section>
 
@@ -605,18 +610,138 @@ const Venues = () => {
               Nos experts vous accompagnent dans la sélection du venue parfait selon vos besoins, 
               votre budget et vos préférences esthétiques.
             </p>
-            <div style={{ display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap" }}>
-              <a href="/contact" className="btn-primary">
-                Consulter nos experts
-              </a>
-              <a href="/services" className="btn-secondary">
-                Voir nos services
-                <ArrowRight size={16} />
-              </a>
-            </div>
           </div>
         </div>
       </section>
+
+      {/* Venue Details Modal */}
+      {selectedVenue && (
+        <div style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.9)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          zIndex: 9999,
+          padding: "20px"
+        }}>
+          <div style={{
+            backgroundColor: "var(--bg-primary)",
+            borderRadius: "16px",
+            maxWidth: "900px",
+            width: "100%",
+            maxHeight: "90vh",
+            overflow: "auto",
+            position: "relative",
+            boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3)"
+          }}>
+            <button
+              onClick={closeModal}
+              style={{
+                position: "absolute",
+                top: "20px",
+                right: "20px",
+                background: "var(--interactive-base)",
+                border: "none",
+                borderRadius: "50%",
+                width: "40px",
+                height: "40px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                zIndex: 1001,
+                color: "white"
+              }}
+            >
+              <X size={20} />
+            </button>
+            <div style={{ padding: "40px" }}>
+              <div style={{ display: "flex", gap: "30px", alignItems: "flex-start" }}>
+                <img 
+                  src={selectedVenue.image}
+                  alt={selectedVenue.name}
+                  style={{
+                    width: "300px",
+                    height: "200px",
+                    objectFit: "cover",
+                    borderRadius: "12px",
+                    flexShrink: 0
+                  }}
+                  onError={(e) => {
+                    e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
+                  }}
+                />
+                <div style={{ flex: 1 }}>
+                  <h2 className="heading-1" style={{ marginBottom: "16px", color: "var(--text-primary)" }}>
+                    {selectedVenue.name}
+                  </h2>
+                  
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
+                    <MapPin size={16} color="var(--text-secondary)" />
+                    <p style={{ color: "var(--text-secondary)", margin: 0, fontSize: "14px" }}>
+                      {selectedVenue.address}
+                    </p>
+                  </div>
+
+                  <p className="body-large" style={{ color: "var(--text-secondary)", marginBottom: "24px" }}>
+                    {selectedVenue.description}
+                  </p>
+                  
+                  <div style={{ marginBottom: "24px" }}>
+                    <h3 className="heading-3" style={{ marginBottom: "12px", color: "var(--text-primary)" }}>
+                      Caractéristiques du lieu :
+                    </h3>
+                    <ul style={{ listStyle: "none", padding: 0 }}>
+                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                        <CheckCircle size={16} color="var(--success)" />
+                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                          Capacité : {selectedVenue.capacity}
+                        </span>
+                      </li>
+                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                        <CheckCircle size={16} color="var(--success)" />
+                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                          Catégorie : {selectedVenue.category}
+                        </span>
+                      </li>
+                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                        <CheckCircle size={16} color="var(--success)" />
+                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                          Parking disponible
+                        </span>
+                      </li>
+                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                        <CheckCircle size={16} color="var(--success)" />
+                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                          Accès handicapés
+                        </span>
+                      </li>
+                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                        <CheckCircle size={16} color="var(--success)" />
+                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                          Climatisation
+                        </span>
+                      </li>
+                      <li style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                        <CheckCircle size={16} color="var(--success)" />
+                        <span className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                          Équipement audiovisuel inclus
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 };
