@@ -840,7 +840,7 @@ const About = () => {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }}>
             {[
               {
-                image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+                image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
                 title: "Équipe de Planification",
                 description: "Coordination et organisation complète de vos événements",
                 color: "#667eea"
@@ -852,7 +852,7 @@ const About = () => {
                 color: "#764ba2"
               },
               {
-                image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
                 title: "Équipe Créative",
                 description: "Design, décoration et mise en scène de vos événements",
                 color: "#f093fb"

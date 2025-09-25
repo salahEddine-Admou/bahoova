@@ -112,6 +112,14 @@ const Home = () => {
                   "name": "Événements Corporate",
                   "description": "Gestion d'événements d'entreprise et lancements de produits"
                 }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Mariages & Cérémonies",
+                  "description": "Organisation complète de mariages et cérémonies romantiques"
+                }
               }
             ]
           },
@@ -147,7 +155,7 @@ const Home = () => {
                   Expert Gestion Événements Maroc - BAHOOVA Events
                 </h1>
                 <p className="hero-description">
-                  <strong>Expert gestion événements Maroc</strong> - BAHOOVA Events est votre partenaire de confiance pour l'organisation d'événements, congrès, forums, séminaires, réunions d'entreprises et dîners de gala au Maroc. Notre expertise en gestion d'événements au Maroc couvre tous les secteurs : congrès scientifiques, forums de recherche, séminaires d'entreprises, dîners de gala et événements corporate. Planification complète, technologies avancées, 15 ans d'expérience dans l'événementiel professionnel au Maroc.
+                  <strong>Expert gestion événements Maroc</strong> - BAHOOVA Events est votre partenaire de confiance pour l'organisation d'événements, congrès, forums, séminaires, réunions d'entreprises, dîners de gala et mariages au Maroc. Notre expertise en gestion d'événements au Maroc couvre tous les secteurs : congrès scientifiques, forums de recherche, séminaires d'entreprises, dîners de gala, événements corporate et mariages de luxe. Planification complète, technologies avancées, 15 ans d'expérience dans l'événementiel professionnel au Maroc.
                 </p>
                 <div className="hero-actions">
                   <Link to="/contact" className="btn-primary creative-btn">
@@ -373,37 +381,6 @@ const Home = () => {
                   "
                 </div>
                 
-                {/* Profile Image */}
-                <div style={{ position: "relative", marginBottom: "24px" }}>
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name}
-                    style={{ 
-                      width: "100px", 
-                      height: "100px", 
-                      borderRadius: "50%", 
-                      objectFit: "cover",
-                      border: "4px solid var(--interactive-base)",
-                      boxShadow: "0 8px 25px rgba(102, 126, 234, 0.3)"
-                    }}
-                    onError={(e) => {
-                      e.target.src = `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&t=${Date.now()}`;
-                    }}
-                    loading="lazy"
-                  />
-                  {/* Decorative Ring */}
-                  <div style={{
-                    position: "absolute",
-                    top: "-8px",
-                    left: "-8px",
-                    right: "-8px",
-                    bottom: "-8px",
-                    border: "2px solid var(--interactive-base)",
-                    borderRadius: "50%",
-                    opacity: 0.3,
-                    animation: "rotate 10s linear infinite"
-                  }} />
-                </div>
                 
                 {/* Testimonial Text */}
                 <p className="body-regular" style={{ 

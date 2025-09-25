@@ -212,7 +212,12 @@ const ExpertGestionEvenements = () => {
               {
                 title: "Expert Dîners de Gala Maroc",
                 description: "Expert en organisation de dîners de gala, événements prestigieux et cérémonies au Maroc. Lieux d'exception, service haut de gamme.",
-                image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center"
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center"
+              },
+              {
+                title: "Expert Mariages Maroc",
+                description: "Expert en organisation de mariages, cérémonies romantiques et événements de célébration au Maroc. Moments magiques et inoubliables.",
+                image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&crop=center"
               }
             ].map((expertise, index) => (
               <div key={index} className="service-card hover-lift">
@@ -288,24 +293,6 @@ const ExpertGestionEvenements = () => {
                   animation: `fadeInUp 0.8s ease-out ${index * 0.2}s both`
                 }}
               >
-                <div style={{ position: "relative", marginBottom: "24px" }}>
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name}
-                    style={{ 
-                      width: "100px", 
-                      height: "100px", 
-                      borderRadius: "50%", 
-                      objectFit: "cover",
-                      border: "4px solid var(--interactive-base)",
-                      boxShadow: "0 8px 25px rgba(102, 126, 234, 0.3)"
-                    }}
-                    onError={(e) => {
-                      e.target.src = `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&t=${Date.now()}`;
-                    }}
-                    loading="lazy"
-                  />
-                </div>
                 
                 <p className="body-regular" style={{ 
                   color: "var(--text-primary)", 

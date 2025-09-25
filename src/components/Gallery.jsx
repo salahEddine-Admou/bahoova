@@ -276,7 +276,7 @@ const Gallery = () => {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }}>
             <div style={{ textAlign: "center" }}>
               <img 
-                src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center"
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center"
                 alt="Événement scientifique"
                 style={{ 
                   width: "100%", 

@@ -56,7 +56,7 @@ export const mockData = {
     {
       title: "Gestion d'Événements",
       description: "Organisation complète et créative de tous vos événements avec une approche unique et innovante",
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
       category: "Management",
       priority: 3
     },
@@ -80,6 +80,13 @@ export const mockData = {
       image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
       category: "Technique",
       priority: 6
+    },
+    {
+      title: "Mariages & Cérémonies",
+      description: "Organisation complète de mariages, cérémonies et événements romantiques au Maroc",
+      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&crop=center",
+      category: "Romantique",
+      priority: 7
     }
   ],
 
@@ -286,7 +293,7 @@ export const mockData = {
     },
     {
       id: 6,
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
       title: "Congrès d'Intelligence Artificielle",
       category: "Technique"
     },
@@ -316,13 +323,13 @@ export const mockData = {
     },
     {
       id: 11,
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center",
       title: "Gala d'Entreprise Annuel",
       category: "Corporate"
     },
     {
       id: 12,
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
       title: "Séminaire de Formation",
       category: "Corporate"
     },
@@ -334,7 +341,7 @@ export const mockData = {
     },
     {
       id: 14,
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
       title: "Conférence de Presse",
       category: "Corporate"
     },
@@ -352,24 +359,42 @@ export const mockData = {
     },
     {
       id: 17,
+      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&crop=center",
+      title: "Mariage de Luxe au Palais",
+      category: "Romantique"
+    },
+    {
+      id: 18,
+      image: "https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?w=800&h=600&fit=crop&crop=center",
+      title: "Cérémonie de Mariage Traditionnel",
+      category: "Romantique"
+    },
+    {
+      id: 19,
+      image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&h=600&fit=crop&crop=center",
+      title: "Réception de Mariage en Extérieur",
+      category: "Romantique"
+    },
+    {
+      id: 20,
       image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
       title: "Écran LED Géant",
       category: "Technique"
     },
     {
-      id: 18,
+      id: 21,
       image: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center",
       title: "Système de Traduction Simultanée",
       category: "Technique"
     },
     {
-      id: 19,
+      id: 22,
       image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
       title: "Webinaire International",
       category: "Technique"
     },
     {
-      id: 20,
+      id: 23,
       image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
       title: "Live Stream Professionnel",
       category: "Technique"

@@ -812,6 +812,96 @@ const Services = () => {
             </div>
           </div>
 
+          {/* Wedding Services Section */}
+          <div style={{ 
+            background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)", 
+            padding: "60px 40px", 
+            borderRadius: "20px",
+            marginBottom: "60px",
+            color: "white"
+          }}>
+            <div style={{ textAlign: "center", marginBottom: "50px" }}>
+              <h2 className="hero-medium" style={{ marginBottom: "24px", color: "white" }}>
+                Services Mariages & Cérémonies
+              </h2>
+              <p className="body-large" style={{ color: "rgba(255,255,255,0.9)", marginBottom: "16px" }}>
+                Créez des moments magiques et inoubliables
+              </p>
+              <p className="body-regular" style={{ color: "rgba(255,255,255,0.8)", maxWidth: "800px", margin: "0 auto" }}>
+                Notre expertise en organisation de mariages au Maroc vous garantit une journée parfaite, 
+                de la cérémonie à la réception, avec des lieux d'exception et un service haut de gamme.
+              </p>
+            </div>
+            
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }}>
+              <div style={{ textAlign: "center", padding: "30px", background: "rgba(255,255,255,0.1)", borderRadius: "16px", backdropFilter: "blur(10px)" }}>
+                <div style={{ 
+                  width: "60px", 
+                  height: "60px", 
+                  background: "rgba(255,255,255,0.2)",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 20px",
+                  border: "2px solid rgba(255,255,255,0.3)"
+                }}>
+                  <Heart size={28} color="white" />
+                </div>
+                <h3 className="heading-3" style={{ marginBottom: "12px", color: "white" }}>
+                  Mariages de Luxe
+                </h3>
+                <p className="body-regular" style={{ color: "rgba(255,255,255,0.9)" }}>
+                  Organisation complète de mariages dans des palais et lieux d'exception au Maroc
+                </p>
+              </div>
+              
+              <div style={{ textAlign: "center", padding: "30px", background: "rgba(255,255,255,0.1)", borderRadius: "16px", backdropFilter: "blur(10px)" }}>
+                <div style={{ 
+                  width: "60px", 
+                  height: "60px", 
+                  background: "rgba(255,255,255,0.2)",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 20px",
+                  border: "2px solid rgba(255,255,255,0.3)"
+                }}>
+                  <Sparkles size={28} color="white" />
+                </div>
+                <h3 className="heading-3" style={{ marginBottom: "12px", color: "white" }}>
+                  Cérémonies Traditionnelles
+                </h3>
+                <p className="body-regular" style={{ color: "rgba(255,255,255,0.9)" }}>
+                  Célébrations respectant les traditions marocaines avec une touche moderne
+                </p>
+              </div>
+              
+              <div style={{ textAlign: "center", padding: "30px", background: "rgba(255,255,255,0.1)", borderRadius: "16px", backdropFilter: "blur(10px)" }}>
+                <div style={{ 
+                  width: "60px", 
+                  height: "60px", 
+                  background: "rgba(255,255,255,0.2)",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 20px",
+                  border: "2px solid rgba(255,255,255,0.3)"
+                }}>
+                  <Gift size={28} color="white" />
+                </div>
+                <h3 className="heading-3" style={{ marginBottom: "12px", color: "white" }}>
+                  Réceptions Mémorables
+                </h3>
+                <p className="body-regular" style={{ color: "rgba(255,255,255,0.9)" }}>
+                  Soirées de gala, anniversaires et célébrations familiales inoubliables
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Optional Extras */}
           <div style={{ 
             background: "var(--bg-primary)", 
