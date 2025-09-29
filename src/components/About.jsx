@@ -3,7 +3,6 @@ import { Award, Users, Clock, Heart, Sparkles, Zap, Star, Target, Rocket, Shield
 import { mockData } from "../mock";
 import ColorSwitcher from "./ColorSwitcher";
 import AnimatedText from "./AnimatedText";
-import FloatingElements from "./FloatingElements";
 
 const About = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -18,7 +17,7 @@ const About = () => {
     {
       src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
       fallback: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      title: "Congrès Scientifiques",
+      title: "Dîner et gala",
       description: "Organisation professionnelle de vos événements de recherche"
     },
     {
@@ -98,7 +97,6 @@ const About = () => {
 
   return (
     <main>
-      <FloatingElements />
       {/* Hero Section */}
       <section className="section-padding" style={{ position: "relative", overflow: "hidden" }}>
         <ColorSwitcher>
@@ -131,50 +129,8 @@ const About = () => {
                     animation: "fadeIn 1s ease-out 0.6s both"
                   }}
                 >
-                {mockData.company.vision}
-              </p>
-                <p 
-                  className="body-regular fade-in"
-                  style={{ 
-                    color: "var(--text-secondary)",
-                    fontSize: "1.1rem",
-                    lineHeight: "1.6",
-                    animation: "fadeIn 1s ease-out 0.9s both",
-                    marginBottom: "24px"
-                  }}
-                >
-                  Chez BAHOOVA Events, nous croyons que chaque événement raconte une histoire unique. Notre passion pour l'excellence et notre attention aux détails font de nous le partenaire idéal pour concrétiser vos rêves les plus ambitieux.
+                  Bahova Event est une agence événementielle spécialisée dans la conception et l'organisation d'événements sur mesure. Plus qu'un simple prestataire, nous sommes des créateurs d'expériences uniques, où l'excellence se mêle à l'émotion.
                 </p>
-                
-                
-                {/* Floating Icons */}
-                <div style={{ 
-                  position: "absolute", 
-                  top: "20%", 
-                  left: "-10%", 
-                  animation: "float 3s ease-in-out infinite",
-                  zIndex: 1
-                }}>
-                  <Sparkles size={24} color="#667eea" />
-                </div>
-                <div style={{ 
-                  position: "absolute", 
-                  top: "40%", 
-                  right: "-5%", 
-                  animation: "float 3s ease-in-out infinite 1s",
-                  zIndex: 1
-                }}>
-                  <Zap size={20} color="#764ba2" />
-                </div>
-                <div style={{ 
-                  position: "absolute", 
-                  bottom: "30%", 
-                  left: "-8%", 
-                  animation: "float 3s ease-in-out infinite 2s",
-                  zIndex: 1
-                }}>
-                  <Star size={18} color="#f093fb" />
-                </div>
             </div>
               <div style={{ position: "relative" }}>
                 <div 
@@ -643,40 +599,165 @@ const About = () => {
                       ))}
                     </div>
                     
-                    {/* Floating Elements on Image */}
-                    <div style={{ 
-                      position: "absolute", 
-                      top: "20px", 
-                      left: "20px", 
-                      animation: "bounce 2s ease-in-out infinite",
-                      zIndex: 2
-                    }}>
-                      <Target size={24} color="white" />
-                    </div>
-                    <div style={{ 
-                      position: "absolute", 
-                      bottom: "100px", 
-                      left: "20px", 
-                      animation: "bounce 2s ease-in-out infinite 1s",
-                      zIndex: 2
-                    }}>
-                      <Award size={24} color="white" />
-                    </div>
-                    <div style={{ 
-                      position: "absolute", 
-                      bottom: "100px", 
-                      right: "20px", 
-                      animation: "bounce 2s ease-in-out infinite 0.5s",
-                      zIndex: 2
-                    }}>
-                      <Rocket size={20} color="white" />
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </ColorSwitcher>
+      </section>
+
+      {/* Expertise Domains Section */}
+      <section className="section-padding" style={{ background: "var(--bg-secondary)" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "60px" }}>
+            <h2 
+              className="heading-1 fade-in"
+              style={{ 
+                fontSize: "2.5rem",
+                fontWeight: "700",
+                color: "#667eea",
+                background: "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)",
+                backgroundSize: "300% 300%",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                animation: "gradientShift 3s ease-in-out infinite, fadeIn 1s ease-out 0.3s both"
+              }}
+            >
+              Nos Domaines d'Expertise
+            </h2>
+            <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
+              Des événements d'entreprise aux mariages d'exception, nous créons des expériences mémorables
+            </p>
+          </div>
+          
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "40px" }}>
+            {[
+              {
+                icon: Users,
+                title: "Événements d'entreprise",
+                description: "Conférences, séminaires, team buildings, lancements de produits",
+                color: "#667eea",
+                image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center&auto=format&q=80"
+              },
+              {
+                icon: Heart,
+                title: "Événements privés",
+                description: "Mariages d'exception, galas, réceptions exclusives",
+                color: "#f093fb",
+                image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&auto=format&q=80"
+              },
+              {
+                icon: Palette,
+                title: "Scénographie & technique",
+                description: "Conception artistique, décors sur mesure, sonorisation, lumière, audiovisuel",
+                color: "#764ba2",
+                image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center&auto=format&q=80"
+              }
+            ].map((expertise, index) => (
+              <div 
+                key={index}
+                className="fade-in"
+                style={{ 
+                  textAlign: "center",
+                  animation: `slideInUp 0.8s ease-out ${0.5 + index * 0.2}s both`,
+                  position: "relative",
+                  borderRadius: "20px",
+                  overflow: "hidden",
+                  boxShadow: "0 15px 35px rgba(0,0,0,0.1)",
+                  transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                  background: "white"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-15px) scale(1.03)";
+                  e.currentTarget.style.boxShadow = `0 25px 50px ${expertise.color}30`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0) scale(1)";
+                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.1)";
+                }}
+              >
+                <div style={{ position: "relative", overflow: "hidden", height: "200px" }}>
+                  <img 
+                    src={expertise.image}
+                    alt={expertise.title}
+                    style={{ 
+                      width: "100%", 
+                      height: "100%", 
+                      objectFit: "cover",
+                      transition: "transform 0.4s ease"
+                    }}
+                    onError={(e) => {
+                      e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&auto=format&q=80&t=${Date.now()}`;
+                    }}
+                    loading="lazy"
+                    onMouseEnter={(e) => {
+                      e.target.style.transform = "scale(1.1)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.transform = "scale(1)";
+                    }}
+                  />
+                  
+                  {/* Gradient Overlay */}
+                  <div style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    background: `linear-gradient(135deg, ${expertise.color}40, ${expertise.color}60)`,
+                    transition: "opacity 0.3s ease"
+                  }} />
+                  
+                  {/* Icon */}
+                  <div style={{ 
+                    position: "absolute", 
+                    top: "50%", 
+                    left: "50%", 
+                    transform: "translate(-50%, -50%)",
+                    width: "80px", 
+                    height: "80px", 
+                    background: `linear-gradient(135deg, ${expertise.color}, ${expertise.color}80)`,
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    border: `3px solid white`,
+                    boxShadow: `0 10px 30px ${expertise.color}50`,
+                    zIndex: 2
+                  }}>
+                    <expertise.icon size={40} color="white" />
+                  </div>
+                </div>
+                
+                <div style={{ padding: "30px 24px" }}>
+                  <h3 
+                    className="heading-3" 
+                    style={{ 
+                      marginBottom: "12px",
+                      color: expertise.color,
+                      fontSize: "1.6rem",
+                      fontWeight: "600"
+                    }}
+                  >
+                    {expertise.title}
+                  </h3>
+                  <p 
+                    className="body-regular" 
+                    style={{ 
+                      color: "var(--text-secondary)",
+                      fontSize: "1.1rem",
+                      lineHeight: "1.6"
+                    }}
+                  >
+                    {expertise.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Stats Section */}
@@ -773,97 +854,60 @@ const About = () => {
                   {stat.label}
               </p>
             
-                {/* Floating Sparkles */}
-                {hoveredStat === index && (
-                  <>
-              <div style={{ 
-                      position: "absolute", 
-                      top: "20px", 
-                      right: "20px", 
-                      animation: "bounce 1s ease-in-out infinite",
-                      zIndex: 1
-                    }}>
-                      <Sparkles size={16} color={stat.color} />
-            </div>
-              <div style={{ 
-                      position: "absolute", 
-                      bottom: "20px", 
-                      left: "20px", 
-                      animation: "bounce 1s ease-in-out infinite 0.5s",
-                      zIndex: 1
-                    }}>
-                      <Star size={14} color={stat.color} />
-              </div>
-                  </>
-                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Signature Section - Three Pillars */}
       <section className="section-padding">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Nos valeurs fondamentales</h2>
+            <h2 
+              className="heading-1"
+              style={{ 
+                fontSize: "2.5rem",
+                fontWeight: "700",
+                color: "#667eea",
+                background: "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)",
+                backgroundSize: "300% 300%",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                animation: "gradientShift 3s ease-in-out infinite, fadeIn 1s ease-out 0.3s both"
+              }}
+            >
+              Notre Signature
+            </h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Les principes qui guident chacune de nos actions
+              Chaque projet signé Bahova Event repose sur trois piliers fondamentaux
             </p>
           </div>
           
-          <div className="grid-product-showcase">
-            {mockData.coreValues.map((value, index) => (
-              <div key={index} className="service-card hover-lift" style={{ textAlign: "center", padding: "40px 24px" }}>
-                <h3 className="heading-2" style={{ marginBottom: "16px" }}>
-                  {value.title}
-                </h3>
-                <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                  {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="section-padding-small" style={{ background: "var(--bg-secondary)" }}>
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "60px" }}>
-            <h2 className="heading-1">Notre équipe événementielle</h2>
-            <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Des experts en gestion d'événements dédiés à votre succès
-            </p>
-          </div>
-          
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "40px" }}>
             {[
               {
-                image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-                title: "Équipe de Planification",
-                description: "Coordination et organisation complète de vos événements",
-                color: "#667eea"
+                icon: Sparkles,
+                title: "Créativité",
+                description: "Concevoir des concepts originaux et élégants",
+                color: "#667eea",
+                number: "1"
               },
               {
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-                title: "Équipe Logistique",
-                description: "Gestion technique, sonorisation et éclairage professionnel",
-                color: "#764ba2"
+                icon: Shield,
+                title: "Rigueur",
+                description: "Garantir une organisation fluide et irréprochable",
+                color: "#764ba2",
+                number: "2"
               },
               {
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-                title: "Équipe Créative",
-                description: "Design, décoration et mise en scène de vos événements",
-                color: "#f093fb"
-              },
-              {
-                image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-                title: "Équipe Commerciale",
-                description: "Relation client et développement de nouveaux projets",
-                color: "#10ac84"
+                icon: Heart,
+                title: "Émotion",
+                description: "Transformer l'instant éphémère en souvenir impérissable",
+                color: "#f093fb",
+                number: "3"
               }
-            ].map((team, index) => (
+            ].map((pillar, index) => (
               <div 
                 key={index}
                 className="fade-in"
@@ -871,108 +915,282 @@ const About = () => {
                   textAlign: "center",
                   animation: `slideInUp 0.8s ease-out ${0.5 + index * 0.2}s both`,
                   position: "relative",
-                  borderRadius: "16px",
+                  borderRadius: "20px",
                   overflow: "hidden",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
-                  transition: "all 0.3s ease"
+                  boxShadow: "0 15px 35px rgba(0,0,0,0.1)",
+                  transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                  background: "white",
+                  padding: "40px 30px"
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "translateY(-10px) scale(1.02)";
-                  e.currentTarget.style.boxShadow = `0 20px 40px ${team.color}30`;
+                  e.currentTarget.style.transform = "translateY(-15px) scale(1.03)";
+                  e.currentTarget.style.boxShadow = `0 25px 50px ${pillar.color}30`;
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = "translateY(0) scale(1)";
-                  e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
+                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.1)";
                 }}
               >
-                <div style={{ position: "relative", overflow: "hidden" }}>
-                  <img 
-                    src={team.image}
-                    alt={team.title}
-                    style={{ 
-                      width: "100%", 
-                      height: "250px", 
-                      objectFit: "cover", 
-                      transition: "transform 0.3s ease"
-                    }}
-                    onError={(e) => {
-                      e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&auto=format&q=80&t=${Date.now()}`;
-                    }}
-                    onLoad={() => {
-                      // Image loaded successfully
-                    }}
-                    loading="lazy"
-                    onMouseEnter={(e) => {
-                      e.target.style.transform = "scale(1.1)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.transform = "scale(1)";
-                    }}
-                  />
+                {/* Number Badge */}
+                <div style={{
+                  position: "absolute",
+                  top: "20px",
+                  right: "20px",
+                  width: "50px",
+                  height: "50px",
+                  background: `linear-gradient(135deg, ${pillar.color}, ${pillar.color}80)`,
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "white",
+                  fontSize: "1.5rem",
+                  fontWeight: "700",
+                  boxShadow: `0 5px 15px ${pillar.color}50`
+                }}>
+                  {pillar.number}
+                </div>
+                
+                {/* Icon */}
+                <div style={{ 
+                  width: "120px", 
+                  height: "120px", 
+                  background: `linear-gradient(135deg, ${pillar.color}20, ${pillar.color}40)`,
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 30px",
+                  border: `4px solid ${pillar.color}`,
+                  boxShadow: `0 10px 30px ${pillar.color}30`,
+                  transition: "all 0.3s ease",
+                  position: "relative",
+                  overflow: "hidden"
+                }}>
+                  <pillar.icon size={60} color={pillar.color} />
                   
-                  {/* Gradient Overlay */}
-                  <div style={{
+                  {/* Rotating Ring */}
+                  <div style={{ 
                     position: "absolute",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    background: `linear-gradient(135deg, ${team.color}20, ${team.color}40)`,
-                    transition: "opacity 0.3s ease"
+                    top: "-8px",
+                    left: "-8px",
+                    right: "-8px",
+                    bottom: "-8px",
+                    border: `3px solid ${pillar.color}`,
+                    borderRadius: "50%",
+                    animation: "rotate 3s linear infinite",
+                    opacity: 0.6
                   }} />
-                  
-                  {/* Floating Icons */}
-                  <div style={{ 
-                    position: "absolute", 
-                    top: "20px", 
-                    right: "20px", 
-                    animation: "bounce 2s ease-in-out infinite",
-                    zIndex: 2
+                </div>
+                
+                <h3 
+                  className="heading-2" 
+                  style={{ 
+                    marginBottom: "16px",
+                    color: pillar.color,
+                    fontSize: "2rem",
+                    fontWeight: "700"
+                  }}
+                >
+                  {pillar.title}
+                </h3>
+                <p 
+                  className="body-regular" 
+                  style={{ 
+                    color: "var(--text-secondary)",
+                    fontSize: "1.1rem",
+                    lineHeight: "1.6"
+                  }}
+                >
+                  {pillar.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Bahova Event Section */}
+      <section className="section-padding-small" style={{ background: "var(--bg-secondary)" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "60px" }}>
+            <h2 
+              className="heading-1"
+              style={{ 
+                fontSize: "2.5rem",
+                fontWeight: "700",
+                color: "#667eea",
+                background: "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)",
+                backgroundSize: "300% 300%",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                animation: "gradientShift 3s ease-in-out infinite, fadeIn 1s ease-out 0.3s both"
+              }}
+            >
+              Pourquoi Choisir Bahova Event ?
+            </h2>
+            <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
+              Des avantages qui font la différence
+            </p>
+          </div>
+          
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", gap: "40px" }}>
+            {[
+              {
+                icon: "✓",
+                title: "Une approche personnalisée",
+                description: "Adaptée à chaque client et à ses besoins spécifiques",
+                color: "#667eea"
+              },
+              {
+                icon: "✓",
+                title: "Un réseau de partenaires fiables",
+                description: "Haut de gamme et sélectionnés avec soin",
+                color: "#764ba2"
+              },
+              {
+                icon: "✓",
+                title: "Une équipe passionnée",
+                description: "Alliant vision stratégique et souci du détail",
+                color: "#f093fb"
+              }
+            ].map((advantage, index) => (
+              <div 
+                key={index}
+                className="fade-in"
+                style={{ 
+                  animation: `slideInUp 0.8s ease-out ${0.5 + index * 0.2}s both`,
+                  position: "relative",
+                  borderRadius: "20px",
+                  overflow: "hidden",
+                  boxShadow: "0 15px 35px rgba(0,0,0,0.1)",
+                  transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                  background: "white",
+                  padding: "40px 30px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "24px"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-10px) scale(1.02)";
+                  e.currentTarget.style.boxShadow = `0 25px 50px ${advantage.color}30`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0) scale(1)";
+                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.1)";
+                }}
+              >
+                {/* Checkmark Icon */}
+                <div style={{ 
+                  width: "80px", 
+                  height: "80px", 
+                  background: `linear-gradient(135deg, ${advantage.color}, ${advantage.color}80)`,
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  border: `3px solid ${advantage.color}`,
+                  boxShadow: `0 10px 30px ${advantage.color}30`,
+                  transition: "all 0.3s ease",
+                  flexShrink: 0
+                }}>
+                  <span style={{
+                    color: "white",
+                    fontSize: "2rem",
+                    fontWeight: "700"
                   }}>
-                    {index === 0 ? <Calendar size={24} color="white" /> : 
-                     index === 1 ? <Settings size={24} color="white" /> : 
-                     index === 2 ? <Palette size={24} color="white" /> :
-                     <Handshake size={24} color="white" />}
-                  </div>
-                  <div style={{ 
-                    position: "absolute", 
-                    bottom: "20px", 
-                    left: "20px", 
-                    animation: "bounce 2s ease-in-out infinite 1s",
-                    zIndex: 2
-                  }}>
-                    {index === 0 ? <Users size={20} color="white" /> : 
-                     index === 1 ? <Zap size={20} color="white" /> : 
-                     index === 2 ? <Heart size={20} color="white" /> :
-                     <Award size={20} color="white" />}
-                  </div>
-            </div>
-            
-                <div style={{ padding: "24px" }}>
+                    {advantage.icon}
+                  </span>
+                </div>
+                
+                {/* Content */}
+                <div style={{ flex: 1 }}>
                   <h3 
                     className="heading-3" 
-                style={{ 
-                      marginBottom: "8px",
-                      color: team.color,
-                      fontSize: "1.5rem",
+                    style={{ 
+                      marginBottom: "12px",
+                      color: advantage.color,
+                      fontSize: "1.6rem",
                       fontWeight: "600"
                     }}
                   >
-                    {team.title}
-              </h3>
+                    {advantage.title}
+                  </h3>
                   <p 
-                    className="body-small" 
+                    className="body-regular" 
                     style={{ 
                       color: "var(--text-secondary)",
-                      fontSize: "1rem",
-                      lineHeight: "1.5"
+                      fontSize: "1.1rem",
+                      lineHeight: "1.6",
+                      margin: 0
                     }}
                   >
-                    {team.description}
-              </p>
-            </div>
+                    {advantage.description}
+                  </p>
+                </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Promise Section */}
+      <section className="section-padding" style={{ background: "linear-gradient(135deg, #667eea, #764ba2, #f093fb, #f5576c)", position: "relative", overflow: "hidden" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", position: "relative", zIndex: 2 }}>
+            <h2 
+              className="heading-1 fade-in"
+              style={{ 
+                fontSize: "3rem",
+                fontWeight: "700",
+                color: "white",
+                marginBottom: "24px",
+                textShadow: "0 4px 8px rgba(0,0,0,0.3)",
+                animation: "fadeIn 1s ease-out 0.3s both"
+              }}
+            >
+              Notre Promesse
+            </h2>
+            <p 
+              className="body-large fade-in"
+              style={{ 
+                fontSize: "1.5rem",
+                color: "rgba(255, 255, 255, 0.95)",
+                marginBottom: "32px",
+                lineHeight: "1.6",
+                textShadow: "0 2px 4px rgba(0,0,0,0.3)",
+                animation: "fadeIn 1s ease-out 0.6s both"
+              }}
+            >
+              Plus qu'un événement, une signature.
+            </p>
+            <p 
+              className="body-regular fade-in"
+              style={{ 
+                fontSize: "1.2rem",
+                color: "rgba(255, 255, 255, 0.9)",
+                maxWidth: "800px",
+                margin: "0 auto",
+                lineHeight: "1.7",
+                textShadow: "0 2px 4px rgba(0,0,0,0.3)",
+                animation: "fadeIn 1s ease-out 0.9s both"
+              }}
+            >
+              Avec Bahova Event, vos idées prennent vie dans des univers mémorables, fidèles à vos valeurs et à votre image.
+            </p>
+            
+            {/* Signature Line */}
+            <div 
+              className="fade-in"
+              style={{
+                marginTop: "40px",
+                width: "200px",
+                height: "3px",
+                background: "linear-gradient(90deg, transparent, white, transparent)",
+                margin: "40px auto 0",
+                animation: "fadeIn 1s ease-out 1.2s both"
+              }}
+            />
           </div>
         </div>
       </section>

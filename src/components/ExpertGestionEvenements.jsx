@@ -4,12 +4,10 @@ import { Award, Users, Calendar, Coffee, Sparkles, Zap, Heart, Star, Target, Roc
 import { mockData } from "../mock";
 import ColorSwitcher from "./ColorSwitcher";
 import AnimatedText from "./AnimatedText";
-import FloatingElements from "./FloatingElements";
 
 const ExpertGestionEvenements = () => {
   return (
     <main>
-      <FloatingElements />
       
       {/* Structured Data for Expert Event Management */}
       <script type="application/ld+json">

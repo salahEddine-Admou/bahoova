@@ -4,7 +4,6 @@ import { ArrowRight, Award, Users, Calendar, Coffee, Sparkles, Zap, Heart } from
 import { mockData } from "../mock";
 import AnimatedSlider from "./AnimatedSlider";
 import ColorSwitcher from "./ColorSwitcher";
-import FloatingElements from "./FloatingElements";
 import AnimatedText from "./AnimatedText";
 
 const Home = () => {
@@ -33,7 +32,6 @@ const Home = () => {
 
   return (
     <main>
-      <FloatingElements />
       
       {/* Structured Data for Local SEO */}
       <script type="application/ld+json">

@@ -4,7 +4,6 @@ import { mockData } from "../mock";
 import EmailDebugger from "./EmailDebugger";
 import ColorSwitcher from "./ColorSwitcher";
 import AnimatedText from "./AnimatedText";
-import FloatingElements from "./FloatingElements";
 import { sendContactEmail, getEmailJSConfig } from "../emailService";
 
 const Contact = () => {
@@ -421,69 +420,11 @@ ${process.env.NODE_ENV === 'development' ? '📝 Mode développement : Email sim
 
   return (
     <main>
-      <FloatingElements />
       {process.env.NODE_ENV === 'development' && <EmailDebugger />}
       {/* Hero Section */}
       <section className="section-padding" style={{ position: "relative", overflow: "hidden" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto", position: "relative" }}>
-            {/* Floating Icons */}
-            <div style={{ 
-              position: "absolute", 
-              top: "-20px", 
-              left: "20px", 
-              animation: "bounce 3s ease-in-out infinite",
-              zIndex: 1
-            }}>
-              <Sparkles size={32} color="#667eea" />
-            </div>
-            <div style={{ 
-              position: "absolute", 
-              top: "40px", 
-              right: "30px", 
-              animation: "bounce 3s ease-in-out infinite 1s",
-              zIndex: 1
-            }}>
-              <Zap size={28} color="#764ba2" />
-            </div>
-            <div style={{ 
-              position: "absolute", 
-              bottom: "20px", 
-              left: "40px", 
-              animation: "bounce 3s ease-in-out infinite 2s",
-              zIndex: 1
-            }}>
-              <Heart size={24} color="#f093fb" />
-            </div>
-            <div style={{ 
-              position: "absolute", 
-              bottom: "60px", 
-              right: "20px", 
-              animation: "bounce 3s ease-in-out infinite 0.5s",
-              zIndex: 1
-            }}>
-              <Star size={26} color="#10ac84" />
-            </div>
-            <div style={{ 
-              position: "absolute", 
-              top: "80px", 
-              left: "50%", 
-              transform: "translateX(-50%)",
-              animation: "bounce 3s ease-in-out infinite 1.5s",
-              zIndex: 1
-            }}>
-              <Target size={22} color="#ff6b6b" />
-            </div>
-            <div style={{ 
-              position: "absolute", 
-              top: "120px", 
-              right: "50px", 
-              animation: "bounce 3s ease-in-out infinite 2.5s",
-              zIndex: 1
-            }}>
-              <Rocket size={20} color="#667eea" />
-            </div>
-
             <ColorSwitcher>
               <h1 
                 className="hero-large fade-in" 
