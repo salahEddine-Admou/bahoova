@@ -12,34 +12,34 @@ const About = () => {
 
   const aboutImages = [
     {
+      src: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      fallback: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      title: "Créateurs d'Expériences",
+      description: "Des événements sur mesure où l'excellence se mêle à l'émotion"
+    },
+    {
       src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      fallback: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      title: "Dîner et gala",
-      description: "Organisation professionnelle de vos événements de recherche"
+      fallback: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      title: "Événements d'Entreprise",
+      description: "Conférences, séminaires et lancements de produits professionnels"
     },
     {
       src: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
       fallback: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      title: "Forums de Recherche",
-      description: "Colloques et symposiums scientifiques internationaux"
+      title: "Mariages d'Exception",
+      description: "Des cérémonies uniques et des réceptions inoubliables"
     },
     {
       src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
       fallback: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      title: "Conférences Médicales",
-      description: "Événements médicaux et pharmaceutiques de pointe"
+      title: "Scénographie Artistique",
+      description: "Décors sur mesure, éclairage et ambiance créative"
     },
     {
       src: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
       fallback: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      title: "Technologies Avancées",
-      description: "Équipements de pointe pour présentations scientifiques"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      fallback: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      title: "Live Stream & Webinaire",
-      description: "Diffusion en direct et événements hybrides"
+      title: "Séminaires & Conférences",
+      description: "Organisation professionnelle de vos événements d'entreprise"
     }
   ];
 

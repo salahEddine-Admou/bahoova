@@ -150,7 +150,8 @@ const Home = () => {
             <div className="hero-content">
               <div className="hero-text-container">
                 <h1 className="hero-title">
-                  Expert Gestion Événements Maroc - BAHOOVA Events
+                  Expert Gestion Événements Maroc<br />
+                  BAHOOVA Events
                 </h1>
                 <p className="hero-description">
                   <strong>Expert gestion événements Maroc</strong> - BAHOOVA Events est votre partenaire de confiance pour l'organisation d'événements, congrès, forums, séminaires, réunions d'entreprises, dîners de gala et mariages au Maroc. Notre expertise en gestion d'événements au Maroc couvre tous les secteurs : congrès scientifiques, forums de recherche, séminaires d'entreprises, dîners de gala, événements corporate et mariages de luxe. Planification complète, technologies avancées, 15 ans d'expérience dans l'événementiel professionnel au Maroc.

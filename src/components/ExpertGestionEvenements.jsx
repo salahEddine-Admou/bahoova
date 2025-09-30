@@ -96,7 +96,8 @@ const ExpertGestionEvenements = () => {
             <div className="hero-content">
               <div className="hero-text-container">
                 <h1 className="hero-title">
-                  Expert Gestion Événements Maroc - BAHOOVA Events
+                  Expert Gestion Événements Maroc<br />
+                  BAHOOVA Events
                 </h1>
                 <p className="hero-description">
                   <strong>Expert gestion événements Maroc</strong> depuis 15 ans. BAHOOVA Events est le leader de l'organisation d'événements au Maroc. 
