@@ -15,7 +15,7 @@ const ExpertGestionEvenements = () => {
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           "name": "Expert Gestion Événements Maroc - BAHOOVA Events",
-          "description": "Expert en gestion d'événements au Maroc avec 15 ans d'expérience. Organisation de congrès, forums, séminaires, réunions d'entreprises et dîners de gala.",
+          "description": "Organisation événements Maroc avec 15 ans d'expérience. Event management, planificateur d'événements, événementielle mariage, dîner gala, séminaire au Maroc.",
           "url": "https://bahoovaevents.com/expert-gestion-evenements-maroc",
           "telephone": "0662017389",
           "email": "bahoovaevents@gmail.com",

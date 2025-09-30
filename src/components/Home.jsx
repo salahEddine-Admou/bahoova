@@ -39,7 +39,7 @@ const Home = () => {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "BAHOOVA Events",
-          "description": "Expert gestion événements Maroc - BAHOOVA Events, organisation de congrès, forums, séminaires, réunions d'entreprises et dîners de gala au Maroc",
+          "description": "Organisation événements Maroc - BAHOOVA Events, event management, planificateur d'événements, événementielle mariage, dîner gala, séminaire au Maroc",
           "url": "https://bahoovaevents.com",
           "telephone": "0662017389",
           "email": "bahoovaevents@gmail.com",
