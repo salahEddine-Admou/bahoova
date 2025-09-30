@@ -3,7 +3,7 @@ export const mockData = {
   company: {
     name: "BAHOOVA Events",
     tagline: "Gestion de Tous Événements & Congrès",
-    intro: "Votre partenaire expert en organisation de tous types d'événements, congrès, forums et événements de recherche au Maroc. Nous créons des expériences professionnelles exceptionnelles.",
+    intro: "Votre organisateur spécialisé des événements au Maroc. Nous créons des expériences mémorables pour mariages, dîners de gala, séminaires, congrès et événements corporate.",
     vision: "Visiblement, nous avons atteint un sommet où chaque idée s'élève au-delà du simple rêve, où les projets prennent vie sous une lumière nouvelle. À l'image de l'horizon qui s'étire à l'infini, nous façonnons vos événements pour qu'ils deviennent des souvenirs éternels, suspendus dans le temps et marqués par l'émotion.",
     stats: {
       experience: "15 ans d'expérience",
@@ -21,71 +21,71 @@ export const mockData = {
   
   coreValues: [
     {
-      title: "Expertise Polyvalente",
-      description: "Spécialisés dans l'organisation de tous types d'événements et congrès"
+      title: "Organisation Polyvalente",
+      description: "Spécialisés dans l'organisation de mariages, galas, séminaires et événements corporate"
     },
     {
       title: "Gestion Complète",
-      description: "De la planification à l'exécution de vos événements professionnels"
+      description: "De la planification à l'exécution de vos événements mémorables"
     },
     {
-      title: "Technologies Avancées", 
-      description: "Équipements de pointe pour conférences et présentations de qualité"
+      title: "Créativité Unique", 
+      description: "Des concepts personnalisés pour chaque événement"
     },
     {
-      title: "Réseau International",
-      description: "Partenaires experts dans tous les domaines d'événements"
+      title: "Excellence Garantie",
+      description: "Un réseau de partenaires fiables et haut de gamme"
     }
   ],
 
   services: [
     {
-      title: "Congrès Scientifiques",
-      description: "Organisation complète de congrès internationaux, symposiums et conférences de recherche",
+      title: "Congrès & Forums",
+      description: "Organisation complète de congrès internationaux, forums et événements professionnels",
       image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
-      category: "Scientifique",
+      category: "Corporate",
       priority: 1
-    },
-    {
-      title: "Forums de Recherche",
-      description: "Forums académiques, colloques scientifiques et événements de networking professionnel",
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
-      category: "Scientifique",
-      priority: 2
-    },
-    {
-      title: "Gestion d'Événements",
-      description: "Organisation complète et créative de tous vos événements avec une approche unique et innovante",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
-      category: "Management",
-      priority: 3
-    },
-    {
-      title: "Conférences Médicales",
-      description: "Événements médicaux, symposiums pharmaceutiques et conférences de santé",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center",
-      category: "Médical",
-      priority: 4
-    },
-    {
-      title: "Technologies Avancées",
-      description: "Équipements de pointe, sonorisation et éclairage pour présentations scientifiques",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
-      category: "Technique",
-      priority: 5
-    },
-    {
-      title: "Live Stream & Webinaire",
-      description: "Diffusion en direct, webinaires et événements hybrides",
-      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
-      category: "Technique",
-      priority: 6
     },
     {
       title: "Mariages & Cérémonies",
       description: "Organisation complète de mariages, cérémonies et événements romantiques au Maroc",
       image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&crop=center",
       category: "Romantique",
+      priority: 2
+    },
+    {
+      title: "Dîners de Gala",
+      description: "Événements de gala, réceptions officielles et dîners d'exception",
+      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center",
+      category: "Gala",
+      priority: 3
+    },
+    {
+      title: "Séminaires d'Entreprise",
+      description: "Formations, séminaires et événements corporate pour entreprises",
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
+      category: "Corporate",
+      priority: 4
+    },
+    {
+      title: "Gestion d'Événements",
+      description: "Organisation complète et créative de tous vos événements avec une approche unique et innovante",
+      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
+      category: "Management",
+      priority: 5
+    },
+    {
+      title: "Technologies Avancées",
+      description: "Équipements de pointe, sonorisation et éclairage pour tous types d'événements",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
+      category: "Technique",
+      priority: 6
+    },
+    {
+      title: "Live Stream & Webinaire",
+      description: "Diffusion en direct, webinaires et événements hybrides",
+      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
+      category: "Technique",
       priority: 7
     }
   ],
@@ -414,25 +414,25 @@ export const mockData = {
       name: "Dr. Sarah Chen",
       role: "Directrice de Recherche",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-      text: "BAHOOVA Events a organisé notre congrès international de neurosciences avec une précision remarquable. Une expertise exceptionnelle dans l'organisation scientifique."
+      text: "BAHOOVA Events a organisé notre congrès international avec une précision remarquable. Une expertise exceptionnelle dans l'organisation d'événements."
     },
     {
       name: "Prof. Marc Dubois",
       role: "Président de Forum",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-      text: "L'organisation de notre forum de recherche en biotechnologie a été parfaite. BAHOOVA Events excelle dans les événements scientifiques."
+      text: "L'organisation de notre forum professionnel a été parfaite. BAHOOVA Events excelle dans les événements corporate."
     },
     {
       name: "Prof. Ahmed Al-Rashid",
       role: "Président de Congrès",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-      text: "Notre congrès médical international a été un succès total grâce à l'expertise de BAHOOVA Events. Nous les recommandons vivement pour tous événements scientifiques."
+      text: "Notre événement corporate a été un succès total grâce à l'expertise de BAHOOVA Events. Nous les recommandons vivement pour tous événements."
     },
     {
       name: "Dr. Fatima Al-Zahra",
       role: "Directrice Médicale",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-      text: "L'équipe de BAHOOVA Events a transformé notre symposium médical en un événement mémorable. Leur attention aux détails est impressionnante."
+      text: "L'équipe de BAHOOVA Events a transformé notre événement en un moment mémorable. Leur attention aux détails est impressionnante."
     },
     {
       name: "Prof. James Wilson",
