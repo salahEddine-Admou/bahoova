@@ -4,8 +4,12 @@
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG, EMAIL_TEMPLATES } from './config/emailConfig';
 
-// Initialize EmailJS
-emailjs.init(EMAILJS_CONFIG.publicKey);
+// Initialize EmailJS (only if public key is valid)
+if (EMAILJS_CONFIG.publicKey && EMAILJS_CONFIG.publicKey !== 'YOUR_VALID_PUBLIC_KEY_HERE') {
+  emailjs.init(EMAILJS_CONFIG.publicKey);
+} else {
+  console.warn('EmailJS not initialized: Invalid or missing public key');
+}
 
 // For development/testing - shows email details in console
 export const simulateEmail = (emailData) => {

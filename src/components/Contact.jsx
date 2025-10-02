@@ -4,7 +4,6 @@ import { mockData } from "../mock";
 import EmailDebugger from "./EmailDebugger";
 import ColorSwitcher from "./ColorSwitcher";
 import AnimatedText from "./AnimatedText";
-import { sendContactEmail, getEmailJSConfig } from "../emailService";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -350,6 +349,15 @@ ${formData.name}`
     return templates[eventType] || templates['autre'];
   };
 
+  // Function to create Gmail URL with pre-filled content
+  const createGmailUrl = (subject, body, fromEmail) => {
+    const recipient = mockData.company.contact.email;
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+    
+    return `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${encodedSubject}&body=${encodedBody}`;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -374,45 +382,37 @@ ${formData.name}`
       // Get personalized email template based on event type
       const template = getEmailTemplate(formData.eventType, formData);
       
-      // Prepare email data for the service
-      const emailData = {
-        to: mockData.company.contact.email,
-        from: formData.email,
-        fromName: formData.name,
-        subject: template.subject,
-        body: template.body
-      };
+      // Create Gmail URL with pre-filled email
+      const gmailUrl = createGmailUrl(template.subject, template.body, formData.email);
       
-      // Send email using the contact email service
-      const result = await sendContactEmail(emailData);
+      // Show success message and redirect
+      setSubmitMessage(`✅ Formulaire validé avec succès !
       
-      if (result.success) {
-        // Show success message
-        setSubmitMessage(`✅ ${result.message}
-        
-📧 Votre message a été envoyé avec succès !
+📧 Redirection vers Gmail en cours...
 • À : ${mockData.company.contact.email}
 • De : ${formData.email}
 • Sujet : ${template.subject}
-• Heure : ${new Date().toLocaleString('fr-FR')}
 
-${process.env.NODE_ENV === 'development' ? '📝 Mode développement : Email simulé pour test.' : '📧 Email envoyé directement à notre équipe ! Nous vous répondrons dans les plus brefs délais.'}`);
-        
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          eventType: '',
-          message: ''
-        });
-      } else {
-        setSubmitMessage(`❌ ${result.message}`);
-      }
+🔄 Vous allez être redirigé vers votre Gmail avec le message pré-rempli.`);
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        eventType: '',
+        message: ''
+      });
+      
+      // Redirect to Gmail after a short delay
+      setTimeout(() => {
+        window.open(gmailUrl, '_blank');
+        setSubmitMessage('✅ Redirection effectuée ! Vérifiez votre Gmail.');
+      }, 2000);
       
     } catch (error) {
-      setSubmitMessage('Une erreur est survenue. Veuillez nous contacter directement par email.');
-      console.error('Email sending error:', error);
+      setSubmitMessage('❌ Erreur lors de la préparation de l\'email. Veuillez réessayer.');
+      console.error('Error preparing Gmail redirect:', error);
     }
     
     setIsSubmitting(false);

@@ -12,8 +12,8 @@ export const EMAILJS_CONFIG = {
     eventInquiry: 'template_event_inquiry' // For event-specific inquiries
   },
   
-  // Public Key from EmailJS dashboard
-  publicKey: 'aeyr kzhj viex wklp',
+  // Public Key from EmailJS dashboard (REPLACE WITH VALID KEY)
+  publicKey: 'YOUR_VALID_PUBLIC_KEY_HERE',
   
   // Destination email address
   userEmail: 'adyvepro@gmail.com',
