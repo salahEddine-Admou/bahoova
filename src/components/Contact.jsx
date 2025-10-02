@@ -9,6 +9,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     subject: '',
     eventType: '',
     message: ''
@@ -37,6 +38,8 @@ Je souhaite organiser un congrès scientifique et j'aimerais recevoir un devis p
 INFORMATIONS PERSONNELLES:
 • Nom: ${formData.name}
 • Email: ${formData.email}
+• Téléphone: ${formData.phone || 'Non renseigné'}
+• Téléphone: ${formData.phone || 'Non renseigné'}
 
 DÉTAILS DE L'ÉVÉNEMENT:
 • Type: Congrès Scientifique
@@ -66,6 +69,7 @@ Je vous contacte pour l'organisation d'un forum de recherche.
 COORDONNÉES:
 • Nom: ${formData.name}
 • Email: ${formData.email}
+• Téléphone: ${formData.phone || 'Non renseigné'}
 
 ÉVÉNEMENT:
 • Type: Forum de Recherche
@@ -95,6 +99,7 @@ Je souhaite organiser une conférence médicale et j'aurais besoin de vos servic
 INFORMATIONS:
 • Nom: ${formData.name}
 • Email: ${formData.email}
+• Téléphone: ${formData.phone || 'Non renseigné'}
 • Sujet: ${formData.subject || 'Conférence Médicale'}
 
 DÉTAILS:
@@ -120,6 +125,7 @@ Je souhaite organiser un séminaire d'entreprise et j'aimerais vos services.
 COORDONNÉES:
 • Nom: ${formData.name}
 • Email: ${formData.email}
+• Téléphone: ${formData.phone || 'Non renseigné'}
 • Sujet: ${formData.subject || 'Séminaire d\'Entreprise'}
 
 DÉTAILS DE L'ÉVÉNEMENT:
@@ -146,6 +152,7 @@ Je souhaite organiser un lancement de produit et j'ai besoin de votre expertise 
 INFORMATIONS:
 • Nom: ${formData.name}
 • Email: ${formData.email}
+• Téléphone: ${formData.phone || 'Non renseigné'}
 • Sujet: ${formData.subject || 'Lancement de Produit'}
 
 CONCEPT:
@@ -173,6 +180,7 @@ Je souhaite organiser un mariage de luxe et j'aimerais vos services premium.
 COORDONNÉES:
 • Nom: ${formData.name}
 • Email: ${formData.email}
+• Téléphone: ${formData.phone || 'Non renseigné'}
 • Sujet: ${formData.subject || 'Mariage de Luxe'}
 
 VISION DU MARIAGE:
@@ -200,6 +208,7 @@ Je souhaite organiser une formation professionnelle et j'aurais besoin de vos se
 INFORMATIONS:
 • Nom: ${formData.name}
 • Email: ${formData.email}
+• Téléphone: ${formData.phone || 'Non renseigné'}
 • Sujet: ${formData.subject || 'Formation Professionnelle'}
 
 DÉTAILS DE LA FORMATION:
@@ -226,6 +235,7 @@ Je souhaite organiser un gala caritatif et j'aimerais vos services.
 COORDONNÉES:
 • Nom: ${formData.name}
 • Email: ${formData.email}
+• Téléphone: ${formData.phone || 'Non renseigné'}
 • Sujet: ${formData.subject || 'Gala Caritatif'}
 
 CONCEPT DE L'ÉVÉNEMENT:
@@ -253,6 +263,7 @@ Je souhaite organiser un événement sportif et j'aurais besoin de vos services.
 INFORMATIONS:
 • Nom: ${formData.name}
 • Email: ${formData.email}
+• Téléphone: ${formData.phone || 'Non renseigné'}
 • Sujet: ${formData.subject || 'Événement Sportif'}
 
 DÉTAILS DE L'ÉVÉNEMENT:
@@ -280,6 +291,7 @@ Je souhaite organiser un festival culturel et j'ai besoin de votre expertise.
 INFORMATIONS:
 • Nom: ${formData.name}
 • Email: ${formData.email}
+• Téléphone: ${formData.phone || 'Non renseigné'}
 • Sujet: ${formData.subject || 'Festival Culturel'}
 
 CONCEPT DU FESTIVAL:
@@ -307,6 +319,7 @@ Je souhaite organiser un webinaire en direct et j'aurais besoin de vos services 
 INFORMATIONS:
 • Nom: ${formData.name}
 • Email: ${formData.email}
+• Téléphone: ${formData.phone || 'Non renseigné'}
 • Sujet: ${formData.subject || 'Webinaire & Live Stream'}
 
 DÉTAILS TECHNIQUES:
@@ -334,6 +347,7 @@ Je souhaite organiser un événement et j'aimerais recevoir un devis personnalis
 INFORMATIONS:
 • Nom: ${formData.name}
 • Email: ${formData.email}
+• Téléphone: ${formData.phone || 'Non renseigné'}
 • Sujet: ${formData.subject || 'Événement Personnalisé'}
 
 DÉTAILS DE L'ÉVÉNEMENT:
@@ -399,6 +413,7 @@ ${formData.name}`
       setFormData({
         name: '',
         email: '',
+        phone: '',
         subject: '',
         eventType: '',
         message: ''
@@ -815,6 +830,36 @@ ${formData.name}`
                   className="form-group fade-in"
                   style={{ animation: "slideInUp 0.8s ease-out 1.8s both" }}
                 >
+                  <label htmlFor="phone" className="form-label">
+                    Téléphone
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="form-input"
+                    placeholder="+212 6XX XXX XXX"
+                    style={{
+                      transition: "all 0.3s ease",
+                      border: "2px solid #e2e8f0"
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = "#764ba2";
+                      e.target.style.boxShadow = "0 0 0 3px rgba(118, 75, 162, 0.1)";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = "#e2e8f0";
+                      e.target.style.boxShadow = "none";
+                    }}
+                  />
+                </div>
+                
+                <div 
+                  className="form-group fade-in"
+                  style={{ animation: "slideInUp 0.8s ease-out 2.0s both" }}
+                >
                   <label htmlFor="subject" className="form-label">
                     Sujet
                   </label>
@@ -843,7 +888,7 @@ ${formData.name}`
                 
                 <div 
                   className="form-group fade-in"
-                  style={{ animation: "slideInUp 0.8s ease-out 2s both" }}
+                  style={{ animation: "slideInUp 0.8s ease-out 2.2s both" }}
                 >
                   <label htmlFor="eventType" className="form-label">
                     Type d'événement
@@ -890,7 +935,7 @@ ${formData.name}`
                 
                 <div 
                   className="form-group fade-in"
-                  style={{ animation: "slideInUp 0.8s ease-out 2.2s both" }}
+                  style={{ animation: "slideInUp 0.8s ease-out 2.4s both" }}
                 >
                   <label htmlFor="message" className="form-label">
                     Message *
@@ -929,7 +974,7 @@ ${formData.name}`
                     alignItems: "center", 
                     justifyContent: "center", 
                     gap: "8px",
-                    animation: "slideInUp 0.8s ease-out 2.4s both",
+                    animation: "slideInUp 0.8s ease-out 2.6s both",
                     background: "linear-gradient(135deg, #667eea, #764ba2)",
                     border: "none",
                     borderRadius: "12px",
