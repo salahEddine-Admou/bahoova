@@ -66,7 +66,7 @@ const Services = () => {
               <div 
                 className="fade-in"
                 style={{ 
-                  color: "#4a90e2", 
+                  color: "#333333", 
                   fontSize: "1.25rem",
                   lineHeight: "1.6",
                   marginBottom: "32px",
