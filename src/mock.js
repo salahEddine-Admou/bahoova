@@ -261,6 +261,7 @@ export const mockData = {
   ],
 
   gallery: [
+    // Original PNG Images
     {
       id: 1,
       image: "/images/gallery/ourika.png",
@@ -338,6 +339,531 @@ export const mockData = {
       image: "/images/gallery/show-12.png",
       title: "Production Artistique & Spectacle Live",
       category: "Spectacles"
+    },
+    
+    // New WhatsApp Images
+    {
+      id: 14,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.11.jpeg",
+      title: "Événement Corporate Élégant",
+      category: "Corporate"
+    },
+    {
+      id: 15,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.11 (1).jpeg",
+      title: "Décoration Florale Raffinée",
+      category: "Mariages"
+    },
+    {
+      id: 16,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.11 (2).jpeg",
+      title: "Spectacle de Divertissement",
+      category: "Spectacles"
+    },
+    {
+      id: 17,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.11 (3).jpeg",
+      title: "Setup Audio-Visuel Professionnel",
+      category: "Corporate"
+    },
+    {
+      id: 18,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.12.jpeg",
+      title: "Dîner de Gala Exclusif",
+      category: "Galas"
+    },
+    {
+      id: 19,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.12 (1).jpeg",
+      title: "Mariage en Plein Air",
+      category: "Mariages"
+    },
+    {
+      id: 20,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.12 (2).jpeg",
+      title: "Animation Musicale Live",
+      category: "Spectacles"
+    },
+    {
+      id: 21,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.12 (3).jpeg",
+      title: "Événement VIP Prestige",
+      category: "Galas"
+    },
+    {
+      id: 22,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.12 (4).jpeg",
+      title: "Conférence Internationale",
+      category: "Corporate"
+    },
+    {
+      id: 23,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.13.jpeg",
+      title: "Cérémonie de Mariage Traditionnelle",
+      category: "Mariages"
+    },
+    {
+      id: 24,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.13 (1).jpeg",
+      title: "Soirée Thématique Exclusive",
+      category: "Galas"
+    },
+    {
+      id: 25,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.14.jpeg",
+      title: "Performance Artistique Premium",
+      category: "Spectacles"
+    },
+    {
+      id: 26,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.14 (1).jpeg",
+      title: "Séminaire d'Entreprise",
+      category: "Corporate"
+    },
+    {
+      id: 27,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.14 (2).jpeg",
+      title: "Décoration de Mariage Luxueuse",
+      category: "Mariages"
+    },
+    {
+      id: 28,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.14 (3).jpeg",
+      title: "Spectacle Musical Professionnel",
+      category: "Spectacles"
+    },
+    {
+      id: 29,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.15.jpeg",
+      title: "Gala de Bienfaisance",
+      category: "Galas"
+    },
+    {
+      id: 30,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.15 (1).jpeg",
+      title: "Lancement de Produit Corporate",
+      category: "Corporate"
+    },
+    {
+      id: 31,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.15 (2).jpeg",
+      title: "Réception de Mariage Romantique",
+      category: "Mariages"
+    },
+    {
+      id: 32,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.15 (3).jpeg",
+      title: "Animation Artistique Live",
+      category: "Spectacles"
+    },
+    {
+      id: 33,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.16.jpeg",
+      title: "Soirée de Gala Prestige",
+      category: "Galas"
+    },
+    {
+      id: 34,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.16 (1).jpeg",
+      title: "Convention d'Entreprise",
+      category: "Corporate"
+    },
+    {
+      id: 35,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.16 (2).jpeg",
+      title: "Cérémonie de Mariage Élégante",
+      category: "Mariages"
+    },
+    {
+      id: 36,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.17.jpeg",
+      title: "Show Musical Exceptionnel",
+      category: "Spectacles"
+    },
+    {
+      id: 37,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.17 (1).jpeg",
+      title: "Dîner d'Affaires VIP",
+      category: "Galas"
+    },
+    {
+      id: 38,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.17 (2).jpeg",
+      title: "Team Building Corporate",
+      category: "Corporate"
+    },
+    {
+      id: 39,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.18.jpeg",
+      title: "Mariage de Rêve",
+      category: "Mariages"
+    },
+    {
+      id: 40,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.18 (1).jpeg",
+      title: "Performance Scénique Premium",
+      category: "Spectacles"
+    },
+    {
+      id: 41,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.18 (2).jpeg",
+      title: "Gala de Remise de Prix",
+      category: "Galas"
+    },
+    {
+      id: 42,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.18 (3).jpeg",
+      title: "Congrès Professionnel",
+      category: "Corporate"
+    },
+    {
+      id: 43,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.18 (4).jpeg",
+      title: "Décoration Mariage Moderne",
+      category: "Mariages"
+    },
+    {
+      id: 44,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.19.jpeg",
+      title: "Concert Privé Exclusif",
+      category: "Spectacles"
+    },
+    {
+      id: 45,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.19 (1).jpeg",
+      title: "Soirée Gala Charity",
+      category: "Galas"
+    },
+    {
+      id: 46,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.19 (2).jpeg",
+      title: "Forum d'Entreprise",
+      category: "Corporate"
+    },
+    {
+      id: 47,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.20.jpeg",
+      title: "Célébration de Mariage Unique",
+      category: "Mariages"
+    },
+    {
+      id: 48,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.20 (1).jpeg",
+      title: "Spectacle Culturel Artistique",
+      category: "Spectacles"
+    },
+    {
+      id: 49,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.20 (2).jpeg",
+      title: "Banquet de Gala Royal",
+      category: "Galas"
+    },
+    {
+      id: 50,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.21.jpeg",
+      title: "Séminaire de Formation",
+      category: "Corporate"
+    },
+    // Additional WhatsApp Images - Continuing the collection
+    {
+      id: 51,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.21 (1).jpeg",
+      title: "Événement Artistique Premium",
+      category: "Spectacles"
+    },
+    {
+      id: 52,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.21 (2).jpeg",
+      title: "Soirée de Gala Luxury",
+      category: "Galas"
+    },
+    {
+      id: 53,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.22.jpeg",
+      title: "Mariage Traditionnel Marocain",
+      category: "Mariages"
+    },
+    {
+      id: 54,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.22 (1).jpeg",
+      title: "Conférence Tech Innovation",
+      category: "Corporate"
+    },
+    {
+      id: 55,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.22 (2).jpeg",
+      title: "Spectacle Musical Élégant",
+      category: "Spectacles"
+    },
+    {
+      id: 56,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.22 (3).jpeg",
+      title: "Dîner d'Excellence VIP",
+      category: "Galas"
+    },
+    {
+      id: 57,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.23.jpeg",
+      title: "Cérémonie de Mariage Royale",
+      category: "Mariages"
+    },
+    {
+      id: 58,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.23 (1).jpeg",
+      title: "Lancement Corporate Exclusif",
+      category: "Corporate"
+    },
+    {
+      id: 59,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.23 (2).jpeg",
+      title: "Performance Live Exceptionnelle",
+      category: "Spectacles"
+    },
+    {
+      id: 60,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.24.jpeg",
+      title: "Gala Diplomatique",
+      category: "Galas"
+    },
+    {
+      id: 61,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.24 (1).jpeg",
+      title: "Réception de Mariage Chic",
+      category: "Mariages"
+    },
+    {
+      id: 62,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.24 (2).jpeg",
+      title: "Assemblée Générale Corporate",
+      category: "Corporate"
+    },
+    {
+      id: 63,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.24 (3).jpeg",
+      title: "Show Artistique Professionnel",
+      category: "Spectacles"
+    },
+    {
+      id: 64,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.25.jpeg",
+      title: "Banquet de Prestige",
+      category: "Galas"
+    },
+    {
+      id: 65,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.25 (1).jpeg",
+      title: "Mariage Destination Maroc",
+      category: "Mariages"
+    },
+    {
+      id: 66,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.26.jpeg",
+      title: "Symposium International",
+      category: "Corporate"
+    },
+    {
+      id: 67,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.26 (1).jpeg",
+      title: "Concert Privé Premium",
+      category: "Spectacles"
+    },
+    {
+      id: 68,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.26 (2).jpeg",
+      title: "Soirée Thématique Gala",
+      category: "Galas"
+    },
+    {
+      id: 69,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.27.jpeg",
+      title: "Cérémonie de Mariage Moderne",
+      category: "Mariages"
+    },
+    {
+      id: 70,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.27 (1).jpeg",
+      title: "Meeting Corporate Stratégique",
+      category: "Corporate"
+    },
+    {
+      id: 71,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.27 (2).jpeg",
+      title: "Animation Musicale Live",
+      category: "Spectacles"
+    },
+    {
+      id: 72,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.27 (3).jpeg",
+      title: "Gala de Charité",
+      category: "Galas"
+    },
+    {
+      id: 73,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.27 (4).jpeg",
+      title: "Mariage Berbère Authentique",
+      category: "Mariages"
+    },
+    {
+      id: 74,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.28.jpeg",
+      title: "Convention d'Affaires",
+      category: "Corporate"
+    },
+    {
+      id: 75,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.28 (1).jpeg",
+      title: "Spectacle Culturel Marocain",
+      category: "Spectacles"
+    },
+    {
+      id: 76,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.28 (2).jpeg",
+      title: "Dîner de Gala Impérial",
+      category: "Galas"
+    },
+    {
+      id: 77,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.28 (3).jpeg",
+      title: "Célébration de Mariage Exclusive",
+      category: "Mariages"
+    },
+    {
+      id: 78,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.29.jpeg",
+      title: "Forum Économique",
+      category: "Corporate"
+    },
+    {
+      id: 79,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.29 (1).jpeg",
+      title: "Performance Artistique Unique",
+      category: "Spectacles"
+    },
+    {
+      id: 80,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.29 (2).jpeg",
+      title: "Soirée VIP Prestige",
+      category: "Galas"
+    },
+    {
+      id: 81,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.30.jpeg",
+      title: "Mariage Royal Marocain",
+      category: "Mariages"
+    },
+    {
+      id: 82,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.30 (1).jpeg",
+      title: "Séminaire Leadership",
+      category: "Corporate"
+    },
+    {
+      id: 83,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.31.jpeg",
+      title: "Show Musical International",
+      category: "Spectacles"
+    },
+    {
+      id: 84,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.31 (1).jpeg",
+      title: "Gala d'Excellence",
+      category: "Galas"
+    },
+    {
+      id: 85,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.31 (2).jpeg",
+      title: "Réception de Mariage Luxueuse",
+      category: "Mariages"
+    },
+    {
+      id: 86,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.31 (3).jpeg",
+      title: "Congrès Médical International",
+      category: "Corporate"
+    },
+    {
+      id: 87,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.31 (4).jpeg",
+      title: "Concert Symphonique Privé",
+      category: "Spectacles"
+    },
+    {
+      id: 88,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.32.jpeg",
+      title: "Banquet Diplomatique",
+      category: "Galas"
+    },
+    {
+      id: 89,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.32 (1).jpeg",
+      title: "Mariage Palace Imperial",
+      category: "Mariages"
+    },
+    {
+      id: 90,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.32 (2).jpeg",
+      title: "Table Ronde Corporate",
+      category: "Corporate"
+    },
+    {
+      id: 91,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.33.jpeg",
+      title: "Spectacle Folklorique Premium",
+      category: "Spectacles"
+    },
+    {
+      id: 92,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.33 (1).jpeg",
+      title: "Soirée de Gala Royal",
+      category: "Galas"
+    },
+    {
+      id: 93,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.33 (2).jpeg",
+      title: "Cérémonie de Mariage Traditionnelle",
+      category: "Mariages"
+    },
+    {
+      id: 94,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.33 (3).jpeg",
+      title: "Sommet d'Entreprise",
+      category: "Corporate"
+    },
+    {
+      id: 95,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.34.jpeg",
+      title: "Animation Artistique Exclusive",
+      category: "Spectacles"
+    },
+    {
+      id: 96,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.34 (1).jpeg",
+      title: "Gala de Bienfaisance VIP",
+      category: "Galas"
+    },
+    {
+      id: 97,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.34 (2).jpeg",
+      title: "Mariage de Conte de Fées",
+      category: "Mariages"
+    },
+    {
+      id: 98,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.35.jpeg",
+      title: "Colloque Scientifique",
+      category: "Corporate"
+    },
+    {
+      id: 99,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.35 (1).jpeg",
+      title: "Performance Théâtrale Privée",
+      category: "Spectacles"
+    },
+    {
+      id: 100,
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.35 (2).jpeg",
+      title: "Dîner de Gala Présidentiel",
+      category: "Galas"
     }
   ],
 
