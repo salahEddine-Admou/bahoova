@@ -100,17 +100,17 @@ const ExpertGestionEvenements = () => {
                   BAHOOVA Events
                 </h1>
                 <p className="hero-description">
-                  <strong>Expert gestion événements Maroc</strong> depuis 15 ans. BAHOOVA Events est le leader de l'organisation d'événements au Maroc. 
-                  Congrès, forums, séminaires, réunions d'entreprises, dîners de gala - notre expertise événementielle vous garantit le succès.
+                  <strong>Professionnel gestion événements Maroc</strong> depuis 15 ans. BAHOOVA Events est le leader de l'organisation d'événements au Maroc. 
+                  Congrès, forums, séminaires, réunions d'entreprises, dîners de gala - notre savoir-faire événementiel vous garantit le succès.
                 </p>
                 <div className="hero-actions">
                   <Link to="/contact" className="btn-primary creative-btn">
                     <Sparkles size={20} />
-                    Devis Expert Gratuit
+                    Devis Professionnel Gratuit
                     <Zap size={16} />
                   </Link>
                   <Link to="/services" className="btn-secondary creative-btn">
-                    Nos Expertises
+                    Nos Services
                     <Award size={16} />
                   </Link>
                 </div>

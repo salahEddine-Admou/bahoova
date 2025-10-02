@@ -2,11 +2,11 @@
 export const mockData = {
   company: {
     name: "BAHOOVA Events",
-    tagline: "Gestion de Tous Événements & Congrès",
-    intro: "Votre organisateur spécialisé des événements au Maroc. Nous créons des expériences mémorables pour mariages, dîners de gala, séminaires, congrès et événements corporate.",
-    vision: "Visiblement, nous avons atteint un sommet où chaque idée s'élève au-delà du simple rêve, où les projets prennent vie sous une lumière nouvelle. À l'image de l'horizon qui s'étire à l'infini, nous façonnons vos événements pour qu'ils deviennent des souvenirs éternels, suspendus dans le temps et marqués par l'émotion.",
+    tagline: "Gestion Complète de Tous Événements",
+    intro: "Votre partenaire spécialisé en organisation d'événements au Maroc. Notre professionnalisme et notre expérience nous garantissons la réussite de vos projets événementiels.",
+    vision: "De la planification à l'exécution, notre expertise transforme vos événements en moments inoubliables. Nous créons des expériences mémorables pour mariages, dîners de gala, séminaires, congrès et événements corporate.",
     stats: {
-      experience: "15 ans d'expérience",
+      experience: "Fondé en 2005",
       employees: "350 employés à temps plein", 
       events: "25 événements par an",
       servings: "720 services/jour"
@@ -22,19 +22,19 @@ export const mockData = {
   coreValues: [
     {
       title: "Organisation Polyvalente",
-      description: "Spécialisés dans l'organisation de mariages, galas, séminaires et événements corporate"
+      description: "Notre professionnalisme et notre expérience nous garantissons la réussite de vos projets événementiels"
     },
     {
-      title: "Gestion Complète",
-      description: "De la planification à l'exécution de vos événements mémorables"
+      title: "Gestion Complète de vos Événements",
+      description: "De la planification à l'exécution, notre expertise transforme vos événements en moments inoubliables"
     },
     {
       title: "Créativité Unique", 
-      description: "Des concepts personnalisés pour chaque événement"
+      description: "Nous imaginons des concepts sur-mesure qui reflètent l'identité de chaque client, pour des événements à votre image"
     },
     {
       title: "Excellence Garantie",
-      description: "Un réseau de partenaires fiables et haut de gamme"
+      description: "La qualité de service est notre priorité. Votre tranquillité d'esprit, notre promesse, avec BAHOOVA Events vous bénéficiez d'un accompagnement fiable et d'une exécution irréprochable"
     }
   ],
 
@@ -277,7 +277,7 @@ export const mockData = {
       id: 3,
       image: "/images/gallery/show-2.png",
       title: "Performance Artistique & Divertissement",
-      category: "Corporate"
+      category: "Spectacles"
     },
     {
       id: 4,
@@ -289,55 +289,55 @@ export const mockData = {
       id: 5,
       image: "/images/gallery/show-4.png",
       title: "Spectacle Musical & Artistique",
-      category: "Corporate"
+      category: "Spectacles"
     },
     {
       id: 6,
       image: "/images/gallery/show-5.png",
       title: "Entertainment & Production Scénique",
-      category: "Corporate"
+      category: "Spectacles"
     },
     {
       id: 7,
       image: "/images/gallery/show-6.png",
-      title: "Animation Culturelle & Artistique",
-      category: "Corporate"
+      title: "Mariage de Luxe & Cérémonie",
+      category: "Mariages"
     },
     {
       id: 8,
       image: "/images/gallery/show-7.png",
       title: "Performance Live & Spectacle",
-      category: "Corporate"
+      category: "Spectacles"
     },
     {
       id: 9,
       image: "/images/gallery/show-8.png",
-      title: "Production Événementielle Créative",
-      category: "Corporate"
+      title: "Dîner de Gala Prestigieux",
+      category: "Galas"
     },
     {
       id: 10,
       image: "/images/gallery/show-9.png",
-      title: "Divertissement & Animation Exclusive",
-      category: "Corporate"
+      title: "Réception de Mariage Élégante",
+      category: "Mariages"
     },
     {
       id: 11,
       image: "/images/gallery/show-10.png",
-      title: "Spectacle Professionnel & Mise en Scène",
-      category: "Corporate"
+      title: "Soirée de Gala & Entertainment",
+      category: "Galas"
     },
     {
       id: 12,
       image: "/images/gallery/show-11.png",
-      title: "Animation Premium & Entertainment",
-      category: "Corporate"
+      title: "Cérémonie de Mariage Premium",
+      category: "Mariages"
     },
     {
       id: 13,
       image: "/images/gallery/show-12.png",
       title: "Production Artistique & Spectacle Live",
-      category: "Corporate"
+      category: "Spectacles"
     }
   ],
 

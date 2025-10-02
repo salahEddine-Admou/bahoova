@@ -12,33 +12,33 @@ const About = () => {
 
   const aboutImages = [
     {
-      src: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      fallback: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      title: "Créateurs d'Expériences",
+      src: "/images/gallery/ourika.png",
+      fallback: "/images/gallery/show-1.png",
+      title: "Événement Ourika - Vallée de l'Ourika",
       description: "Des événements sur mesure où l'excellence se mêle à l'émotion"
     },
     {
-      src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      fallback: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      title: "Événements d'Entreprise",
+      src: "/images/gallery/show-1.png",
+      fallback: "/images/gallery/show-2.png",
+      title: "Spectacle & Animation Professionnelle",
       description: "Conférences, séminaires et lancements de produits professionnels"
     },
     {
-      src: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      fallback: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      src: "/images/gallery/show-6.png",
+      fallback: "/images/gallery/show-9.png",
       title: "Mariages d'Exception",
       description: "Des cérémonies uniques et des réceptions inoubliables"
     },
     {
-      src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      fallback: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      title: "Scénographie Artistique",
+      src: "/images/gallery/show-4.png",
+      fallback: "/images/gallery/show-5.png",
+      title: "Spectacle Musical & Artistique",
       description: "Décors sur mesure, éclairage et ambiance créative"
     },
     {
-      src: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      fallback: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      title: "Séminaires & Conférences",
+      src: "/images/gallery/show-8.png",
+      fallback: "/images/gallery/show-10.png",
+      title: "Dîner de Gala Prestigieux",
       description: "Organisation professionnelle de vos événements d'entreprise"
     }
   ];
@@ -841,6 +841,116 @@ const About = () => {
                     {advantage.description}
                   </p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Créativité Unique Section */}
+      <section className="section-padding">
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "60px" }}>
+            <h2 
+              className="heading-1"
+              style={{ 
+                fontSize: "2.5rem",
+                fontWeight: "700",
+                color: "#667eea",
+                background: "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)",
+                backgroundSize: "300% 300%",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                animation: "gradientShift 3s ease-in-out infinite, fadeIn 1s ease-out 0.3s both"
+              }}
+            >
+              Créativité Unique
+            </h2>
+            <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
+              Des concepts personnalisés qui reflètent votre identité
+            </p>
+          </div>
+          
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", gap: "40px" }}>
+            {[
+              {
+                title: "Concepts Sur-Mesure",
+                description: "Nous imaginons des concepts sur-mesure qui reflètent l'identité de chaque client, pour des événements à votre image qui reflètent votre identité.",
+                color: "#667eea"
+              },
+              {
+                title: "Expérience Personnalisée",
+                description: "Chaque détail est pensé pour vous offrir une expérience événementielle inégalée, élégante et totalement personnalisée.",
+                color: "#764ba2"
+              },
+              {
+                title: "Innovation Sans Limite",
+                description: "Créativité sans limite, faites vivre à vos invités une expérience inédite grâce à des idées innovantes conçues spécialement pour vous.",
+                color: "#f093fb"
+              }
+            ].map((creativity, index) => (
+              <div 
+                key={index}
+                className="fade-in"
+                style={{ 
+                  animation: `slideInUp 0.8s ease-out ${0.5 + index * 0.2}s both`,
+                  position: "relative",
+                  borderRadius: "20px",
+                  overflow: "hidden",
+                  boxShadow: "0 15px 35px rgba(0,0,0,0.1)",
+                  transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                  background: "white",
+                  padding: "40px 30px",
+                  textAlign: "center"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-10px) scale(1.02)";
+                  e.currentTarget.style.boxShadow = `0 25px 50px ${creativity.color}30`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0) scale(1)";
+                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.1)";
+                }}
+              >
+                {/* Icon */}
+                <div style={{ 
+                  width: "100px", 
+                  height: "100px", 
+                  background: `linear-gradient(135deg, ${creativity.color}, ${creativity.color}80)`,
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 30px",
+                  border: `4px solid ${creativity.color}`,
+                  boxShadow: `0 10px 30px ${creativity.color}30`,
+                  transition: "all 0.3s ease"
+                }}>
+                  <Sparkles size={50} color="white" />
+                </div>
+                
+                <h3 
+                  className="heading-3" 
+                  style={{ 
+                    marginBottom: "16px",
+                    color: creativity.color,
+                    fontSize: "1.8rem",
+                    fontWeight: "600"
+                  }}
+                >
+                  {creativity.title}
+                </h3>
+                <p 
+                  className="body-regular" 
+                  style={{ 
+                    color: "var(--text-secondary)",
+                    fontSize: "1.1rem",
+                    lineHeight: "1.6",
+                    margin: 0
+                  }}
+                >
+                  {creativity.description}
+                </p>
               </div>
             ))}
           </div>

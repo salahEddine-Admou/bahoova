@@ -9,7 +9,7 @@ const Navigation = () => {
 
   const navItems = [
     { path: "/", label: "Accueil" },
-    { path: "/expert-gestion-evenements-maroc", label: "Expert Maroc" },
+    { path: "/expert-gestion-evenements-maroc", label: "Événementiel Maroc" },
     { path: "/about", label: "Qui sommes-nous ?" },
     { path: "/services", label: "Services" },
     { path: "/venues", label: "Lieux" },

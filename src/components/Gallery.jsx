@@ -31,7 +31,7 @@ const Gallery = () => {
     setCurrentIndex(prevIndex);
   };
 
-  const categories = ["Tous", "Scientifique", "Médical", "Sportif", "Corporate", "Technique"];
+  const categories = ["Tous", "Corporate", "Mariages", "Galas", "Spectacles"];
   const [activeCategory, setActiveCategory] = useState("Tous");
 
   const filteredGallery = activeCategory === "Tous" 
