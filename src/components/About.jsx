@@ -92,12 +92,8 @@ const About = () => {
                     marginBottom: "32px",
                     fontSize: "3.5rem",
                     fontWeight: "700",
-                    color: "#667eea",
-                    background: "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)",
-                    backgroundSize: "300% 300%",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    animation: "gradientShift 3s ease-in-out infinite, fadeIn 1s ease-out 0.3s both"
+                    color: "#333333",
+                    animation: "fadeIn 1s ease-out 0.3s both"
                   }}
                 >
                 Qui sommes-nous ?

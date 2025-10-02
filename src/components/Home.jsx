@@ -91,22 +91,6 @@ const Home = () => {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Expert Dîner et Gala",
-                  "description": "Organisation de dîners de gala et événements prestigieux"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Dîners de Gala",
-                  "description": "Organisation de dîners de gala et événements prestigieux"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
                   "name": "Événements Corporate",
                   "description": "Gestion d'événements d'entreprise et lancements de produits"
                 }
@@ -149,8 +133,8 @@ const Home = () => {
           <div className="container">
             <div className="hero-content">
               <div className="hero-text-container">
-                <h1 className="hero-title">
-                  Expert Gestion Événements Maroc<br />
+                <h1 className="hero-title" style={{ color: "white" }}>
+                  Gestion Événements Maroc<br />
                   BAHOOVA Events
                 </h1>
                 <p className="hero-description">
@@ -177,9 +161,9 @@ const Home = () => {
       <section className="section-padding" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Expert Gestion Événements Maroc - Notre Expertise Événementielle</h2>
+            <h2 className="heading-1">Gestion Événements Maroc - Notre Savoir-Faire Événementiel</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              <strong>Expert gestion événements Maroc</strong> - BAHOOVA Events est le spécialiste de l'organisation d'événements au Maroc. Notre expertise événementielle couvre congrès, forums, séminaires, réunions d'entreprises et dîners de gala. Depuis 15 ans, nous sommes votre expert de confiance en gestion d'événements au Maroc, offrant des solutions sur mesure pour tous vos besoins événementiels.
+              <strong>Spécialiste gestion événements Maroc</strong> - BAHOOVA Events est le leader de l'organisation d'événements au Maroc. Notre savoir-faire événementiel couvre congrès, forums, séminaires, réunions d'entreprises et dîners de gala. Depuis 15 ans, nous sommes votre partenaire de confiance en gestion d'événements au Maroc, offrant des solutions sur mesure pour tous vos besoins événementiels.
             </p>
           </div>
           
@@ -204,10 +188,10 @@ const Home = () => {
                     {index === 3 && <Coffee size={24} color="var(--text-primary)" />}
                   </div>
                   <h3 className="heading-3" style={{ marginBottom: "16px" }}>
-                    {value.title} - Expert Gestion Événements Maroc
+                    {value.title}
                   </h3>
                   <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                    {value.description}. Notre expertise en gestion d'événements au Maroc garantit la réussite de vos projets événementiels.
+                    {value.description}. Notre savoir-faire en gestion d'événements au Maroc garantit la réussite de vos projets événementiels.
                   </p>
                 </div>
               </div>
@@ -221,14 +205,14 @@ const Home = () => {
         <div className="container">
           <div className="grid-two-column">
             <div>
-              <h2 className="hero-medium" style={{ marginBottom: "24px" }}>
-                Expert Gestion Événements Maroc - Une Expertise Reconnue
+                <h2 className="hero-medium" style={{ marginBottom: "24px" }}>
+                Gestion Événements Maroc - Une Expérience Reconnue
               </h2>
               <p className="body-large" style={{ color: "var(--text-secondary)", marginBottom: "24px" }}>
                 {mockData.company.vision}
               </p>
               <p className="body-regular" style={{ color: "var(--text-secondary)", marginBottom: "32px" }}>
-                En tant qu'<strong>expert gestion événements Maroc</strong>, BAHOOVA Events a développé une expertise unique dans l'organisation d'événements au Maroc. Notre connaissance approfondie du marché local, de la culture marocaine et des spécificités régionales nous permet d'offrir des solutions événementielles parfaitement adaptées. Que ce soit pour des congrès scientifiques à Casablanca, des forums de recherche à Rabat, ou des séminaires d'entreprises à Marrakech, notre expertise événementielle au Maroc garantit le succès de vos événements.
+                En tant que <strong>spécialiste gestion événements Maroc</strong>, BAHOOVA Events a développé un savoir-faire unique dans l'organisation d'événements au Maroc. Notre connaissance approfondie du marché local, de la culture marocaine et des spécificités régionales nous permet d'offrir des solutions événementielles parfaitement adaptées. Que ce soit pour des congrès scientifiques à Casablanca, des forums de recherche à Rabat, ou des séminaires d'entreprises à Marrakech, notre expérience événementielle au Maroc garantit le succès de vos événements.
               </p>
               <Link to="/about" className="btn-icon">
                 En savoir plus sur notre expertise
@@ -281,9 +265,9 @@ const Home = () => {
       <section className="section-padding" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Expert Gestion Événements Maroc - Nos Services Événementiels</h2>
+            <h2 className="heading-1">Gestion Événements Maroc - Nos Services Événementiels</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              En tant qu'<strong>expert gestion événements Maroc</strong>, BAHOOVA Events propose une organisation complète de congrès, forums, séminaires, réunions d'entreprises, dîners de gala et événements scientifiques. Notre expertise événementielle au Maroc s'appuie sur des technologies avancées et une équipe de 350 professionnels dédiés à la réussite de vos événements.
+              En tant que <strong>spécialiste gestion événements Maroc</strong>, BAHOOVA Events propose une organisation complète de congrès, forums, séminaires, réunions d'entreprises et événements professionnels. Notre savoir-faire événementiel au Maroc s'appuie sur des technologies avancées et une équipe de 350 professionnels dédiés à la réussite de vos événements.
             </p>
           </div>
           
@@ -317,13 +301,7 @@ const Home = () => {
       <section className="section-padding-small" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "60px" }}>
-            <h2 className="heading-1" style={{ 
-              background: "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)",
-              backgroundSize: "300% 300%",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              animation: "gradientShift 3s ease-in-out infinite"
-            }}>
+            <h2 className="heading-1" style={{ color: "#333333" }}>
               Témoignages clients
             </h2>
             <p className="body-large" style={{ 
@@ -430,9 +408,9 @@ const Home = () => {
       <section className="section-padding">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Pourquoi Choisir BAHOOVA Events - Expert Gestion Événements Maroc ?</h2>
+            <h2 className="heading-1">Pourquoi Choisir BAHOOVA Events - Spécialiste Gestion Événements Maroc ?</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Découvrez les avantages de faire appel à notre expertise événementielle au Maroc
+              Découvrez les avantages de faire appel à notre savoir-faire événementiel au Maroc
             </p>
           </div>
           

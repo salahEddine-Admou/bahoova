@@ -40,54 +40,33 @@ export const mockData = {
 
   services: [
     {
-      title: "Congrès & Forums",
-      description: "Organisation complète de congrès internationaux, forums et événements professionnels",
+      title: "Organisation Congrès Maroc",
+      description: "Spécialisé en organisation de congrès internationaux, forums et événements professionnels",
       image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
       category: "Corporate",
       priority: 1
     },
     {
-      title: "Mariages & Cérémonies",
-      description: "Organisation complète de mariages, cérémonies et événements romantiques au Maroc",
+      title: "Mariages & Cérémonies Maroc",
+      description: "Organisateur professionnel de mariages, cérémonies et événements romantiques au Maroc",
       image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&crop=center",
       category: "Romantique",
       priority: 2
     },
     {
-      title: "Dîners de Gala",
-      description: "Événements de gala, réceptions officielles et dîners d'exception",
-      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center",
-      category: "Gala",
+      title: "Séminaires Entreprises Maroc",
+      description: "Leader en organisation de formations, séminaires et événements corporate pour entreprises",
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
+      category: "Corporate",
       priority: 3
     },
     {
-      title: "Séminaires d'Entreprise",
-      description: "Formations, séminaires et événements corporate pour entreprises",
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
-      category: "Corporate",
-      priority: 4
-    },
-    {
-      title: "Gestion d'Événements",
-      description: "Organisation complète et créative de tous vos événements avec une approche unique et innovante",
+      title: "Gestion Événements Maroc",
+      description: "Partenaire de confiance en organisation complète et créative de tous vos événements avec une approche unique et innovante",
       image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
       category: "Management",
-      priority: 5
+      priority: 4
     },
-    {
-      title: "Technologies Avancées",
-      description: "Équipements de pointe, sonorisation et éclairage pour tous types d'événements",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
-      category: "Technique",
-      priority: 6
-    },
-    {
-      title: "Live Stream & Webinaire",
-      description: "Diffusion en direct, webinaires et événements hybrides",
-      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
-      category: "Technique",
-      priority: 7
-    }
   ],
 
   venues: [

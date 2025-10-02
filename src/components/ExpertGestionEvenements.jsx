@@ -62,14 +62,6 @@ const ExpertGestionEvenements = () => {
                   "description": "Expert en organisation de séminaires et réunions d'entreprises au Maroc"
                 }
               },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Expert Dîners de Gala Maroc",
-                  "description": "Expert en organisation de dîners de gala et événements prestigieux au Maroc"
-                }
-              }
             ]
           },
           "aggregateRating": {
@@ -95,8 +87,8 @@ const ExpertGestionEvenements = () => {
           <div className="container">
             <div className="hero-content">
               <div className="hero-text-container">
-                <h1 className="hero-title">
-                  Expert Gestion Événements Maroc<br />
+                <h1 className="hero-title" style={{ color: "white" }}>
+                  Gestion Événements Maroc<br />
                   BAHOOVA Events
                 </h1>
                 <p className="hero-description">
@@ -124,9 +116,9 @@ const ExpertGestionEvenements = () => {
       <section className="section-padding" style={{ background: "var(--bg-secondary)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Pourquoi BAHOOVA Events - Expert Gestion Événements Maroc ?</h2>
+            <h2 className="heading-1">Pourquoi BAHOOVA Events - Spécialiste Gestion Événements Maroc ?</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Leader de l'événementiel au Maroc avec une expertise reconnue et 15 ans d'expérience
+              Leader de l'événementiel au Maroc avec un savoir-faire reconnu et 15 ans d'expérience
             </p>
           </div>
           
@@ -134,23 +126,23 @@ const ExpertGestionEvenements = () => {
             {[
               {
                 icon: <Award size={24} />,
-                title: "Expert Gestion Événements Maroc",
-                description: "15 ans d'expertise dans l'organisation d'événements au Maroc. Plus de 350 événements réussis."
+                title: "Gestion Événements Maroc",
+                description: "15 ans d'expérience dans l'organisation d'événements au Maroc. Plus de 350 événements réussis."
               },
               {
                 icon: <Users size={24} />,
-                title: "Équipe d'Experts Locaux",
-                description: "350 employés experts en événementiel au Maroc. Connaissance parfaite du marché local."
+                title: "Équipe de Professionnels Locaux",
+                description: "350 employés spécialisés en événementiel au Maroc. Connaissance parfaite du marché local."
               },
               {
                 icon: <Calendar size={24} />,
-                title: "Expert Organisation Congrès",
+                title: "Organisation Congrès",
                 description: "Spécialiste de l'organisation de congrès scientifiques et médicaux au Maroc."
               },
               {
                 icon: <Coffee size={24} />,
-                title: "Expert Séminaires Entreprises",
-                description: "Expert en organisation de séminaires et réunions d'entreprises au Maroc."
+                title: "Séminaires Entreprises",
+                description: "Leader en organisation de séminaires et réunions d'entreprises au Maroc."
               }
             ].map((value, index) => (
               <div key={index} className="service-card hover-lift">
@@ -185,37 +177,32 @@ const ExpertGestionEvenements = () => {
       <section className="section-padding">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Expert Gestion Événements Maroc - Nos Expertises</h2>
+            <h2 className="heading-1">Gestion Événements Maroc - Nos Spécialités</h2>
             <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Découvrez nos domaines d'expertise en gestion d'événements au Maroc
+              Découvrez nos domaines de spécialisation en gestion d'événements au Maroc
             </p>
           </div>
           
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }}>
             {[
               {
-                title: "Expert Organisation Congrès Maroc",
-                description: "Expert en organisation de congrès scientifiques, médicaux et internationaux au Maroc. Planification complète, technologies avancées, gestion logistique.",
+                title: "Organisation Congrès Maroc",
+                description: "Spécialisé en organisation de congrès scientifiques, médicaux et internationaux au Maroc. Planification complète, technologies avancées, gestion logistique.",
                 image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center"
               },
               {
-                title: "Expert Forums de Recherche Maroc",
-                description: "Expert en organisation de forums académiques, colloques scientifiques et événements de recherche au Maroc. Expertise reconnue par les universités.",
+                title: "Forums de Recherche Maroc",
+                description: "Spécialisé en organisation de forums académiques, colloques scientifiques et événements de recherche au Maroc. Expérience reconnue par les universités.",
                 image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center"
               },
               {
-                title: "Expert Séminaires Entreprises Maroc",
-                description: "Expert en organisation de séminaires d'entreprises, réunions professionnelles et formations au Maroc. Solutions sur mesure pour chaque secteur.",
+                title: "Séminaires Entreprises Maroc",
+                description: "Leader en organisation de séminaires d'entreprises, réunions professionnelles et formations au Maroc. Solutions sur mesure pour chaque secteur.",
                 image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center"
               },
               {
-                title: "Expert Dîners de Gala Maroc",
-                description: "Expert en organisation de dîners de gala, événements prestigieux et cérémonies au Maroc. Lieux d'exception, service haut de gamme.",
-                image: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center"
-              },
-              {
-                title: "Expert Mariages Maroc",
-                description: "Expert en organisation de mariages, cérémonies romantiques et événements de célébration au Maroc. Moments magiques et inoubliables.",
+                title: "Mariages & Cérémonies Maroc",
+                description: "Organisateur professionnel de mariages, cérémonies romantiques et événements de célébration au Maroc. Moments magiques et inoubliables.",
                 image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&crop=center"
               }
             ].map((expertise, index) => (

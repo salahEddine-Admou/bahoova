@@ -52,12 +52,13 @@ const Services = () => {
           <div className="container">
             <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto", padding: "40px 20px" }}>
               <AnimatedText 
-                text="Expert Gestion Événements Maroc"
-                type="gradient"
+                text="Gestion Événements Maroc"
+                type="solid"
                 className="hero-large"
                 style={{ 
                   marginBottom: "32px",
                   display: "block",
+                  color: "#333333",
                   fontSize: "3rem",
                   fontWeight: "700"
                 }}
