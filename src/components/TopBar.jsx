@@ -63,7 +63,7 @@ const TopBar = () => {
             className="topbar-contact-link"
           >
             <Phone size={16} color="#ff6b6b" />
-            <span>+212 666 332 230</span>
+            <span>+212662017389</span>
           </a>
         </div>
       </div>

@@ -263,141 +263,81 @@ export const mockData = {
   gallery: [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
-      title: "Congrès International de Neurosciences",
-      category: "Scientifique"
+      image: "/images/gallery/ourika.png",
+      title: "Événement Ourika - Vallée de l'Ourika",
+      category: "Corporate"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
-      title: "Forum de Recherche en Biotechnologie",
-      category: "Scientifique"
+      image: "/images/gallery/show-1.png",
+      title: "Spectacle & Animation Professionnelle",
+      category: "Corporate"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
-      title: "Colloque de Physique Quantique",
-      category: "Scientifique"
+      image: "/images/gallery/show-2.png",
+      title: "Performance Artistique & Divertissement",
+      category: "Corporate"
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center",
-      title: "Conférence Médicale Internationale",
-      category: "Médical"
+      image: "/images/gallery/show-3.png",
+      title: "Animation Événementielle Premium",
+      category: "Corporate"
     },
     {
       id: 5,
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
-      title: "Symposium de Chimie Organique",
-      category: "Scientifique"
+      image: "/images/gallery/show-4.png",
+      title: "Spectacle Musical & Artistique",
+      category: "Corporate"
     },
     {
       id: 6,
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
-      title: "Congrès d'Intelligence Artificielle",
-      category: "Technique"
+      image: "/images/gallery/show-5.png",
+      title: "Entertainment & Production Scénique",
+      category: "Corporate"
     },
     {
       id: 7,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center",
-      title: "Événement Sportif avec Live Stream",
-      category: "Sportif"
+      image: "/images/gallery/show-6.png",
+      title: "Animation Culturelle & Artistique",
+      category: "Corporate"
     },
     {
       id: 8,
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&crop=center",
-      title: "Tournoi de Football Professionnel",
-      category: "Sportif"
+      image: "/images/gallery/show-7.png",
+      title: "Performance Live & Spectacle",
+      category: "Corporate"
     },
     {
       id: 9,
-      image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=600&fit=crop&crop=center",
-      title: "Compétition de Natation",
-      category: "Sportif"
+      image: "/images/gallery/show-8.png",
+      title: "Production Événementielle Créative",
+      category: "Corporate"
     },
     {
       id: 10,
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&crop=center",
-      title: "Marathon International",
-      category: "Sportif"
+      image: "/images/gallery/show-9.png",
+      title: "Divertissement & Animation Exclusive",
+      category: "Corporate"
     },
     {
       id: 11,
-      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center",
-      title: "Gala d'Entreprise Annuel",
+      image: "/images/gallery/show-10.png",
+      title: "Spectacle Professionnel & Mise en Scène",
       category: "Corporate"
     },
     {
       id: 12,
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
-      title: "Séminaire de Formation",
+      image: "/images/gallery/show-11.png",
+      title: "Animation Premium & Entertainment",
       category: "Corporate"
     },
     {
       id: 13,
-      image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop&crop=center",
-      title: "Lancement de Produit",
+      image: "/images/gallery/show-12.png",
+      title: "Production Artistique & Spectacle Live",
       category: "Corporate"
-    },
-    {
-      id: 14,
-      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
-      title: "Conférence de Presse",
-      category: "Corporate"
-    },
-    {
-      id: 15,
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
-      title: "Équipement Sonorisation Pro",
-      category: "Technique"
-    },
-    {
-      id: 16,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center",
-      title: "Éclairage LED Professionnel",
-      category: "Technique"
-    },
-    {
-      id: 17,
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&crop=center",
-      title: "Mariage de Luxe au Palais",
-      category: "Romantique"
-    },
-    {
-      id: 18,
-      image: "https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?w=800&h=600&fit=crop&crop=center",
-      title: "Cérémonie de Mariage Traditionnel",
-      category: "Romantique"
-    },
-    {
-      id: 19,
-      image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&h=600&fit=crop&crop=center",
-      title: "Réception de Mariage en Extérieur",
-      category: "Romantique"
-    },
-    {
-      id: 20,
-      image: "https://images.unsplash.com/photo-1556761175-4b46a1b1b616?w=800&h=600&fit=crop&crop=center",
-      title: "Écran LED Géant",
-      category: "Technique"
-    },
-    {
-      id: 21,
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba0efed?w=800&h=600&fit=crop&crop=center",
-      title: "Système de Traduction Simultanée",
-      category: "Technique"
-    },
-    {
-      id: 22,
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
-      title: "Webinaire International",
-      category: "Technique"
-    },
-    {
-      id: 23,
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
-      title: "Live Stream Professionnel",
-      category: "Technique"
     }
   ],
 

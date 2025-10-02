@@ -22,7 +22,7 @@ export const EMAILJS_CONFIG = {
   company: {
     name: 'BAHOOVA Events',
     email: 'adyvepro@gmail.com',
-    phone: '+212 666 332 230',
+    phone: '+212662017389',
     address: '123 Avenue Mohammed V, Casablanca, Maroc'
   }
 };
