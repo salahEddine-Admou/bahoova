@@ -24,7 +24,7 @@ const Services = () => {
   const serviceFeatures = [
     {
       icon: <Heart size={24} />,
-      title: "Expertise reconnue",
+      title: "Expérience reconnue",
       description: "Plus de 10 ans d'expérience dans l'organisation d'événements d'exception"
     },
     {

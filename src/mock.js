@@ -42,7 +42,7 @@ export const mockData = {
     {
       title: "Organisation Congrès Maroc",
       description: "Spécialisé en organisation de congrès internationaux, forums et événements professionnels",
-      image: "/images/gallery/ourika.png",
+      image: "/images/gallery/show-3.png",
       category: "Corporate",
       priority: 1
     },
@@ -63,7 +63,7 @@ export const mockData = {
     {
       title: "Gestion Événements Maroc",
       description: "Partenaire de confiance en organisation complète et créative de tous vos événements avec une approche unique et innovante",
-      image: "/images/gallery/show-4.png",
+      image: "/images/gallery/show-8.png",
       category: "Management",
       priority: 4
     },
@@ -77,21 +77,21 @@ export const mockData = {
     {
       title: "Événements Premium",
       description: "Organisation d'événements haut de gamme avec animation professionnelle",
-      image: "/images/gallery/show-3.png",
+      image: "/images/gallery/show-10.png",
       category: "Corporate",
       priority: 6
     },
     {
       title: "Musique & Divertissement",
       description: "Spectacles musicaux et animations artistiques pour vos événements",
-      image: "/images/gallery/show-5.png",
+      image: "/images/gallery/show-4.png",
       category: "Spectacles",
       priority: 7
     },
     {
       title: "Événements d'Entreprise",
       description: "Solutions complètes pour vos événements corporate et professionnels",
-      image: "/images/gallery/show-7.png",
+      image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.11.jpeg",
       category: "Corporate",
       priority: 8
     },
