@@ -184,26 +184,26 @@ const ExpertGestionEvenements = () => {
           </div>
           
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }}>
-            {[
+            {            [
               {
                 title: "Organisation Congrès Maroc",
-                description: "Spécialisé en organisation de congrès scientifiques, médicaux et internationaux au Maroc. Planification complète, technologies avancées, gestion logistique.",
-                image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center"
-              },
-              {
-                title: "Forums de Recherche Maroc",
-                description: "Spécialisé en organisation de forums académiques, colloques scientifiques et événements de recherche au Maroc. Expérience reconnue par les universités.",
-                image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center"
+                description: "Spécialisé en organisation de congrès internationaux, forums et événements professionnels au Maroc. Planification complète, technologies avancées, gestion logistique.",
+                image: "/images/gallery/show-3.png"
               },
               {
                 title: "Séminaires Entreprises Maroc",
                 description: "Leader en organisation de séminaires d'entreprises, réunions professionnelles et formations au Maroc. Solutions sur mesure pour chaque secteur.",
-                image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center"
+                image: "/images/gallery/show-1.png"
+              },
+              {
+                title: "Gestion Événements Maroc",
+                description: "Partenaire de confiance en organisation complète et créative de tous vos événements avec une approche unique et innovante au Maroc.",
+                image: "/images/gallery/show-8.png"
               },
               {
                 title: "Mariages & Cérémonies Maroc",
                 description: "Organisateur professionnel de mariages, cérémonies romantiques et événements de célébration au Maroc. Moments magiques et inoubliables.",
-                image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&crop=center"
+                image: "/images/gallery/show-6.png"
               }
             ].map((expertise, index) => (
               <div key={index} className="service-card hover-lift">

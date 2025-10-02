@@ -359,7 +359,7 @@ export const mockData = {
       id: 15,
       image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.11 (1).jpeg",
       title: "Décoration Florale Raffinée",
-      category: "Mariages"
+      category: "Décoration"
     },
     {
       id: 16,
@@ -377,7 +377,7 @@ export const mockData = {
       id: 18,
       image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.12.jpeg",
       title: "Dîner de Gala Exclusif",
-      category: "Galas"
+      category: "Événements Premium"
     },
     {
       id: 19,
@@ -389,13 +389,13 @@ export const mockData = {
       id: 20,
       image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.12 (2).jpeg",
       title: "Animation Musicale Live",
-      category: "Spectacles"
+      category: "Traditionnel"
     },
     {
       id: 21,
       image: "/images/gallery/WhatsApp Image 2025-10-02 at 15.57.12 (3).jpeg",
       title: "Événement VIP Prestige",
-      category: "Galas"
+      category: "Événements Premium"
     },
     {
       id: 22,
