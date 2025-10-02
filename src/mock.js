@@ -42,30 +42,58 @@ export const mockData = {
     {
       title: "Organisation Congrès Maroc",
       description: "Spécialisé en organisation de congrès internationaux, forums et événements professionnels",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&crop=center",
+      image: "/images/gallery/ourika.png",
       category: "Corporate",
       priority: 1
     },
     {
       title: "Mariages & Cérémonies Maroc",
       description: "Organisateur professionnel de mariages, cérémonies et événements romantiques au Maroc",
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&crop=center",
+      image: "/images/gallery/show-6.png",
       category: "Romantique",
       priority: 2
     },
     {
       title: "Séminaires Entreprises Maroc",
       description: "Leader en organisation de formations, séminaires et événements corporate pour entreprises",
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=center",
+      image: "/images/gallery/show-1.png",
       category: "Corporate",
       priority: 3
     },
     {
       title: "Gestion Événements Maroc",
       description: "Partenaire de confiance en organisation complète et créative de tous vos événements avec une approche unique et innovante",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center",
+      image: "/images/gallery/show-4.png",
       category: "Management",
       priority: 4
+    },
+    {
+      title: "Spectacles & Animations",
+      description: "Performances artistiques et divertissements pour tous vos événements",
+      image: "/images/gallery/show-2.png",
+      category: "Spectacles",
+      priority: 5
+    },
+    {
+      title: "Événements Premium",
+      description: "Organisation d'événements haut de gamme avec animation professionnelle",
+      image: "/images/gallery/show-3.png",
+      category: "Corporate",
+      priority: 6
+    },
+    {
+      title: "Musique & Divertissement",
+      description: "Spectacles musicaux et animations artistiques pour vos événements",
+      image: "/images/gallery/show-5.png",
+      category: "Spectacles",
+      priority: 7
+    },
+    {
+      title: "Événements d'Entreprise",
+      description: "Solutions complètes pour vos événements corporate et professionnels",
+      image: "/images/gallery/show-7.png",
+      category: "Corporate",
+      priority: 8
     },
   ],
 
