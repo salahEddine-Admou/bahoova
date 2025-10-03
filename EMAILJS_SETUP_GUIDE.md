@@ -8,7 +8,7 @@ Votre configuration EmailJS a été intégrée avec succès ! Voici les détails
 
 - **Service ID**: `service_20b75lb`
 - **Public Key**: `aeyr kzhj viex wklp`
-- **Email de Destination**: `amina.bahou@bahoova.com`
+- **Email de Destination**: `contact@bahoova.com`
 
 ### 🔧 Étapes de Configuration dans EmailJS Dashboard
 
@@ -63,7 +63,7 @@ Répondre à: {{reply_to}}
 
 1. Allez sur [EmailJS Dashboard](https://dashboard.emailjs.com/)
 2. Vérifiez que votre service `service_20b75lb` est actif
-3. Assurez-vous que l'email `amina.bahou@bahoova.com` est configuré comme destinataire
+3. Assurez-vous que l'email `contact@bahoova.com` est configuré comme destinataire
 
 #### 3. Test de Configuration
 

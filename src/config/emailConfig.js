@@ -16,12 +16,12 @@ export const EMAILJS_CONFIG = {
   publicKey: 'YOUR_VALID_PUBLIC_KEY_HERE',
   
   // Destination email address
-  userEmail: 'amina.bahou@bahoova.com',
+  userEmail: 'contact@bahoova.com',
   
   // Company information
   company: {
     name: 'BAHOOVA Events',
-    email: 'amina.bahou@bahoova.com',
+    email: 'contact@bahoova.com',
     phone: '+212662017389',
     address: '123 Avenue Mohammed V, Casablanca, Maroc'
   }

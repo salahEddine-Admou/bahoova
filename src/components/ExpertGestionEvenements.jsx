@@ -18,7 +18,7 @@ const ExpertGestionEvenements = () => {
           "description": "Organisation événements Maroc avec 15 ans d'expérience. Event management, planificateur d'événements, événementielle mariage, dîner gala, séminaire au Maroc.",
           "url": "https://bahoovaevents.com/expert-gestion-evenements-maroc",
           "telephone": "0662017389",
-          "email": "amina.bahou@bahoova.com",
+          "email": "contact@bahoova.com",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "123 Avenue Mohammed V",
@@ -381,7 +381,7 @@ const ExpertGestionEvenements = () => {
               </div>
               <h3 className="heading-3" style={{ marginBottom: "16px" }}>Email Expert</h3>
               <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                amina.bahou@bahoova.com
+                contact@bahoova.com
               </p>
             </div>
             

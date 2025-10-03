@@ -42,7 +42,7 @@ const Home = () => {
           "description": "Organisation événements Maroc - BAHOOVA Events, event management, planificateur d'événements, événementielle mariage, dîner gala, séminaire au Maroc",
           "url": "https://bahoovaevents.com",
           "telephone": "0662017389",
-          "email": "amina.bahou@bahoova.com",
+          "email": "contact@bahoova.com",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "123 Avenue Mohammed V",

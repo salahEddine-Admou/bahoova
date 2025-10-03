@@ -13,7 +13,7 @@ export const mockData = {
     },
     contact: {
       phone: "0662017389",
-      email: "amina.bahou@bahoova.com",
+      email: "contact@bahoova.com",
       contactEmail: "contact@bahoova.com",
       supportEmail: "support@bahoova.com",
       address: "123 Avenue Mohammed V, Casablanca, Maroc",

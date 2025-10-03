@@ -67,7 +67,7 @@ app.use(express.json());
 const transporter = nodemailer.createTransporter({
   service: 'gmail',
   auth: {
-    user: 'amina.bahou@bahoova.com',
+    user: 'contact@bahoova.com',
     pass: 'your-app-password' // Mot de passe d'application Gmail
   }
 });
