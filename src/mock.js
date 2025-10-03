@@ -13,7 +13,9 @@ export const mockData = {
     },
     contact: {
       phone: "0662017389",
-      email: "bahoovaevents@gmail.com",
+      email: "amina.bahou@bahoova.com",
+      contactEmail: "contact@bahoova.com",
+      supportEmail: "support@bahoova.com",
       address: "123 Avenue Mohammed V, Casablanca, Maroc",
       whatsapp: "https://wa.me/212662017389?text=Bonjour,%20je%20souhaite%20organiser%20un%20événement%20avec%20BAHOOVA%20Events."
     },
