@@ -473,13 +473,15 @@ const Venues = () => {
             
             <div>
               <img 
-                src="https://bahoova.com/wp-content/uploads/2022/08/venues-1.jpeg"
+                src="/images/gallery/show-8.png"
                 alt="Venue de prestige"
                 style={{ 
                   width: "100%", 
                   height: "500px", 
                   objectFit: "cover",
-                  border: "1px solid var(--border-light)"
+                  borderRadius: "12px",
+                  border: "1px solid var(--border-light)",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.1)"
                 }}
               />
             </div>

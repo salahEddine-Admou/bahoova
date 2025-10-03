@@ -1132,18 +1132,48 @@ ${formData.name}`
           width: "100%", 
           height: "100%", 
           display: "flex", 
+          flexDirection: "column",
           alignItems: "center", 
           justifyContent: "center",
-          color: "var(--text-secondary)"
+          gap: "24px"
         }}>
-          <div style={{ textAlign: "center" }}>
-            <MapPin size={48} style={{ marginBottom: "16px" }} />
-            <h3 className="heading-3" style={{ marginBottom: "8px" }}>
-              Localisation
+          <div className="contact-map-container" style={{ 
+            width: "100%", 
+            height: "400px", 
+            borderRadius: "16px", 
+            overflow: "hidden",
+            boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
+            border: "1px solid rgba(102, 126, 234, 0.2)"
+          }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-7.6113800!3d33.5731100!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b5c5c5c5c5%3A0x5c5c5c5c5c5c5c5c!2sAvenue%20Mohammed%20V%2C%20Casablanca%2C%20Morocco!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="BAHOOVA Events Location - Casablanca, Morocco"
+            ></iframe>
+          </div>
+          
+          <div style={{ 
+            textAlign: "center",
+            padding: "20px",
+            backgroundColor: "rgba(102, 126, 234, 0.05)",
+            borderRadius: "12px",
+            border: "1px solid rgba(102, 126, 234, 0.1)",
+            width: "100%"
+          }}>
+            <MapPin size={24} style={{ marginBottom: "8px", color: "#667eea" }} />
+            <h3 className="heading-3" style={{ marginBottom: "8px", color: "#333" }}>
+              Notre Adresse
             </h3>
-            <p className="body-regular">
-              Carte Google Maps sera intégrée ici<br />
+            <p className="body-regular" style={{ color: "#666", marginBottom: "8px" }}>
               {mockData.company.contact.address}
+            </p>
+            <p className="body-small" style={{ color: "#888" }}>
+              Facilement accessible en transport public et parking disponible
             </p>
           </div>
         </div>

@@ -21,8 +21,25 @@ const Navigation = () => {
     <header className="navigation-header">
       <div className="container">
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
-          <Link to="/" className="navigation-logo">
-            {mockData.company.name}
+          <Link to="/" className="navigation-logo" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <img 
+              src="/images/gallery/bahoova-logo-profile.png" 
+              alt="BAHOOVA Events Logo" 
+              style={{ 
+                height: "100px", 
+                width: "100px",
+                objectFit: "contain",
+                borderRadius: "50%",
+                border: "5px solid #667eea",
+                padding: "10px",
+                backgroundColor: "#ffffff",
+                boxShadow: "0 8px 20px rgba(102, 126, 234, 0.4), 0 0 0 1px rgba(102, 126, 234, 0.1)",
+                outline: "4px solid rgba(102, 126, 234, 0.2)"
+              }}
+            />
+            <span style={{ fontSize: "1.5rem", fontWeight: "700", color: "#333" }}>
+              {mockData.company.name}
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

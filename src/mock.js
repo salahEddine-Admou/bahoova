@@ -107,7 +107,7 @@ export const mockData = {
     {
       name: "Palais Namaskar Marrakech",
       address: "Route de Bab Atlas, Marrakech, Maroc",
-      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center",
+      image: "/images/gallery/show-1.png",
       description: "Palais de luxe avec jardins exotiques et salles de réception somptueuses",
       category: "Hôtel de Luxe",
       capacity: "500 personnes",
@@ -115,7 +115,7 @@ export const mockData = {
     {
       name: "Royal Mansour Marrakech",
       address: "Rue Abou Abbas El Sebti, Marrakech, Maroc",
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
+      image: "/images/gallery/show-2.png",
       description: "Palais royal transformé en hôtel de luxe avec architecture traditionnelle marocaine",
       category: "Palais de Luxe",
       capacity: "300 personnes",
@@ -123,7 +123,7 @@ export const mockData = {
     {
       name: "Four Seasons Resort Casablanca",
       address: "Boulevard de la Corniche, Casablanca, Maroc",
-      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center",
+      image: "/images/gallery/show-3.png",
       description: "Hôtel 5 étoiles face à l'océan avec salles de conférence modernes",
       category: "Hôtel 5 Étoiles",
       capacity: "800 personnes",
@@ -131,7 +131,7 @@ export const mockData = {
     {
       name: "La Mamounia Marrakech",
       address: "Avenue Bab Jdid, Marrakech, Maroc",
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
+      image: "/images/gallery/show-4.png",
       description: "Hôtel légendaire avec jardins historiques et architecture art déco",
       category: "Hôtel Historique",
       capacity: "600 personnes",
@@ -139,7 +139,7 @@ export const mockData = {
     {
       name: "Sofitel Rabat Jardin des Roses",
       address: "Avenue de France, Rabat, Maroc",
-      image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop&crop=center",
+      image: "/images/gallery/show-5.png",
       description: "Hôtel moderne avec jardins de roses et salles polyvalentes",
       category: "Hôtel 5 Étoiles",
       capacity: "400 personnes",
@@ -147,7 +147,7 @@ export const mockData = {
     {
       name: "Mandarin Oriental Marrakech",
       address: "Route de Fès, Marrakech, Maroc",
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&crop=center",
+      image: "/images/gallery/show-6.png",
       description: "Résort de luxe avec villas privées et espaces événementiels exclusifs",
       category: "Résort de Luxe",
       capacity: "300 personnes",

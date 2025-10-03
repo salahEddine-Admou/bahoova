@@ -77,9 +77,26 @@ ${process.env.NODE_ENV === 'development' ? '📝 Mode développement : Inscripti
         <div className="footer-content">
           {/* Company Info */}
           <div className="footer-section">
-            <h3 style={{ marginBottom: "20px" }}>
-              {mockData.company.name}
-            </h3>
+            <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px" }}>
+              <img 
+                src="/images/gallery/bahoova-logo-profile.png" 
+                alt="BAHOOVA Events Logo" 
+                style={{ 
+                  height: "80px", 
+                  width: "80px",
+                  objectFit: "contain",
+                  borderRadius: "50%",
+                  border: "5px solid #667eea",
+                  padding: "8px",
+                  backgroundColor: "#ffffff",
+                  boxShadow: "0 6px 18px rgba(102, 126, 234, 0.4), 0 0 0 1px rgba(102, 126, 234, 0.1)",
+                  outline: "4px solid rgba(102, 126, 234, 0.2)"
+                }}
+              />
+              <h3 style={{ margin: 0 }}>
+                {mockData.company.name}
+              </h3>
+            </div>
             <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
               Votre partenaire expert en organisation de congrès, forums scientifiques et événements de recherche au Maroc. 
               Nous créons des expériences professionnelles et exceptionnelles.
