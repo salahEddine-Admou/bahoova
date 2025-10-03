@@ -8,7 +8,7 @@ const TopBar = () => {
         {/* Social Media Links */}
         <div className="topbar-social">
           <a 
-            href="https://facebook.com/BahoovaEvents" 
+            href="https://www.facebook.com/share/16xRvhf7z8/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="topbar-social-link"
@@ -17,7 +17,7 @@ const TopBar = () => {
           </a>
           
           <a 
-            href="https://www.instagram.com/bahoova_events/" 
+            href="https://www.instagram.com/bahoovaevents/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="topbar-social-link"
@@ -26,7 +26,7 @@ const TopBar = () => {
           </a>
           
           <a 
-            href="https://linkedin.com/in/amina-bahou" 
+            href="https://www.linkedin.com/company/bahoovaevents" 
             target="_blank" 
             rel="noopener noreferrer"
             className="topbar-social-link"

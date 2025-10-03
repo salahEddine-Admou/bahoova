@@ -16,6 +16,11 @@ export const mockData = {
       email: "bahoovaevents@gmail.com",
       address: "123 Avenue Mohammed V, Casablanca, Maroc",
       whatsapp: "https://wa.me/212662017389?text=Bonjour,%20je%20souhaite%20organiser%20un%20événement%20avec%20BAHOOVA%20Events."
+    },
+    social: {
+      facebook: "https://www.facebook.com/share/16xRvhf7z8/",
+      instagram: "https://www.instagram.com/bahoovaevents/",
+      linkedin: "https://www.linkedin.com/company/bahoovaevents"
     }
   },
   

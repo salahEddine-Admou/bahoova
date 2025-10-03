@@ -111,8 +111,8 @@ const Home = () => {
             "reviewCount": "150"
           },
           "sameAs": [
-            "https://www.facebook.com/bahoovaevents",
-            "https://www.instagram.com/bahoovaevents",
+            "https://www.facebook.com/share/16xRvhf7z8/",
+            "https://www.instagram.com/bahoovaevents/",
             "https://www.linkedin.com/company/bahoovaevents"
           ]
         })}
