@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle, AlertCircle, Sparkles, Zap, Heart, Star, Target, Rocket } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle, AlertCircle } from "lucide-react";
 import { mockData } from "../mock";
 import EmailDebugger from "./EmailDebugger";
-import ColorSwitcher from "./ColorSwitcher";
-import AnimatedText from "./AnimatedText";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -434,306 +432,220 @@ ${formData.name}`
   };
 
   return (
-    <main>
+    <main style={{ paddingTop: '80px' }}>
       {process.env.NODE_ENV === 'development' && <EmailDebugger />}
-      {/* Hero Section */}
-      <section className="section-padding" style={{ position: "relative", overflow: "hidden" }}>
+      
+      {/* Hero Section - Delight Style */}
+      <section style={{ 
+        padding: '100px 0', 
+        background: '#f8f9fa',
+        textAlign: 'center'
+      }}>
         <div className="container">
-          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto", position: "relative" }}>
-            <ColorSwitcher>
-              <h1 
-                className="hero-large fade-in" 
-                style={{ 
-                  marginBottom: "24px",
-                  background: "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)",
-                  backgroundSize: "300% 300%",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  animation: "gradientShift 3s ease-in-out infinite, fadeIn 1s ease-in-out",
-                  position: "relative",
-                  zIndex: 2
-                }}
-              >
-                Contactez-nous
-              </h1>
-              <AnimatedText 
-                className="body-large" 
-                style={{ 
-                  color: "var(--text-secondary)",
-                  fontSize: "1.2rem",
-                  lineHeight: "1.6",
-                  marginBottom: "32px",
-                  animation: "fadeIn 1s ease-in-out 0.5s both",
-                  position: "relative",
-                  zIndex: 2
-                }}
-                animation="typewriter"
-                delay={1000}
-              >
-                Prêt à donner vie à votre événement de rêve ? Notre équipe d'experts est là pour vous accompagner 
-                à chaque étape, de la conception initiale à la réalisation parfaite.
-              </AnimatedText>
-            </ColorSwitcher>
-          </div>
+          <h1 style={{
+            fontSize: '3rem',
+            fontWeight: '300',
+            color: '#333',
+            marginBottom: '2rem',
+            letterSpacing: '2px',
+            textTransform: 'uppercase'
+          }}>
+            Contact
+          </h1>
+          <p style={{
+            fontSize: '1.2rem',
+            color: '#666',
+            maxWidth: '600px',
+            margin: '0 auto',
+            lineHeight: '1.6'
+          }}>
+            Prêt à donner vie à votre événement de rêve ? Notre équipe d'experts est là pour vous accompagner à chaque étape.
+          </p>
         </div>
       </section>
 
-      {/* Contact Information & Form */}
-      <section className="section-padding-small" style={{ background: "var(--bg-secondary)" }}>
+      {/* Contact Information & Form - Delight Style */}
+      <section style={{ padding: "100px 0", background: "white" }}>
         <div className="container">
-          <div className="grid-two-column" style={{ alignItems: "flex-start" }}>
+          <div style={{ 
+            display: "grid", 
+            gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", 
+            gap: "4rem",
+            alignItems: "flex-start"
+          }}>
             {/* Contact Information */}
             <div>
-              <h2 className="heading-1" style={{ marginBottom: "32px" }}>
+              <h2 style={{
+                fontSize: '2rem',
+                fontWeight: '300',
+                color: '#333',
+                marginBottom: '3rem',
+                letterSpacing: '1px'
+              }}>
                 Informations de contact
               </h2>
               
-              <div style={{ display: "flex", flexDirection: "column", gap: "24px", marginBottom: "40px" }}>
-                <div 
-                  className="fade-in"
-                  style={{ 
-                    display: "flex", 
-                    alignItems: "center", 
-                    gap: "16px",
-                    animation: "slideInUp 0.8s ease-out 0.2s both",
-                    transition: "all 0.3s ease"
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateX(10px)";
-                    e.currentTarget.style.boxShadow = "0 10px 30px rgba(102, 126, 234, 0.2)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateX(0)";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
-                >
+              <div style={{ display: "flex", flexDirection: "column", gap: "2rem", marginBottom: "3rem" }}>
+                <div style={{ 
+                  display: "flex", 
+                  alignItems: "center", 
+                  gap: "1.5rem"
+                }}>
                   <div style={{ 
-                    width: "48px", 
-                    height: "48px", 
-                    background: "linear-gradient(135deg, #667eea, #764ba2)",
+                    width: "60px", 
+                    height: "60px", 
+                    background: "#333",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    border: "2px solid rgba(102, 126, 234, 0.3)",
-                    flexShrink: 0,
-                    animation: "pulse 2s ease-in-out infinite",
-                    boxShadow: "0 4px 15px rgba(102, 126, 234, 0.3)"
+                    flexShrink: 0
                   }}>
-                    <Phone size={20} color="white" />
+                    <Phone size={24} color="white" />
                   </div>
                   <div>
-                    <h3 className="heading-3" style={{ marginBottom: "4px" }}>
+                    <h3 style={{ 
+                      fontSize: "1.2rem", 
+                      fontWeight: "300",
+                      color: "#333",
+                      marginBottom: "0.5rem",
+                      letterSpacing: "1px"
+                    }}>
                       Téléphone
                     </h3>
-                    <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                    <p style={{ 
+                      color: "#666",
+                      fontSize: "1.1rem"
+                    }}>
                       {mockData.company.contact.phone}
                     </p>
                   </div>
                 </div>
                 
-                <div 
-                  className="fade-in"
-                  style={{ 
-                    display: "flex", 
-                    alignItems: "center", 
-                    gap: "16px",
-                    animation: "slideInUp 0.8s ease-out 0.4s both",
-                    transition: "all 0.3s ease"
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateX(10px)";
-                    e.currentTarget.style.boxShadow = "0 10px 30px rgba(118, 75, 162, 0.2)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateX(0)";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
-                >
+                <div style={{ 
+                  display: "flex", 
+                  alignItems: "center", 
+                  gap: "1.5rem"
+                }}>
                   <div style={{ 
-                    width: "48px", 
-                    height: "48px", 
-                    background: "linear-gradient(135deg, #764ba2, #f093fb)",
+                    width: "60px", 
+                    height: "60px", 
+                    background: "#333",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    border: "2px solid rgba(118, 75, 162, 0.3)",
-                    flexShrink: 0,
-                    animation: "pulse 2s ease-in-out infinite 0.5s",
-                    boxShadow: "0 4px 15px rgba(118, 75, 162, 0.3)"
+                    flexShrink: 0
                   }}>
-                    <Mail size={20} color="white" />
+                    <Mail size={24} color="white" />
                   </div>
                   <div>
-                    <h3 className="heading-3" style={{ marginBottom: "4px" }}>
+                    <h3 style={{ 
+                      fontSize: "1.2rem", 
+                      fontWeight: "300",
+                      color: "#333",
+                      marginBottom: "0.5rem",
+                      letterSpacing: "1px"
+                    }}>
                       Email
                     </h3>
-                    <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                    <p style={{ 
+                      color: "#666",
+                      fontSize: "1.1rem"
+                    }}>
                       {mockData.company.contact.email}
                     </p>
                   </div>
                 </div>
                 
-                <div 
-                  className="fade-in"
-                  style={{ 
-                    display: "flex", 
-                    alignItems: "center", 
-                    gap: "16px",
-                    animation: "slideInUp 0.8s ease-out 0.6s both",
-                    transition: "all 0.3s ease"
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateX(10px)";
-                    e.currentTarget.style.boxShadow = "0 10px 30px rgba(240, 147, 251, 0.2)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateX(0)";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
-                >
+                <div style={{ 
+                  display: "flex", 
+                  alignItems: "center", 
+                  gap: "1.5rem"
+                }}>
                   <div style={{ 
-                    width: "48px", 
-                    height: "48px", 
-                    background: "linear-gradient(135deg, #f093fb, #f5576c)",
+                    width: "60px", 
+                    height: "60px", 
+                    background: "#333",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    border: "2px solid rgba(240, 147, 251, 0.3)",
-                    flexShrink: 0,
-                    animation: "pulse 2s ease-in-out infinite 1s",
-                    boxShadow: "0 4px 15px rgba(240, 147, 251, 0.3)"
+                    flexShrink: 0
                   }}>
-                    <MapPin size={20} color="white" />
+                    <MapPin size={24} color="white" />
                   </div>
                   <div>
-                    <h3 className="heading-3" style={{ marginBottom: "4px" }}>
+                    <h3 style={{ 
+                      fontSize: "1.2rem", 
+                      fontWeight: "300",
+                      color: "#333",
+                      marginBottom: "0.5rem",
+                      letterSpacing: "1px"
+                    }}>
                       Adresse
                     </h3>
-                    <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                    <p style={{ 
+                      color: "#666",
+                      fontSize: "1.1rem"
+                    }}>
                       {mockData.company.contact.address}
                     </p>
                   </div>
                 </div>
                 
-                <div 
-                  className="fade-in"
-                  style={{ 
-                    display: "flex", 
-                    alignItems: "center", 
-                    gap: "16px",
-                    animation: "slideInUp 0.8s ease-out 0.8s both",
-                    transition: "all 0.3s ease"
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateX(10px)";
-                    e.currentTarget.style.boxShadow = "0 10px 30px rgba(16, 172, 132, 0.2)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateX(0)";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
-                >
+                <div style={{ 
+                  display: "flex", 
+                  alignItems: "center", 
+                  gap: "1.5rem"
+                }}>
                   <div style={{ 
-                    width: "48px", 
-                    height: "48px", 
-                    background: "linear-gradient(135deg, #10ac84, #667eea)",
+                    width: "60px", 
+                    height: "60px", 
+                    background: "#333",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    border: "2px solid rgba(16, 172, 132, 0.3)",
-                    flexShrink: 0,
-                    animation: "pulse 2s ease-in-out infinite 1.5s",
-                    boxShadow: "0 4px 15px rgba(16, 172, 132, 0.3)"
+                    flexShrink: 0
                   }}>
-                    <Clock size={20} color="white" />
+                    <Clock size={24} color="white" />
                   </div>
                   <div>
-                    <h3 className="heading-3" style={{ marginBottom: "4px" }}>
+                    <h3 style={{ 
+                      fontSize: "1.2rem", 
+                      fontWeight: "300",
+                      color: "#333",
+                      marginBottom: "0.5rem",
+                      letterSpacing: "1px"
+                    }}>
                       Horaires
                     </h3>
-                    <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
+                    <p style={{ 
+                      color: "#666",
+                      fontSize: "1.1rem"
+                    }}>
                       Lun-Ven: 9h00-18h00<br />
                       Sam: 10h00-16h00
                     </p>
                   </div>
                 </div>
               </div>
-              
-              <div style={{ 
-                padding: "24px", 
-                background: "var(--bg-primary)", 
-                border: "1px solid var(--border-light)"
-              }}>
-                <h3 className="heading-3" style={{ marginBottom: "16px" }}>
-                  Planifiez votre événement avec nous dès aujourd'hui !
-                </h3>
-                <p className="body-regular" style={{ color: "var(--text-secondary)", marginBottom: "16px" }}>
-                  Nos experts sont disponibles pour une consultation gratuite et personnalisée.
-                </p>
-                <a 
-                  href={mockData.company.contact.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                  style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}
-                >
-                  Consultation gratuite
-                </a>
-              </div>
             </div>
             
             {/* Contact Form */}
-            <div 
-              className="fade-in"
-              style={{ 
-                background: "var(--bg-primary)", 
-                padding: "40px", 
-                border: "1px solid var(--border-light)",
-                borderRadius: "16px",
-                boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
-                animation: "slideInUp 0.8s ease-out 1s both",
-                position: "relative",
-                overflow: "hidden"
-              }}
-            >
-              {/* Decorative Background */}
-              <div style={{
-                position: "absolute",
-                top: "-50px",
-                right: "-50px",
-                width: "100px",
-                height: "100px",
-                background: "linear-gradient(135deg, #667eea20, #764ba220)",
-                borderRadius: "50%",
-                animation: "rotate 20s linear infinite"
-              }} />
-              <div style={{
-                position: "absolute",
-                bottom: "-30px",
-                left: "-30px",
-                width: "60px",
-                height: "60px",
-                background: "linear-gradient(135deg, #f093fb20, #f5576c20)",
-                borderRadius: "50%",
-                animation: "rotate 15s linear infinite reverse"
-              }} />
-
-              <h2 
-                className="heading-1 fade-in" 
-                style={{ 
-                  marginBottom: "24px",
-                  background: "linear-gradient(45deg, #667eea, #764ba2)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  animation: "gradientShift 3s ease-in-out infinite, fadeIn 1s ease-in-out 1.2s both",
-                  position: "relative",
-                  zIndex: 2
-                }}
-              >
+            <div style={{ 
+              background: "#f8f9fa", 
+              padding: "3rem", 
+              borderRadius: "8px"
+            }}>
+              <h2 style={{
+                fontSize: '2rem',
+                fontWeight: '300',
+                color: '#333',
+                marginBottom: '2rem',
+                letterSpacing: '1px'
+              }}>
                 Envoyez-nous un message
               </h2>
               
@@ -763,12 +675,17 @@ ${formData.name}`
                 </div>
               )}
               
-              <form onSubmit={handleSubmit} className="contact-form" style={{ position: "relative", zIndex: 2 }}>
-                <div 
-                  className="form-group fade-in"
-                  style={{ animation: "slideInUp 0.8s ease-out 1.4s both" }}
-                >
-                  <label htmlFor="name" className="form-label">
+              <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                <div>
+                  <label htmlFor="name" style={{
+                    display: "block",
+                    fontSize: "0.9rem",
+                    fontWeight: "300",
+                    color: "#333",
+                    marginBottom: "0.5rem",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase"
+                  }}>
                     Nom complet *
                   </label>
                   <input
@@ -777,29 +694,36 @@ ${formData.name}`
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="form-input"
                     required
                     placeholder="Votre nom complet"
                     style={{
-                      transition: "all 0.3s ease",
-                      border: "2px solid #e2e8f0"
+                      width: "100%",
+                      padding: "12px 16px",
+                      border: "1px solid #ddd",
+                      borderRadius: "4px",
+                      fontSize: "1rem",
+                      background: "white",
+                      transition: "border-color 0.3s ease"
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = "#667eea";
-                      e.target.style.boxShadow = "0 0 0 3px rgba(102, 126, 234, 0.1)";
+                      e.target.style.borderColor = "#333";
                     }}
                     onBlur={(e) => {
-                      e.target.style.borderColor = "#e2e8f0";
-                      e.target.style.boxShadow = "none";
+                      e.target.style.borderColor = "#ddd";
                     }}
                   />
                 </div>
                 
-                <div 
-                  className="form-group fade-in"
-                  style={{ animation: "slideInUp 0.8s ease-out 1.6s both" }}
-                >
-                  <label htmlFor="email" className="form-label">
+                <div>
+                  <label htmlFor="email" style={{
+                    display: "block",
+                    fontSize: "0.9rem",
+                    fontWeight: "300",
+                    color: "#333",
+                    marginBottom: "0.5rem",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase"
+                  }}>
                     Email *
                   </label>
                   <input
@@ -808,29 +732,36 @@ ${formData.name}`
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="form-input"
                     required
                     placeholder="votre@email.com"
                     style={{
-                      transition: "all 0.3s ease",
-                      border: "2px solid #e2e8f0"
+                      width: "100%",
+                      padding: "12px 16px",
+                      border: "1px solid #ddd",
+                      borderRadius: "4px",
+                      fontSize: "1rem",
+                      background: "white",
+                      transition: "border-color 0.3s ease"
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = "#764ba2";
-                      e.target.style.boxShadow = "0 0 0 3px rgba(118, 75, 162, 0.1)";
+                      e.target.style.borderColor = "#333";
                     }}
                     onBlur={(e) => {
-                      e.target.style.borderColor = "#e2e8f0";
-                      e.target.style.boxShadow = "none";
+                      e.target.style.borderColor = "#ddd";
                     }}
                   />
                 </div>
                 
-                <div 
-                  className="form-group fade-in"
-                  style={{ animation: "slideInUp 0.8s ease-out 1.8s both" }}
-                >
-                  <label htmlFor="phone" className="form-label">
+                <div>
+                  <label htmlFor="phone" style={{
+                    display: "block",
+                    fontSize: "0.9rem",
+                    fontWeight: "300",
+                    color: "#333",
+                    marginBottom: "0.5rem",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase"
+                  }}>
                     Téléphone
                   </label>
                   <input
@@ -839,28 +770,35 @@ ${formData.name}`
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="form-input"
                     placeholder="+212 6XX XXX XXX"
                     style={{
-                      transition: "all 0.3s ease",
-                      border: "2px solid #e2e8f0"
+                      width: "100%",
+                      padding: "12px 16px",
+                      border: "1px solid #ddd",
+                      borderRadius: "4px",
+                      fontSize: "1rem",
+                      background: "white",
+                      transition: "border-color 0.3s ease"
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = "#764ba2";
-                      e.target.style.boxShadow = "0 0 0 3px rgba(118, 75, 162, 0.1)";
+                      e.target.style.borderColor = "#333";
                     }}
                     onBlur={(e) => {
-                      e.target.style.borderColor = "#e2e8f0";
-                      e.target.style.boxShadow = "none";
+                      e.target.style.borderColor = "#ddd";
                     }}
                   />
                 </div>
                 
-                <div 
-                  className="form-group fade-in"
-                  style={{ animation: "slideInUp 0.8s ease-out 2.0s both" }}
-                >
-                  <label htmlFor="subject" className="form-label">
+                <div>
+                  <label htmlFor="subject" style={{
+                    display: "block",
+                    fontSize: "0.9rem",
+                    fontWeight: "300",
+                    color: "#333",
+                    marginBottom: "0.5rem",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase"
+                  }}>
                     Sujet
                   </label>
                   <input
@@ -869,28 +807,35 @@ ${formData.name}`
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="form-input"
                     placeholder="Sujet de votre demande"
                     style={{
-                      transition: "all 0.3s ease",
-                      border: "2px solid #e2e8f0"
+                      width: "100%",
+                      padding: "12px 16px",
+                      border: "1px solid #ddd",
+                      borderRadius: "4px",
+                      fontSize: "1rem",
+                      background: "white",
+                      transition: "border-color 0.3s ease"
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = "#f093fb";
-                      e.target.style.boxShadow = "0 0 0 3px rgba(240, 147, 251, 0.1)";
+                      e.target.style.borderColor = "#333";
                     }}
                     onBlur={(e) => {
-                      e.target.style.borderColor = "#e2e8f0";
-                      e.target.style.boxShadow = "none";
+                      e.target.style.borderColor = "#ddd";
                     }}
                   />
                 </div>
                 
-                <div 
-                  className="form-group fade-in"
-                  style={{ animation: "slideInUp 0.8s ease-out 2.2s both" }}
-                >
-                  <label htmlFor="eventType" className="form-label">
+                <div>
+                  <label htmlFor="eventType" style={{
+                    display: "block",
+                    fontSize: "0.9rem",
+                    fontWeight: "300",
+                    color: "#333",
+                    marginBottom: "0.5rem",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase"
+                  }}>
                     Type d'événement
                   </label>
                   <select
@@ -898,46 +843,53 @@ ${formData.name}`
                     name="eventType"
                     value={formData.eventType}
                     onChange={handleInputChange}
-                    className="form-select"
                     style={{
-                      transition: "all 0.3s ease",
-                      border: "2px solid #e2e8f0"
+                      width: "100%",
+                      padding: "12px 16px",
+                      border: "1px solid #ddd",
+                      borderRadius: "4px",
+                      fontSize: "1rem",
+                      background: "white",
+                      transition: "border-color 0.3s ease"
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = "#10ac84";
-                      e.target.style.boxShadow = "0 0 0 3px rgba(16, 172, 132, 0.1)";
+                      e.target.style.borderColor = "#333";
                     }}
                     onBlur={(e) => {
-                      e.target.style.borderColor = "#e2e8f0";
-                      e.target.style.boxShadow = "none";
+                      e.target.style.borderColor = "#ddd";
                     }}
                   >
                     <option value="">Sélectionnez un type d'événement</option>
-                    <option value="congres-scientifique">🏛️ Congrès Scientifique</option>
-                    <option value="forum-recherche">🔬 Forum de Recherche</option>
-                    <option value="conference-medicale">🏥 Conférence Médicale</option>
-                    <option value="seminaire-entreprise">💼 Séminaire d'Entreprise</option>
-                    <option value="lancement-produit">🚀 Lancement de Produit</option>
-                    <option value="formation-professionnelle">📚 Formation Professionnelle</option>
-                    <option value="gala-charity">🎭 Gala & Événements Caritatifs</option>
-                    <option value="mariage-luxe">💍 Mariage de Luxe</option>
-                    <option value="anniversaire-corporatif">🎂 Anniversaire d'Entreprise</option>
-                    <option value="evenement-sportif">⚽ Événement Sportif</option>
-                    <option value="festival-culturel">🎪 Festival Culturel</option>
-                    <option value="exposition-art">🎨 Exposition d'Art</option>
-                    <option value="conference-presse">📰 Conférence de Presse</option>
-                    <option value="evenement-religieux">🕌 Événement Religieux</option>
-                    <option value="fete-privee">🎉 Fête Privée</option>
-                    <option value="webinaire-live">💻 Webinaire & Live Stream</option>
-                    <option value="autre">✨ Autre (Précisez dans le message)</option>
+                    <option value="congres-scientifique">Congrès Scientifique</option>
+                    <option value="forum-recherche">Forum de Recherche</option>
+                    <option value="conference-medicale">Conférence Médicale</option>
+                    <option value="seminaire-entreprise">Séminaire d'Entreprise</option>
+                    <option value="lancement-produit">Lancement de Produit</option>
+                    <option value="formation-professionnelle">Formation Professionnelle</option>
+                    <option value="gala-charity">Gala & Événements Caritatifs</option>
+                    <option value="mariage-luxe">Mariage de Luxe</option>
+                    <option value="anniversaire-corporatif">Anniversaire d'Entreprise</option>
+                    <option value="evenement-sportif">Événement Sportif</option>
+                    <option value="festival-culturel">Festival Culturel</option>
+                    <option value="exposition-art">Exposition d'Art</option>
+                    <option value="conference-presse">Conférence de Presse</option>
+                    <option value="evenement-religieux">Événement Religieux</option>
+                    <option value="fete-privee">Fête Privée</option>
+                    <option value="webinaire-live">Webinaire & Live Stream</option>
+                    <option value="autre">Autre (Précisez dans le message)</option>
                   </select>
                 </div>
                 
-                <div 
-                  className="form-group fade-in"
-                  style={{ animation: "slideInUp 0.8s ease-out 2.4s both" }}
-                >
-                  <label htmlFor="message" className="form-label">
+                <div>
+                  <label htmlFor="message" style={{
+                    display: "block",
+                    fontSize: "0.9rem",
+                    fontWeight: "300",
+                    color: "#333",
+                    marginBottom: "0.5rem",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase"
+                  }}>
                     Message *
                   </label>
                   <textarea
@@ -945,236 +897,58 @@ ${formData.name}`
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="form-textarea"
                     required
                     placeholder="Décrivez votre projet d'événement, vos besoins, la date prévue, le nombre d'invités..."
                     style={{
-                      transition: "all 0.3s ease",
-                      border: "2px solid #e2e8f0",
-                      minHeight: "120px"
+                      width: "100%",
+                      padding: "12px 16px",
+                      border: "1px solid #ddd",
+                      borderRadius: "4px",
+                      fontSize: "1rem",
+                      background: "white",
+                      transition: "border-color 0.3s ease",
+                      minHeight: "120px",
+                      resize: "vertical"
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = "#ff6b6b";
-                      e.target.style.boxShadow = "0 0 0 3px rgba(255, 107, 107, 0.1)";
+                      e.target.style.borderColor = "#333";
                     }}
                     onBlur={(e) => {
-                      e.target.style.borderColor = "#e2e8f0";
-                      e.target.style.boxShadow = "none";
+                      e.target.style.borderColor = "#ddd";
                     }}
                   />
                 </div>
                 
                 <button
                   type="submit"
-                  className="btn-primary fade-in"
                   disabled={isSubmitting}
                   style={{ 
-                    width: "100%", 
-                    display: "flex", 
-                    alignItems: "center", 
-                    justifyContent: "center", 
-                    gap: "8px",
-                    animation: "slideInUp 0.8s ease-out 2.6s both",
-                    background: "linear-gradient(135deg, #667eea, #764ba2)",
-                    border: "none",
-                    borderRadius: "12px",
-                    padding: "16px 24px",
-                    fontSize: "16px",
-                    fontWeight: "600",
+                    padding: "15px 30px",
+                    background: "#333",
+                    border: "2px solid #333",
                     color: "white",
+                    textDecoration: "none",
+                    fontSize: "1rem",
+                    fontWeight: "300",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase",
                     cursor: "pointer",
                     transition: "all 0.3s ease",
-                    boxShadow: "0 8px 25px rgba(102, 126, 234, 0.3)",
-                    position: "relative",
-                    overflow: "hidden"
+                    borderRadius: "4px"
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.transform = "translateY(-2px)";
-                    e.target.style.boxShadow = "0 12px 35px rgba(102, 126, 234, 0.4)";
+                    e.target.style.background = "transparent";
+                    e.target.style.color = "#333";
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.transform = "translateY(0)";
-                    e.target.style.boxShadow = "0 8px 25px rgba(102, 126, 234, 0.3)";
+                    e.target.style.background = "#333";
+                    e.target.style.color = "white";
                   }}
                 >
-                  {isSubmitting ? (
-                    <>
-                      <div style={{
-                        width: "16px",
-                        height: "16px",
-                        border: "2px solid white",
-                        borderTop: "2px solid transparent",
-                        borderRadius: "50%",
-                        animation: "rotate 1s linear infinite"
-                      }} />
-                      Envoi en cours...
-                    </>
-                  ) : (
-                    <>
-                      Envoyer le message
-                      <Send size={16} />
-                    </>
-                  )}
+                  {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
                 </button>
               </form>
-              
-              {/* Alternative Contact Methods */}
-              <div style={{ 
-                marginTop: "32px", 
-                padding: "24px", 
-                background: "var(--bg-secondary)", 
-                borderRadius: "12px",
-                border: "1px solid var(--border-light)"
-              }}>
-                <h3 className="heading-3" style={{ marginBottom: "16px", textAlign: "center" }}>
-                  Ou contactez-nous directement
-                </h3>
-                <div style={{ 
-                  display: "grid", 
-                  gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", 
-                  gap: "16px" 
-                }}>
-                  <a 
-                    href={`mailto:${mockData.company.contact.email}`}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: "8px",
-                      padding: "12px 16px",
-                      background: "var(--interactive-base)",
-                      color: "white",
-                      textDecoration: "none",
-                      borderRadius: "8px",
-                      transition: "all 0.3s ease",
-                      fontWeight: "500"
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.background = "var(--interactive-hover)";
-                      e.target.style.transform = "translateY(-2px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.background = "var(--interactive-base)";
-                      e.target.style.transform = "translateY(0)";
-                    }}
-                  >
-                    <Mail size={16} />
-                    Email
-                  </a>
-                  
-                  <a 
-                    href={mockData.company.contact.whatsapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: "8px",
-                      padding: "12px 16px",
-                      background: "#25D366",
-                      color: "white",
-                      textDecoration: "none",
-                      borderRadius: "8px",
-                      transition: "all 0.3s ease",
-                      fontWeight: "500"
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.background = "#128C7E";
-                      e.target.style.transform = "translateY(-2px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.background = "#25D366";
-                      e.target.style.transform = "translateY(0)";
-                    }}
-                  >
-                    <MessageCircle size={16} />
-                    WhatsApp
-                  </a>
-                  
-                  <a 
-                    href={`tel:${mockData.company.contact.phone}`}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: "8px",
-                      padding: "12px 16px",
-                      background: "var(--text-primary)",
-                      color: "white",
-                      textDecoration: "none",
-                      borderRadius: "8px",
-                      transition: "all 0.3s ease",
-                      fontWeight: "500"
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.background = "var(--text-secondary)";
-                      e.target.style.transform = "translateY(-2px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.background = "var(--text-primary)";
-                      e.target.style.transform = "translateY(0)";
-                    }}
-                  >
-                    <Phone size={16} />
-                    Téléphone
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section style={{ height: "400px", background: "var(--bg-subtle)" }}>
-        <div style={{ 
-          width: "100%", 
-          height: "100%", 
-          display: "flex", 
-          flexDirection: "column",
-          alignItems: "center", 
-          justifyContent: "center",
-          gap: "24px"
-        }}>
-          <div className="contact-map-container" style={{ 
-            width: "100%", 
-            height: "400px", 
-            borderRadius: "16px", 
-            overflow: "hidden",
-            boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
-            border: "1px solid rgba(102, 126, 234, 0.2)"
-          }}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-7.6113800!3d33.5731100!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b5c5c5c5c5%3A0x5c5c5c5c5c5c5c5c!2sAvenue%20Mohammed%20V%2C%20Casablanca%2C%20Morocco!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="BAHOOVA Events Location - Casablanca, Morocco"
-            ></iframe>
-          </div>
-          
-          <div style={{ 
-            textAlign: "center",
-            padding: "20px",
-            backgroundColor: "rgba(102, 126, 234, 0.05)",
-            borderRadius: "12px",
-            border: "1px solid rgba(102, 126, 234, 0.1)",
-            width: "100%"
-          }}>
-            <MapPin size={24} style={{ marginBottom: "8px", color: "#667eea" }} />
-            <h3 className="heading-3" style={{ marginBottom: "8px", color: "#333" }}>
-              Notre Adresse
-            </h3>
-            <p className="body-regular" style={{ color: "#666", marginBottom: "8px" }}>
-              {mockData.company.contact.address}
-            </p>
-            <p className="body-small" style={{ color: "#888" }}>
-              Facilement accessible en transport public et parking disponible
-            </p>
           </div>
         </div>
       </section>

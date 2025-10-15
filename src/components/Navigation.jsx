@@ -9,62 +9,109 @@ const Navigation = () => {
 
   const navItems = [
     { path: "/", label: "Accueil" },
-    { path: "/expert-gestion-evenements-maroc", label: "Événementiel Maroc" },
-    { path: "/about", label: "Qui sommes-nous ?" },
-    { path: "/services", label: "Services" },
-    { path: "/venues", label: "Lieux" },
     { path: "/gallery", label: "Galerie" },
     { path: "/contact", label: "Contact" }
   ];
 
   return (
-    <header className="navigation-header">
+    <header style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      background: 'rgba(255, 255, 255, 0.98)',
+      backdropFilter: 'blur(10px)',
+      borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+      zIndex: 1000,
+      padding: '1rem 0'
+    }}>
       <div className="container">
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
-          <Link to="/" className="navigation-logo" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <div style={{ 
+          display: "flex", 
+          alignItems: "center", 
+          justifyContent: "space-between", 
+          width: "100%" 
+        }}>
+          <Link 
+            to="/" 
+            style={{ 
+              display: "flex", 
+              alignItems: "center", 
+              gap: "12px",
+              textDecoration: 'none'
+            }}
+          >
             <img 
               src="/images/gallery/bahoova-logo-profile.png" 
               alt="BAHOOVA Events Logo" 
               style={{ 
-                height: "100px", 
-                width: "100px",
+                height: "50px", 
+                width: "50px",
                 objectFit: "contain",
-                borderRadius: "50%",
-                border: "5px solid #667eea",
-                padding: "10px",
-                backgroundColor: "#ffffff",
-                boxShadow: "0 8px 20px rgba(102, 126, 234, 0.4), 0 0 0 1px rgba(102, 126, 234, 0.1)",
-                outline: "4px solid rgba(102, 126, 234, 0.2)"
+                borderRadius: "50%"
               }}
             />
-            <span style={{ fontSize: "1.5rem", fontWeight: "700", color: "#333" }}>
-              {mockData.company.name}
+            <span style={{ 
+              fontSize: "1.5rem", 
+              fontWeight: "300", 
+              color: "#333",
+              letterSpacing: '1px'
+            }}>
+              BAHOOVA Events
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="navigation-menu" style={{ display: window.innerWidth > 768 ? "flex" : "none" }}>
+          <nav style={{ 
+            display: window.innerWidth > 768 ? "flex" : "none",
+            gap: '3rem'
+          }}>
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`navigation-link ${location.pathname === item.path ? "active" : ""}`}
+                style={{
+                  color: location.pathname === item.path ? "#333" : "#666",
+                  textDecoration: "none",
+                  fontSize: "1rem",
+                  fontWeight: "300",
+                  letterSpacing: "1px",
+                  textTransform: "uppercase",
+                  position: "relative",
+                  transition: "color 0.3s ease"
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.color = "#333";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.color = location.pathname === item.path ? "#333" : "#666";
+                }}
               >
                 {item.label}
+                {location.pathname === item.path && (
+                  <div style={{
+                    position: 'absolute',
+                    bottom: '-5px',
+                    left: 0,
+                    right: 0,
+                    height: '1px',
+                    background: '#333'
+                  }} />
+                )}
               </Link>
             ))}
           </nav>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="mobile-menu-toggle"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             style={{
               display: window.innerWidth <= 768 ? "block" : "none",
               background: "none",
               border: "none",
               cursor: "pointer",
-              color: "var(--text-primary)"
+              color: "#333",
+              padding: "0.5rem"
             }}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -74,26 +121,42 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav
-            className="mobile-navigation"
             style={{
               position: "absolute",
               top: "100%",
               left: 0,
               right: 0,
-              background: "var(--bg-primary)",
-              borderBottom: "1px solid var(--border-light)",
-              padding: "20px 40px",
+              background: "rgba(255, 255, 255, 0.98)",
+              backdropFilter: "blur(10px)",
+              borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+              padding: "2rem 0",
               display: "flex",
               flexDirection: "column",
-              gap: "16px"
+              gap: "2rem",
+              textAlign: "center"
             }}
           >
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`navigation-link ${location.pathname === item.path ? "active" : ""}`}
+                style={{
+                  color: location.pathname === item.path ? "#333" : "#666",
+                  textDecoration: "none",
+                  fontSize: "1.2rem",
+                  fontWeight: "300",
+                  letterSpacing: "1px",
+                  textTransform: "uppercase",
+                  padding: "0.5rem 0",
+                  transition: "color 0.3s ease"
+                }}
                 onClick={() => setIsMenuOpen(false)}
+                onMouseEnter={(e) => {
+                  e.target.style.color = "#333";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.color = location.pathname === item.path ? "#333" : "#666";
+                }}
               >
                 {item.label}
               </Link>

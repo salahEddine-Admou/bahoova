@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Users, Calendar, Coffee, Sparkles, Zap, Heart } from "lucide-react";
+import { ArrowRight, Award, Users, Calendar, Coffee, Sparkles, Zap, Heart, Phone, Mail, MapPin } from "lucide-react";
 import { mockData } from "../mock";
 import AnimatedSlider from "./AnimatedSlider";
 import ColorSwitcher from "./ColorSwitcher";
@@ -118,346 +118,418 @@ const Home = () => {
         })}
       </script>
       
-      {/* Hero Section */}
+      {/* Hero Section - Delight Light Style */}
       <section 
         className="hero-section"
         style={{
-          backgroundImage: `url('${mockData.heroImages.main}')`,
+          backgroundImage: `url('https://delight-event.com/wp-content/uploads/2020/01/palazzo-reale-milan-2019-1.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          height: '100vh',
+          position: 'relative',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
         }}
       >
-        <div className="hero-overlay"></div>
-        <ColorSwitcher className="hero-color-switcher">
-          <div className="container">
-            <div className="hero-content">
-              <div className="hero-text-container">
-                <h1 className="hero-title" style={{ color: "white" }}>
-                  Gestion Événements Maroc<br />
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'rgba(255, 255, 255, 0.7)',
+          zIndex: 1
+        }}></div>
+        
+        <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <h1 style={{
+              fontSize: '4rem',
+              fontWeight: '300',
+              color: '#333',
+              marginBottom: '2rem',
+              letterSpacing: '2px',
+              textTransform: 'uppercase'
+            }}>
                   BAHOOVA Events
                 </h1>
-                <p className="hero-description">
-                  <strong>Spécialiste gestion événements Maroc</strong> - BAHOOVA Events est votre partenaire de confiance pour l'organisation d'événements, congrès, forums, séminaires, réunions d'entreprises, dîners de gala et mariages au Maroc. Notre savoir-faire en gestion d'événements au Maroc couvre tous les secteurs : congrès scientifiques, forums de recherche, séminaires d'entreprises, dîners de gala, événements corporate et mariages de luxe. Planification complète, technologies avancées, 15 ans d'expérience dans l'événementiel professionnel au Maroc.
-                </p>
-                <div className="hero-actions">
-                  <Link to="/contact" className="btn-primary creative-btn">
-                    <Sparkles size={20} />
-                    Planifier un événement
-                    <Zap size={16} />
-                  </Link>
-                  <Link to="/services" className="btn-secondary creative-btn">
-                    Voir nos services
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
-              </div>
+            <p style={{
+              fontSize: '1.2rem',
+              color: '#666',
+              marginBottom: '3rem',
+              lineHeight: '1.6',
+              fontWeight: '300'
+            }}>
+              L'agence événementielle de référence au Maroc.<br />
+              Nous créons des événements exceptionnels qui marquent les esprits.
+            </p>
+            <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link 
+                to="/contact" 
+                style={{
+                  padding: '15px 30px',
+                  background: 'transparent',
+                  border: '2px solid #333',
+                  color: '#333',
+                  textDecoration: 'none',
+                  fontSize: '1rem',
+                  fontWeight: '300',
+                  letterSpacing: '1px',
+                  textTransform: 'uppercase',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = '#333';
+                  e.target.style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = 'transparent';
+                  e.target.style.color = '#333';
+                }}
+              >
+                Contactez-nous
+              </Link>
+              <Link 
+                to="/gallery" 
+                style={{
+                  padding: '15px 30px',
+                  background: '#333',
+                  border: '2px solid #333',
+                  color: 'white',
+                  textDecoration: 'none',
+                  fontSize: '1rem',
+                  fontWeight: '300',
+                  letterSpacing: '1px',
+                  textTransform: 'uppercase',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = 'transparent';
+                  e.target.style.color = '#333';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = '#333';
+                  e.target.style.color = 'white';
+                }}
+              >
+                Voir nos réalisations
+              </Link>
             </div>
           </div>
-        </ColorSwitcher>
+        </div>
       </section>
 
-      {/* Core Values Section */}
-      <section className="section-padding" style={{ background: "var(--bg-secondary)" }}>
+      {/* About Section - Delight Light Style */}
+      <section style={{ padding: '100px 0', background: 'white' }}>
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Gestion Événements Maroc - Notre Savoir-Faire Événementiel</h2>
-            <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              <strong>Spécialiste gestion événements Maroc</strong> - BAHOOVA Events est le leader de l'organisation d'événements au Maroc. Notre savoir-faire événementiel couvre congrès, forums, séminaires, réunions d'entreprises et dîners de gala. Depuis 15 ans, nous sommes votre partenaire de confiance en gestion d'événements au Maroc, offrant des solutions sur mesure pour tous vos besoins événementiels.
+          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 style={{
+              fontSize: '2.5rem',
+              fontWeight: '300',
+              color: '#333',
+              marginBottom: '2rem',
+              letterSpacing: '1px'
+            }}>
+              L'agence
+            </h2>
+            <p style={{
+              fontSize: '1.1rem',
+              lineHeight: '1.8',
+              color: '#666',
+              marginBottom: '3rem'
+            }}>
+              Basée à Casablanca, BAHOOVA Events est une agence événementielle spécialisée dans la conception et la production d'événements sur mesure pour des entreprises de renom ainsi que pour une large clientèle privée. Nous mettons tout notre savoir-faire à la disposition de nos clients pour réaliser des événements uniques et personnalisés.
+            </p>
+            <p style={{
+              fontSize: '1.1rem',
+              lineHeight: '1.8',
+              color: '#666',
+              marginBottom: '3rem'
+            }}>
+              La société a été créée en 2008 par une équipe d'experts, rompue à l'exigence de l'excellence en tant que responsable événementiel au sein d'organisations prestigieuses. Le maître mot de BAHOOVA Events est de faire de chaque événement un moment exceptionnel et sur-mesure.
+            </p>
+            <p style={{
+              fontSize: '1.1rem',
+              lineHeight: '1.8',
+              color: '#666'
+            }}>
+              Fort d'une équipe dédiée et spécialisée regroupant tous les domaines de compétences nécessaires, l'agence englobe ainsi tout le savoir-faire indispensable au succès de chacun des projets qui lui est confié. BAHOOVA Events opère aujourd'hui sur le marché local au Maroc mais également à l'international.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Preview Section - Delight Light Style */}
+      <section style={{ padding: '100px 0', background: '#fafafa' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <h2 style={{
+              fontSize: '2.5rem',
+              fontWeight: '300',
+              color: '#333',
+              marginBottom: '1rem',
+              letterSpacing: '1px'
+            }}>
+              Nos réalisations
+            </h2>
+            <p style={{
+              fontSize: '1.1rem',
+              color: '#666',
+              maxWidth: '600px',
+              margin: '0 auto'
+            }}>
+              Découvrez quelques-unes de nos plus belles réalisations à travers une sélection d'événements exceptionnels.
             </p>
           </div>
           
-          <div className="grid-product-showcase">
-            {mockData.coreValues.map((value, index) => (
-              <div key={index} className="service-card hover-lift">
-                <div style={{ padding: "32px 24px", textAlign: "center" }}>
-                  <div style={{ 
-                    width: "60px", 
-                    height: "60px", 
-                    background: "var(--bg-primary)",
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    margin: "0 auto 24px",
-                    border: "1px solid var(--border-light)"
-                  }}>
-                    {index === 0 && <Award size={24} color="var(--text-primary)" />}
-                    {index === 1 && <Users size={24} color="var(--text-primary)" />}
-                    {index === 2 && <Calendar size={24} color="var(--text-primary)" />}
-                    {index === 3 && <Coffee size={24} color="var(--text-primary)" />}
-                  </div>
-                  <h3 className="heading-3" style={{ marginBottom: "16px" }}>
-                    {value.title}
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+            gap: '2rem',
+            marginBottom: '4rem'
+          }}>
+            {[
+              {
+                image: 'https://delight-event.com/wp-content/uploads/2020/01/palazzo-reale-milan-2019-1.jpg',
+                title: 'Palazzo Reale - Milan',
+                category: 'Événement de Luxe'
+              },
+              {
+                image: 'https://delight-event.com/wp-content/uploads/2020/01/office-nations-unies-geneve-2017-1.jpg',
+                title: 'Office des Nations Unies - Genève',
+                category: 'Événement International'
+              },
+              {
+                image: 'https://delight-event.com/wp-content/uploads/2020/01/palais-bahia-marrakech-2019-1.jpg',
+                title: 'Palais de la Bahia - Marrakech',
+                category: 'Événement Maroc'
+              },
+              {
+                image: 'https://delight-event.com/wp-content/uploads/2020/01/palais-el-badi-marrakech-2015-1.jpg',
+                title: 'Palais El Badi - Marrakech',
+                category: 'Événement Historique'
+              },
+              {
+                image: 'https://delight-event.com/wp-content/uploads/2020/01/diner-haute-joaillerie-milan.jpg',
+                title: 'Dîner Haute Joaillerie - Milan',
+                category: 'Événement Prestige'
+              },
+              {
+                image: 'https://delight-event.com/wp-content/uploads/2020/01/diner-presse-dior-marrakech.jpg',
+                title: 'Dîner Presse Dior - Marrakech',
+                category: 'Événement Mode'
+              }
+            ].map((item, index) => (
+              <div 
+                key={index}
+                style={{
+                  position: 'relative',
+                  overflow: 'hidden',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  transition: 'transform 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.transform = 'scale(1.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.transform = 'scale(1)';
+                }}
+              >
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  style={{
+                    width: '100%',
+                    height: '250px',
+                    objectFit: 'cover',
+                    display: 'block'
+                  }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.8))',
+                  color: 'white',
+                  padding: '2rem 1rem 1rem',
+                  transform: 'translateY(100%)',
+                  transition: 'transform 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.transform = 'translateY(0)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.transform = 'translateY(100%)';
+                }}
+                >
+                  <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>
+                    {item.title}
                   </h3>
-                  <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                    {value.description}. Notre savoir-faire en gestion d'événements au Maroc garantit la réussite de vos projets événementiels.
+                  <p style={{ fontSize: '0.9rem', opacity: 0.9 }}>
+                    {item.category}
                   </p>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="section-padding-small">
-        <div className="container">
-          <div className="grid-two-column">
-            <div>
-                <h2 className="hero-medium" style={{ marginBottom: "24px" }}>
-                Gestion Événements Maroc - Une Expérience Reconnue
-              </h2>
-              <p className="body-large" style={{ color: "var(--text-secondary)", marginBottom: "24px" }}>
-                {mockData.company.vision}
-              </p>
-              <p className="body-regular" style={{ color: "var(--text-secondary)", marginBottom: "32px" }}>
-                En tant que <strong>spécialiste gestion événements Maroc</strong>, BAHOOVA Events a développé un savoir-faire unique dans l'organisation d'événements au Maroc. Notre connaissance approfondie du marché local, de la culture marocaine et des spécificités régionales nous permet d'offrir des solutions événementielles parfaitement adaptées. Que ce soit pour des congrès scientifiques à Casablanca, des forums de recherche à Rabat, ou des séminaires d'entreprises à Marrakech, notre expérience événementielle au Maroc garantit le succès de vos événements.
-              </p>
-              <Link to="/about" className="btn-icon">
-                En savoir plus sur notre expertise
-                <ArrowRight size={16} />
-              </Link>
-            </div>
-            
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
-              <div style={{ textAlign: "center" }}>
-                <div className="hero-medium" style={{ color: "var(--interactive-base)", marginBottom: "8px" }}>
-                  15+
-                </div>
-                <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                  Années d'expérience
-                </p>
-              </div>
-              
-              <div style={{ textAlign: "center" }}>
-                <div className="hero-medium" style={{ color: "var(--interactive-base)", marginBottom: "8px" }}>
-                  350+
-                </div>
-                <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                  Employés dédiés
-                </p>
-              </div>
-              
-              <div style={{ textAlign: "center" }}>
-                <div className="hero-medium" style={{ color: "var(--interactive-base)", marginBottom: "8px" }}>
-                  25+
-                </div>
-                <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                  Événements par an
-                </p>
-              </div>
-              
-              <div style={{ textAlign: "center" }}>
-                <div className="hero-medium" style={{ color: "var(--interactive-base)", marginBottom: "8px" }}>
-                  720+
-                </div>
-                <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                  Services par jour
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Preview */}
-      <section className="section-padding" style={{ background: "var(--bg-secondary)" }}>
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Gestion Événements Maroc - Nos Services Événementiels</h2>
-            <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              En tant que <strong>spécialiste gestion événements Maroc</strong>, BAHOOVA Events propose une organisation complète de congrès, forums, séminaires, réunions d'entreprises et événements professionnels. Notre savoir-faire événementiel au Maroc s'appuie sur des technologies avancées et une équipe de 350 professionnels dédiés à la réussite de vos événements.
-            </p>
-          </div>
           
-          <div className="grid-product-showcase">
-            {mockData.services.slice(0, 4).map((service, index) => (
-              <div key={index} className="service-card hover-lift">
-                <img 
-                  src={service.image} 
-                  alt={service.title}
-                  className="service-card-image"
-                  onError={(e) => {
-                    e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
-                  }}
-                  loading="lazy"
-                />
-                <h3 className="service-card-title">{service.title}</h3>
-                <p className="service-card-description">{service.description}</p>
-              </div>
-            ))}
-          </div>
-          
-          <div style={{ textAlign: "center", marginTop: "48px" }}>
-            <Link to="/services" className="btn-primary">
-              Découvrir tous nos services
+          <div style={{ textAlign: 'center' }}>
+            <Link 
+              to="/gallery"
+              style={{
+                padding: '15px 30px',
+                background: 'transparent',
+                border: '2px solid #333',
+                color: '#333',
+                textDecoration: 'none',
+                fontSize: '1rem',
+                fontWeight: '500',
+                letterSpacing: '1px',
+                textTransform: 'uppercase',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.background = '#333';
+                e.target.style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = 'transparent';
+                e.target.style.color = '#333';
+              }}
+            >
+              Voir toutes nos réalisations
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="section-padding-small" style={{ background: "var(--bg-secondary)" }}>
+      {/* Contact Section - Delight Light Style */}
+      <section style={{ padding: '100px 0', background: 'white' }}>
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "60px" }}>
-            <h2 className="heading-1" style={{ color: "#333333" }}>
-              Témoignages clients
-            </h2>
-            <p className="body-large" style={{ 
-              marginTop: "16px", 
-              color: "var(--text-secondary)",
-              fontSize: "1.2rem",
-              fontWeight: "500"
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <h2 style={{
+              fontSize: '2.5rem',
+              fontWeight: '300',
+              color: '#333',
+              marginBottom: '1rem',
+              letterSpacing: '1px'
             }}>
-              Ce que disent nos clients de leur expérience BAHOOVA
+              Contact
+            </h2>
+            <p style={{
+              fontSize: '1.1rem',
+              color: '#666',
+              maxWidth: '600px',
+              margin: '0 auto'
+            }}>
+              Prêt à donner vie à votre événement de rêve ? Notre équipe d'experts est là pour vous accompagner.
             </p>
           </div>
           
           <div style={{ 
-            display: "grid", 
-            gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", 
-            gap: "32px",
-            maxWidth: "1200px",
-            margin: "0 auto"
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+            gap: '3rem',
+            maxWidth: '1000px',
+            margin: '0 auto'
           }}>
-            {mockData.testimonials.map((testimonial, index) => (
-              <div 
-                key={index} 
-                className="fade-in"
-                style={{ 
-                  padding: "40px 32px", 
-                  background: "white", 
-                  border: "1px solid var(--border-light)",
-                  borderRadius: "16px",
-                  textAlign: "center",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
-                  transition: "all 0.3s ease",
-                  position: "relative",
-                  overflow: "hidden",
-                  animation: `fadeInUp 0.8s ease-out ${index * 0.2}s both`
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.transform = "translateY(-10px)";
-                  e.target.style.boxShadow = "0 20px 40px rgba(0,0,0,0.15)";
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = "translateY(0)";
-                  e.target.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
-                }}
-              >
-                {/* Quote Icon */}
-                <div style={{
-                  position: "absolute",
-                  top: "20px",
-                  right: "20px",
-                  fontSize: "2rem",
-                  color: "var(--interactive-base)",
-                  opacity: 0.3
-                }}>
-                  "
-                </div>
-                
-                
-                {/* Testimonial Text */}
-                <p className="body-regular" style={{ 
-                  color: "var(--text-primary)", 
-                  marginBottom: "24px",
-                  fontStyle: "italic",
-                  fontSize: "1.1rem",
-                  lineHeight: "1.6"
-                }}>
-                  "{testimonial.text}"
-                </p>
-                
-                {/* Author Info */}
-                <div>
-                  <h4 className="heading-3" style={{ 
-                    marginBottom: "4px",
-                    color: "var(--text-primary)",
-                    fontWeight: "700"
-                  }}>
-                    {testimonial.name}
-                  </h4>
-                  <p className="body-small" style={{ 
-                    color: "var(--interactive-base)",
-                    fontWeight: "500"
-                  }}>
-                    {testimonial.role}
-                  </p>
-                </div>
-                
-                {/* Decorative Bottom Border */}
-                <div style={{
-                  position: "absolute",
-                  bottom: "0",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  width: "60px",
-                  height: "4px",
-                  background: "linear-gradient(45deg, #667eea, #764ba2)",
-                  borderRadius: "2px"
-                }} />
+            <div style={{ textAlign: 'center' }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                background: '#333',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 2rem',
+                color: 'white'
+              }}>
+                <Phone size={32} />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pourquoi Choisir BAHOOVA Events - Expert Maroc */}
-      <section className="section-padding">
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "80px" }}>
-            <h2 className="heading-1">Pourquoi Choisir BAHOOVA Events - Spécialiste Gestion Événements Maroc ?</h2>
-            <p className="body-large" style={{ marginTop: "16px", color: "var(--text-secondary)" }}>
-              Découvrez les avantages de faire appel à notre savoir-faire événementiel au Maroc
-            </p>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#333' }}>
+                Téléphone
+              </h3>
+              <p style={{ color: '#666', fontSize: '1.1rem' }}>
+                {mockData.company.contact.phone}
+              </p>
+            </div>
+            
+            <div style={{ textAlign: 'center' }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                background: '#333',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 2rem',
+                color: 'white'
+              }}>
+                <Mail size={32} />
+              </div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#333' }}>
+                Email
+              </h3>
+              <p style={{ color: '#666', fontSize: '1.1rem' }}>
+                {mockData.company.contact.email}
+              </p>
+            </div>
+            
+            <div style={{ textAlign: 'center' }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                background: '#333',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 2rem',
+                color: 'white'
+              }}>
+                <MapPin size={32} />
+              </div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#333' }}>
+                Adresse
+              </h3>
+              <p style={{ color: '#666', fontSize: '1.1rem' }}>
+                {mockData.company.contact.address}
+              </p>
+            </div>
           </div>
           
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px", marginBottom: "60px" }}>
-            <div style={{ padding: "32px 24px", textAlign: "center", border: "1px solid var(--border-light)", borderRadius: "12px" }}>
-              <h3 className="heading-3" style={{ marginBottom: "16px" }}>Expertise Locale Maroc</h3>
-              <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                Notre <strong>expert gestion événements Maroc</strong> maîtrise parfaitement le marché local, les réglementations marocaines et les spécificités culturelles. Cette expertise locale garantit des événements parfaitement adaptés au contexte marocain.
-              </p>
-            </div>
-            
-            <div style={{ padding: "32px 24px", textAlign: "center", border: "1px solid var(--border-light)", borderRadius: "12px" }}>
-              <h3 className="heading-3" style={{ marginBottom: "16px" }}>Réseau de Partenaires Maroc</h3>
-              <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                En tant qu'<strong>expert gestion événements Maroc</strong>, nous disposons d'un réseau étendu de partenaires locaux : lieux, traiteurs, techniciens, artistes. Cette collaboration nous permet d'offrir des services de qualité supérieure.
-              </p>
-            </div>
-            
-            <div style={{ padding: "32px 24px", textAlign: "center", border: "1px solid var(--border-light)", borderRadius: "12px" }}>
-              <h3 className="heading-3" style={{ marginBottom: "16px" }}>Technologies Avancées</h3>
-              <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                Notre <strong>expertise événementielle au Maroc</strong> s'appuie sur les dernières technologies : sonorisation professionnelle, éclairage LED, écrans géants, live streaming. Nous garantissons des événements modernes et technologiquement avancés.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding-small">
-        <div className="container">
-          <div style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto" }}>
-            <h2 className="hero-medium" style={{ marginBottom: "24px" }}>
-              Prêt à créer votre événement de rêve au Maroc ?
-            </h2>
-            <p className="body-large" style={{ color: "var(--text-secondary)", marginBottom: "32px" }}>
-              Contactez notre <strong>expert gestion événements Maroc</strong> dès aujourd'hui pour discuter de votre projet et découvrir comment nous pouvons le transformer en réalité. Devis gratuit et conseil personnalisé.
-            </p>
-            <div style={{ display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link to="/contact" className="btn-primary">
-                Planifiez votre événement
+          <div style={{ textAlign: 'center', marginTop: '4rem' }}>
+            <Link 
+              to="/contact"
+              style={{
+                padding: '15px 30px',
+                background: '#333',
+                border: '2px solid #333',
+                color: 'white',
+                textDecoration: 'none',
+                fontSize: '1rem',
+                fontWeight: '500',
+                letterSpacing: '1px',
+                textTransform: 'uppercase',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.background = 'transparent';
+                e.target.style.color = '#333';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = '#333';
+                e.target.style.color = 'white';
+              }}
+            >
+              Nous contacter
               </Link>
-              <Link to="/gallery" className="btn-secondary">
-                Voir notre galerie
-                <ArrowRight size={16} />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
