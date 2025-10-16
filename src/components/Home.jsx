@@ -122,17 +122,33 @@ const Home = () => {
       <section 
         className="hero-section"
         style={{
-          backgroundImage: `url('https://delight-event.com/wp-content/uploads/2020/01/palazzo-reale-milan-2019-1.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
           height: '100vh',
           position: 'relative',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          overflow: 'hidden'
         }}
       >
+        {/* Background Image */}
+        <img 
+          src="https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=1920&h=1080&fit=crop&crop=center"
+          alt="Luxury Event Venue"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: 0
+          }}
+          onError={(e) => {
+            e.target.src = 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&h=1080&fit=crop&crop=center';
+          }}
+        />
+        
+        {/* Overlay */}
         <div style={{
           position: 'absolute',
           top: 0,
@@ -143,6 +159,7 @@ const Home = () => {
           zIndex: 1
         }}></div>
         
+        {/* Content */}
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h1 style={{
@@ -266,6 +283,9 @@ const Home = () => {
                     objectFit: 'cover',
                     borderRadius: '8px'
                   }}
+                  onError={(e) => {
+                    e.target.src = 'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=600&h=400&fit=crop&crop=center';
+                  }}
                 />
               </div>
             </div>
@@ -304,34 +324,34 @@ const Home = () => {
           }}>
             {[
               {
-                image: 'https://delight-event.com/wp-content/uploads/2020/01/palazzo-reale-milan-2019-1.jpg',
-                title: 'Palazzo Reale - Milan',
+                image: 'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=600&h=400&fit=crop&crop=center',
+                title: 'Luxury Wedding - Milan',
                 category: 'Luxury Event'
               },
               {
-                image: 'https://delight-event.com/wp-content/uploads/2020/01/office-nations-unies-geneve-2017-1.jpg',
-                title: 'United Nations Office - Geneva',
-                category: 'International Conference'
+                image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop&crop=center',
+                title: 'International Conference - Geneva',
+                category: 'Corporate Event'
               },
               {
-                image: 'https://delight-event.com/wp-content/uploads/2020/01/palais-bahia-marrakech-2019-1.jpg',
-                title: 'Palais de la Bahia - Marrakech',
+                image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center',
+                title: 'Cultural Event - Marrakech',
                 category: 'Cultural Event'
               },
               {
-                image: 'https://delight-event.com/wp-content/uploads/2020/01/palais-el-badi-marrakech-2015-1.jpg',
-                title: 'Palais El Badi - Marrakech',
-                category: 'Historical Venue'
-              },
-              {
-                image: 'https://delight-event.com/wp-content/uploads/2020/01/diner-haute-joaillerie-milan.jpg',
-                title: 'Haute Joaillerie Dinner - Milan',
+                image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&crop=center',
+                title: 'Fashion Show - Paris',
                 category: 'Fashion Event'
               },
               {
-                image: 'https://delight-event.com/wp-content/uploads/2020/01/diner-presse-dior-marrakech.jpg',
-                title: 'Dior Press Dinner - Marrakech',
-                category: 'Fashion & Media'
+                image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop&crop=center',
+                title: 'Corporate Gala - New York',
+                category: 'Corporate Event'
+              },
+              {
+                image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=400&fit=crop&crop=center',
+                title: 'Product Launch - London',
+                category: 'Product Launch'
               }
             ].map((item, index) => (
               <div 
@@ -357,6 +377,9 @@ const Home = () => {
                     height: '300px',
                     objectFit: 'cover',
                     display: 'block'
+                  }}
+                  onError={(e) => {
+                    e.target.src = 'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=600&h=400&fit=crop&crop=center';
                   }}
                 />
                 <div style={{
