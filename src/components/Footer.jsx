@@ -77,24 +77,15 @@ ${process.env.NODE_ENV === 'development' ? '📝 Mode développement : Inscripti
         <div className="footer-content">
           {/* Company Info */}
           <div className="footer-section">
-            <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px" }}>
-              <img 
-                src="/images/gallery/bahoova-logo-profile.png" 
-                alt="BAHOOVA Events Logo" 
-                style={{ 
-                  height: "80px", 
-                  width: "80px",
-                  objectFit: "contain",
-                  borderRadius: "50%",
-                  border: "5px solid #667eea",
-                  padding: "8px",
-                  backgroundColor: "#ffffff",
-                  boxShadow: "0 6px 18px rgba(102, 126, 234, 0.4), 0 0 0 1px rgba(102, 126, 234, 0.1)",
-                  outline: "4px solid rgba(102, 126, 234, 0.2)"
-                }}
-              />
-              <h3 style={{ margin: 0 }}>
-                {mockData.company.name}
+            <div style={{ marginBottom: "20px" }}>
+              <h3 style={{ 
+                margin: 0, 
+                fontSize: "1.5rem",
+                fontWeight: "300",
+                color: "#1a1a1a",
+                letterSpacing: "1px"
+              }}>
+                BAHOOVA Events
               </h3>
             </div>
             <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
