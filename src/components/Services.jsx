@@ -105,33 +105,27 @@ const Services = () => {
             {[
               {
                 title: "Événements d'Entreprise",
-                description: "Conférences, séminaires, team buildings et lancements de produits avec une approche professionnelle et moderne.",
-                icon: <Building size={32} />
+                description: "Conférences, séminaires, team buildings et lancements de produits avec une approche professionnelle et moderne."
               },
               {
                 title: "Événements Privés",
-                description: "Mariages d'exception, galas et réceptions exclusives créés sur mesure pour des moments inoubliables.",
-                icon: <Heart size={32} />
+                description: "Mariages d'exception, galas et réceptions exclusives créés sur mesure pour des moments inoubliables."
               },
               {
                 title: "Scénographie & Technique",
-                description: "Conception artistique, décors sur mesure, sonorisation, éclairage et solutions audiovisuelles.",
-                icon: <Palette size={32} />
+                description: "Conception artistique, décors sur mesure, sonorisation, éclairage et solutions audiovisuelles."
               },
               {
                 title: "Gestion Complète",
-                description: "De la planification initiale à l'exécution finale, nous gérons tous les aspects de votre événement.",
-                icon: <Settings size={32} />
+                description: "De la planification initiale à l'exécution finale, nous gérons tous les aspects de votre événement."
               },
               {
                 title: "Partenaires Premium",
-                description: "Un réseau de prestataires haut de gamme pour garantir la qualité et l'excellence de votre événement.",
-                icon: <Users size={32} />
+                description: "Un réseau de prestataires haut de gamme pour garantir la qualité et l'excellence de votre événement."
               },
               {
                 title: "Suivi Personnalisé",
-                description: "Un accompagnement dédié et un suivi personnalisé pour chaque étape de votre projet.",
-                icon: <Target size={32} />
+                description: "Un accompagnement dédié et un suivi personnalisé pour chaque étape de votre projet."
               }
             ].map((service, index) => (
               <div 
@@ -148,19 +142,6 @@ const Services = () => {
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
-                <div style={{ 
-                  width: '80px',
-                  height: '80px',
-                  background: '#f8f8f8',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 24px',
-                  color: '#1a1a1a'
-                }}>
-                  {service.icon}
-                </div>
                 <h3 style={{ 
                   fontSize: '1.5rem', 
                   fontWeight: '400', 
@@ -206,9 +187,9 @@ const Services = () => {
             }}>
               Une méthode éprouvée pour des événements exceptionnels
             </p>
-          </div>
+              </div>
               
-          <div style={{ 
+              <div style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
             gap: '60px' 
@@ -236,7 +217,7 @@ const Services = () => {
               }
             ].map((step, index) => (
               <div key={index} style={{ textAlign: 'center' }}>
-                <div style={{
+            <div style={{ 
                   fontSize: '4rem',
                   fontWeight: '300',
                   color: '#1a1a1a',
@@ -245,7 +226,7 @@ const Services = () => {
                   opacity: 0.8
                 }}>
                   {step.step}
-                </div>
+              </div>
                 <h3 style={{
                   fontSize: '1.5rem',
                   fontWeight: '400',
@@ -254,7 +235,7 @@ const Services = () => {
                   letterSpacing: '0.3px'
                 }}>
                   {step.title}
-                </h3>
+                  </h3>
                 <p style={{
                   fontSize: '1rem',
                   lineHeight: '1.6',
@@ -266,7 +247,7 @@ const Services = () => {
                 </p>
               </div>
             ))}
-          </div>
+            </div>
 
         </div>
       </section>
