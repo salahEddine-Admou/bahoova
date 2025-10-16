@@ -381,7 +381,7 @@ const Services = () => {
                 Nous Contacter
               </a>
               <a 
-                href="/portfolio"
+                href="/gallery"
                 style={{
                   padding: '15px 30px',
                   background: '#1a1a1a',
@@ -402,7 +402,7 @@ const Services = () => {
                   e.target.style.color = 'white';
                 }}
               >
-                Voir Nos Réalisations
+                Voir Notre Galerie
               </a>
             </div>
           </div>

@@ -19,7 +19,7 @@ const Agency = () => {
               marginBottom: '2rem',
               letterSpacing: '1px'
             }}>
-              Agence
+              Qui sommes-nous ?
             </h1>
             <p style={{
               fontSize: '1.2rem',
@@ -27,8 +27,8 @@ const Agency = () => {
               lineHeight: '1.6',
               fontWeight: '300'
             }}>
-              BAHOOVA Events est une agence de gestion d'événements à service complet basée au Maroc, 
-              spécialisée dans la création d'expériences exceptionnelles pour les clients corporatifs et privés.
+              Bahova Event est une agence événementielle spécialisée dans la conception et l'organisation d'événements sur mesure. 
+              Plus qu'un simple prestataire, nous sommes des créateurs d'expériences uniques, où l'excellence se mêle à l'émotion.
             </p>
           </div>
         </div>
@@ -47,39 +47,24 @@ const Agency = () => {
                   marginBottom: '2rem',
                   letterSpacing: '0.5px'
                 }}>
-                  Notre Histoire
+                  Nos Domaines d'Expertise
                 </h2>
-                <p style={{
+                <div style={{
                   fontSize: '1.1rem',
                   lineHeight: '1.8',
                   color: '#666',
                   marginBottom: '2rem'
                 }}>
-                  Fondée en 2008, BAHOOVA Events s'est établie comme une agence de gestion d'événements 
-                  leader au Maroc. Notre équipe de professionnels expérimentés allie créativité, 
-                  précision et expertise locale pour livrer des événements inoubliables.
-                </p>
-                <p style={{
-                  fontSize: '1.1rem',
-                  lineHeight: '1.8',
-                  color: '#666'
-                }}>
-                  Des rassemblements intimes aux événements corporatifs de grande envergure, nous abordons chaque projet 
-                  avec le même niveau de dévouement et d'attention aux détails qui a fait de nous le 
-                  choix privilégié pour une clientèle exigeante au Maroc et à l'international.
-                </p>
-              </div>
-              <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop&crop=center"
-                  alt="BAHOOVA Events Team"
-                  style={{
-                    width: '100%',
-                    height: '400px',
-                    objectFit: 'cover',
-                    borderRadius: '8px'
-                  }}
-                />
+                  <p style={{ marginBottom: '1rem' }}>
+                    <strong>Événements d'entreprise :</strong> conférences, séminaires, team buildings, lancements de produits.
+                  </p>
+                  <p style={{ marginBottom: '1rem' }}>
+                    <strong>Événements privés :</strong> mariages d'exception, galas, réceptions exclusives.
+                  </p>
+                  <p>
+                    <strong>Scénographie & technique :</strong> conception artistique, décors sur mesure, sonorisation, lumière, audiovisuel
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -97,7 +82,7 @@ const Agency = () => {
               marginBottom: '1rem',
               letterSpacing: '0.5px'
             }}>
-              Nos Valeurs
+              Notre Signature
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -105,7 +90,7 @@ const Agency = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Les principes qui guident tout ce que nous faisons
+              Chaque projet signé Bahova Event repose sur trois piliers
             </p>
           </div>
           
@@ -134,15 +119,14 @@ const Agency = () => {
                 color: '#1a1a1a',
                 marginBottom: '16px'
               }}>
-                Excellence
+                1. Créativité
               </h3>
               <p style={{
                 fontSize: '1rem',
                 lineHeight: '1.6',
                 color: '#666'
               }}>
-                Nous visons la perfection dans chaque détail, nous assurant que chaque événement dépasse les attentes 
-                et crée des souvenirs durables.
+                Concevoir des concepts originaux et élégants.
               </p>
             </div>
             
@@ -166,15 +150,14 @@ const Agency = () => {
                 color: '#1a1a1a',
                 marginBottom: '16px'
               }}>
-                Créativité
+                2. Rigueur
               </h3>
               <p style={{
                 fontSize: '1rem',
                 lineHeight: '1.6',
                 color: '#666'
               }}>
-                Nous apportons des idées fraîches et des concepts innovants à chaque projet, créant des 
-                expériences uniques qui se démarquent de l'ordinaire.
+                Garantir une organisation fluide et irréprochable.
               </p>
             </div>
             
@@ -198,15 +181,14 @@ const Agency = () => {
                 color: '#1a1a1a',
                 marginBottom: '16px'
               }}>
-                Partenariat
+                3. Émotion
               </h3>
               <p style={{
                 fontSize: '1rem',
                 lineHeight: '1.6',
                 color: '#666'
               }}>
-                Nous travaillons étroitement avec nos clients en tant que partenaires de confiance, comprenant leur vision 
-                et la donnant vie avec professionnalisme et attention.
+                Transformer l'instant éphémère en souvenir impérissable.
               </p>
             </div>
           </div>
@@ -224,7 +206,7 @@ const Agency = () => {
               marginBottom: '1rem',
               letterSpacing: '0.5px'
             }}>
-              Notre Équipe
+              Pourquoi Choisir Bahova Event ?
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -232,7 +214,7 @@ const Agency = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Rencontrez les professionnels passionnés derrière BAHOOVA Events
+              Nos avantages qui font la différence
             </p>
           </div>
           
@@ -261,13 +243,13 @@ const Agency = () => {
                 color: '#1a1a1a',
                 marginBottom: '8px'
               }}>
-                Équipe de Direction
+                ✔️ Approche Personnalisée
               </h3>
               <p style={{
                 fontSize: '0.9rem',
                 color: '#666'
               }}>
-                Professionnels expérimentés avec des décennies d'expertise combinée en gestion d'événements
+                Adaptée à chaque client
               </p>
             </div>
             
@@ -291,13 +273,13 @@ const Agency = () => {
                 color: '#1a1a1a',
                 marginBottom: '8px'
               }}>
-                Équipe Créative
+                ✔️ Réseau de Partenaires
               </h3>
               <p style={{
                 fontSize: '0.9rem',
                 color: '#666'
               }}>
-                Designers talentueux et esprits créatifs qui donnent vie à votre vision
+                Fidèles et haut de gamme
               </p>
             </div>
             
@@ -321,13 +303,13 @@ const Agency = () => {
                 color: '#1a1a1a',
                 marginBottom: '8px'
               }}>
-                Équipe Opérationnelle
+                ✔️ Équipe Passionnée
               </h3>
               <p style={{
                 fontSize: '0.9rem',
                 color: '#666'
               }}>
-                Professionnels dévoués assurant une exécution parfaite de chaque événement
+                Alliant vision stratégique et souci du détail
               </p>
             </div>
           </div>
@@ -345,7 +327,7 @@ const Agency = () => {
               marginBottom: '2rem',
               letterSpacing: '0.5px'
             }}>
-              Prêt à travailler avec nous ?
+              Notre Promesse
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -353,7 +335,8 @@ const Agency = () => {
               marginBottom: '2rem',
               lineHeight: '1.6'
             }}>
-              Discutons de votre prochain événement et créons quelque chose d'extraordinaire ensemble.
+              Plus qu'un événement, une signature.<br />
+              Avec Bahova Event, vos idées prennent vie dans des univers mémorables, fidèles à vos valeurs et à votre image.
             </p>
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a 
@@ -381,7 +364,7 @@ const Agency = () => {
                 Nous Contacter
               </a>
               <a 
-                href="/portfolio"
+                href="/gallery"
                 style={{
                   padding: '15px 30px',
                   background: '#1a1a1a',
@@ -402,7 +385,7 @@ const Agency = () => {
                   e.target.style.color = 'white';
                 }}
               >
-                Voir Nos Réalisations
+                Voir Notre Galerie
               </a>
             </div>
           </div>

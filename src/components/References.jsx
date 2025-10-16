@@ -504,7 +504,7 @@ const References = () => {
                 Démarrer Votre Projet
               </a>
               <a 
-                href="/portfolio"
+                href="/gallery"
                 style={{
                   padding: '15px 30px',
                   background: '#1a1a1a',
@@ -525,7 +525,7 @@ const References = () => {
                   e.target.style.color = 'white';
                 }}
               >
-                Voir Nos Réalisations
+                Voir Notre Galerie
               </a>
             </div>
           </div>

@@ -127,9 +127,8 @@ ${process.env.NODE_ENV === 'development' ? '📝 Mode développement : Inscripti
           <div className="footer-section">
             <h3>Navigation</h3>
             <Link to="/">Accueil</Link>
-            <Link to="/agency">Agence</Link>
+            <Link to="/agency">Qui sommes-nous</Link>
             <Link to="/services">Notre Expertise</Link>
-            <Link to="/portfolio">Portfolio</Link>
             <Link to="/references">Références</Link>
             <Link to="/gallery">Galerie</Link>
             <Link to="/contact">Contact</Link>

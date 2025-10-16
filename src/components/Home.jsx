@@ -209,7 +209,7 @@ const Home = () => {
                 Nous Contacter
               </Link>
               <Link 
-                to="/portfolio" 
+                to="/gallery" 
                 style={{
                   padding: '15px 30px',
                   background: 'white',
@@ -231,7 +231,7 @@ const Home = () => {
                   e.target.style.color = '#1a1a1a';
                 }}
               >
-                Voir Nos Réalisations
+                Voir Notre Galerie
               </Link>
             </div>
           </div>
@@ -293,160 +293,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Portfolio Preview Section - Delight Event Style */}
-      <section style={{ padding: '120px 0', background: '#fafafa' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h2 style={{
-              fontSize: '2.5rem',
-              fontWeight: '300',
-              color: '#1a1a1a',
-              marginBottom: '1rem',
-              letterSpacing: '0.5px'
-            }}>
-              Nos Réalisations
-            </h2>
-            <p style={{
-              fontSize: '1.1rem',
-              color: '#666',
-              maxWidth: '600px',
-              margin: '0 auto'
-            }}>
-              Découvrez quelques-uns de nos événements les plus exceptionnels et voyez comment nous donnons vie aux visions.
-            </p>
-          </div>
-          
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
-            gap: '40px',
-            marginBottom: '60px'
-          }}>
-            {[
-              {
-                image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop&crop=center',
-                title: 'Mariage de Luxe - Milan',
-                category: 'Événement de Luxe'
-              },
-              {
-                image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop&crop=center',
-                title: 'Conférence Internationale - Genève',
-                category: 'Événement Corporate'
-              },
-              {
-                image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center',
-                title: 'Événement Culturel - Marrakech',
-                category: 'Événement Culturel'
-              },
-              {
-                image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&crop=center',
-                title: 'Défilé de Mode - Paris',
-                category: 'Événement Mode'
-              },
-              {
-                image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop&crop=center',
-                title: 'Gala Corporate - New York',
-                category: 'Événement Corporate'
-              },
-              {
-                image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=400&fit=crop&crop=center',
-                title: 'Lancement Produit - Londres',
-                category: 'Lancement Produit'
-              }
-            ].map((item, index) => (
-              <div 
-                key={index}
-                style={{
-                  position: 'relative',
-                  overflow: 'hidden',
-                  cursor: 'pointer',
-                  transition: 'transform 0.3s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                }}
-              >
-                <img 
-                  src={item.image} 
-                  alt={item.title}
-                  style={{
-                    width: '100%',
-                    height: '300px',
-                    objectFit: 'cover',
-                    display: 'block'
-                  }}
-                  onError={(e) => {
-                    // Fallback to a different image if the original fails
-                    const fallbackImages = [
-                      'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=600&h=400&fit=crop&crop=center',
-                      'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop&crop=center',
-                      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center'
-                    ];
-                    const randomFallback = fallbackImages[Math.floor(Math.random() * fallbackImages.length)];
-                    e.target.src = randomFallback;
-                  }}
-                />
-                <div style={{
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  background: 'linear-gradient(transparent, rgba(0,0,0,0.8))',
-                  color: 'white',
-                  padding: '30px 20px 20px',
-                  transform: 'translateY(100%)',
-                  transition: 'transform 0.3s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'translateY(0)';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'translateY(100%)';
-                }}
-                >
-                  <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', fontWeight: '400' }}>
-                    {item.title}
-                  </h3>
-                  <p style={{ fontSize: '0.9rem', opacity: 0.9 }}>
-                    {item.category}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div style={{ textAlign: 'center' }}>
-            <Link 
-              to="/portfolio"
-              style={{
-                padding: '15px 30px',
-                background: 'transparent',
-                border: '1px solid #1a1a1a',
-                color: '#1a1a1a',
-                textDecoration: 'none',
-                fontSize: '1rem',
-                fontWeight: '400',
-                letterSpacing: '0.5px',
-                textTransform: 'none',
-                transition: 'all 0.3s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.background = '#1a1a1a';
-                e.target.style.color = 'white';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.background = 'transparent';
-                e.target.style.color = '#1a1a1a';
-              }}
-            >
-              Voir Tous les Projets
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Contact Section - Delight Event Style */}
       <section style={{ padding: '120px 0', background: 'white' }}>
