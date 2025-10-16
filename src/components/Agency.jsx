@@ -100,19 +100,6 @@ const Agency = () => {
             gap: '40px' 
           }}>
             <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-              <div style={{
-                width: '80px',
-                height: '80px',
-                background: '#f8f8f8',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 24px',
-                fontSize: '2rem'
-              }}>
-                ✨
-              </div>
               <h3 style={{
                 fontSize: '1.5rem',
                 fontWeight: '400',
@@ -131,19 +118,6 @@ const Agency = () => {
             </div>
             
             <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-              <div style={{
-                width: '80px',
-                height: '80px',
-                background: '#f8f8f8',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 24px',
-                fontSize: '2rem'
-              }}>
-                🎨
-              </div>
               <h3 style={{
                 fontSize: '1.5rem',
                 fontWeight: '400',
@@ -162,19 +136,6 @@ const Agency = () => {
             </div>
             
             <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-              <div style={{
-                width: '80px',
-                height: '80px',
-                background: '#f8f8f8',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 24px',
-                fontSize: '2rem'
-              }}>
-                🤝
-              </div>
               <h3 style={{
                 fontSize: '1.5rem',
                 fontWeight: '400',
@@ -224,19 +185,6 @@ const Agency = () => {
             gap: '40px' 
           }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{
-                width: '200px',
-                height: '200px',
-                background: '#f0f0f0',
-                borderRadius: '50%',
-                margin: '0 auto 24px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '3rem'
-              }}>
-                👨‍💼
-              </div>
               <h3 style={{
                 fontSize: '1.25rem',
                 fontWeight: '400',
@@ -254,19 +202,6 @@ const Agency = () => {
             </div>
             
             <div style={{ textAlign: 'center' }}>
-              <div style={{
-                width: '200px',
-                height: '200px',
-                background: '#f0f0f0',
-                borderRadius: '50%',
-                margin: '0 auto 24px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '3rem'
-              }}>
-                🎨
-              </div>
               <h3 style={{
                 fontSize: '1.25rem',
                 fontWeight: '400',
@@ -284,19 +219,6 @@ const Agency = () => {
             </div>
             
             <div style={{ textAlign: 'center' }}>
-              <div style={{
-                width: '200px',
-                height: '200px',
-                background: '#f0f0f0',
-                borderRadius: '50%',
-                margin: '0 auto 24px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '3rem'
-              }}>
-                ⚙️
-              </div>
               <h3 style={{
                 fontSize: '1.25rem',
                 fontWeight: '400',
