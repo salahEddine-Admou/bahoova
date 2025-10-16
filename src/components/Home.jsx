@@ -132,8 +132,8 @@ const Home = () => {
       >
         {/* Background Image */}
         <img 
-          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&h=1080&fit=crop&crop=center"
-          alt="Modern Conference Hall"
+          src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=1920&h=1080&fit=crop&crop=center"
+          alt="Professional Event Setup"
           style={{
             position: 'absolute',
             top: 0,
@@ -144,7 +144,13 @@ const Home = () => {
             zIndex: 0
           }}
           onError={(e) => {
-            e.target.src = 'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=1920&h=1080&fit=crop&crop=center';
+            const fallbackImages = [
+              'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=1920&h=1080&fit=crop&crop=center',
+              'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&h=1080&fit=crop&crop=center',
+              'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop&crop=center'
+            ];
+            const randomFallback = fallbackImages[Math.floor(Math.random() * fallbackImages.length)];
+            e.target.src = randomFallback;
           }}
         />
         
