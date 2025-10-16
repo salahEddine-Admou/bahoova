@@ -377,7 +377,7 @@ const Home = () => {
                   marginBottom: '2rem',
                   letterSpacing: '0.5px'
                 }}>
-                  À Propos de Nous
+                  Qui sommes-nous ?
                 </h2>
                 <p style={{
                   fontSize: '1.1rem',
@@ -385,18 +385,8 @@ const Home = () => {
                   color: '#666',
                   marginBottom: '2rem'
                 }}>
-                  Basée à Casablanca, BAHOOVA Events est une agence de gestion d'événements à service complet 
-                  spécialisée dans la création d'expériences exceptionnelles pour les clients corporatifs et privés 
-                  au Maroc et à l'international.
-                </p>
-                <p style={{
-                  fontSize: '1.1rem',
-                  lineHeight: '1.8',
-                  color: '#666'
-                }}>
-                  Fondée en 2008 par une équipe de professionnels expérimentés, nous allions 
-                  créativité, précision et expertise locale pour livrer des événements inoubliables 
-                  qui dépassent les attentes.
+                  Bahova Event est une agence événementielle spécialisée dans la conception et l'organisation d'événements sur mesure. 
+                  Plus qu'un simple prestataire, nous sommes des créateurs d'expériences uniques, où l'excellence se mêle à l'émotion.
                 </p>
               </div>
               <div>
