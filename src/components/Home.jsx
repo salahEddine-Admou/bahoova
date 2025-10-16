@@ -1,34 +1,54 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Users, Calendar, Coffee, Sparkles, Zap, Heart, Phone, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Award, Users, Calendar, Coffee, Sparkles, Zap, Heart, Phone, Mail, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
 import { mockData } from "../mock";
 import AnimatedSlider from "./AnimatedSlider";
 import ColorSwitcher from "./ColorSwitcher";
 import AnimatedText from "./AnimatedText";
 
 const Home = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
   const heroImages = [
     {
-      url: mockData.heroImages.main,
-      title: "Gestion d'Événements Créative",
-      description: "Transformez vos idées en expériences inoubliables"
+      url: "/images/banner/1.png",
+      title: "Événements d'Entreprise",
+      description: "Conférences et séminaires professionnels"
     },
     {
-      url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=800&fit=crop&crop=center",
-      title: "Conférences & Congrès",
-      description: "Organisation professionnelle de vos événements scientifiques"
+      url: "/images/banner/2.png",
+      title: "Mariages de Luxe",
+      description: "Cérémonies d'exception et réceptions exclusives"
     },
     {
-      url: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=800&fit=crop&crop=center",
-      title: "Événements Sportifs",
-      description: "Compétitions et tournois avec équipements de pointe"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&h=800&fit=crop&crop=center",
-      title: "Sonorisation & Éclairage",
-      description: "Technologies avancées pour des événements exceptionnels"
+      url: "/images/banner/3.png",
+      title: "Événements Culturels",
+      description: "Festivals et célébrations artistiques"
     }
   ];
+
+  // Auto-rotate images every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? heroImages.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <main>
@@ -118,7 +138,7 @@ const Home = () => {
         })}
       </script>
       
-      {/* Hero Section - Delight Event Style */}
+      {/* Hero Section - Image Carousel */}
       <section 
         className="hero-section"
         style={{
@@ -130,29 +150,130 @@ const Home = () => {
           overflow: 'hidden'
         }}
       >
-        {/* Background Image */}
-        <img 
-          src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=1920&h=1080&fit=crop&crop=center"
-          alt="Professional Event Setup"
+        {/* Background Images Carousel */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 0
+        }}>
+          {heroImages.map((image, index) => (
+            <img 
+              key={index}
+              src={image.url}
+              alt={image.title}
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                opacity: index === currentImageIndex ? 1 : 0,
+                transition: 'opacity 1s ease-in-out'
+              }}
+              onError={(e) => {
+                const fallbackImages = [
+                  '/images/banner/1.png',
+                  '/images/banner/2.png',
+                  '/images/banner/3.png'
+                ];
+                const randomFallback = fallbackImages[Math.floor(Math.random() * fallbackImages.length)];
+                e.target.src = randomFallback;
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevImage}
           style={{
             position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: 0
+            left: '30px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'rgba(255, 255, 255, 0.2)',
+            border: '1px solid rgba(255, 255, 255, 0.3)',
+            borderRadius: '50%',
+            width: '50px',
+            height: '50px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
+            cursor: 'pointer',
+            zIndex: 3,
+            transition: 'all 0.3s ease'
           }}
-          onError={(e) => {
-            const fallbackImages = [
-              'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=1920&h=1080&fit=crop&crop=center',
-              'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&h=1080&fit=crop&crop=center',
-              'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop&crop=center'
-            ];
-            const randomFallback = fallbackImages[Math.floor(Math.random() * fallbackImages.length)];
-            e.target.src = randomFallback;
+          onMouseEnter={(e) => {
+            e.target.style.background = 'rgba(255, 255, 255, 0.3)';
           }}
-        />
+          onMouseLeave={(e) => {
+            e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+          }}
+        >
+          <ChevronLeft size={24} />
+        </button>
+
+        <button
+          onClick={nextImage}
+          style={{
+            position: 'absolute',
+            right: '30px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'rgba(255, 255, 255, 0.2)',
+            border: '1px solid rgba(255, 255, 255, 0.3)',
+            borderRadius: '50%',
+            width: '50px',
+            height: '50px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
+            cursor: 'pointer',
+            zIndex: 3,
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.background = 'rgba(255, 255, 255, 0.3)';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+          }}
+        >
+          <ChevronRight size={24} />
+        </button>
+
+        {/* Image Indicators */}
+        <div style={{
+          position: 'absolute',
+          bottom: '30px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          gap: '10px',
+          zIndex: 3
+        }}>
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              style={{
+                width: '12px',
+                height: '12px',
+                borderRadius: '50%',
+                border: 'none',
+                background: index === currentImageIndex ? 'white' : 'rgba(255, 255, 255, 0.5)',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+              }}
+            />
+          ))}
+        </div>
         
         {/* Overlay */}
         <div style={{
