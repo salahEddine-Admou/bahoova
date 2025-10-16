@@ -178,16 +178,15 @@ const Home = () => {
             }}>
               BAHOOVA Events
             </h1>
-            <p style={{
-              fontSize: '1.3rem',
-              color: 'rgba(255, 255, 255, 0.9)',
-              marginBottom: '3rem',
-              lineHeight: '1.6',
-              fontWeight: '300'
-            }}>
-              Créer des événements exceptionnels qui inspirent et enchantent.<br />
-              Votre vision, notre expertise, des expériences inoubliables.
-            </p>
+              <p style={{
+                fontSize: '1.3rem',
+                color: 'rgba(255, 255, 255, 0.9)',
+                marginBottom: '3rem',
+                lineHeight: '1.6',
+                fontWeight: '300'
+              }}>
+                L'éphémère transformé en mémorable
+              </p>
             <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link 
                 to="/contact" 

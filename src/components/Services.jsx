@@ -69,14 +69,15 @@ const Services = () => {
               Des rassemblements intimes aux conférences de grande envergure, notre expertise 
               couvre tous les aspects de la gestion d'événements.
             </p>
-              </div>
-            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Services Overview */}
-      <section style={{ padding: '80px 0', background: '#fafafa' }}>
+
+      {/* Services Grid - Delight Event Style */}
+      <section style={{ padding: '120px 0', background: 'white' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
             <h2 style={{
               fontSize: '2.5rem',
               fontWeight: '300',
@@ -84,7 +85,7 @@ const Services = () => {
               marginBottom: '1rem',
               letterSpacing: '0.5px'
             }}>
-              Ce Que Nous Faisons
+              Nos Services
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -92,29 +93,53 @@ const Services = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Nos services complets de gestion d'événements couvrent tous les aspects de votre événement, 
-              du concept initial à l'exécution parfaite.
+              Des solutions complètes pour tous vos événements
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section style={{ padding: '80px 0', background: 'white' }}>
-        <div className="container">
+          
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
-            gap: '40px' 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+            gap: '60px' 
           }}>
-            {mockData.services.map((service, index) => (
+            {[
+              {
+                title: "Événements d'Entreprise",
+                description: "Conférences, séminaires, team buildings et lancements de produits avec une approche professionnelle et moderne.",
+                icon: <Building size={32} />
+              },
+              {
+                title: "Événements Privés",
+                description: "Mariages d'exception, galas et réceptions exclusives créés sur mesure pour des moments inoubliables.",
+                icon: <Heart size={32} />
+              },
+              {
+                title: "Scénographie & Technique",
+                description: "Conception artistique, décors sur mesure, sonorisation, éclairage et solutions audiovisuelles.",
+                icon: <Palette size={32} />
+              },
+              {
+                title: "Gestion Complète",
+                description: "De la planification initiale à l'exécution finale, nous gérons tous les aspects de votre événement.",
+                icon: <Settings size={32} />
+              },
+              {
+                title: "Partenaires Premium",
+                description: "Un réseau de prestataires haut de gamme pour garantir la qualité et l'excellence de votre événement.",
+                icon: <Users size={32} />
+              },
+              {
+                title: "Suivi Personnalisé",
+                description: "Un accompagnement dédié et un suivi personnalisé pour chaque étape de votre projet.",
+                icon: <Target size={32} />
+              }
+            ].map((service, index) => (
               <div 
                 key={index}
                     style={{ 
-                  background: '#fafafa',
-                  padding: '40px',
-                  transition: 'transform 0.3s ease',
-                  cursor: 'pointer'
+                  textAlign: 'center',
+                  padding: '40px 20px',
+                  transition: 'transform 0.3s ease'
                 }}
                     onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
@@ -122,27 +147,26 @@ const Services = () => {
                     onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
-                onClick={() => handleServiceClick(service)}
               >
-                <img 
-                  src={service.image} 
-                  alt={service.title}
-                style={{ 
-                    width: '100%',
-                    height: '200px',
-                    objectFit: 'cover',
-                    marginBottom: '24px',
-                    borderRadius: '8px'
-                  }}
-                  onError={(e) => {
-                    e.target.src = `https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&crop=center&t=${Date.now()}`;
-                  }}
-                />
+                <div style={{ 
+                  width: '80px',
+                  height: '80px',
+                  background: '#f8f8f8',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 24px',
+                  color: '#1a1a1a'
+                }}>
+                  {service.icon}
+                </div>
                 <h3 style={{ 
-                  fontSize: '1.25rem', 
+                  fontSize: '1.5rem', 
                   fontWeight: '400', 
                   color: '#1a1a1a', 
-                  marginBottom: '12px' 
+                  marginBottom: '16px',
+                  letterSpacing: '0.3px'
                 }}>
                   {service.title}
                 </h3>
@@ -150,31 +174,21 @@ const Services = () => {
                   fontSize: '1rem', 
                   lineHeight: '1.6', 
                   color: '#666',
-                  marginBottom: '20px'
+                  maxWidth: '280px',
+                  margin: '0 auto'
                 }}>
                   {service.description}
                 </p>
-                <div style={{ 
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  color: '#1a1a1a',
-                  fontSize: '0.9rem',
-                  fontWeight: '500'
-                }}>
-                  En Savoir Plus
-                  <ArrowRight size={16} />
-                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section style={{ padding: '80px 0', background: '#fafafa' }}>
+      {/* Process Section - Delight Event Style */}
+      <section style={{ padding: '120px 0', background: '#fafafa' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
             <h2 style={{
               fontSize: '2.5rem',
               fontWeight: '300',
@@ -182,7 +196,7 @@ const Services = () => {
               marginBottom: '1rem',
               letterSpacing: '0.5px'
             }}>
-              Notre Processus
+              Notre Approche
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -190,148 +204,71 @@ const Services = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Une approche structurée pour assurer le succès de chaque événement
-            </p>
-              </div>
-              
-              <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
-            gap: '40px' 
-          }}>
-            <div style={{ textAlign: 'center' }}>
-            <div style={{ 
-                width: '60px',
-                height: '60px',
-                background: '#1a1a1a',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 20px',
-                color: 'white',
-                fontSize: '1.5rem',
-                fontWeight: 'bold'
-              }}>
-                1
-              </div>
-              <h3 style={{
-                fontSize: '1.25rem',
-                fontWeight: '400',
-                color: '#1a1a1a',
-                marginBottom: '12px'
-              }}>
-                Consultation
-                  </h3>
-              <p style={{
-                fontSize: '1rem',
-                lineHeight: '1.6',
-                color: '#666'
-              }}>
-                Comprendre vos besoins, objectifs et vision pour l'événement
-              </p>
-            </div>
-
-            <div style={{ textAlign: 'center' }}>
-            <div style={{ 
-                width: '60px',
-                height: '60px',
-                background: '#1a1a1a',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 20px',
-                color: 'white',
-                fontSize: '1.5rem',
-                fontWeight: 'bold'
-              }}>
-                2
-                </div>
-              <h3 style={{
-                fontSize: '1.25rem',
-                fontWeight: '400',
-                color: '#1a1a1a',
-                marginBottom: '12px'
-              }}>
-                Conception
-                  </h3>
-              <p style={{
-                fontSize: '1rem',
-                lineHeight: '1.6',
-                color: '#666'
-              }}>
-                Développer le concept, le design et la planification détaillée
+              Une méthode éprouvée pour des événements exceptionnels
             </p>
           </div>
+              
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+            gap: '60px' 
+          }}>
+            {[
+              {
+                step: "01",
+                title: "Écoute & Analyse",
+                description: "Nous prenons le temps de comprendre vos objectifs et votre vision pour créer un événement parfaitement adapté."
+              },
+              {
+                step: "02", 
+                title: "Conception Créative",
+                description: "Notre équipe créative développe des concepts uniques qui reflètent votre identité et vos valeurs."
+              },
+              {
+                step: "03",
+                title: "Planification Détaillée",
+                description: "Coordination précise de tous les éléments techniques, logistiques et créatifs de votre événement."
+              },
+              {
+                step: "04",
+                title: "Exécution Parfaite",
+                description: "Mise en œuvre professionnelle avec un suivi constant pour garantir une expérience inoubliable."
+              }
+            ].map((step, index) => (
+              <div key={index} style={{ textAlign: 'center' }}>
+                <div style={{
+                  fontSize: '4rem',
+                  fontWeight: '300',
+                  color: '#1a1a1a',
+                  marginBottom: '24px',
+                  letterSpacing: '2px',
+                  opacity: 0.8
+                }}>
+                  {step.step}
+                </div>
+                <h3 style={{
+                  fontSize: '1.5rem',
+                  fontWeight: '400',
+                  color: '#1a1a1a',
+                  marginBottom: '16px',
+                  letterSpacing: '0.3px'
+                }}>
+                  {step.title}
+                </h3>
+                <p style={{
+                  fontSize: '1rem',
+                  lineHeight: '1.6',
+                  color: '#666',
+                  maxWidth: '260px',
+                  margin: '0 auto'
+                }}>
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
 
-            <div style={{ textAlign: 'center' }}>
-                <div style={{ 
-                width: '60px',
-                height: '60px',
-                background: '#1a1a1a',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 20px',
-                color: 'white',
-                fontSize: '1.5rem',
-                fontWeight: 'bold'
-              }}>
-                3
-                </div>
-              <h3 style={{
-                fontSize: '1.25rem',
-                fontWeight: '400',
-                color: '#1a1a1a',
-                marginBottom: '12px'
-              }}>
-                Coordination
-                  </h3>
-              <p style={{
-                fontSize: '1rem',
-                lineHeight: '1.6',
-                color: '#666'
-              }}>
-                Gestion des fournisseurs, logistique et suivi de projet
-              </p>
-            </div>
-
-            <div style={{ textAlign: 'center' }}>
-                <div style={{ 
-                width: '60px',
-                height: '60px',
-                background: '#1a1a1a',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 20px',
-                color: 'white',
-                fontSize: '1.5rem',
-                fontWeight: 'bold'
-              }}>
-                4
-                </div>
-              <h3 style={{
-                fontSize: '1.25rem',
-                fontWeight: '400',
-                color: '#1a1a1a',
-                marginBottom: '12px'
-              }}>
-                Exécution
-                  </h3>
-              <p style={{
-                fontSize: '1rem',
-                lineHeight: '1.6',
-                color: '#666'
-              }}>
-                Supervision complète le jour J pour un événement parfait
-              </p>
-            </div>
-                </div>
-                </div>
+        </div>
       </section>
 
       {/* CTA Section */}
