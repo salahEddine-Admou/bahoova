@@ -19,7 +19,7 @@ const Agency = () => {
               marginBottom: '2rem',
               letterSpacing: '1px'
             }}>
-              Agency
+              Agence
             </h1>
             <p style={{
               fontSize: '1.2rem',
@@ -27,8 +27,8 @@ const Agency = () => {
               lineHeight: '1.6',
               fontWeight: '300'
             }}>
-              BAHOOVA Events is a full-service event management agency based in Morocco, 
-              specializing in creating exceptional experiences for corporate and private clients.
+              BAHOOVA Events est une agence de gestion d'événements à service complet basée au Maroc, 
+              spécialisée dans la création d'expériences exceptionnelles pour les clients corporatifs et privés.
             </p>
           </div>
         </div>
@@ -47,7 +47,7 @@ const Agency = () => {
                   marginBottom: '2rem',
                   letterSpacing: '0.5px'
                 }}>
-                  Our Story
+                  Notre Histoire
                 </h2>
                 <p style={{
                   fontSize: '1.1rem',
@@ -55,18 +55,18 @@ const Agency = () => {
                   color: '#666',
                   marginBottom: '2rem'
                 }}>
-                  Founded in 2008, BAHOOVA Events has established itself as a leading event management 
-                  agency in Morocco. Our team of experienced professionals brings together creativity, 
-                  precision, and local expertise to deliver unforgettable events.
+                  Fondée en 2008, BAHOOVA Events s'est établie comme une agence de gestion d'événements 
+                  leader au Maroc. Notre équipe de professionnels expérimentés allie créativité, 
+                  précision et expertise locale pour livrer des événements inoubliables.
                 </p>
                 <p style={{
                   fontSize: '1.1rem',
                   lineHeight: '1.8',
                   color: '#666'
                 }}>
-                  From intimate gatherings to large-scale corporate events, we approach each project 
-                  with the same level of dedication and attention to detail that has made us the 
-                  preferred choice for discerning clients across Morocco and internationally.
+                  Des rassemblements intimes aux événements corporatifs de grande envergure, nous abordons chaque projet 
+                  avec le même niveau de dévouement et d'attention aux détails qui a fait de nous le 
+                  choix privilégié pour une clientèle exigeante au Maroc et à l'international.
                 </p>
               </div>
               <div>
@@ -97,7 +97,7 @@ const Agency = () => {
               marginBottom: '1rem',
               letterSpacing: '0.5px'
             }}>
-              Our Values
+              Nos Valeurs
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -105,7 +105,7 @@ const Agency = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              The principles that guide everything we do
+              Les principes qui guident tout ce que nous faisons
             </p>
           </div>
           
@@ -141,8 +141,8 @@ const Agency = () => {
                 lineHeight: '1.6',
                 color: '#666'
               }}>
-                We strive for perfection in every detail, ensuring that each event exceeds expectations 
-                and creates lasting memories.
+                Nous visons la perfection dans chaque détail, nous assurant que chaque événement dépasse les attentes 
+                et crée des souvenirs durables.
               </p>
             </div>
             
@@ -166,15 +166,15 @@ const Agency = () => {
                 color: '#1a1a1a',
                 marginBottom: '16px'
               }}>
-                Creativity
+                Créativité
               </h3>
               <p style={{
                 fontSize: '1rem',
                 lineHeight: '1.6',
                 color: '#666'
               }}>
-                We bring fresh ideas and innovative concepts to every project, creating unique 
-                experiences that stand out from the ordinary.
+                Nous apportons des idées fraîches et des concepts innovants à chaque projet, créant des 
+                expériences uniques qui se démarquent de l'ordinaire.
               </p>
             </div>
             
@@ -198,15 +198,15 @@ const Agency = () => {
                 color: '#1a1a1a',
                 marginBottom: '16px'
               }}>
-                Partnership
+                Partenariat
               </h3>
               <p style={{
                 fontSize: '1rem',
                 lineHeight: '1.6',
                 color: '#666'
               }}>
-                We work closely with our clients as trusted partners, understanding their vision 
-                and bringing it to life with professionalism and care.
+                Nous travaillons étroitement avec nos clients en tant que partenaires de confiance, comprenant leur vision 
+                et la donnant vie avec professionnalisme et attention.
               </p>
             </div>
           </div>
@@ -224,7 +224,7 @@ const Agency = () => {
               marginBottom: '1rem',
               letterSpacing: '0.5px'
             }}>
-              Our Team
+              Notre Équipe
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -232,7 +232,7 @@ const Agency = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Meet the passionate professionals behind BAHOOVA Events
+              Rencontrez les professionnels passionnés derrière BAHOOVA Events
             </p>
           </div>
           
@@ -261,13 +261,13 @@ const Agency = () => {
                 color: '#1a1a1a',
                 marginBottom: '8px'
               }}>
-                Leadership Team
+                Équipe de Direction
               </h3>
               <p style={{
                 fontSize: '0.9rem',
                 color: '#666'
               }}>
-                Experienced professionals with decades of combined expertise in event management
+                Professionnels expérimentés avec des décennies d'expertise combinée en gestion d'événements
               </p>
             </div>
             
@@ -291,13 +291,13 @@ const Agency = () => {
                 color: '#1a1a1a',
                 marginBottom: '8px'
               }}>
-                Creative Team
+                Équipe Créative
               </h3>
               <p style={{
                 fontSize: '0.9rem',
                 color: '#666'
               }}>
-                Talented designers and creative minds who bring your vision to life
+                Designers talentueux et esprits créatifs qui donnent vie à votre vision
               </p>
             </div>
             
@@ -321,13 +321,13 @@ const Agency = () => {
                 color: '#1a1a1a',
                 marginBottom: '8px'
               }}>
-                Operations Team
+                Équipe Opérationnelle
               </h3>
               <p style={{
                 fontSize: '0.9rem',
                 color: '#666'
               }}>
-                Dedicated professionals ensuring flawless execution of every event
+                Professionnels dévoués assurant une exécution parfaite de chaque événement
               </p>
             </div>
           </div>
@@ -345,7 +345,7 @@ const Agency = () => {
               marginBottom: '2rem',
               letterSpacing: '0.5px'
             }}>
-              Ready to work with us?
+              Prêt à travailler avec nous ?
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -353,7 +353,7 @@ const Agency = () => {
               marginBottom: '2rem',
               lineHeight: '1.6'
             }}>
-              Let's discuss your next event and create something extraordinary together.
+              Discutons de votre prochain événement et créons quelque chose d'extraordinaire ensemble.
             </p>
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a 
@@ -378,7 +378,7 @@ const Agency = () => {
                   e.target.style.color = '#1a1a1a';
                 }}
               >
-                Get in Touch
+                Nous Contacter
               </a>
               <a 
                 href="/portfolio"
@@ -402,7 +402,7 @@ const Agency = () => {
                   e.target.style.color = 'white';
                 }}
               >
-                View Our Work
+                Voir Nos Réalisations
               </a>
             </div>
           </div>

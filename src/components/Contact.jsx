@@ -460,7 +460,7 @@ ${formData.name}`
             lineHeight: '1.6',
             fontWeight: '300'
           }}>
-            Ready to bring your event vision to life? Our team of experts is here to guide you every step of the way.
+            Prêt à donner vie à votre vision d'événement ? Notre équipe d'experts est là pour vous guider à chaque étape.
           </p>
         </div>
       </section>
@@ -483,7 +483,7 @@ ${formData.name}`
                 marginBottom: '3rem',
                 letterSpacing: '0.5px'
               }}>
-                Get in Touch
+                Nous Contacter
               </h2>
               
               <div style={{ display: "flex", flexDirection: "column", gap: "2rem", marginBottom: "3rem" }}>
@@ -512,7 +512,7 @@ ${formData.name}`
                       marginBottom: "0.5rem",
                       letterSpacing: "0.3px"
                     }}>
-                      Phone
+                      Téléphone
                     </h3>
                     <p style={{ 
                       color: "#666",
@@ -584,7 +584,7 @@ ${formData.name}`
                       marginBottom: "0.5rem",
                       letterSpacing: "0.3px"
                     }}>
-                      Address
+                      Adresse
                     </h3>
                     <p style={{ 
                       color: "#666",
@@ -620,14 +620,14 @@ ${formData.name}`
                       marginBottom: "0.5rem",
                       letterSpacing: "0.3px"
                     }}>
-                      Hours
+                      Horaires
                     </h3>
                     <p style={{ 
                       color: "#666",
                       fontSize: "1.1rem"
                     }}>
-                      Mon-Fri: 9:00-18:00<br />
-                      Sat: 10:00-16:00
+                      Lun-Ven: 9h00-18h00<br />
+                      Sam: 10h00-16h00
                     </p>
                   </div>
                 </div>
@@ -647,7 +647,7 @@ ${formData.name}`
                 marginBottom: '2rem',
                 letterSpacing: '0.5px'
               }}>
-                Send us a message
+                Envoyez-nous un message
               </h2>
               
               {submitMessage && (
@@ -687,7 +687,7 @@ ${formData.name}`
                     letterSpacing: "0.3px",
                     textTransform: "none"
                   }}>
-                    Full Name *
+                    Nom Complet *
                   </label>
                   <input
                     type="text"
@@ -696,7 +696,7 @@ ${formData.name}`
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    placeholder="Your full name"
+                    placeholder="Votre nom complet"
                     style={{
                       width: "100%",
                       padding: "12px 16px",
@@ -734,7 +734,7 @@ ${formData.name}`
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    placeholder="your@email.com"
+                    placeholder="votre@email.com"
                     style={{
                       width: "100%",
                       padding: "12px 16px",
@@ -763,7 +763,7 @@ ${formData.name}`
                     letterSpacing: "0.3px",
                     textTransform: "none"
                   }}>
-                    Phone
+                    Téléphone
                   </label>
                   <input
                     type="tel"
@@ -771,7 +771,7 @@ ${formData.name}`
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+212 6 62 01 73 89"
                     style={{
                       width: "100%",
                       padding: "12px 16px",
@@ -800,7 +800,7 @@ ${formData.name}`
                     letterSpacing: "0.3px",
                     textTransform: "none"
                   }}>
-                    Subject
+                    Sujet
                   </label>
                   <input
                     type="text"
@@ -808,7 +808,7 @@ ${formData.name}`
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    placeholder="Subject of your inquiry"
+                    placeholder="Sujet de votre demande"
                     style={{
                       width: "100%",
                       padding: "12px 16px",
@@ -837,7 +837,7 @@ ${formData.name}`
                     letterSpacing: "0.3px",
                     textTransform: "none"
                   }}>
-                    Event Type
+                    Type d'Événement
                   </label>
                   <select
                     id="eventType"
@@ -860,7 +860,7 @@ ${formData.name}`
                       e.target.style.borderColor = "#ddd";
                     }}
                   >
-                    <option value="">Select an event type</option>
+                    <option value="">Sélectionnez un type d'événement</option>
                     <option value="congres-scientifique">Congrès Scientifique</option>
                     <option value="forum-recherche">Forum de Recherche</option>
                     <option value="conference-medicale">Conférence Médicale</option>
@@ -899,7 +899,7 @@ ${formData.name}`
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    placeholder="Describe your event project, your needs, the planned date, number of guests..."
+                    placeholder="Décrivez votre projet d'événement, vos besoins, la date prévue, le nombre d'invités..."
                     style={{
                       width: "100%",
                       padding: "12px 16px",
@@ -946,7 +946,7 @@ ${formData.name}`
                     e.target.style.color = "white";
                   }}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Envoi en cours..." : "Envoyer le Message"}
                 </button>
               </form>
             </div>

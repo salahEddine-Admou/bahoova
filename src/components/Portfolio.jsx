@@ -8,57 +8,57 @@ const Portfolio = () => {
     {
       id: 1,
       title: "Palazzo Reale - Milan",
-      category: "Luxury Event",
+      category: "Événement de Luxe",
       image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop&crop=center",
-      description: "An exclusive luxury event held at the prestigious Palazzo Reale in Milan, featuring elegant design and impeccable service.",
-      details: "This high-end event showcased our ability to work in prestigious international venues, delivering a sophisticated experience for discerning clients."
+      description: "Un événement de luxe exclusif organisé au prestigieux Palazzo Reale de Milan, alliant design élégant et service impeccable.",
+      details: "Cet événement haut de gamme a démontré notre capacité à travailler dans des lieux internationaux prestigieux, offrant une expérience sophistiquée à une clientèle exigeante."
     },
     {
       id: 2,
       title: "Office des Nations Unies - Genève",
-      category: "International Conference",
+      category: "Conférence Internationale",
       image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop&crop=center",
-      description: "A major international conference at the United Nations Office in Geneva, demonstrating our expertise in large-scale diplomatic events.",
-      details: "Organized a complex multi-day conference with delegates from over 50 countries, featuring simultaneous translation and state-of-the-art technology."
+      description: "Une conférence internationale majeure au Bureau des Nations Unies à Genève, démontrant notre expertise dans les événements diplomatiques de grande envergure.",
+      details: "Organisation d'une conférence complexe de plusieurs jours avec des délégués de plus de 50 pays, incluant traduction simultanée et technologie de pointe."
     },
     {
       id: 3,
       title: "Palais de la Bahia - Marrakech",
-      category: "Cultural Event",
+      category: "Événement Culturel",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center",
-      description: "A cultural celebration at the historic Palais de la Bahia in Marrakech, blending traditional Moroccan architecture with modern event design.",
-      details: "Created an immersive cultural experience that honored Moroccan heritage while providing contemporary amenities and services for international guests."
+      description: "Une célébration culturelle au Palais de la Bahia de Marrakech, alliant architecture marocaine traditionnelle et design d'événement moderne.",
+      details: "Création d'une expérience culturelle immersive qui honore l'héritage marocain tout en offrant des services contemporains aux invités internationaux."
     },
     {
       id: 4,
       title: "Palais El Badi - Marrakech",
-      category: "Historical Venue",
+      category: "Lieu Historique",
       image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&crop=center",
-      description: "An elegant event at the ancient Palais El Badi, showcasing our ability to work with historical venues while maintaining modern standards.",
-      details: "Successfully managed the challenges of organizing a contemporary event in a UNESCO World Heritage site, ensuring both preservation and functionality."
+      description: "Un événement élégant au Palais El Badi, démontrant notre capacité à travailler avec des lieux historiques tout en maintenant des standards modernes.",
+      details: "Gestion réussie des défis d'organisation d'un événement contemporain dans un site du patrimoine mondial de l'UNESCO, assurant préservation et fonctionnalité."
     },
     {
       id: 5,
       title: "Dîner Haute Joaillerie - Milan",
-      category: "Fashion Event",
+      category: "Événement Mode",
       image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop&crop=center",
-      description: "An exclusive haute joaillerie dinner in Milan, featuring luxury brands and sophisticated entertainment.",
-      details: "Coordinated with top luxury brands to create an unforgettable evening that combined fine dining, high fashion, and exclusive entertainment."
+      description: "Un dîner exclusif de haute joaillerie à Milan, mettant en vedette des marques de luxe et un divertissement sophistiqué.",
+      details: "Coordination avec les plus grandes marques de luxe pour créer une soirée inoubliable alliant gastronomie raffinée, haute couture et divertissement exclusif."
     },
     {
       id: 6,
       title: "Dîner Presse Dior - Marrakech",
-      category: "Fashion & Media",
+      category: "Mode & Médias",
       image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=400&fit=crop&crop=center",
-      description: "A prestigious press dinner for Dior in Marrakech, demonstrating our expertise in luxury brand events and media relations.",
-      details: "Managed a high-profile media event for a major fashion house, coordinating with international press and ensuring flawless execution under intense scrutiny."
+      description: "Un dîner de presse prestigieux pour Dior à Marrakech, démontrant notre expertise dans les événements de marques de luxe et les relations médias.",
+      details: "Gestion d'un événement médiatique de haut profil pour une grande maison de mode, coordination avec la presse internationale et exécution parfaite sous forte pression."
     }
   ];
 
-  const categories = ["All", "Luxury Event", "International Conference", "Cultural Event", "Historical Venue", "Fashion Event", "Fashion & Media"];
-  const [activeCategory, setActiveCategory] = useState("All");
+  const categories = ["Tous", "Événement de Luxe", "Conférence Internationale", "Événement Culturel", "Lieu Historique", "Événement Mode", "Mode & Médias"];
+  const [activeCategory, setActiveCategory] = useState("Tous");
 
-  const filteredProjects = activeCategory === "All" 
+  const filteredProjects = activeCategory === "Tous" 
     ? projects 
     : projects.filter(project => project.category === activeCategory);
 
@@ -87,8 +87,8 @@ const Portfolio = () => {
               lineHeight: '1.6',
               fontWeight: '300'
             }}>
-              Discover our portfolio of exceptional events, from intimate gatherings to large-scale 
-              international conferences across Morocco and beyond.
+              Découvrez notre portfolio d'événements exceptionnels, des rassemblements intimes aux 
+              conférences internationales de grande envergure au Maroc et au-delà.
             </p>
           </div>
         </div>
@@ -347,7 +347,7 @@ const Portfolio = () => {
               marginBottom: '2rem',
               letterSpacing: '0.5px'
             }}>
-              Ready to create your next event?
+              Prêt à créer votre prochain événement ?
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -355,7 +355,7 @@ const Portfolio = () => {
               marginBottom: '2rem',
               lineHeight: '1.6'
             }}>
-              Let's discuss your vision and bring it to life with our expertise and creativity.
+              Discutons de votre vision et donnons-lui vie avec notre expertise et créativité.
             </p>
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a 
@@ -383,7 +383,7 @@ const Portfolio = () => {
                   e.target.style.color = '#1a1a1a';
                 }}
               >
-                Start Your Project
+                Démarrer Votre Projet
                 <ExternalLink size={16} />
               </a>
               <a 
@@ -408,7 +408,7 @@ const Portfolio = () => {
                   e.target.style.color = 'white';
                 }}
               >
-                View Gallery
+                Voir la Galerie
               </a>
             </div>
           </div>

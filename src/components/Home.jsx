@@ -179,8 +179,8 @@ const Home = () => {
               lineHeight: '1.6',
               fontWeight: '300'
             }}>
-              Creating exceptional events that inspire and delight.<br />
-              Your vision, our expertise, unforgettable experiences.
+              Créer des événements exceptionnels qui inspirent et enchantent.<br />
+              Votre vision, notre expertise, des expériences inoubliables.
             </p>
             <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link 
@@ -206,7 +206,7 @@ const Home = () => {
                   e.target.style.color = 'white';
                 }}
               >
-                Get in Touch
+                Nous Contacter
               </Link>
               <Link 
                 to="/portfolio" 
@@ -231,7 +231,7 @@ const Home = () => {
                   e.target.style.color = '#1a1a1a';
                 }}
               >
-                View Our Work
+                Voir Nos Réalisations
               </Link>
             </div>
           </div>
@@ -251,7 +251,7 @@ const Home = () => {
                   marginBottom: '2rem',
                   letterSpacing: '0.5px'
                 }}>
-                  About Us
+                  À Propos de Nous
                 </h2>
                 <p style={{
                   fontSize: '1.1rem',
@@ -259,18 +259,18 @@ const Home = () => {
                   color: '#666',
                   marginBottom: '2rem'
                 }}>
-                  Based in Casablanca, BAHOOVA Events is a full-service event management agency 
-                  specializing in creating exceptional experiences for corporate and private clients 
-                  across Morocco and internationally.
+                  Basée à Casablanca, BAHOOVA Events est une agence de gestion d'événements à service complet 
+                  spécialisée dans la création d'expériences exceptionnelles pour les clients corporatifs et privés 
+                  au Maroc et à l'international.
                 </p>
                 <p style={{
                   fontSize: '1.1rem',
                   lineHeight: '1.8',
                   color: '#666'
                 }}>
-                  Founded in 2008 by a team of experienced professionals, we bring together 
-                  creativity, precision, and local expertise to deliver unforgettable events 
-                  that exceed expectations.
+                  Fondée en 2008 par une équipe de professionnels expérimentés, nous allions 
+                  créativité, précision et expertise locale pour livrer des événements inoubliables 
+                  qui dépassent les attentes.
                 </p>
               </div>
               <div>
@@ -304,7 +304,7 @@ const Home = () => {
               marginBottom: '1rem',
               letterSpacing: '0.5px'
             }}>
-              Our Work
+              Nos Réalisations
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -312,7 +312,7 @@ const Home = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Discover some of our most exceptional events and see how we bring visions to life.
+              Découvrez quelques-uns de nos événements les plus exceptionnels et voyez comment nous donnons vie aux visions.
             </p>
           </div>
           
@@ -325,33 +325,33 @@ const Home = () => {
             {[
               {
                 image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop&crop=center',
-                title: 'Luxury Wedding - Milan',
-                category: 'Luxury Event'
+                title: 'Mariage de Luxe - Milan',
+                category: 'Événement de Luxe'
               },
               {
                 image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop&crop=center',
-                title: 'International Conference - Geneva',
-                category: 'Corporate Event'
+                title: 'Conférence Internationale - Genève',
+                category: 'Événement Corporate'
               },
               {
                 image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center',
-                title: 'Cultural Event - Marrakech',
-                category: 'Cultural Event'
+                title: 'Événement Culturel - Marrakech',
+                category: 'Événement Culturel'
               },
               {
                 image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&crop=center',
-                title: 'Fashion Show - Paris',
-                category: 'Fashion Event'
+                title: 'Défilé de Mode - Paris',
+                category: 'Événement Mode'
               },
               {
                 image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop&crop=center',
-                title: 'Corporate Gala - New York',
-                category: 'Corporate Event'
+                title: 'Gala Corporate - New York',
+                category: 'Événement Corporate'
               },
               {
                 image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=400&fit=crop&crop=center',
-                title: 'Product Launch - London',
-                category: 'Product Launch'
+                title: 'Lancement Produit - Londres',
+                category: 'Lancement Produit'
               }
             ].map((item, index) => (
               <div 
@@ -442,7 +442,7 @@ const Home = () => {
                 e.target.style.color = '#1a1a1a';
               }}
             >
-              View All Projects
+              Voir Tous les Projets
             </Link>
           </div>
         </div>
@@ -467,8 +467,8 @@ const Home = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Ready to bring your vision to life? Our team of experts is here to help you create 
-              an unforgettable event.
+              Prêt à donner vie à votre vision ? Notre équipe d'experts est là pour vous aider à créer 
+              un événement inoubliable.
             </p>
           </div>
           
@@ -494,7 +494,7 @@ const Home = () => {
                 <Phone size={32} />
               </div>
               <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: '#1a1a1a', fontWeight: '400' }}>
-                Phone
+                Téléphone
               </h3>
               <p style={{ color: '#666', fontSize: '1rem' }}>
                 {mockData.company.contact.phone}
@@ -538,7 +538,7 @@ const Home = () => {
                 <MapPin size={32} />
               </div>
               <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: '#1a1a1a', fontWeight: '400' }}>
-                Address
+                Adresse
               </h3>
               <p style={{ color: '#666', fontSize: '1rem' }}>
                 {mockData.company.contact.address}
@@ -570,7 +570,7 @@ const Home = () => {
                 e.target.style.color = 'white';
               }}
             >
-              Get in Touch
+              Nous Contacter
             </Link>
           </div>
         </div>

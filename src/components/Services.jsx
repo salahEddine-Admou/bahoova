@@ -57,7 +57,7 @@ const Services = () => {
               marginBottom: '2rem',
               letterSpacing: '1px'
             }}>
-              Our Expertise
+              Notre Expertise
             </h1>
             <p style={{
               fontSize: '1.2rem',
@@ -65,9 +65,9 @@ const Services = () => {
               lineHeight: '1.6',
               fontWeight: '300'
             }}>
-              We specialize in creating exceptional events that exceed expectations. 
-              From intimate gatherings to large-scale conferences, our expertise 
-              covers every aspect of event management.
+              Nous nous spécialisons dans la création d'événements exceptionnels qui dépassent les attentes. 
+              Des rassemblements intimes aux conférences de grande envergure, notre expertise 
+              couvre tous les aspects de la gestion d'événements.
             </p>
               </div>
             </div>
@@ -84,7 +84,7 @@ const Services = () => {
               marginBottom: '1rem',
               letterSpacing: '0.5px'
             }}>
-              What We Do
+              Ce Que Nous Faisons
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -92,8 +92,8 @@ const Services = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Our comprehensive event management services cover every aspect of your event, 
-              from initial concept to flawless execution.
+              Nos services complets de gestion d'événements couvrent tous les aspects de votre événement, 
+              du concept initial à l'exécution parfaite.
             </p>
           </div>
         </div>
@@ -162,7 +162,7 @@ const Services = () => {
                   fontSize: '0.9rem',
                   fontWeight: '500'
                 }}>
-                  Learn More
+                  En Savoir Plus
                   <ArrowRight size={16} />
                 </div>
               </div>
@@ -182,7 +182,7 @@ const Services = () => {
               marginBottom: '1rem',
               letterSpacing: '0.5px'
             }}>
-              Our Process
+              Notre Processus
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -190,7 +190,7 @@ const Services = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              A structured approach to ensure the success of every event
+              Une approche structurée pour assurer le succès de chaque événement
             </p>
               </div>
               
@@ -228,7 +228,7 @@ const Services = () => {
                 lineHeight: '1.6',
                 color: '#666'
               }}>
-                Understanding your needs, objectives and vision for the event
+                Comprendre vos besoins, objectifs et vision pour l'événement
               </p>
             </div>
 
@@ -254,14 +254,14 @@ const Services = () => {
                 color: '#1a1a1a',
                 marginBottom: '12px'
               }}>
-                Design
+                Conception
                   </h3>
               <p style={{
                 fontSize: '1rem',
                 lineHeight: '1.6',
                 color: '#666'
               }}>
-                Developing the concept, design and detailed planning
+                Développer le concept, le design et la planification détaillée
             </p>
           </div>
 
@@ -294,7 +294,7 @@ const Services = () => {
                 lineHeight: '1.6',
                 color: '#666'
               }}>
-                Managing vendors, logistics and project follow-up
+                Gestion des fournisseurs, logistique et suivi de projet
               </p>
             </div>
 
@@ -320,14 +320,14 @@ const Services = () => {
                 color: '#1a1a1a',
                 marginBottom: '12px'
               }}>
-                Execution
+                Exécution
                   </h3>
               <p style={{
                 fontSize: '1rem',
                 lineHeight: '1.6',
                 color: '#666'
               }}>
-                Complete supervision on the day for a flawless event
+                Supervision complète le jour J pour un événement parfait
               </p>
             </div>
                 </div>
@@ -345,7 +345,7 @@ const Services = () => {
               marginBottom: '2rem',
               letterSpacing: '0.5px'
             }}>
-              Ready to work with us?
+              Prêt à travailler avec nous ?
               </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -353,7 +353,7 @@ const Services = () => {
               marginBottom: '2rem',
               lineHeight: '1.6'
             }}>
-              Let's discuss your next event and create something extraordinary together.
+              Discutons de votre prochain événement et créons quelque chose d'extraordinaire ensemble.
             </p>
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a 
@@ -378,7 +378,7 @@ const Services = () => {
                   e.target.style.color = '#1a1a1a';
                 }}
               >
-                Get in Touch
+                Nous Contacter
               </a>
               <a 
                 href="/portfolio"
@@ -402,7 +402,7 @@ const Services = () => {
                   e.target.style.color = 'white';
                 }}
               >
-                View Our Work
+                Voir Nos Réalisations
               </a>
             </div>
           </div>

@@ -69,40 +69,40 @@ const References = () => {
     {
       icon: <Users size={32} />,
       number: "500+",
-      label: "Events Organized",
-      description: "Successfully planned and executed events of all sizes"
+      label: "Événements Organisés",
+      description: "Événements planifiés et exécutés avec succès de toutes tailles"
     },
     {
       icon: <Globe size={32} />,
       number: "25+",
-      label: "Countries Served",
-      description: "International experience across multiple continents"
+      label: "Pays Desservis",
+      description: "Expérience internationale sur plusieurs continents"
     },
     {
       icon: <Award size={32} />,
       number: "98%",
-      label: "Client Satisfaction",
-      description: "Consistently high ratings from our clients"
+      label: "Satisfaction Client",
+      description: "Évaluations constamment élevées de nos clients"
     },
     {
       icon: <Building size={32} />,
       number: "200+",
-      label: "Corporate Clients",
-      description: "Trusted by leading companies worldwide"
+      label: "Clients Corporatifs",
+      description: "Fait confiance par les entreprises leaders mondiales"
     }
   ];
 
   const clients = [
-    "World Health Organization",
-    "United Nations",
-    "Moroccan Investment Group",
-    "Luxury Fashion Houses",
+    "Organisation Mondiale de la Santé",
+    "Nations Unies",
+    "Groupe d'Investissement Marocain",
+    "Maisons de Mode de Luxe",
     "Tech Innovation Corp",
-    "Moroccan Academy of Sciences",
+    "Académie des Sciences du Maroc",
     "Elite Weddings International",
-    "International Banks",
-    "Government Institutions",
-    "NGOs and Foundations"
+    "Banques Internationales",
+    "Institutions Gouvernementales",
+    "ONG et Fondations"
   ];
 
   return (
@@ -122,7 +122,7 @@ const References = () => {
               marginBottom: '2rem',
               letterSpacing: '1px'
             }}>
-              References
+              Références
             </h1>
             <p style={{
               fontSize: '1.2rem',
@@ -130,8 +130,8 @@ const References = () => {
               lineHeight: '1.6',
               fontWeight: '300'
             }}>
-              Discover what our clients say about working with BAHOOVA Events and 
-              explore our track record of successful events.
+              Découvrez ce que nos clients disent de leur collaboration avec BAHOOVA Events et 
+              explorez notre historique d'événements réussis.
             </p>
           </div>
         </div>
@@ -200,7 +200,7 @@ const References = () => {
               marginBottom: '1rem',
               letterSpacing: '0.5px'
             }}>
-              Client Testimonials
+              Témoignages Clients
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -208,7 +208,7 @@ const References = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Hear from our satisfied clients about their experience working with BAHOOVA Events
+              Écoutez nos clients satisfaits parler de leur expérience avec BAHOOVA Events
             </p>
           </div>
           
@@ -320,7 +320,7 @@ const References = () => {
               marginBottom: '1rem',
               letterSpacing: '0.5px'
             }}>
-              Our Clients
+              Nos Clients
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -328,7 +328,7 @@ const References = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              We're proud to work with leading organizations across various industries
+              Nous sommes fiers de travailler avec des organisations leaders dans diverses industries
             </p>
           </div>
           
@@ -380,7 +380,7 @@ const References = () => {
               marginBottom: '1rem',
               letterSpacing: '0.5px'
             }}>
-              Recognition & Awards
+              Reconnaissance & Récompenses
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -388,7 +388,7 @@ const References = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Our commitment to excellence has been recognized by industry leaders
+              Notre engagement envers l'excellence a été reconnu par les leaders de l'industrie
             </p>
           </div>
           
@@ -405,7 +405,7 @@ const References = () => {
                 color: '#1a1a1a',
                 marginBottom: '12px'
               }}>
-                Best Event Management Company
+                Meilleure Agence de Gestion d'Événements
               </h3>
               <p style={{
                 fontSize: '0.9rem',
@@ -424,7 +424,7 @@ const References = () => {
                 color: '#1a1a1a',
                 marginBottom: '12px'
               }}>
-                Excellence in International Events
+                Excellence dans les Événements Internationaux
               </h3>
               <p style={{
                 fontSize: '0.9rem',
@@ -443,7 +443,7 @@ const References = () => {
                 color: '#1a1a1a',
                 marginBottom: '12px'
               }}>
-                Outstanding Corporate Events
+                Événements Corporatifs Exceptionnels
               </h3>
               <p style={{
                 fontSize: '0.9rem',
@@ -468,7 +468,7 @@ const References = () => {
               marginBottom: '2rem',
               letterSpacing: '0.5px'
             }}>
-              Ready to join our success stories?
+              Prêt à rejoindre nos histoires de succès ?
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -476,7 +476,7 @@ const References = () => {
               marginBottom: '2rem',
               lineHeight: '1.6'
             }}>
-              Let us create an exceptional event that will be remembered for years to come.
+              Laissez-nous créer un événement exceptionnel qui sera mémorable pour les années à venir.
             </p>
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a 
@@ -501,7 +501,7 @@ const References = () => {
                   e.target.style.color = '#1a1a1a';
                 }}
               >
-                Start Your Project
+                Démarrer Votre Projet
               </a>
               <a 
                 href="/portfolio"
@@ -525,7 +525,7 @@ const References = () => {
                   e.target.style.color = 'white';
                 }}
               >
-                View Our Work
+                Voir Nos Réalisations
               </a>
             </div>
           </div>
