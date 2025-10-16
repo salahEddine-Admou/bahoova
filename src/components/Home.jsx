@@ -132,8 +132,8 @@ const Home = () => {
       >
         {/* Background Image */}
         <img 
-          src="https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=1920&h=1080&fit=crop&crop=center"
-          alt="Luxury Event Venue"
+          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&h=1080&fit=crop&crop=center"
+          alt="Modern Conference Hall"
           style={{
             position: 'absolute',
             top: 0,
@@ -144,7 +144,7 @@ const Home = () => {
             zIndex: 0
           }}
           onError={(e) => {
-            e.target.src = 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&h=1080&fit=crop&crop=center';
+            e.target.src = 'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=1920&h=1080&fit=crop&crop=center';
           }}
         />
         
@@ -324,7 +324,7 @@ const Home = () => {
           }}>
             {[
               {
-                image: 'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=600&h=400&fit=crop&crop=center',
+                image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop&crop=center',
                 title: 'Luxury Wedding - Milan',
                 category: 'Luxury Event'
               },
@@ -379,7 +379,14 @@ const Home = () => {
                     display: 'block'
                   }}
                   onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=600&h=400&fit=crop&crop=center';
+                    // Fallback to a different image if the original fails
+                    const fallbackImages = [
+                      'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=600&h=400&fit=crop&crop=center',
+                      'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop&crop=center',
+                      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center'
+                    ];
+                    const randomFallback = fallbackImages[Math.floor(Math.random() * fallbackImages.length)];
+                    e.target.src = randomFallback;
                   }}
                 />
                 <div style={{

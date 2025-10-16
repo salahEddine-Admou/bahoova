@@ -9,7 +9,7 @@ const Portfolio = () => {
       id: 1,
       title: "Palazzo Reale - Milan",
       category: "Luxury Event",
-      image: "https://delight-event.com/wp-content/uploads/2020/01/palazzo-reale-milan-2019-1.jpg",
+      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop&crop=center",
       description: "An exclusive luxury event held at the prestigious Palazzo Reale in Milan, featuring elegant design and impeccable service.",
       details: "This high-end event showcased our ability to work in prestigious international venues, delivering a sophisticated experience for discerning clients."
     },
@@ -17,7 +17,7 @@ const Portfolio = () => {
       id: 2,
       title: "Office des Nations Unies - Genève",
       category: "International Conference",
-      image: "https://delight-event.com/wp-content/uploads/2020/01/office-nations-unies-geneve-2017-1.jpg",
+      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop&crop=center",
       description: "A major international conference at the United Nations Office in Geneva, demonstrating our expertise in large-scale diplomatic events.",
       details: "Organized a complex multi-day conference with delegates from over 50 countries, featuring simultaneous translation and state-of-the-art technology."
     },
@@ -25,7 +25,7 @@ const Portfolio = () => {
       id: 3,
       title: "Palais de la Bahia - Marrakech",
       category: "Cultural Event",
-      image: "https://delight-event.com/wp-content/uploads/2020/01/palais-bahia-marrakech-2019-1.jpg",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center",
       description: "A cultural celebration at the historic Palais de la Bahia in Marrakech, blending traditional Moroccan architecture with modern event design.",
       details: "Created an immersive cultural experience that honored Moroccan heritage while providing contemporary amenities and services for international guests."
     },
@@ -33,7 +33,7 @@ const Portfolio = () => {
       id: 4,
       title: "Palais El Badi - Marrakech",
       category: "Historical Venue",
-      image: "https://delight-event.com/wp-content/uploads/2020/01/palais-el-badi-marrakech-2015-1.jpg",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&crop=center",
       description: "An elegant event at the ancient Palais El Badi, showcasing our ability to work with historical venues while maintaining modern standards.",
       details: "Successfully managed the challenges of organizing a contemporary event in a UNESCO World Heritage site, ensuring both preservation and functionality."
     },
@@ -41,7 +41,7 @@ const Portfolio = () => {
       id: 5,
       title: "Dîner Haute Joaillerie - Milan",
       category: "Fashion Event",
-      image: "https://delight-event.com/wp-content/uploads/2020/01/diner-haute-joaillerie-milan.jpg",
+      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop&crop=center",
       description: "An exclusive haute joaillerie dinner in Milan, featuring luxury brands and sophisticated entertainment.",
       details: "Coordinated with top luxury brands to create an unforgettable evening that combined fine dining, high fashion, and exclusive entertainment."
     },
@@ -49,7 +49,7 @@ const Portfolio = () => {
       id: 6,
       title: "Dîner Presse Dior - Marrakech",
       category: "Fashion & Media",
-      image: "https://delight-event.com/wp-content/uploads/2020/01/diner-presse-dior-marrakech.jpg",
+      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=400&fit=crop&crop=center",
       description: "A prestigious press dinner for Dior in Marrakech, demonstrating our expertise in luxury brand events and media relations.",
       details: "Managed a high-profile media event for a major fashion house, coordinating with international press and ensuring flawless execution under intense scrutiny."
     }
@@ -175,6 +175,16 @@ const Portfolio = () => {
                     objectFit: 'cover',
                     display: 'block'
                   }}
+                  onError={(e) => {
+                    // Fallback to a different image if the original fails
+                    const fallbackImages = [
+                      'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=600&h=400&fit=crop&crop=center',
+                      'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop&crop=center',
+                      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center'
+                    ];
+                    const randomFallback = fallbackImages[Math.floor(Math.random() * fallbackImages.length)];
+                    e.target.src = randomFallback;
+                  }}
                 />
                 <div style={{
                   position: 'absolute',
@@ -273,6 +283,16 @@ const Portfolio = () => {
                   width: '100%',
                   height: '400px',
                   objectFit: 'cover'
+                }}
+                onError={(e) => {
+                  // Fallback to a different image if the original fails
+                  const fallbackImages = [
+                    'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=600&h=400&fit=crop&crop=center',
+                    'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop&crop=center',
+                    'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center'
+                  ];
+                  const randomFallback = fallbackImages[Math.floor(Math.random() * fallbackImages.length)];
+                  e.target.src = randomFallback;
                 }}
               />
               <div style={{ padding: '40px' }}>
