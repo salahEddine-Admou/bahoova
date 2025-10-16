@@ -24,6 +24,11 @@ const Home = () => {
       url: "/images/banner/3.png",
       title: "Événements Culturels",
       description: "Festivals et célébrations artistiques"
+    },
+    {
+      url: "/images/banner/4.png",
+      title: "Événements Techniques",
+      description: "Solutions audiovisuelles et scénographie"
     }
   ];
 
@@ -178,7 +183,8 @@ const Home = () => {
                 const fallbackImages = [
                   '/images/banner/1.png',
                   '/images/banner/2.png',
-                  '/images/banner/3.png'
+                  '/images/banner/3.png',
+                  '/images/banner/4.png'
                 ];
                 const randomFallback = fallbackImages[Math.floor(Math.random() * fallbackImages.length)];
                 e.target.src = randomFallback;
@@ -297,17 +303,17 @@ const Home = () => {
               letterSpacing: '1px',
               textTransform: 'none'
             }}>
-              BAHOOVA Events
-            </h1>
-              <p style={{
+                  BAHOOVA Events
+                </h1>
+            <p style={{
                 fontSize: '1.3rem',
                 color: 'rgba(255, 255, 255, 0.9)',
-                marginBottom: '3rem',
-                lineHeight: '1.6',
-                fontWeight: '300'
-              }}>
+              marginBottom: '3rem',
+              lineHeight: '1.6',
+              fontWeight: '300'
+            }}>
                 L'éphémère transformé en mémorable
-              </p>
+            </p>
             <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link 
                 to="/contact" 
@@ -364,51 +370,103 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Section - Delight Event Style */}
-      <section style={{ padding: '120px 0', background: 'white' }}>
+
+      {/* Nos Domaines d'Expertise Section */}
+      <section style={{ padding: '120px 0', background: '#fafafa' }}>
         <div className="container">
-          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }}>
-              <div>
-                <h2 style={{
-                  fontSize: '2.5rem',
-                  fontWeight: '300',
-                  color: '#1a1a1a',
-                  marginBottom: '2rem',
-                  letterSpacing: '0.5px'
-                }}>
-                  Qui sommes-nous ?
-                </h2>
-                <p style={{
-                  fontSize: '1.1rem',
-                  lineHeight: '1.8',
-                  color: '#666',
-                  marginBottom: '2rem'
-                }}>
-                  Bahova Event est une agence événementielle spécialisée dans la conception et l'organisation d'événements sur mesure. 
-                  Plus qu'un simple prestataire, nous sommes des créateurs d'expériences uniques, où l'excellence se mêle à l'émotion.
-                </p>
-              </div>
-              <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop&crop=center"
-                  alt="BAHOOVA Events Team"
-                  style={{
-                    width: '100%',
-                    height: '400px',
-                    objectFit: 'cover',
-                    borderRadius: '8px'
-                  }}
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1519167758481-83f1426e4b3e?w=600&h=400&fit=crop&crop=center';
-                  }}
-                />
-              </div>
-            </div>
+          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+            <h2 style={{
+              fontSize: '2.5rem',
+              fontWeight: '300',
+              color: '#1a1a1a',
+              marginBottom: '1rem',
+              letterSpacing: '0.5px'
+            }}>
+              Nos Domaines d'Expertise
+            </h2>
+          </div>
+          
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
+            gap: '60px',
+            maxWidth: '1000px',
+            margin: '0 auto'
+          }}>
+            <div style={{
+              background: 'white',
+              padding: '40px',
+              borderRadius: '8px',
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)'
+            }}>
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: '400',
+                color: '#1a1a1a',
+                marginBottom: '16px',
+                letterSpacing: '0.3px'
+              }}>
+                Événements d'entreprise
+              </h3>
+            <p style={{
+                fontSize: '1rem',
+                lineHeight: '1.6',
+              color: '#666'
+            }}>
+                Conférences, séminaires, team buildings, lancements de produits.
+            </p>
+          </div>
+
+            <div style={{
+              background: 'white',
+              padding: '40px',
+              borderRadius: '8px',
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)'
+            }}>
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: '400',
+                color: '#1a1a1a',
+                marginBottom: '16px',
+                letterSpacing: '0.3px'
+              }}>
+                Événements privés
+              </h3>
+            <p style={{
+                fontSize: '1rem',
+                lineHeight: '1.6',
+                color: '#666'
+              }}>
+                Mariages d'exception, galas, réceptions exclusives.
+            </p>
+          </div>
+          
+          <div style={{ 
+              background: 'white',
+              padding: '40px',
+              borderRadius: '8px',
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)'
+            }}>
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: '400',
+                color: '#1a1a1a',
+                marginBottom: '16px',
+                letterSpacing: '0.3px'
+              }}>
+                Scénographie & technique
+                  </h3>
+              <p style={{
+                fontSize: '1rem',
+                lineHeight: '1.6',
+                color: '#666'
+              }}>
+                Conception artistique, décors sur mesure, sonorisation, lumière, audiovisuel.
+                  </p>
+                </div>
           </div>
         </div>
       </section>
-
 
       {/* Contact Section - Delight Event Style */}
       <section style={{ padding: '120px 0', background: 'white' }}>
@@ -533,7 +591,7 @@ const Home = () => {
               }}
             >
               Nous Contacter
-            </Link>
+              </Link>
           </div>
         </div>
       </section>
