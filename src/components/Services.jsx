@@ -47,56 +47,26 @@ const Services = () => {
   return (
     <main>
       {/* Hero Section - Delight Event Style */}
-      <section style={{ padding: '120px 0 80px', background: 'white', textAlign: 'center' }}>
-          <div className="container">
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <h1 style={{
-              fontSize: '3rem',
-              fontWeight: '300',
-              color: '#1a1a1a',
-              marginBottom: '2rem',
-              letterSpacing: '1px'
-            }}>
-              Notre Expertise
-            </h1>
-            <p style={{
-              fontSize: '1.2rem',
-              color: '#666',
-              lineHeight: '1.6',
-              fontWeight: '300'
-            }}>
-              Nous nous spécialisons dans la création d'événements exceptionnels qui dépassent les attentes. 
-              Des rassemblements intimes aux conférences de grande envergure, notre expertise 
-              couvre tous les aspects de la gestion d'événements.
-            </p>
-          </div>
-        </div>
-      </section>
+              <section style={{ padding: '80px 0 40px', background: 'white', textAlign: 'center' }}>
+                  <div className="container">
+                  <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                    <h1 style={{
+                      fontSize: '3rem',
+                      fontWeight: '300',
+                      color: '#1a1a1a',
+                      marginBottom: '0',
+                      letterSpacing: '1px'
+                    }}>
+                      Nous sommes expertise
+                    </h1>
+                      </div>
+                    </div>
+              </section>
 
 
-      {/* Services Grid - Delight Event Style */}
+      {/* Services Grid - Detailed Competencies */}
       <section style={{ padding: '120px 0', background: 'white' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-            <h2 style={{
-              fontSize: '2.5rem',
-              fontWeight: '300',
-              color: '#1a1a1a',
-              marginBottom: '1rem',
-              letterSpacing: '0.5px'
-            }}>
-              Nos Services
-            </h2>
-            <p style={{
-              fontSize: '1.1rem',
-              color: '#666',
-              maxWidth: '600px',
-              margin: '0 auto'
-            }}>
-              Des solutions complètes pour tous vos événements
-            </p>
-          </div>
-          
           <div style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
@@ -104,62 +74,149 @@ const Services = () => {
           }}>
             {[
               {
-                title: "Événements d'Entreprise",
-                description: "Conférences, séminaires, team buildings et lancements de produits avec une approche professionnelle et moderne."
+                title: "Création",
+                services: [
+                  "Recherche de lieux",
+                  "Etude de faisabilité",
+                  "Studio de décoration intégré",
+                  "Elaboration plan d'aménagement",
+                  "Visualisation 3D",
+                  "Moodboard",
+                  "Illustration"
+                ]
               },
               {
-                title: "Événements Privés",
-                description: "Mariages d'exception, galas et réceptions exclusives créés sur mesure pour des moments inoubliables."
+                title: "Décoration",
+                services: [
+                  "Décoration éphémère",
+                  "Concept décoration",
+                  "Scénographie",
+                  "Fabrication de décor",
+                  "Aménagement d'espaces",
+                  "Fabrication de mobiliers",
+                  "Location de mobiliers"
+                ]
               },
               {
-                title: "Scénographie & Technique",
-                description: "Conception artistique, décors sur mesure, sonorisation, éclairage et solutions audiovisuelles."
+                title: "Technique",
+                services: [
+                  "Direction technique",
+                  "Bureau d'études",
+                  "Etude de cahier des charges",
+                  "Sonorisation et lumière",
+                  "Vidéo et projection mapping",
+                  "Effets spéciaux",
+                  "Energie"
+                ]
               },
               {
-                title: "Gestion Complète",
-                description: "De la planification initiale à l'exécution finale, nous gérons tous les aspects de votre événement."
+                title: "Aménagement",
+                services: [
+                  "Agencement d'espace",
+                  "Structures et chapiteaux",
+                  "Plancher et revêtement sol",
+                  "Sanitaires",
+                  "Climatisation",
+                  "Installation eau et électricité"
+                ]
               },
               {
-                title: "Partenaires Premium",
-                description: "Un réseau de prestataires haut de gamme pour garantir la qualité et l'excellence de votre événement."
+                title: "Restauration",
+                services: [
+                  "Conseil en restauration",
+                  "Sélection de Chefs",
+                  "Sélection de traiteurs",
+                  "Art de la table",
+                  "Protocole de service",
+                  "Installation cuisine éphémère"
+                ]
               },
               {
-                title: "Suivi Personnalisé",
-                description: "Un accompagnement dédié et un suivi personnalisé pour chaque étape de votre projet."
+                title: "Animation",
+                services: [
+                  "Booking d'artistes",
+                  "Choix artistique",
+                  "Chorégraphie",
+                  "Mise en scène de spectacles",
+                  "Spectacle d'eau",
+                  "Spectacle pyrotechnique"
+                ]
+              },
+              {
+                title: "Logistique",
+                services: [
+                  "Accueil VIP à l'aéroport",
+                  "Gestion du transport terrestre et aérien",
+                  "Gestion de l'hébergement",
+                  "Gestion de l'accueil",
+                  "Gestion de la sécurité",
+                  "Accréditation"
+                ]
+              },
+              {
+                title: "Production",
+                services: [
+                  "Gestion de planning",
+                  "Gestion de production technique",
+                  "Régie générale",
+                  "Régie plateau",
+                  "Gestion des relations fournisseurs",
+                  "Suivi de demandes d'autorisation"
+                ]
               }
-            ].map((service, index) => (
+            ].map((category, index) => (
               <div 
                 key={index}
-                    style={{ 
-                  textAlign: 'center',
-                  padding: '40px 20px',
+                style={{ 
+                  textAlign: 'left',
+                  padding: '40px 30px',
+                  background: '#fafafa',
+                  borderRadius: '8px',
                   transition: 'transform 0.3s ease'
                 }}
-                    onMouseEnter={(e) => {
+                onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
-                    }}
-                    onMouseLeave={(e) => {
+                }}
+                onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
                 <h3 style={{ 
                   fontSize: '1.5rem', 
-                  fontWeight: '400', 
+                  fontWeight: '500', 
                   color: '#1a1a1a', 
-                  marginBottom: '16px',
+                  marginBottom: '24px',
                   letterSpacing: '0.3px'
                 }}>
-                  {service.title}
+                  {category.title}
                 </h3>
-                <p style={{ 
-                  fontSize: '1rem', 
-                  lineHeight: '1.6', 
-                  color: '#666',
-                  maxWidth: '280px',
-                  margin: '0 auto'
+                <ul style={{ 
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0
                 }}>
-                  {service.description}
-                </p>
+                  {category.services.map((service, serviceIndex) => (
+                    <li key={serviceIndex} style={{
+                      fontSize: '0.95rem',
+                      lineHeight: '1.6',
+                      color: '#666',
+                      marginBottom: '8px',
+                      paddingLeft: '16px',
+                      position: 'relative'
+                    }}>
+                      <span style={{
+                        position: 'absolute',
+                        left: 0,
+                        top: '8px',
+                        width: '4px',
+                        height: '4px',
+                        background: '#1a1a1a',
+                        borderRadius: '50%'
+                      }}></span>
+                      {service}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
