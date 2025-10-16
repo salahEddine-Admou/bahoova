@@ -118,7 +118,7 @@ const Home = () => {
         })}
       </script>
       
-      {/* Hero Section - Delight Light Style */}
+      {/* Hero Section - Delight Event Style */}
       <section 
         className="hero-section"
         style={{
@@ -139,31 +139,31 @@ const Home = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'rgba(255, 255, 255, 0.7)',
+          background: 'rgba(0, 0, 0, 0.4)',
           zIndex: 1
         }}></div>
         
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h1 style={{
-              fontSize: '4rem',
+              fontSize: '3.5rem',
               fontWeight: '300',
-              color: '#333',
+              color: 'white',
               marginBottom: '2rem',
-              letterSpacing: '2px',
-              textTransform: 'uppercase'
+              letterSpacing: '1px',
+              textTransform: 'none'
             }}>
-                  BAHOOVA Events
-                </h1>
+              BAHOOVA Events
+            </h1>
             <p style={{
-              fontSize: '1.2rem',
-              color: '#666',
+              fontSize: '1.3rem',
+              color: 'rgba(255, 255, 255, 0.9)',
               marginBottom: '3rem',
               lineHeight: '1.6',
               fontWeight: '300'
             }}>
-              L'agence événementielle de référence au Maroc.<br />
-              Nous créons des événements exceptionnels qui marquent les esprits.
+              Creating exceptional events that inspire and delight.<br />
+              Your vision, our expertise, unforgettable experiences.
             </p>
             <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link 
@@ -171,108 +171,120 @@ const Home = () => {
                 style={{
                   padding: '15px 30px',
                   background: 'transparent',
-                  border: '2px solid #333',
-                  color: '#333',
-                  textDecoration: 'none',
-                  fontSize: '1rem',
-                  fontWeight: '300',
-                  letterSpacing: '1px',
-                  textTransform: 'uppercase',
-                  transition: 'all 0.3s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.background = '#333';
-                  e.target.style.color = 'white';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.background = 'transparent';
-                  e.target.style.color = '#333';
-                }}
-              >
-                Contactez-nous
-              </Link>
-              <Link 
-                to="/gallery" 
-                style={{
-                  padding: '15px 30px',
-                  background: '#333',
-                  border: '2px solid #333',
+                  border: '1px solid white',
                   color: 'white',
                   textDecoration: 'none',
                   fontSize: '1rem',
-                  fontWeight: '300',
-                  letterSpacing: '1px',
-                  textTransform: 'uppercase',
+                  fontWeight: '400',
+                  letterSpacing: '0.5px',
+                  textTransform: 'none',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = 'white';
+                  e.target.style.color = '#1a1a1a';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = 'transparent';
+                  e.target.style.color = 'white';
+                }}
+              >
+                Get in Touch
+              </Link>
+              <Link 
+                to="/portfolio" 
+                style={{
+                  padding: '15px 30px',
+                  background: 'white',
+                  border: '1px solid white',
+                  color: '#1a1a1a',
+                  textDecoration: 'none',
+                  fontSize: '1rem',
+                  fontWeight: '400',
+                  letterSpacing: '0.5px',
+                  textTransform: 'none',
                   transition: 'all 0.3s ease'
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.background = 'transparent';
-                  e.target.style.color = '#333';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.background = '#333';
                   e.target.style.color = 'white';
                 }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = 'white';
+                  e.target.style.color = '#1a1a1a';
+                }}
               >
-                Voir nos réalisations
+                View Our Work
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section - Delight Light Style */}
-      <section style={{ padding: '100px 0', background: 'white' }}>
+      {/* About Section - Delight Event Style */}
+      <section style={{ padding: '120px 0', background: 'white' }}>
         <div className="container">
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{
-              fontSize: '2.5rem',
-              fontWeight: '300',
-              color: '#333',
-              marginBottom: '2rem',
-              letterSpacing: '1px'
-            }}>
-              L'agence
-            </h2>
-            <p style={{
-              fontSize: '1.1rem',
-              lineHeight: '1.8',
-              color: '#666',
-              marginBottom: '3rem'
-            }}>
-              Basée à Casablanca, BAHOOVA Events est une agence événementielle spécialisée dans la conception et la production d'événements sur mesure pour des entreprises de renom ainsi que pour une large clientèle privée. Nous mettons tout notre savoir-faire à la disposition de nos clients pour réaliser des événements uniques et personnalisés.
-            </p>
-            <p style={{
-              fontSize: '1.1rem',
-              lineHeight: '1.8',
-              color: '#666',
-              marginBottom: '3rem'
-            }}>
-              La société a été créée en 2008 par une équipe d'experts, rompue à l'exigence de l'excellence en tant que responsable événementiel au sein d'organisations prestigieuses. Le maître mot de BAHOOVA Events est de faire de chaque événement un moment exceptionnel et sur-mesure.
-            </p>
-            <p style={{
-              fontSize: '1.1rem',
-              lineHeight: '1.8',
-              color: '#666'
-            }}>
-              Fort d'une équipe dédiée et spécialisée regroupant tous les domaines de compétences nécessaires, l'agence englobe ainsi tout le savoir-faire indispensable au succès de chacun des projets qui lui est confié. BAHOOVA Events opère aujourd'hui sur le marché local au Maroc mais également à l'international.
-            </p>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }}>
+              <div>
+                <h2 style={{
+                  fontSize: '2.5rem',
+                  fontWeight: '300',
+                  color: '#1a1a1a',
+                  marginBottom: '2rem',
+                  letterSpacing: '0.5px'
+                }}>
+                  About Us
+                </h2>
+                <p style={{
+                  fontSize: '1.1rem',
+                  lineHeight: '1.8',
+                  color: '#666',
+                  marginBottom: '2rem'
+                }}>
+                  Based in Casablanca, BAHOOVA Events is a full-service event management agency 
+                  specializing in creating exceptional experiences for corporate and private clients 
+                  across Morocco and internationally.
+                </p>
+                <p style={{
+                  fontSize: '1.1rem',
+                  lineHeight: '1.8',
+                  color: '#666'
+                }}>
+                  Founded in 2008 by a team of experienced professionals, we bring together 
+                  creativity, precision, and local expertise to deliver unforgettable events 
+                  that exceed expectations.
+                </p>
+              </div>
+              <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop&crop=center"
+                  alt="BAHOOVA Events Team"
+                  style={{
+                    width: '100%',
+                    height: '400px',
+                    objectFit: 'cover',
+                    borderRadius: '8px'
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Gallery Preview Section - Delight Light Style */}
-      <section style={{ padding: '100px 0', background: '#fafafa' }}>
+      {/* Portfolio Preview Section - Delight Event Style */}
+      <section style={{ padding: '120px 0', background: '#fafafa' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
             <h2 style={{
               fontSize: '2.5rem',
               fontWeight: '300',
-              color: '#333',
+              color: '#1a1a1a',
               marginBottom: '1rem',
-              letterSpacing: '1px'
+              letterSpacing: '0.5px'
             }}>
-              Nos réalisations
+              Our Work
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -280,46 +292,46 @@ const Home = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Découvrez quelques-unes de nos plus belles réalisations à travers une sélection d'événements exceptionnels.
+              Discover some of our most exceptional events and see how we bring visions to life.
             </p>
           </div>
           
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-            gap: '2rem',
-            marginBottom: '4rem'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
+            gap: '40px',
+            marginBottom: '60px'
           }}>
             {[
               {
                 image: 'https://delight-event.com/wp-content/uploads/2020/01/palazzo-reale-milan-2019-1.jpg',
                 title: 'Palazzo Reale - Milan',
-                category: 'Événement de Luxe'
+                category: 'Luxury Event'
               },
               {
                 image: 'https://delight-event.com/wp-content/uploads/2020/01/office-nations-unies-geneve-2017-1.jpg',
-                title: 'Office des Nations Unies - Genève',
-                category: 'Événement International'
+                title: 'United Nations Office - Geneva',
+                category: 'International Conference'
               },
               {
                 image: 'https://delight-event.com/wp-content/uploads/2020/01/palais-bahia-marrakech-2019-1.jpg',
                 title: 'Palais de la Bahia - Marrakech',
-                category: 'Événement Maroc'
+                category: 'Cultural Event'
               },
               {
                 image: 'https://delight-event.com/wp-content/uploads/2020/01/palais-el-badi-marrakech-2015-1.jpg',
                 title: 'Palais El Badi - Marrakech',
-                category: 'Événement Historique'
+                category: 'Historical Venue'
               },
               {
                 image: 'https://delight-event.com/wp-content/uploads/2020/01/diner-haute-joaillerie-milan.jpg',
-                title: 'Dîner Haute Joaillerie - Milan',
-                category: 'Événement Prestige'
+                title: 'Haute Joaillerie Dinner - Milan',
+                category: 'Fashion Event'
               },
               {
                 image: 'https://delight-event.com/wp-content/uploads/2020/01/diner-presse-dior-marrakech.jpg',
-                title: 'Dîner Presse Dior - Marrakech',
-                category: 'Événement Mode'
+                title: 'Dior Press Dinner - Marrakech',
+                category: 'Fashion & Media'
               }
             ].map((item, index) => (
               <div 
@@ -327,15 +339,14 @@ const Home = () => {
                 style={{
                   position: 'relative',
                   overflow: 'hidden',
-                  borderRadius: '8px',
                   cursor: 'pointer',
                   transition: 'transform 0.3s ease'
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
+                  e.currentTarget.style.transform = 'translateY(-5px)';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
+                  e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
                 <img 
@@ -343,7 +354,7 @@ const Home = () => {
                   alt={item.title}
                   style={{
                     width: '100%',
-                    height: '250px',
+                    height: '300px',
                     objectFit: 'cover',
                     display: 'block'
                   }}
@@ -355,7 +366,7 @@ const Home = () => {
                   right: 0,
                   background: 'linear-gradient(transparent, rgba(0,0,0,0.8))',
                   color: 'white',
-                  padding: '2rem 1rem 1rem',
+                  padding: '30px 20px 20px',
                   transform: 'translateY(100%)',
                   transition: 'transform 0.3s ease'
                 }}
@@ -366,7 +377,7 @@ const Home = () => {
                   e.target.style.transform = 'translateY(100%)';
                 }}
                 >
-                  <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>
+                  <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', fontWeight: '400' }}>
                     {item.title}
                   </h3>
                   <p style={{ fontSize: '0.9rem', opacity: 0.9 }}>
@@ -379,44 +390,44 @@ const Home = () => {
           
           <div style={{ textAlign: 'center' }}>
             <Link 
-              to="/gallery"
+              to="/portfolio"
               style={{
                 padding: '15px 30px',
                 background: 'transparent',
-                border: '2px solid #333',
-                color: '#333',
+                border: '1px solid #1a1a1a',
+                color: '#1a1a1a',
                 textDecoration: 'none',
                 fontSize: '1rem',
-                fontWeight: '500',
-                letterSpacing: '1px',
-                textTransform: 'uppercase',
+                fontWeight: '400',
+                letterSpacing: '0.5px',
+                textTransform: 'none',
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = '#333';
+                e.target.style.background = '#1a1a1a';
                 e.target.style.color = 'white';
               }}
               onMouseLeave={(e) => {
                 e.target.style.background = 'transparent';
-                e.target.style.color = '#333';
+                e.target.style.color = '#1a1a1a';
               }}
             >
-              Voir toutes nos réalisations
+              View All Projects
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Contact Section - Delight Light Style */}
-      <section style={{ padding: '100px 0', background: 'white' }}>
+      {/* Contact Section - Delight Event Style */}
+      <section style={{ padding: '120px 0', background: 'white' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
             <h2 style={{
               fontSize: '2.5rem',
               fontWeight: '300',
-              color: '#333',
+              color: '#1a1a1a',
               marginBottom: '1rem',
-              letterSpacing: '1px'
+              letterSpacing: '0.5px'
             }}>
               Contact
             </h2>
@@ -426,14 +437,15 @@ const Home = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Prêt à donner vie à votre événement de rêve ? Notre équipe d'experts est là pour vous accompagner.
+              Ready to bring your vision to life? Our team of experts is here to help you create 
+              an unforgettable event.
             </p>
           </div>
           
           <div style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-            gap: '3rem',
+            gap: '40px',
             maxWidth: '1000px',
             margin: '0 auto'
           }}>
@@ -441,20 +453,20 @@ const Home = () => {
               <div style={{
                 width: '80px',
                 height: '80px',
-                background: '#333',
+                background: '#f8f8f8',
                 borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 margin: '0 auto 2rem',
-                color: 'white'
+                color: '#1a1a1a'
               }}>
                 <Phone size={32} />
               </div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#333' }}>
-                Téléphone
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: '#1a1a1a', fontWeight: '400' }}>
+                Phone
               </h3>
-              <p style={{ color: '#666', fontSize: '1.1rem' }}>
+              <p style={{ color: '#666', fontSize: '1rem' }}>
                 {mockData.company.contact.phone}
               </p>
             </div>
@@ -463,20 +475,20 @@ const Home = () => {
               <div style={{
                 width: '80px',
                 height: '80px',
-                background: '#333',
+                background: '#f8f8f8',
                 borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 margin: '0 auto 2rem',
-                color: 'white'
+                color: '#1a1a1a'
               }}>
                 <Mail size={32} />
               </div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#333' }}>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: '#1a1a1a', fontWeight: '400' }}>
                 Email
               </h3>
-              <p style={{ color: '#666', fontSize: '1.1rem' }}>
+              <p style={{ color: '#666', fontSize: '1rem' }}>
                 {mockData.company.contact.email}
               </p>
             </div>
@@ -485,51 +497,51 @@ const Home = () => {
               <div style={{
                 width: '80px',
                 height: '80px',
-                background: '#333',
+                background: '#f8f8f8',
                 borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 margin: '0 auto 2rem',
-                color: 'white'
+                color: '#1a1a1a'
               }}>
                 <MapPin size={32} />
               </div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#333' }}>
-                Adresse
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: '#1a1a1a', fontWeight: '400' }}>
+                Address
               </h3>
-              <p style={{ color: '#666', fontSize: '1.1rem' }}>
+              <p style={{ color: '#666', fontSize: '1rem' }}>
                 {mockData.company.contact.address}
               </p>
             </div>
           </div>
           
-          <div style={{ textAlign: 'center', marginTop: '4rem' }}>
+          <div style={{ textAlign: 'center', marginTop: '60px' }}>
             <Link 
               to="/contact"
               style={{
                 padding: '15px 30px',
-                background: '#333',
-                border: '2px solid #333',
+                background: '#1a1a1a',
+                border: '1px solid #1a1a1a',
                 color: 'white',
                 textDecoration: 'none',
                 fontSize: '1rem',
-                fontWeight: '500',
-                letterSpacing: '1px',
-                textTransform: 'uppercase',
+                fontWeight: '400',
+                letterSpacing: '0.5px',
+                textTransform: 'none',
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
                 e.target.style.background = 'transparent';
-                e.target.style.color = '#333';
+                e.target.style.color = '#1a1a1a';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = '#333';
+                e.target.style.background = '#1a1a1a';
                 e.target.style.color = 'white';
               }}
             >
-              Nous contacter
-              </Link>
+              Get in Touch
+            </Link>
           </div>
         </div>
       </section>

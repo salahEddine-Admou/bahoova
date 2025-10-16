@@ -437,52 +437,53 @@ ${formData.name}`
       
       {/* Hero Section - Delight Style */}
       <section style={{ 
-        padding: '100px 0', 
-        background: '#f8f9fa',
+        padding: '120px 0', 
+        background: 'white',
         textAlign: 'center'
       }}>
         <div className="container">
           <h1 style={{
             fontSize: '3rem',
             fontWeight: '300',
-            color: '#333',
+            color: '#1a1a1a',
             marginBottom: '2rem',
-            letterSpacing: '2px',
-            textTransform: 'uppercase'
+            letterSpacing: '1px',
+            textTransform: 'none'
           }}>
             Contact
           </h1>
           <p style={{
-            fontSize: '1.2rem',
-            color: '#666',
+            fontSize: '1.3rem',
+            color: 'rgba(0, 0, 0, 0.6)',
             maxWidth: '600px',
             margin: '0 auto',
-            lineHeight: '1.6'
+            lineHeight: '1.6',
+            fontWeight: '300'
           }}>
-            Prêt à donner vie à votre événement de rêve ? Notre équipe d'experts est là pour vous accompagner à chaque étape.
+            Ready to bring your event vision to life? Our team of experts is here to guide you every step of the way.
           </p>
         </div>
       </section>
 
       {/* Contact Information & Form - Delight Style */}
-      <section style={{ padding: "100px 0", background: "white" }}>
+      <section style={{ padding: "120px 0", background: "white" }}>
         <div className="container">
           <div style={{ 
             display: "grid", 
             gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", 
-            gap: "4rem",
+            gap: "80px",
             alignItems: "flex-start"
           }}>
             {/* Contact Information */}
             <div>
               <h2 style={{
-                fontSize: '2rem',
+                fontSize: '2.5rem',
                 fontWeight: '300',
-                color: '#333',
+                color: '#1a1a1a',
                 marginBottom: '3rem',
-                letterSpacing: '1px'
+                letterSpacing: '0.5px'
               }}>
-                Informations de contact
+                Get in Touch
               </h2>
               
               <div style={{ display: "flex", flexDirection: "column", gap: "2rem", marginBottom: "3rem" }}>
@@ -494,24 +495,24 @@ ${formData.name}`
                   <div style={{ 
                     width: "60px", 
                     height: "60px", 
-                    background: "#333",
+                    background: "#f8f8f8",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     flexShrink: 0
                   }}>
-                    <Phone size={24} color="white" />
+                    <Phone size={24} color="#1a1a1a" />
                   </div>
                   <div>
                     <h3 style={{ 
-                      fontSize: "1.2rem", 
-                      fontWeight: "300",
-                      color: "#333",
+                      fontSize: "1.25rem", 
+                      fontWeight: "400",
+                      color: "#1a1a1a",
                       marginBottom: "0.5rem",
-                      letterSpacing: "1px"
+                      letterSpacing: "0.3px"
                     }}>
-                      Téléphone
+                      Phone
                     </h3>
                     <p style={{ 
                       color: "#666",
@@ -530,22 +531,22 @@ ${formData.name}`
                   <div style={{ 
                     width: "60px", 
                     height: "60px", 
-                    background: "#333",
+                    background: "#f8f8f8",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     flexShrink: 0
                   }}>
-                    <Mail size={24} color="white" />
+                    <Mail size={24} color="#1a1a1a" />
                   </div>
                   <div>
                     <h3 style={{ 
-                      fontSize: "1.2rem", 
-                      fontWeight: "300",
-                      color: "#333",
+                      fontSize: "1.25rem", 
+                      fontWeight: "400",
+                      color: "#1a1a1a",
                       marginBottom: "0.5rem",
-                      letterSpacing: "1px"
+                      letterSpacing: "0.3px"
                     }}>
                       Email
                     </h3>
@@ -566,24 +567,24 @@ ${formData.name}`
                   <div style={{ 
                     width: "60px", 
                     height: "60px", 
-                    background: "#333",
+                    background: "#f8f8f8",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     flexShrink: 0
                   }}>
-                    <MapPin size={24} color="white" />
+                    <MapPin size={24} color="#1a1a1a" />
                   </div>
                   <div>
                     <h3 style={{ 
-                      fontSize: "1.2rem", 
-                      fontWeight: "300",
-                      color: "#333",
+                      fontSize: "1.25rem", 
+                      fontWeight: "400",
+                      color: "#1a1a1a",
                       marginBottom: "0.5rem",
-                      letterSpacing: "1px"
+                      letterSpacing: "0.3px"
                     }}>
-                      Adresse
+                      Address
                     </h3>
                     <p style={{ 
                       color: "#666",
@@ -602,31 +603,31 @@ ${formData.name}`
                   <div style={{ 
                     width: "60px", 
                     height: "60px", 
-                    background: "#333",
+                    background: "#f8f8f8",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     flexShrink: 0
                   }}>
-                    <Clock size={24} color="white" />
+                    <Clock size={24} color="#1a1a1a" />
                   </div>
                   <div>
                     <h3 style={{ 
-                      fontSize: "1.2rem", 
-                      fontWeight: "300",
-                      color: "#333",
+                      fontSize: "1.25rem", 
+                      fontWeight: "400",
+                      color: "#1a1a1a",
                       marginBottom: "0.5rem",
-                      letterSpacing: "1px"
+                      letterSpacing: "0.3px"
                     }}>
-                      Horaires
+                      Hours
                     </h3>
                     <p style={{ 
                       color: "#666",
                       fontSize: "1.1rem"
                     }}>
-                      Lun-Ven: 9h00-18h00<br />
-                      Sam: 10h00-16h00
+                      Mon-Fri: 9:00-18:00<br />
+                      Sat: 10:00-16:00
                     </p>
                   </div>
                 </div>
@@ -635,18 +636,18 @@ ${formData.name}`
             
             {/* Contact Form */}
             <div style={{ 
-              background: "#f8f9fa", 
+              background: "#f8f8f8", 
               padding: "3rem", 
               borderRadius: "8px"
             }}>
               <h2 style={{
-                fontSize: '2rem',
+                fontSize: '2.5rem',
                 fontWeight: '300',
-                color: '#333',
+                color: '#1a1a1a',
                 marginBottom: '2rem',
-                letterSpacing: '1px'
+                letterSpacing: '0.5px'
               }}>
-                Envoyez-nous un message
+                Send us a message
               </h2>
               
               {submitMessage && (
@@ -680,13 +681,13 @@ ${formData.name}`
                   <label htmlFor="name" style={{
                     display: "block",
                     fontSize: "0.9rem",
-                    fontWeight: "300",
-                    color: "#333",
+                    fontWeight: "400",
+                    color: "#1a1a1a",
                     marginBottom: "0.5rem",
-                    letterSpacing: "1px",
-                    textTransform: "uppercase"
+                    letterSpacing: "0.3px",
+                    textTransform: "none"
                   }}>
-                    Nom complet *
+                    Full Name *
                   </label>
                   <input
                     type="text"
@@ -695,7 +696,7 @@ ${formData.name}`
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    placeholder="Votre nom complet"
+                    placeholder="Your full name"
                     style={{
                       width: "100%",
                       padding: "12px 16px",
@@ -706,7 +707,7 @@ ${formData.name}`
                       transition: "border-color 0.3s ease"
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = "#333";
+                      e.target.style.borderColor = "#1a1a1a";
                     }}
                     onBlur={(e) => {
                       e.target.style.borderColor = "#ddd";
@@ -718,11 +719,11 @@ ${formData.name}`
                   <label htmlFor="email" style={{
                     display: "block",
                     fontSize: "0.9rem",
-                    fontWeight: "300",
-                    color: "#333",
+                    fontWeight: "400",
+                    color: "#1a1a1a",
                     marginBottom: "0.5rem",
-                    letterSpacing: "1px",
-                    textTransform: "uppercase"
+                    letterSpacing: "0.3px",
+                    textTransform: "none"
                   }}>
                     Email *
                   </label>
@@ -733,7 +734,7 @@ ${formData.name}`
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    placeholder="votre@email.com"
+                    placeholder="your@email.com"
                     style={{
                       width: "100%",
                       padding: "12px 16px",
@@ -744,7 +745,7 @@ ${formData.name}`
                       transition: "border-color 0.3s ease"
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = "#333";
+                      e.target.style.borderColor = "#1a1a1a";
                     }}
                     onBlur={(e) => {
                       e.target.style.borderColor = "#ddd";
@@ -756,13 +757,13 @@ ${formData.name}`
                   <label htmlFor="phone" style={{
                     display: "block",
                     fontSize: "0.9rem",
-                    fontWeight: "300",
-                    color: "#333",
+                    fontWeight: "400",
+                    color: "#1a1a1a",
                     marginBottom: "0.5rem",
-                    letterSpacing: "1px",
-                    textTransform: "uppercase"
+                    letterSpacing: "0.3px",
+                    textTransform: "none"
                   }}>
-                    Téléphone
+                    Phone
                   </label>
                   <input
                     type="tel"
@@ -770,7 +771,7 @@ ${formData.name}`
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="+212 6XX XXX XXX"
+                    placeholder="+1 (555) 123-4567"
                     style={{
                       width: "100%",
                       padding: "12px 16px",
@@ -781,7 +782,7 @@ ${formData.name}`
                       transition: "border-color 0.3s ease"
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = "#333";
+                      e.target.style.borderColor = "#1a1a1a";
                     }}
                     onBlur={(e) => {
                       e.target.style.borderColor = "#ddd";
@@ -793,13 +794,13 @@ ${formData.name}`
                   <label htmlFor="subject" style={{
                     display: "block",
                     fontSize: "0.9rem",
-                    fontWeight: "300",
-                    color: "#333",
+                    fontWeight: "400",
+                    color: "#1a1a1a",
                     marginBottom: "0.5rem",
-                    letterSpacing: "1px",
-                    textTransform: "uppercase"
+                    letterSpacing: "0.3px",
+                    textTransform: "none"
                   }}>
-                    Sujet
+                    Subject
                   </label>
                   <input
                     type="text"
@@ -807,7 +808,7 @@ ${formData.name}`
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    placeholder="Sujet de votre demande"
+                    placeholder="Subject of your inquiry"
                     style={{
                       width: "100%",
                       padding: "12px 16px",
@@ -818,7 +819,7 @@ ${formData.name}`
                       transition: "border-color 0.3s ease"
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = "#333";
+                      e.target.style.borderColor = "#1a1a1a";
                     }}
                     onBlur={(e) => {
                       e.target.style.borderColor = "#ddd";
@@ -830,13 +831,13 @@ ${formData.name}`
                   <label htmlFor="eventType" style={{
                     display: "block",
                     fontSize: "0.9rem",
-                    fontWeight: "300",
-                    color: "#333",
+                    fontWeight: "400",
+                    color: "#1a1a1a",
                     marginBottom: "0.5rem",
-                    letterSpacing: "1px",
-                    textTransform: "uppercase"
+                    letterSpacing: "0.3px",
+                    textTransform: "none"
                   }}>
-                    Type d'événement
+                    Event Type
                   </label>
                   <select
                     id="eventType"
@@ -853,13 +854,13 @@ ${formData.name}`
                       transition: "border-color 0.3s ease"
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = "#333";
+                      e.target.style.borderColor = "#1a1a1a";
                     }}
                     onBlur={(e) => {
                       e.target.style.borderColor = "#ddd";
                     }}
                   >
-                    <option value="">Sélectionnez un type d'événement</option>
+                    <option value="">Select an event type</option>
                     <option value="congres-scientifique">Congrès Scientifique</option>
                     <option value="forum-recherche">Forum de Recherche</option>
                     <option value="conference-medicale">Conférence Médicale</option>
@@ -884,11 +885,11 @@ ${formData.name}`
                   <label htmlFor="message" style={{
                     display: "block",
                     fontSize: "0.9rem",
-                    fontWeight: "300",
-                    color: "#333",
+                    fontWeight: "400",
+                    color: "#1a1a1a",
                     marginBottom: "0.5rem",
-                    letterSpacing: "1px",
-                    textTransform: "uppercase"
+                    letterSpacing: "0.3px",
+                    textTransform: "none"
                   }}>
                     Message *
                   </label>
@@ -898,7 +899,7 @@ ${formData.name}`
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    placeholder="Décrivez votre projet d'événement, vos besoins, la date prévue, le nombre d'invités..."
+                    placeholder="Describe your event project, your needs, the planned date, number of guests..."
                     style={{
                       width: "100%",
                       padding: "12px 16px",
@@ -911,7 +912,7 @@ ${formData.name}`
                       resize: "vertical"
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = "#333";
+                      e.target.style.borderColor = "#1a1a1a";
                     }}
                     onBlur={(e) => {
                       e.target.style.borderColor = "#ddd";
@@ -924,28 +925,28 @@ ${formData.name}`
                   disabled={isSubmitting}
                   style={{ 
                     padding: "15px 30px",
-                    background: "#333",
-                    border: "2px solid #333",
+                    background: "#1a1a1a",
+                    border: "1px solid #1a1a1a",
                     color: "white",
                     textDecoration: "none",
                     fontSize: "1rem",
-                    fontWeight: "300",
-                    letterSpacing: "1px",
-                    textTransform: "uppercase",
+                    fontWeight: "400",
+                    letterSpacing: "0.5px",
+                    textTransform: "none",
                     cursor: "pointer",
                     transition: "all 0.3s ease",
                     borderRadius: "4px"
                   }}
                   onMouseEnter={(e) => {
                     e.target.style.background = "transparent";
-                    e.target.style.color = "#333";
+                    e.target.style.color = "#1a1a1a";
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.background = "#333";
+                    e.target.style.background = "#1a1a1a";
                     e.target.style.color = "white";
                   }}
                 >
-                  {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>

@@ -8,9 +8,13 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { path: "/", label: "Accueil" },
-    { path: "/gallery", label: "Galerie" },
-    { path: "/contact", label: "Contact" }
+    { path: "/", label: "Home" },
+    { path: "/agency", label: "Agency" },
+    { path: "/services", label: "Our Expertise" },
+    { path: "/portfolio", label: "Portfolio" },
+    { path: "/references", label: "References" },
+    { path: "/contact", label: "Contact" },
+    { path: "/gallery", label: "Gallery" }
   ];
 
   return (
@@ -19,11 +23,11 @@ const Navigation = () => {
       top: 0,
       left: 0,
       right: 0,
-      background: 'rgba(255, 255, 255, 0.98)',
-      backdropFilter: 'blur(10px)',
-      borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+      background: 'rgba(255, 255, 255, 0.95)',
+      backdropFilter: 'blur(20px)',
+      borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
       zIndex: 1000,
-      padding: '1rem 0'
+      padding: '1.5rem 0'
     }}>
       <div className="container">
         <div style={{ 
@@ -52,10 +56,10 @@ const Navigation = () => {
               }}
             />
             <span style={{ 
-              fontSize: "1.5rem", 
-              fontWeight: "300", 
-              color: "#333",
-              letterSpacing: '1px'
+              fontSize: "1.25rem", 
+              fontWeight: "400", 
+              color: "#1a1a1a",
+              letterSpacing: '0.5px'
             }}>
               BAHOOVA Events
             </span>
@@ -64,38 +68,39 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <nav style={{ 
             display: window.innerWidth > 768 ? "flex" : "none",
-            gap: '3rem'
+            gap: '2.5rem'
           }}>
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 style={{
-                  color: location.pathname === item.path ? "#333" : "#666",
+                  color: location.pathname === item.path ? "#1a1a1a" : "#666",
                   textDecoration: "none",
-                  fontSize: "1rem",
-                  fontWeight: "300",
-                  letterSpacing: "1px",
-                  textTransform: "uppercase",
+                  fontSize: "0.95rem",
+                  fontWeight: "400",
+                  letterSpacing: "0.3px",
+                  textTransform: "none",
                   position: "relative",
-                  transition: "color 0.3s ease"
+                  transition: "color 0.3s ease",
+                  padding: "0.5rem 0"
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.color = "#333";
+                  e.target.style.color = "#1a1a1a";
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.color = location.pathname === item.path ? "#333" : "#666";
+                  e.target.style.color = location.pathname === item.path ? "#1a1a1a" : "#666";
                 }}
               >
                 {item.label}
                 {location.pathname === item.path && (
                   <div style={{
                     position: 'absolute',
-                    bottom: '-5px',
+                    bottom: '0',
                     left: 0,
                     right: 0,
                     height: '1px',
-                    background: '#333'
+                    background: '#1a1a1a'
                   }} />
                 )}
               </Link>
@@ -141,21 +146,21 @@ const Navigation = () => {
                 key={item.path}
                 to={item.path}
                 style={{
-                  color: location.pathname === item.path ? "#333" : "#666",
+                  color: location.pathname === item.path ? "#1a1a1a" : "#666",
                   textDecoration: "none",
-                  fontSize: "1.2rem",
-                  fontWeight: "300",
-                  letterSpacing: "1px",
-                  textTransform: "uppercase",
-                  padding: "0.5rem 0",
+                  fontSize: "1rem",
+                  fontWeight: "400",
+                  letterSpacing: "0.3px",
+                  textTransform: "none",
+                  padding: "0.75rem 0",
                   transition: "color 0.3s ease"
                 }}
                 onClick={() => setIsMenuOpen(false)}
                 onMouseEnter={(e) => {
-                  e.target.style.color = "#333";
+                  e.target.style.color = "#1a1a1a";
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.color = location.pathname === item.path ? "#333" : "#666";
+                  e.target.style.color = location.pathname === item.path ? "#1a1a1a" : "#666";
                 }}
               >
                 {item.label}
