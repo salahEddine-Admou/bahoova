@@ -626,8 +626,7 @@ ${formData.name}`
                       color: "#666",
                       fontSize: "1.1rem"
                     }}>
-                      Lun-Ven: 9h00-18h00<br />
-                      Sam: 10h00-16h00
+                      Ouvert 24h/24 et 7j/7
                     </p>
                   </div>
                 </div>

@@ -420,8 +420,7 @@ const ExpertGestionEvenements = () => {
               </div>
               <h3 className="heading-3" style={{ marginBottom: "16px" }}>Horaires Expert</h3>
               <p className="body-regular" style={{ color: "var(--text-secondary)" }}>
-                Lun - Ven: 8h00 - 18h00<br />
-                Sam: 9h00 - 13h00
+                Disponible 24h/24, 7j/7
               </p>
             </div>
           </div>

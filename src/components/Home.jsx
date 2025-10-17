@@ -81,7 +81,7 @@ const Home = () => {
             "latitude": "33.5731",
             "longitude": "-7.5898"
           },
-          "openingHours": "Mo-Fr 08:00-18:00",
+          "openingHours": "Mo-Su 00:00-23:59",
           "priceRange": "$$",
           "serviceArea": {
             "@type": "GeoCircle",
