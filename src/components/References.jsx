@@ -124,15 +124,6 @@ const References = () => {
             }}>
               Références
             </h1>
-            <p style={{
-              fontSize: '1.2rem',
-              color: '#666',
-              lineHeight: '1.6',
-              fontWeight: '300'
-            }}>
-              Découvrez ce que nos clients disent de leur collaboration avec BAHOOVA Events et 
-              explorez notre historique d'événements réussis.
-            </p>
           </div>
         </div>
       </section>
@@ -322,14 +313,6 @@ const References = () => {
             }}>
               Nos Clients
             </h2>
-            <p style={{
-              fontSize: '1.1rem',
-              color: '#666',
-              maxWidth: '600px',
-              margin: '0 auto'
-            }}>
-              Nous sommes fiers de travailler avec des organisations leaders dans diverses industries
-            </p>
           </div>
           
           <div style={{ 
@@ -369,93 +352,6 @@ const References = () => {
         </div>
       </section>
 
-      {/* Awards Section */}
-      <section style={{ padding: '80px 0', background: 'white' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h2 style={{
-              fontSize: '2.5rem',
-              fontWeight: '300',
-              color: '#1a1a1a',
-              marginBottom: '1rem',
-              letterSpacing: '0.5px'
-            }}>
-              Reconnaissance & Récompenses
-            </h2>
-            <p style={{
-              fontSize: '1.1rem',
-              color: '#666',
-              maxWidth: '600px',
-              margin: '0 auto'
-            }}>
-              Notre engagement envers l'excellence a été reconnu par les leaders de l'industrie
-            </p>
-          </div>
-          
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-            gap: '40px' 
-          }}>
-            <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-              <Award size={48} style={{ color: '#ffd700', marginBottom: '20px' }} />
-              <h3 style={{
-                fontSize: '1.25rem',
-                fontWeight: '400',
-                color: '#1a1a1a',
-                marginBottom: '12px'
-              }}>
-                Meilleure Agence de Gestion d'Événements
-              </h3>
-              <p style={{
-                fontSize: '0.9rem',
-                color: '#666',
-                marginBottom: '8px'
-              }}>
-                Morocco Business Awards 2023
-              </p>
-            </div>
-            
-            <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-              <Star size={48} style={{ color: '#ffd700', marginBottom: '20px' }} />
-              <h3 style={{
-                fontSize: '1.25rem',
-                fontWeight: '400',
-                color: '#1a1a1a',
-                marginBottom: '12px'
-              }}>
-                Excellence dans les Événements Internationaux
-              </h3>
-              <p style={{
-                fontSize: '0.9rem',
-                color: '#666',
-                marginBottom: '8px'
-              }}>
-                Global Event Industry Awards 2023
-              </p>
-            </div>
-            
-            <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-              <Building size={48} style={{ color: '#ffd700', marginBottom: '20px' }} />
-              <h3 style={{
-                fontSize: '1.25rem',
-                fontWeight: '400',
-                color: '#1a1a1a',
-                marginBottom: '12px'
-              }}>
-                Événements Corporatifs Exceptionnels
-              </h3>
-              <p style={{
-                fontSize: '0.9rem',
-                color: '#666',
-                marginBottom: '8px'
-              }}>
-                MENA Business Excellence Awards 2023
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section style={{ padding: '80px 0', background: '#fafafa' }}>
